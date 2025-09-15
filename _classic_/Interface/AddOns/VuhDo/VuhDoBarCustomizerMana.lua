@@ -98,7 +98,7 @@ end
 
 
 --
-local tAllButtons, tManaBar, tQuota;
+local tAllButtons, tManaBar, tHealthBar, tQuota;
 local tManaBarHeight;
 local tRegularHeight;
 local tPanelNum;

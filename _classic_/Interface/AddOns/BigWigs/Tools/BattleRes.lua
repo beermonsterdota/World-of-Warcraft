@@ -23,7 +23,7 @@ do
 			mode = 1,
 			lock = false,
 			size = 50,
-			position = {"CENTER", "CENTER", 0, 0},
+			position = {"CENTER", "CENTER", 500, -50},
 			textXPositionDuration = 0,
 			textYPositionDuration = 0,
 			textXPositionCharges = 0,
@@ -479,7 +479,6 @@ do
 	local anim = updater:CreateAnimation()
 	anim:SetDuration(1)
 end
-mainPanel:SetPoint("CENTER")
 mainPanel:SetFrameStrata("MEDIUM")
 mainPanel:SetFixedFrameStrata(true)
 mainPanel:SetFrameLevel(8500)
@@ -537,7 +536,7 @@ do
 			[33] = true, -- Timewalking (Raid)
 		}
 		function DelayStartOfInstance() -- Difficulty info isn't accurate until 1 frame after PEW
-			local _, _, diffID, _, _, _, _, instanceID = BigWigsLoader.GetInstanceInfo()
+			local _, _, diffID = BigWigsLoader.GetInstanceInfo()
 			if difficultiesWithBattleRes[diffID] then
 				isShowing = true
 				isTesting = false
@@ -783,6 +782,7 @@ do
 	BigWigsLoader.RegisterMessage({}, "BigWigs_ProfileUpdate", function()
 		ProfileUtils.ValidateMainSettings()
 		ProfileUtils.ValidateMediaSettings()
+		UpdateWidgets()
 		isTesting = false
 		local func = mainPanel:GetScript("OnEvent")
 		func(mainPanel, "PLAYER_LEAVING_WORLD")
@@ -792,7 +792,6 @@ do
 			mainPanel:RegisterEvent("PLAYER_LEAVING_WORLD")
 			func(mainPanel, "PLAYER_ENTERING_WORLD")
 		end
-		UpdateWidgets()
 	end)
 
 	local function GetSettings(info)

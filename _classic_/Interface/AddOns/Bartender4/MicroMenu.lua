@@ -14,48 +14,26 @@ local ButtonBar = Bartender4.ButtonBar.prototype
 local pairs, setmetatable, table_insert = pairs, setmetatable, table.insert
 
 local WoWClassic = (WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE)
-local WoWClassicEra = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
-local WoWClassicMists = (WOW_PROJECT_ID == WOW_PROJECT_MISTS_CLASSIC)
+local WoW10 = select(4, GetBuildInfo()) >= 100000
 
 -- GLOBALS: CharacterMicroButton, SpellbookMicroButton, TalentMicroButton, AchievementMicroButton, QuestLogMicroButton, GuildMicroButton
 -- GLOBALS: LFDMicroButton, CollectionsMicroButton, EJMicroButton, MainMenuMicroButton
 -- GLOBALS: HasVehicleActionBar, UnitVehicleSkin, HasOverrideActionBar, GetOverrideBarSkin
 
-local BT_MICRO_BUTTONS
-if WoWClassicMists then
-	BT_MICRO_BUTTONS = {
-		"CharacterMicroButton",
-		"SpellbookMicroButton",
-		"TalentMicroButton",
-		"AchievementMicroButton",
-		"QuestLogMicroButton",
-		"SocialsMicroButton",
-		"GuildMicroButton",
-		"PVPMicroButton",
-		"LFGMicroButton",
-		"CollectionsMicroButton",
-		"EJMicroButton",
-		--"HelpMicroButton",
-		"StoreMicroButton",
-		"MainMenuMicroButton",
+local BT_MICRO_BUTTONS = WoWClassic and CopyTable(MICRO_BUTTONS) or
+	{
+	"CharacterMicroButton",
+	"SpellbookMicroButton",
+	"TalentMicroButton",
+	"AchievementMicroButton",
+	"QuestLogMicroButton",
+	"GuildMicroButton",
+	"LFDMicroButton",
+	"CollectionsMicroButton",
+	"EJMicroButton",
+	"StoreMicroButton",
+	"MainMenuMicroButton",
 	}
-elseif WoWClassic then
-	BT_MICRO_BUTTONS = CopyTable(MICRO_BUTTONS)
-else
-	BT_MICRO_BUTTONS = {
-		"CharacterMicroButton",
-		"ProfessionMicroButton",
-		"PlayerSpellsMicroButton",
-		"AchievementMicroButton",
-		"QuestLogMicroButton",
-		"GuildMicroButton",
-		"LFDMicroButton",
-		"CollectionsMicroButton",
-		"EJMicroButton",
-		"StoreMicroButton",
-		"MainMenuMicroButton",
-	}
-end
 
 -- create prototype information
 local MicroMenuBar = setmetatable({}, {__index = ButtonBar})
@@ -66,9 +44,9 @@ local defaults = { profile = Bartender4.Util:Merge({
 	visibility = {
 		possess = false,
 	},
-	padding = (WoWClassicEra or WoWClassicMists) and -3 or (WoWClassic and -4 or 1),
+	padding = WoW10 and 1 or -3,
 	position = {
-		scale = WoWClassic and 0.8 or 1.0,
+		scale = WoW10 and 1.0 or 0.8,
 	},
 }, Bartender4.ButtonBar.defaults) }
 
@@ -82,26 +60,13 @@ function MicroMenuMod:OnEnable()
 		self.bar = setmetatable(Bartender4.ButtonBar:Create("MicroMenu", self.db.profile, L["Micro Menu"], true), {__index = MicroMenuBar})
 		local buttons = {}
 
-		-- remove the LFG button on classic era
-		if WoWClassicEra then
-			tDeleteItem(BT_MICRO_BUTTONS, "LFGMicroButton")
-		end
-
-		-- guild and social share a spot
-		if WoWClassic then
-			tDeleteItem(BT_MICRO_BUTTONS, "GuildMicroButton")
-		end
-
-		-- these are handled below, if both are in here it'll error
-		if HelpMicroButton and StoreMicroButton then
-			tDeleteItem(BT_MICRO_BUTTONS, "HelpMicroButton")
+		-- handle lfg/worldmap button on classic
+		if WoWClassic and C_LFGList and C_LFGList.IsLookingForGroupEnabled then
+			tDeleteItem(BT_MICRO_BUTTONS, C_LFGList.IsLookingForGroupEnabled() and "WorldMapMicroButton" or "LFGMicroButton")
 		end
 
 		for i=1, #BT_MICRO_BUTTONS do
-			local button = _G[BT_MICRO_BUTTONS[i]]
-			if button then
-				table_insert(buttons, button)
-			end
+			table_insert(buttons, _G[BT_MICRO_BUTTONS[i]])
 		end
 		self.bar.buttons = buttons
 
@@ -221,12 +186,10 @@ function MicroMenuMod:MicroMenuBarShow()
 end
 
 function MicroMenuMod:BlizzardBarShow()
-	if WoWClassic then
-		-- Only reset button positions not set in MoveMicroButtons()
-		for i,v in pairs(self.bar.buttons) do
-			if v ~= CharacterMicroButton and v ~= PVPMicroButton then
-				v:ClearSetPoint(unpack(self.bar.anchors[i]))
-			end
+	-- Only reset button positions not set in MoveMicroButtons()
+	for i,v in pairs(self.bar.buttons) do
+		if v ~= CharacterMicroButton and v ~= LFDMicroButton then
+			v:ClearSetPoint(unpack(self.bar.anchors[i]))
 		end
 	end
 end
@@ -240,7 +203,6 @@ else
 	MicroMenuBar.button_width = 32
 	MicroMenuBar.button_height = 40
 	MicroMenuBar.vpad_offset = 0
-	MicroMenuBar.hpad_offset = -8
 end
 function MicroMenuBar:ApplyConfig(config)
 	ButtonBar.ApplyConfig(self, config)
@@ -253,27 +215,22 @@ function MicroMenuBar:ApplyConfig(config)
 	self:UpdateButtonLayout()
 end
 
-function MicroMenuBar:UpdateButtonLayout()
-	ButtonBar.UpdateButtonLayout(self)
-
-	if HelpMicroButton and StoreMicroButton then
-		HelpMicroButton:ClearAllPoints()
-		HelpMicroButton:SetAllPoints(StoreMicroButton)
+if HelpMicroButton and StoreMicroButton then
+	function MicroMenuBar:UpdateButtonLayout()
+		ButtonBar.UpdateButtonLayout(self)
 		-- If the StoreButton is hidden we want to replace it with the Help button
 		if not StoreMicroButton:IsShown() then
 			HelpMicroButton:Show()
+			HelpMicroButton:ClearAllPoints()
+			HelpMicroButton:SetAllPoints(StoreMicroButton)
 		else
 			HelpMicroButton:Hide()
+			HelpMicroButton:ClearAllPoints()
 		end
-	end
-
-	if WoWClassic and GuildMicroButton then
-		GuildMicroButton:ClearAllPoints()
-		GuildMicroButton:SetAllPoints(SocialsMicroButton)
 	end
 end
 
-if not WoWClassic and QueueStatusButton then
+if WoW10 and QueueStatusButton then
 	local QueueStatusMod = Bartender4:NewModule("QueueStatusButtonBar", "AceHook-3.0")
 
 	-- create prototype information

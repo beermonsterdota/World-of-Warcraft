@@ -19,8 +19,6 @@ setmetatable(VUHDO_REGISTERED_PROVIDERS, VUHDO_META_NEW_ARRAY);
 local VUHDO_INTERESTED_PROVIDERS = { };
 setmetatable(VUHDO_INTERESTED_PROVIDERS, VUHDO_META_NEW_ARRAY);
 
-local VUHDO_INDICATOR_TEXT_PROVIDERS = { };
-
 
 
 --
@@ -39,54 +37,25 @@ end
 
 --
 local tInfo;
-local tIndicators;
 local tText, tValue, tMaxValue;
 local tEmpty = { };
-function VUHDO_updateAllTextIndicatorsForEvent(aUnit, anEventType, aBouquetName, anIsActive)
-
+function VUHDO_updateAllTextIndicatorsForEvent(aUnit, anEventType)
 	tInfo = (VUHDO_RAID or tEmpty)[aUnit];
-
 	if tInfo then
-		if aBouquetName then
-			tIndicators = VUHDO_getRegisteredBouquets()[aBouquetName];
 
-			if tIndicators then
-				for tIndicatorName, _ in pairs(tIndicators) do
-					if VUHDO_INDICATOR_TEXT_PROVIDERS[tIndicatorName] then
-						for tProviderName, tFunction in pairs(VUHDO_INDICATOR_TEXT_PROVIDERS[tIndicatorName]) do
-							if VUHDO_isTextProviderInterestedInEvent(tProviderName, anEventType) then
-								-- FIXME: hardcoded bouquet name check is fragile
-								if not anIsActive or
-									(aBouquetName == VUHDO_I18N_DEF_BOUQUET_BAR_MANA_HEALER_ONLY and tInfo["role"] ~= VUHDO_ID_RANGED_HEAL) then
-									tFunction(aUnit, tProviderName, "", 0, tIndicatorName);
-								else
-									tValue, tMaxValue = VUHDO_TEXT_PROVIDERS[tProviderName]["calculator"](tInfo);
+		for tProviderName, tAllIndicators in pairs(VUHDO_REGISTERED_PROVIDERS) do
+			if VUHDO_isTextProviderInterestedInEvent(tProviderName, anEventType) then
+				tValue, tMaxValue = VUHDO_TEXT_PROVIDERS[tProviderName]["calculator"](tInfo);
+				tText = VUHDO_TEXT_PROVIDERS[tProviderName]["validator"](tInfo, tValue, tMaxValue);
 
-									tText = VUHDO_TEXT_PROVIDERS[tProviderName]["validator"](tInfo, tValue, tMaxValue);
-
-									tFunction(aUnit, tProviderName, tText, tValue, tIndicatorName);
-								end
-							end
-						end
-					end
+				for tIndicatorName, tFunction in pairs(tAllIndicators) do
+					tFunction(aUnit, tProviderName, tText, tValue, tIndicatorName);
 				end
-			end
-		else
-			for tProviderName, tAllIndicators in pairs(VUHDO_REGISTERED_PROVIDERS) do
-				if VUHDO_isTextProviderInterestedInEvent(tProviderName, anEventType) then
-					for tIndicatorName, tFunction in pairs(tAllIndicators) do
-						if not VUHDO_getRegisteredBouquetIndicators(tIndicatorName) then
-							tValue, tMaxValue = VUHDO_TEXT_PROVIDERS[tProviderName]["calculator"](tInfo);
 
-							tText = VUHDO_TEXT_PROVIDERS[tProviderName]["validator"](tInfo, tValue, tMaxValue);
-
-							tFunction(aUnit, tProviderName, tText, tValue, tIndicatorName);
-						end
-					end
-				end
 			end
 		end
 	elseif aUnit then
+
 		for tProviderName, tAllIndicators in pairs(VUHDO_REGISTERED_PROVIDERS) do
 			if VUHDO_isTextProviderInterestedInEvent(tProviderName, anEventType) then
 				for tIndicatorName, tFunction in pairs(tAllIndicators) do
@@ -94,10 +63,8 @@ function VUHDO_updateAllTextIndicatorsForEvent(aUnit, anEventType, aBouquetName,
 				end
 			end
 		end
+
 	end
-
-	return;
-
 end
 local VUHDO_updateAllTextIndicatorsForEvent = VUHDO_updateAllTextIndicatorsForEvent;
 
@@ -121,13 +88,9 @@ local function VUHDO_registerIndicatorForProvider(aProviderName, anIndicatorName
 
 	VUHDO_REGISTERED_PROVIDERS[aProviderName][anIndicatorName] = aFunction;
 
-	if not VUHDO_INDICATOR_TEXT_PROVIDERS[anIndicatorName] then
-		VUHDO_INDICATOR_TEXT_PROVIDERS[anIndicatorName] = { };
+	for tUnit, _ in pairs(VUHDO_RAID) do
+		VUHDO_updateAllTextIndicatorsForEvent(tUnit, 1); -- VUHDO_UPDATE_ALL
 	end
-
-	VUHDO_INDICATOR_TEXT_PROVIDERS[anIndicatorName][aProviderName] = aFunction;
-
-	return;
 
 end
 
@@ -186,7 +149,6 @@ function VUHDO_registerAllTextIndicators()
 
 	table.wipe(VUHDO_REGISTERED_PROVIDERS);
 	table.wipe(VUHDO_INTERESTED_PROVIDERS);
-	table.wipe(VUHDO_INDICATOR_TEXT_PROVIDERS);
 
 	table.wipe(tAlreadyRegistered);
 
@@ -199,21 +161,6 @@ function VUHDO_registerAllTextIndicators()
 		end
 	end
 
-	for tUnit, _ in pairs(VUHDO_RAID) do
-		VUHDO_updateBouquetsForEvent(tUnit, 1); -- VUHDO_UPDATE_ALL
-	end
-
 	VUHDO_initTextProviderComboModel();
-
-	return;
-
-end
-
-
-
---
-function VUHDO_getRegisteredTextProviders()
-
-	return VUHDO_REGISTERED_PROVIDERS;
 
 end

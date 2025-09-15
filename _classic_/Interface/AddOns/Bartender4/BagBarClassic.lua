@@ -7,8 +7,6 @@ local _, Bartender4 = ...
 local WoW10 = select(4, GetBuildInfo()) >= 100000
 if WoW10 then return end
 
-local WoWClassicEra = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
-
 local L = LibStub("AceLocale-3.0"):GetLocale("Bartender4")
 -- register module
 local BagBarMod = Bartender4:NewModule("BagBar", "AceHook-3.0")
@@ -96,7 +94,7 @@ function BagBar:FeedButtons()
 		self.buttons = {}
 	end
 
-	if KeyRingButton and WoWClassicEra and self.config.keyring then
+	if KeyRingButton and self.config.keyring then
 		table_insert(self.buttons, KeyRingButton)
 		count = count + 1
 	elseif KeyRingButton then
@@ -118,7 +116,7 @@ function BagBar:FeedButtons()
 		v:SetParent(self)
 		v:Show()
 		if v ~= KeyRingButton then
-			v:ClearNormalTexture()
+			v:SetNormalTexture("")
 
 			if Masque then
 				local group = self.MasqueGroup

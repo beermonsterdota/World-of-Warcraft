@@ -1,16 +1,11 @@
-## Interface: 110200, 110205
+## Interface: 100206
 ## Title: Plater
 ## Notes: Nameplate addon designed for advanced users.
-## Notes-esES: Addon de placa de nombre diseñado para usuarios avanzados
-## Notes-esMX: Addon de placa de nombre diseñado para usuarios avanzados
-## Notes-frFR: Add-on de plaque de nom conçu pour les utilisateurs avancés
-## Notes-ptBR: Addon de placa de nome projetado para usuários avançados
-## SavedVariables: PlaterDB, PlaterLanguage, PlaterLogs, PlaterBackup
+## SavedVariables: PlaterDB, PlaterLanguage, PlaterLogs
 ## SavedVariablesPerCharacter: PlaterDBChr
-## OptionalDeps: Masque
 ## IconTexture-blank: 982414
 ## IconTexture: Interface\AddOns\Plater\images\cast_bar
-## Version: Plater-v615-Retail
+## Version: Plater-v578a-Retail
 ## X-Curse-Project-ID: 100547
 ## X-Wago-ID: kRNLep6o
 
@@ -29,6 +24,7 @@ locales\ptBR.lua
 locales\ruRU.lua
 locales\zhCN.lua
 locales\zhTW.lua
+locales\arAR.lua
 
 Plater.xml
 
@@ -38,12 +34,9 @@ Plater_DefaultSettings.lua
 
 Plater_Data.lua
 Plater_Logs.lua
+Plater_PerformanceUnits.lua
 Plater_Util.lua
 Plater.lua
-Plater_PerformanceUnits.lua
-Plater_ColorFrame.lua
-Plater_SlashCMD.lua
-Plater_ImportExport.lua
 Plater_Comms.lua
 Plater_Auras.lua
 Plater_Resources.lua
@@ -63,18 +56,9 @@ Plater_BossModsSupport.lua
 Plater_Animations.lua
 Plater_NpcColorPanels.lua
 Plater_CastColorPanels.lua
-Plater_SpellList.lua
 Plater_Audio.lua
 Plater_Profiling.lua
 Plater_Plugins.lua
 Plater_DebugFrames.lua
 Plater_API.lua
-
-options/Plater_O_Search.lua
-options/Plater_O_CastBar.lua
-options/Plater_O_Advanced.lua
-options/Plater_O_BossMod.lua
-
-Plater_LoadFinished.lua
-
 #Plater_SpellPrediction.lua

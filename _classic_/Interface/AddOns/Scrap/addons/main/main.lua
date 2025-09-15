@@ -36,9 +36,14 @@ SCRAP = 'Scrap'
 
 function Scrap:OnLoad()
 	self:OnSettings()
-	self:RegisterSignal('SETS_CHANGED', 'OnSettings')
-	self:RegisterEvent('MERCHANT_SHOW', function() C.AddOns.LoadAddOn('Scrap_Merchant'); self:SendSignal('MERCHANT_SHOW') end)
 	self:CheckForUpdates(ADDON, self.sets, 'interface/addons/scrap/art/scrap-big')
+	self:RegisterSignal('SETS_CHANGED', 'OnSettings')
+	self:RegisterEvent('MERCHANT_SHOW', function()
+		C.AddOns.LoadAddOn('Scrap_Merchant')
+		RunNextFrame(function()
+			self:SendSignal('MERCHANT_SHOW')
+		end)
+	end)
 
 	Scrap_Sets, Scrap_CharSets = self.sets, self.charsets
 	if (Scrap_Sets.tutorial or 0) > 0 then

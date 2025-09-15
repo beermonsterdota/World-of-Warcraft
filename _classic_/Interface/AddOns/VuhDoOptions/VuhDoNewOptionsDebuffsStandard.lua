@@ -43,7 +43,7 @@ end
 local tText;
 function VUHDO_saveDebuffIgnoreClicked(aButton)
 
-	tText = _G[aButton:GetParent():GetName() .. "IgnoreComboBoxEditBox"]:GetText();
+	local tText = _G[aButton:GetParent():GetName() .. "IgnoreComboBoxEditBox"]:GetText();
 
 	if (tText ~= nil) then
 		VUHDO_DEBUFF_BLACKLIST[strtrim(tText)] = true;
@@ -188,6 +188,9 @@ end
 --
 local tImportString;
 local tImportTable;
+local tName;
+local tProfile;
+local tPos;
 function VUHDO_debuffIgnoreImport(aEditBoxName)
 
 	tImportString = _G[aEditBoxName]:GetText();
@@ -240,18 +243,4 @@ function VUHDO_importDebuffIgnoreOkayClicked(aButton)
 
 	VuhDoYesNoFrame:Show();
 
-end
-
-
-
---
-local tOldValue = nil;
-function VUHDO_notifySoundSelect(aComboBox, aValue)
-	if (aValue ~= nil and tOldValue ~= aValue) then
-		local tSuccess = VUHDO_playSoundFile(aValue);
-
-		if tSuccess then
-			tOldValue = aValue;
-		end
-	end
 end

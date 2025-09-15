@@ -6,7 +6,6 @@ local _;
 local tComponents = { };
 local tNum;
 local tModel;
-local tIndex;
 function VUHDO_newOptionsSpellSetModifierHostile(aModifier)
 	VUHDO_CURR_SPELL_MODIFIER = aModifier;
 

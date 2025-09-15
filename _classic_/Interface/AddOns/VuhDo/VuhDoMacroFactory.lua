@@ -2,13 +2,16 @@ VUHDO_IS_SFX_ENABLED = true;
 VUHDO_IS_SOUND_ERRORSPEECH_ENABLED = true;
 
 local VUHDO_RAID;
+local VUHDO_RAID_NAMES;
 local VUHDO_SPELL_CONFIG;
 local VUHDO_SPELLS;
+local VUHDO_SPELL_CONFIG;
 
 local GetMacroIndexByName = GetMacroIndexByName;
 local GetMacroInfo = GetMacroInfo;
-local GetSpellName = C_Spell.GetSpellName or VUHDO_getSpellName;
+local GetSpellBookItemTexture = GetSpellBookItemTexture;
 local VUHDO_replaceMacroTemplates;
+local gsub = gsub;
 local twipe = table.wipe;
 local format = format;
 local sEmpty = { };
@@ -21,8 +24,10 @@ local sStopTargetText = "/click VDSTB LeftButton\n";
 
 function VUHDO_macroFactoryInitLocalOverrides()
 	VUHDO_RAID = _G["VUHDO_RAID"];
+	VUHDO_RAID_NAMES = _G["VUHDO_RAID_NAMES"];
 	VUHDO_SPELL_CONFIG = _G["VUHDO_SPELL_CONFIG"];
 	VUHDO_SPELLS = _G["VUHDO_SPELLS"];
+	VUHDO_SPELL_CONFIG = _G["VUHDO_SPELL_CONFIG"];
 
 	VUHDO_replaceMacroTemplates = _G["VUHDO_replaceMacroTemplates"];
 	sIsAnyAutoFireConfigured = VUHDO_SPELL_CONFIG["IS_AUTO_FIRE"]	and (
@@ -194,9 +199,7 @@ local function VUHDO_generateTargetMacroText(aTarget, aFriendlyAction, aHostileA
 		tFriendText = "/focus [noharm,@vuhdo]\n";
 	elseif "assist" == tLowerFriendly then
 		tFriendText = "/assist [noharm,@vuhdo]\n";
-	elseif VUHDO_SPELL_KEY_PING == tLowerFriendly then
-		tFriendText = "/ping [help,@vuhdo]Assist;[harm,@vuhdo]Attack;[exists,@vuhdo]Ping\n";
-	elseif #aFriendlyAction > 0 and GetSpellName(aFriendlyAction) then
+	elseif #aFriendlyAction > 0 and GetSpellInfo(aFriendlyAction) then
 		if (VUHDO_SPELLS[aFriendlyAction] or sEmpty)["nohelp"] then
 			tModiSpell = "[@vuhdo] ";
 			tIsNoHelp = true;
@@ -231,7 +234,7 @@ local function VUHDO_generateTargetMacroText(aTarget, aFriendlyAction, aHostileA
 		tEnemyText = "/focus [harm,@vuhdo]";
 	elseif "assist" == tLowerHostile then
 		tEnemyText = "/assist [harm,@vuhdo]";
-	elseif #aHostileAction > 0 and GetSpellName(aHostileAction) then
+	elseif #aHostileAction > 0 and GetSpellInfo(aHostileAction) then
 		tEnemyText = "/use [harm,@vuhdo] " .. aHostileAction;
 	else
 		tEnemyText = "";
@@ -308,15 +311,6 @@ end
 --
 function VUHDO_buildMouseLookMacroText()
 	return "/run if IsMouselooking() then MouselookStop() else MouselookStart() end\n";
-end
-
-
-
---
-function VUHDO_buildPingMacroText(aTarget)
-
-	return "/ping [@" .. aTarget .. ",harm] Attack;[@" .. aTarget .. ",help] Assist;[@" .. aTarget .. ",exists] Ping";
-
 end
 
 

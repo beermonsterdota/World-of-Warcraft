@@ -154,18 +154,6 @@ Bartender4DB = {
 },
 },
 },
-["StanceBar"] = {
-["profiles"] = {
-["Зурантор - Пламегор"] = {
-["version"] = 3,
-["position"] = {
-["y"] = -15,
-["x"] = -82.49993896484375,
-["point"] = "CENTER",
-},
-},
-},
-},
 ["Vehicle"] = {
 ["profiles"] = {
 ["Зурантор - Пламегор"] = {
@@ -175,6 +163,18 @@ Bartender4DB = {
 ["point"] = "CENTER",
 },
 ["version"] = 3,
+},
+},
+},
+["StanceBar"] = {
+["profiles"] = {
+["Зурантор - Пламегор"] = {
+["version"] = 3,
+["position"] = {
+["y"] = -15,
+["x"] = -82.49993896484375,
+["point"] = "CENTER",
+},
 },
 },
 },

@@ -70,6 +70,8 @@ end
 
 --
 local function VUHDO_getFirstBuffCategoryVariant(aCategorySpec)
+	local tFirstVariant = nil;
+
 	for _, tFirstVariant in pairs(VUHDO_getPlayerClassBuffs()[aCategorySpec]) do
 		if VUHDO_BUFFS[tFirstVariant[1]] ~= nil then
 			return tFirstVariant;
@@ -158,8 +160,7 @@ end
 
 --
 local function VUHDO_addAllBuffPanels()
-
-	local tBuffPanel, tNewBuffPanel;
+	local tBuffPanel;
 	local tColPanels;
 
 	VUHDO_PANEL_OFFSET_Y = VUHDO_BUFF_PANEL_GAP_TOP;
@@ -178,11 +179,8 @@ local function VUHDO_addAllBuffPanels()
 				tIndex = tIndex + 1;
 				if (VUHDO_BUFF_SETTINGS[tCategName] or { })["enabled"] then
 
-					tNewBuffPanel = VUHDO_addBuffPanel(tCategName);
-
-					if tNewBuffPanel then
-						tBuffPanel = tNewBuffPanel;
-
+					tBuffPanel = VUHDO_addBuffPanel(tCategName);
+					if tBuffPanel then
 						tColPanels = tColPanels + 1;
 
 						VUHDO_PANEL_OFFSET_Y = VUHDO_PANEL_OFFSET_Y + VUHDO_IN_PANEL_HEIGHT;
@@ -212,7 +210,6 @@ local function VUHDO_addAllBuffPanels()
 	if tBuffPanel then
 		VUHDO_PANEL_WIDTH = VUHDO_PANEL_WIDTH + tBuffPanel:GetWidth();
 	end
-
 end
 
 
@@ -249,16 +246,13 @@ end
 
 --
 function VUHDO_reloadBuffPanel()
-
-	if InCombatLockdown() or sIsForceHide then
+	if InCombatLockdown() or sIsForceHide or (VUHDO_BUFF_SETTINGS["CONFIG"]["HIDE_OUT_OF_COMBAT"] and sIsOutOfCombat) then 
+		if VuhDoBuffWatchMainFrame then	VuhDoBuffWatchMainFrame:Hide(); end
 		return;
 	end
 
-	if not VUHDO_BUFF_SETTINGS["CONFIG"] or (VUHDO_BUFF_SETTINGS["CONFIG"]["HIDE_OUT_OF_COMBAT"] and sIsOutOfCombat) then
-		if VuhDoBuffWatchMainFrame then
-			VuhDoBuffWatchMainFrame:Hide();
-		end
-
+	if not VUHDO_BUFF_SETTINGS["CONFIG"] then
+		if VuhDoBuffWatchMainFrame then	VuhDoBuffWatchMainFrame:Hide(); end
 		return;
 	end
 
@@ -293,5 +287,4 @@ function VUHDO_reloadBuffPanel()
 	else
 		VuhDoBuffWatchMainFrame:Hide();
 	end
-
 end

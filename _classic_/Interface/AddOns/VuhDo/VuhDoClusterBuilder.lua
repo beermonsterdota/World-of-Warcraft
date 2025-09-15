@@ -8,12 +8,13 @@ local VUHDO_RAID = {};
 
 local sqrt = sqrt;
 local WorldMapFrame = WorldMapFrame;
-local GetMouseFocus = GetMouseFocus or VUHDO_getMouseFocus;
+local GetMouseFocus = GetMouseFocus;
 local pairs = pairs;
 local GetTime = GetTime;
-local GetSpellCooldown = GetSpellCooldown or VUHDO_getSpellCooldown;
+local GetSpellCooldown = GetSpellCooldown;
 local twipe = table.wipe;
 local tsort = table.sort;
+local VUHDO_setMapToCurrentZone;
 local VUHDO_tableUniqueAdd;
 local VUHDO_checkInteractDistance;
 
@@ -35,6 +36,7 @@ function VUHDO_clusterBuilderInitLocalOverrides()
 	VUHDO_CLUSTER_BASE_RAID = _G["VUHDO_CLUSTER_BASE_RAID"];
 	VUHDO_RAID = _G["VUHDO_RAID"];
 
+	VUHDO_setMapToCurrentZone = _G["VUHDO_setMapToCurrentZone"];
 	VUHDO_tableUniqueAdd = _G["VUHDO_tableUniqueAdd"];
 	VUHDO_checkInteractDistance = _G["VUHDO_checkInteractDistance"];
 end
@@ -194,8 +196,8 @@ end
 --
 local tUnit, tInfo;
 local tAnotherUnit, tAnotherInfo;
-local tDeltaX, tDeltaY;
-local tMaxX;
+local tX, tY, tDeltaX, tDeltaY;
+local tMaxX, tMaxY;
 local tMapId, tMap, tMapFileName, tDungeonLevels, tCurrLevel;
 local tCurrentZone;
 local tNumRaid;
@@ -363,7 +365,7 @@ end
 
 
 --
-local tDistance, tInfo;
+local tDistance, tNumber, tInfo;
 local tStart, tDuration;
 function VUHDO_getUnitsInRadialClusterWith(aUnit, aYardsPow, anArray, aCdSpell)
 	twipe(anArray);
@@ -404,6 +406,7 @@ local VUHDO_getUnitsInRadialClusterWith = VUHDO_getUnitsInRadialClusterWith;
 
 --
 local tWinnerUnit, tInfo, tWinnerMissLife;
+local tCurrMissLife;
 local function VUHDO_getMostDeficitUnitOutOf(anIncludeList, anExcludeList)
 	tWinnerUnit = nil;
 	tWinnerMissLife = -1;
@@ -425,6 +428,7 @@ end
 --
 local tNextJumps = { };
 local tExcludeList = { };
+local tNumJumps = 0;
 function VUHDO_getUnitsInChainClusterWith(aUnit, aYardsPow, anArray, aMaxTargets, aCdSpell)
 	twipe(anArray);
 	twipe(tExcludeList)
@@ -441,7 +445,7 @@ end
 
 
 --
-local tDeltas;
+local tDeltas, tDistance;
 function VUHDO_getDistanceBetween(aUnit, anotherUnit)
 	if VUHDO_CLUSTER_BLACKLIST[aUnit] or VUHDO_CLUSTER_BLACKLIST[anotherUnit] then	return nil; end
 
@@ -456,7 +460,7 @@ end
 
 
 --
-local tXCoord, tYCoord;
+local tDeltas, tXCoord, tYCoord;
 local function VUHDO_getRealPosition(aUnit)
 	if VUHDO_CLUSTER_BLACKLIST[aUnit] then return nil; end
 

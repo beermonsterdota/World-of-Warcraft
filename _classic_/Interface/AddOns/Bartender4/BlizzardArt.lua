@@ -120,13 +120,12 @@ function BlizzardArtMod:OnEnable()
 		self:RegisterEvent("NEUTRAL_FACTION_SELECT_RESULT", "ApplyConfig")
 	end
 
-	if MainMenuBar_UpdateKeyRing and (not IsKeyRingEnabled or IsKeyRingEnabled()) then
+	if MainMenuBar_UpdateKeyRing then
 		self:SecureHook("MainMenuBar_UpdateKeyRing", "ApplyConfig")
 	end
 end
 
 function BlizzardArtMod:ApplyConfig()
-	if InCombatLockdown() then return end
 	self.bar:ApplyConfig()
 end
 
@@ -283,7 +282,7 @@ function BlizzardArt:ApplyConfig()
 		self.rightCap:SetTexCoord(1.0, 0.0, 0.0, 1.0) -- Horizontal mirror
 		self.rightCap:ClearAllPoints()
 
-		local showKeyRing = KeyRingButton and (not IsKeyRingEnabled or IsKeyRingEnabled()) and GetCVarBool("showKeyring") or nil
+		local showKeyRing = KeyRingButton and GetCVarBool("showKeyring") or nil
 
 		if config.artSkin == "HUMAN" then -- Lions on the background of buttons
 			self.barTex0:SetTexture("Interface\\MainMenuBar\\UI-MainMenuBar-Human")

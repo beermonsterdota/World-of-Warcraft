@@ -4,7 +4,7 @@
 ## X-License: All Rights Reserved
 ## Category: Bags & Inventory
 
-## Version: 11.2.2
+## Version: 11.2.3
 ## Interface: 110200, 50500, 40402, 30404, 20504, 11507
 ## Dependencies: Scrap
 ## LoadOnDemand: 1

@@ -1,4 +1,5 @@
 -- BURST CACHE ---------------------------------------------------
+local VUHDO_CONFIG;
 local VUHDO_PANEL_SETUP;
 
 local VUHDO_isTableHeadersShowing;
@@ -11,9 +12,11 @@ local VUHDO_getNumHotSlots;
 local ceil = ceil;
 local floor = floor;
 local twipe = table.wipe;
+local strfind = strfind;
 local ipairs = ipairs;
 
 function VUHDO_sizeCalculatorInitLocalOverridesVer()
+	VUHDO_CONFIG = _G["VUHDO_CONFIG"];
 	VUHDO_PANEL_SETUP = _G["VUHDO_PANEL_SETUP"];
 
 	VUHDO_isTableHeadersShowing = _G["VUHDO_isTableHeadersShowing"];
@@ -282,20 +285,17 @@ end
 local tButtonX;
 local tButtonY;
 local tHots;
-local tHotslots;
 local tScaling;
 local tGridRow;
 local tNumBars;
 local tCurrHeight;
 local tRowHeight;
 function VUHDO_getHealButtonPosVer(aPlaceNum, aRowNo, aPanelNum)
-
 	tButtonX = VUHDO_getColumnPos(aPlaceNum, aPanelNum, aRowNo);
 	tButtonY = VUHDO_getRowPos(aPlaceNum, aPanelNum) + VUHDO_getRowOffset(aRowNo, aPanelNum);
 
 	if not VUHDO_isConfigPanelShowing() then
-		tHots = VUHDO_PANEL_SETUP[aPanelNum]["HOTS"];
-
+		tHots = VUHDO_PANEL_SETUP["HOTS"];
 		if tHots["radioValue"] == 1 then
 			tHotslots = VUHDO_getNumHotSlots(aPanelNum);
 			tButtonX = tButtonX + VUHDO_PANEL_SETUP[aPanelNum]["SCALING"]["barHeight"] * VUHDO_PANEL_SETUP[aPanelNum]["HOTS"]["size"] * 0.01 * tHotslots;
@@ -324,9 +324,7 @@ function VUHDO_getHealButtonPosVer(aPlaceNum, aRowNo, aPanelNum)
 			end
 		end
 	end
-
 	return tButtonX, tButtonY;
-
 end
 
 
@@ -370,6 +368,7 @@ local tHeight;
 local tLastPlace;
 local tLastHeaderY;
 local tLastRowHeight;
+local tHeight;
 function VUHDO_getHealPanelHeightVer(aPanelNum)
 	tBarScaling = VUHDO_PANEL_SETUP[aPanelNum]["SCALING"];
 	if VUHDO_isLooseOrderingShowing(aPanelNum) then

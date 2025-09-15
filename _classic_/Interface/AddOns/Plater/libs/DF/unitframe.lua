@@ -14,13 +14,7 @@ local unpack = table.unpack or unpack --lua local
 local type = type --lua local
 local floor = math.floor --lua local
 local loadstring = loadstring --lua local
-local G_CreateFrame = _G.CreateFrame
-local CreateFrame = function (frameType , name, parent, template, id)
-	local frame = G_CreateFrame(frameType , name, parent, template, id)
-	detailsFramework:Mixin(frame, detailsFramework.FrameFunctions)
-	frame:SetClipsChildren(false)
-	return frame
-end
+local CreateFrame = CreateFrame
 
 local UnitHealth = UnitHealth
 local UnitHealthMax = UnitHealthMax
@@ -171,13 +165,13 @@ local cleanfunction = function() end
 		{"UNIT_MAXHEALTH", true},
 		{(IS_WOW_PROJECT_NOT_MAINLINE) and "UNIT_HEALTH_FREQUENT", true}, -- this one is classic-only...
 		{"UNIT_HEAL_PREDICTION", true},
-		{(UnitGetTotalAbsorbs) and "UNIT_ABSORB_AMOUNT_CHANGED", true},
-		{(UnitGetTotalHealAbsorbs) and "UNIT_HEAL_ABSORB_AMOUNT_CHANGED", true},
+		{(IS_WOW_PROJECT_MAINLINE) and "UNIT_ABSORB_AMOUNT_CHANGED", true},
+		{(IS_WOW_PROJECT_MAINLINE) and "UNIT_HEAL_ABSORB_AMOUNT_CHANGED", true},
 	}
 
 	--setup the castbar to be used by another unit
 	healthBarMetaFunctions.SetUnit = function(self, unit, displayedUnit)
-		if (self.unit ~= unit or self.displayedUnit ~= displayedUnit or unit == nil) then --1x Details/Libs/DF/unitframe.lua:180: script ran too long
+		if (self.unit ~= unit or self.displayedUnit ~= displayedUnit or unit == nil) then
 			self.unit = unit
 			self.displayedUnit = displayedUnit or unit
 
@@ -327,9 +321,9 @@ local cleanfunction = function() end
 
 		if (self.Settings.ShowHealingPrediction) then
 			--incoming heal on the unit from all sources
-			local unitHealIncoming = UnitGetIncomingHeals and self.displayedUnit and UnitGetIncomingHeals(self.displayedUnit) or 0
+			local unitHealIncoming = self.displayedUnit and UnitGetIncomingHeals(self.displayedUnit) or 0
 			--heal absorbs
-			local unitHealAbsorb = UnitGetTotalHealAbsorbs and self.displayedUnit and UnitGetTotalHealAbsorbs(self.displayedUnit) or 0
+			local unitHealAbsorb = IS_WOW_PROJECT_MAINLINE and self.displayedUnit and UnitGetTotalHealAbsorbs(self.displayedUnit) or 0
 
 			if (unitHealIncoming > 0) then
 				--calculate what is the percent of health incoming based on the max health the player has
@@ -353,7 +347,7 @@ local cleanfunction = function() end
 			end
 		end
 
-		if (self.Settings.ShowShields and UnitGetTotalAbsorbs) then
+		if (self.Settings.ShowShields and IS_WOW_PROJECT_MAINLINE) then
 			--damage absorbs
 			local unitDamageAbsorb = self.displayedUnit and UnitGetTotalAbsorbs (self.displayedUnit) or 0
 
@@ -938,7 +932,7 @@ detailsFramework.CastFrameFunctions = {
 		FadeOutTime = 0.5, --amount of time in seconds to go from 100% to zero alpha when the cast finishes
 		CanLazyTick = true, --if true, it'll execute the lazy tick function, it ticks in a much slower pace comparece with the regular tick
 		LazyUpdateCooldown = 0.2, --amount of time to wait for the next lazy update, this updates non critical things like the cast timer
-		DontUpdateAlpha = false,
+
 		ShowEmpoweredDuration = true, --full hold time for empowered spells
 
 		FillOnInterrupt = true,
@@ -1512,9 +1506,7 @@ detailsFramework.CastFrameFunctions = {
 
 			self:SetMinMaxValues(0, self.maxValue)
 			self:SetValue(self.value)
-			if (not self.Settings.DontUpdateAlpha) then
-				self:SetAlpha(1)
-			end
+			self:SetAlpha(1)
 			self.Icon:SetTexture(texture)
 			self.Icon:Show()
 			self.Text:SetText(text or name)
@@ -1526,9 +1518,7 @@ detailsFramework.CastFrameFunctions = {
 			self.flashTexture:Hide()
 			self:Animation_StopAllAnimations()
 
-			if (not self.Settings.DontUpdateAlpha) then
-				self:SetAlpha(1)
-			end
+			self:SetAlpha(1)
 
 			--set the statusbar color
 			self:UpdateCastColor()
@@ -1673,9 +1663,7 @@ detailsFramework.CastFrameFunctions = {
 			self:SetMinMaxValues(0, self.maxValue)
 			self:SetValue(self.value)
 
-			if (not self.Settings.DontUpdateAlpha) then
-				self:SetAlpha(1)
-			end
+			self:SetAlpha(1)
 			self.Icon:SetTexture(texture)
 			self.Icon:Show()
 			self.Text:SetText(text)
@@ -1687,9 +1675,7 @@ detailsFramework.CastFrameFunctions = {
 			self.flashTexture:Hide()
 			self:Animation_StopAllAnimations()
 
-			if (not self.Settings.DontUpdateAlpha) then
-				self:SetAlpha(1)
-			end
+			self:SetAlpha(1)
 
 			--set the statusbar color
 			self:UpdateCastColor()

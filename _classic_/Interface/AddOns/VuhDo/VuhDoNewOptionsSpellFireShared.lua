@@ -1,43 +1,13 @@
 --
-local tLayoutPanelHots;
-function VUHDO_activateLayoutLoadHotsForPanel(aName, aPanelNum)
-
-	if not aName or not aPanelNum or not VUHDO_SPELL_LAYOUTS or not VUHDO_SPELL_LAYOUTS[aName] or
-		not VUHDO_SPELL_LAYOUTS[aName]["HOTS"] or not VUHDO_SPELL_CONFIG or not VUHDO_SPELL_CONFIG["IS_LOAD_HOTS"] then
-		return;
-	end
-
-	-- support for pre per-panel HoTs
-	if type(VUHDO_SPELL_LAYOUTS[aName]["HOTS"]) == "table" then
-		tLayoutPanelHots = VUHDO_decompressOrCopy(VUHDO_SPELL_LAYOUTS[aName]["HOTS"][aPanelNum]);
-
-		if VUHDO_SPELL_CONFIG["IS_LOAD_HOTS_ONLY_SLOTS"] then
-			VUHDO_PANEL_SETUP[aPanelNum]["HOTS"]["SLOTS"] = tLayoutPanelHots["SLOTS"];
-
-			for tSlotNum, tSlotConfig in pairs(tLayoutPanelHots["SLOTCFG"]) do
-				VUHDO_PANEL_SETUP[aPanelNum]["HOTS"]["SLOTCFG"][tSlotNum]["mine"] = tSlotConfig["mine"];
-			end
-		else
-			VUHDO_PANEL_SETUP[aPanelNum]["HOTS"] = tLayoutPanelHots;
-		end
-	else
-		VUHDO_PANEL_SETUP[aPanelNum]["HOTS"] = VUHDO_decompressOrCopy(VUHDO_SPELL_LAYOUTS[aName]["HOTS"]);
-	end
-
-end
-
-
-
---
-function VUHDO_activateLayoutNoInit(aName)
-
+function VUHDO_activateLayout(aName)
+	local tCnt;
 	VUHDO_SPELL_ASSIGNMENTS = VUHDO_decompressOrCopy(VUHDO_SPELL_LAYOUTS[aName]["MOUSE"]);
 	VUHDO_HOSTILE_SPELL_ASSIGNMENTS = VUHDO_decompressOrCopy(VUHDO_SPELL_LAYOUTS[aName]["HOSTILE_MOUSE"]);
 
-	for tPanelNum = 1, VUHDO_MAX_PANELS do
-		VUHDO_activateLayoutLoadHotsForPanel(aName, tPanelNum);
+	if VUHDO_SPELL_LAYOUTS[aName]["HOTS"]	and VUHDO_SPELL_CONFIG["IS_LOAD_HOTS"]
+		and not VUHDO_SPELL_LAYOUTS[aName]["HOTS"][1] then
+		VUHDO_PANEL_SETUP["HOTS"] = VUHDO_decompressOrCopy(VUHDO_SPELL_LAYOUTS[aName]["HOTS"]);
 	end
-
 	VUHDO_SPELLS_KEYBOARD = VUHDO_decompressOrCopy(VUHDO_SPELL_LAYOUTS[aName]["KEYS"]);
 
 	if VUHDO_SPELL_LAYOUTS[aName]["FIRE"] then
@@ -55,15 +25,6 @@ function VUHDO_activateLayoutNoInit(aName)
 	VUHDO_SPEC_LAYOUTS["selected"] = aName;
 	VUHDO_Msg("Key layout \"" .. aName .. "\" loaded.");
 
-end
-
-
-
---
-function VUHDO_activateLayout(aName)
-
-	VUHDO_activateLayoutNoInit(aName);
-
 	VUHDO_loadVariables();
 	VUHDO_initAllBurstCaches();
 	VUHDO_initFromSpellbook();
@@ -72,5 +33,5 @@ function VUHDO_activateLayout(aName)
 	VUHDO_initDebuffs();
 	VUHDO_initKeyboardMacros();
 	VUHDO_timeReloadUI(1);
-
 end
+

@@ -18,22 +18,6 @@
 	<Script file="VuhDoActionEventHandler.lua" />
 
 
-	<Frame name="VuhDoHealButtonSecureHeaderFrame" hidden="true" inherits="SecureHandlerBaseTemplate,SecureHandlerAttributeTemplate">
-		<Scripts>
-			<OnLoad inherit="append">
-				self:SetAttribute("_onattributechanged", [[
-					if name == "vuhdo-unit-exists" and value == "false" and sHealButton and
-						(not sHealButton:IsUnderMouse() or not sHealButton:IsVisible()) then
-						sHealButton:ClearBindings();
-						sHealButton = nil;
-					end
-				]]);
-
-				RegisterAttributeDriver(self, "vuhdo-unit-exists", "[@mouseover, exists] true; false");
-			</OnLoad>
-		</Scripts>
-	</Frame>
-
 	<StatusBar name="VuhDoDummyStatusBar" hidden="true" inherits="VuhDoStatusBar"> </StatusBar>
 	<StatusBar name="VuhDoGcdStatusBar" frameLevel="220" hidden="true" inherits="VuhDoStatusBar">	</StatusBar>
 
@@ -82,7 +66,7 @@
 		</Layers>
 	</Frame>
 
-	<Button name="VuhDoDebuffIconTemplate" virtual="true" inherits="SecureUnitButtonTemplate,SecureHandlerEnterLeaveTemplate,SecureHandlerShowHideTemplate">
+	<Button name="VuhDoDebuffIconTemplate" virtual="true" inherits="SecureUnitButtonTemplate,SecureHandlerEnterLeaveTemplate,SecureHandlerShowHideTemplate,SecureHandlerMouseUpDownTemplate">
 		<Frames>
 			<Frame name="$parentB" enableMouse="false">
 				<Layers>
@@ -154,7 +138,7 @@
 		</KeyValues>
 	</Frame>
 
-	<Button name="VuhDoButtonSecureTargetTemplate" virtual="true" inherits="SecureUnitButtonTemplate,SecureHandlerEnterLeaveTemplate,SecureHandlerShowHideTemplate">
+	<Button name="VuhDoButtonSecureTargetTemplate" virtual="true" inherits="SecureUnitButtonTemplate,SecureHandlerEnterLeaveTemplate,SecureHandlerShowHideTemplate,SecureHandlerMouseUpDownTemplate">
 		<Size>
 			<AbsDimension x="95" y="18" />
 		</Size>
@@ -262,7 +246,7 @@
 	</Button>
 
 
-	<Button name="VuhDoButtonSecureTemplate" virtual="true" inherits="SecureUnitButtonTemplate,SecureHandlerEnterLeaveTemplate,SecureHandlerShowHideTemplate">
+	<Button name="VuhDoButtonSecureTemplate" virtual="true" inherits="SecureUnitButtonTemplate,SecureHandlerEnterLeaveTemplate,SecureHandlerShowHideTemplate,SecureHandlerMouseUpDownTemplate">
 		<Size>
 			<AbsDimension x="95" y="18" />
 		</Size>

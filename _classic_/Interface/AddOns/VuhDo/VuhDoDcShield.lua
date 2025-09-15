@@ -20,7 +20,6 @@ end
 
 
 
-local VUHDO_MAX_PER_CHAR_MACROS = 30;
 local VUHDO_MACRO_NAME_GROUPS = "VuhDoDCShieldData";
 local VUHDO_MACRO_NAME_NAMES = "VuhDoDCShieldNames";
 local VUHDO_EMPTY_SNIPPET = "[x]";
@@ -132,7 +131,7 @@ function VUHDO_mirrorToMacro()
 
 	if (tIndexGroups or 0) == 0 then
 		_, tNumMacros = GetNumMacros();
-		if (tNumMacros or 0) > (VUHDO_MAX_PER_CHAR_MACROS - 1) then
+		if (tNumMacros or 0) > 17 then
 			VUHDO_Msg(VUHDO_I18N_DC_SHIELD_NO_MACROS);
 			VUHDO_IS_DC_TEMP_DISABLE = true;
 		else
@@ -144,7 +143,7 @@ function VUHDO_mirrorToMacro()
 
 	if (tIndexNames or 0) == 0 then
 		_, tNumMacros = GetNumMacros();
-		if (tNumMacros or 0) > (VUHDO_MAX_PER_CHAR_MACROS - 1) then
+		if (tNumMacros or 0) > 17 then
 			VUHDO_Msg(VUHDO_I18N_DC_SHIELD_NO_MACROS);
 			VUHDO_IS_DC_TEMP_DISABLE = true;
 		else
@@ -249,7 +248,7 @@ end
 
 
 --
-local VUHDO_SAFE_PARTY = { "player", "party1", "party2", "party3", "party4" };
+local VUHDO_SAFE_PARTY = { "player", "party1",	"party2",	"party3",	"party4" };
 
 
 

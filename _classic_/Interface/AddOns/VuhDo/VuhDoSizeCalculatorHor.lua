@@ -1,4 +1,5 @@
 -- BURST CACHE ---------------------------------------------------
+local VUHDO_CONFIG;
 local VUHDO_PANEL_SETUP;
 
 local VUHDO_isTableHeadersShowing;
@@ -10,9 +11,11 @@ local VUHDO_getNumHotSlots;
 
 local ceil = ceil;
 local floor = floor;
+local strfind = strfind;
 local ipairs = ipairs;
 
 function VUHDO_sizeCalculatorInitLocalOverridesHor()
+	VUHDO_CONFIG = _G["VUHDO_CONFIG"];
 	VUHDO_PANEL_SETUP = _G["VUHDO_PANEL_SETUP"];
 
 	VUHDO_isTableHeadersShowing = _G["VUHDO_isTableHeadersShowing"];
@@ -274,7 +277,6 @@ end
 local tButtonX;
 local tButtonY;
 local tHots;
-local tHotslots;
 local tScaling;
 local tGridColumn;
 local tNumBars;
@@ -289,7 +291,7 @@ function VUHDO_getHealButtonPosHor(aPlaceNum, aRowNo, aPanelNum)
 	end
 
 
-	tHots = VUHDO_PANEL_SETUP[aPanelNum]["HOTS"];
+	tHots = VUHDO_PANEL_SETUP["HOTS"];
 	if tHots["radioValue"] == 1 then
 		tHotslots = VUHDO_getNumHotSlots(aPanelNum);
 		tButtonX = tButtonX + VUHDO_PANEL_SETUP[aPanelNum]["SCALING"]["barHeight"] * VUHDO_PANEL_SETUP[aPanelNum]["HOTS"]["size"] * 0.01 * tHotslots;

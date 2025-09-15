@@ -3,6 +3,7 @@ VUHDO_PANEL_DYN_MODELS = {};
 
 
 local tinsert = tinsert;
+local tremove = tremove;
 local twipe = table.wipe;
 local ceil = ceil;
 local pairs = pairs;
@@ -68,6 +69,7 @@ end
 
 
 --
+local tIsShowModel;
 local tIsOmitEmpty;
 local tMaxRows, tNumModels, tRepeatModels;
 function VUHDO_initDynamicPanelModels()

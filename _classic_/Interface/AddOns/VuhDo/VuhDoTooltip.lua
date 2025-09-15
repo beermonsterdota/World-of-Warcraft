@@ -297,11 +297,11 @@ function VUHDO_updateTooltip()
 
 	-- Distance
 	VUHDO_addTooltipLineLeft(VUHDO_I18N_TT_DISTANCE);
-	VUHDO_addTooltipLineRight(VUHDO_getDistanceText(tUnit), VUHDO_VALUE_COLOR, 8);
+	VUHDO_addTooltipLineRight(VUHDO_getDistanceText(tUnit), VUHDO_VALUE_COLOR);
 
 	-- Position
 	VUHDO_addTooltipLineLeft(VUHDO_I18N_TT_POSITION);
-	VUHDO_addTooltipLineRight(tInfo["zone"] or GetRealZoneText() or " ", VUHDO_VALUE_COLOR, 8);
+	VUHDO_addTooltipLineRight(tInfo["zone"] or GetRealZoneText() or " ", VUHDO_VALUE_COLOR);
 
 	tLeftText =
 		UnitIsGhost(tUnit) and VUHDO_I18N_TT_GHOST
@@ -415,7 +415,7 @@ function VuhDoTooltipOnMouseUp(aTooltip)
 
 	local tX, tY, tRelative, tOrientation;
 	local tPosition = VUHDO_PANEL_SETUP[DESIGN_MISC_PANEL_NUM]["TOOLTIP"];
-	tOrientation, _, tRelative, tX, tY = aTooltip:GetPoint();
+	local tOrientation, _, tRelative, tX, tY = aTooltip:GetPoint();
 
 	tPosition["x"], tPosition["y"], tPosition["point"], tPosition["relativePoint"]
 		= tX, tY, tOrientation, tRelative;

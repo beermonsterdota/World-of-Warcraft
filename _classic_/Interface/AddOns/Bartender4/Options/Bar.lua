@@ -8,7 +8,7 @@ local Bar = Bartender4.Bar.prototype
 
 local tonumber, tostring, assert, select, floor = tonumber, tostring, assert, select, floor
 
--- GLOBALS: GetNumShapeshiftForms, GetShapeshiftFormInfo
+-- GLOBALS: GetNumShapeshiftForms, GetShapeshiftFormInfo, GetSpellInfo
 
 --[[===================================================================================
 	Bar Options
@@ -163,7 +163,7 @@ local function getStanceTable()
 
 	local num = GetNumShapeshiftForms()
 	for i = 1, num do
-		tbl[i] = Bartender4.Compat.GetSpellName(select(4, GetShapeshiftFormInfo(i)))
+		tbl[i] = GetSpellInfo(select(4, GetShapeshiftFormInfo(i)))
 	end
 	return tbl
 end

@@ -1,22 +1,10 @@
 local _;
 VUHDO_GLOBAL_ICONS = { };
 
-local VUHDO_GI_SCAN_MAX = 400001;
-VUHDO_GI_SCAN_IDX = VUHDO_GI_SCAN_MAX;
+local GI_SCAN_MAX = 200001;
+VUHDO_GI_SCAN_IDX = GI_SCAN_MAX;
 
-local VUHDO_GI_SCAN_SKIPS = {
-	[324269] = 301101,
-	[281624] = 262591,
-	[261127] = 243806,
-	[243805] = 219004,
-	[219002] = 186403,
-	[186402] = 158263,
-	[158262] = 121820,
-};
-
-local GetSpellInfo = GetSpellInfo or VUHDO_getSpellInfo;
-local GetSpellName = C_Spell.GetSpellName or VUHDO_getSpellName;
-local GetSpellBookItemTexture = GetSpellBookItemTexture or VUHDO_getSpellBookItemTexture;
+local GetSpellInfo = GetSpellInfo;
 local pairs = pairs;
 
 
@@ -119,7 +107,7 @@ end
 local tSpellNameById;
 function VUHDO_resolveSpellId(aSpellName)
 	if tonumber(aSpellName or "x") then
-		tSpellNameById = GetSpellName(tonumber(aSpellName));
+		tSpellNameById = GetSpellInfo(tonumber(aSpellName));
 		if tSpellNameById then
 			return tSpellNameById;
 		end
@@ -221,32 +209,20 @@ end
 --
 local tStep = 50;
 local tRef;
-local tName;
-local tIcon;
+local tName, _, tIcon;
 local function VUHDO_scanNextGlobalIcons()
-
 	if not VUHDO_tableContains(VUHDO_GLOBAL_ICONS, "") then
 		return;
 	end
-
 	tRef = VUHDO_GLOBAL_ICONS;
-
-	for tCnt = VUHDO_GI_SCAN_IDX + tStep, VUHDO_GI_SCAN_IDX, -1 do
+	for tCnt = VUHDO_GI_SCAN_IDX + tStep , VUHDO_GI_SCAN_IDX, -1 do
 		tName, _, tIcon = GetSpellInfo(tCnt);
-
-		if tRef[tName] == "" then
-			tRef[tName] = tIcon;
-		end
-
-		tCnt = VUHDO_GI_SCAN_SKIPS[tCnt] or tCnt;
+		if tRef[tName] == "" then tRef[tName] = tIcon; end
 	end
 
 	VUHDO_GI_SCAN_IDX = VUHDO_GI_SCAN_IDX - tStep;
 
-	if VUHDO_GI_SCAN_IDX < 1 then
-		VUHDO_GI_SCAN_IDX = VUHDO_GI_SCAN_MAX;
-	end
-
+	if VUHDO_GI_SCAN_IDX < 1 then VUHDO_GI_SCAN_IDX = GI_SCAN_MAX; end
 end
 
 

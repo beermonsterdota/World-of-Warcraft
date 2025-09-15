@@ -6,12 +6,7 @@ if (not detailsFramework or not DetailsFrameworkCanLoad) then
 end
 
 local unpack = unpack
-local G_CreateFrame = _G.CreateFrame
-local CreateFrame = function (frameType , name, parent, template, id)
-	local frame = G_CreateFrame(frameType , name, parent, template, id)
-	detailsFramework:Mixin(frame, detailsFramework.FrameFunctions)
-	return frame
-end
+local CreateFrame = CreateFrame
 local PixelUtil = PixelUtil
 local GetTime = GetTime
 local GetSpellInfo = GetSpellInfo or function(spellID) if not spellID then return nil end local si = C_Spell.GetSpellInfo(spellID) if si then return si.name, nil, si.iconID, si.castTime, si.minRange, si.maxRange, si.spellID, si.originalIconID end end
@@ -53,7 +48,7 @@ detailsFramework.SideIsCorner = {
 	[17] = true,
 }
 
----@class df_icon : button
+---@class df_icon : frame
 ---@field spellId number
 ---@field startTime number
 ---@field duration number
@@ -137,7 +132,7 @@ detailsFramework.IconMixin = {
 	---@return df_icon
     CreateIcon = function(self, iconName)
 		---@type df_icon
-        local iconFrame = CreateFrame("button", iconName, self, "BackdropTemplate")
+        local iconFrame = CreateFrame("frame", iconName, self, "BackdropTemplate")
 
 		---@type texture
         iconFrame.Texture = iconFrame:CreateTexture(nil, "artwork")
@@ -282,19 +277,17 @@ detailsFramework.IconMixin = {
 			--iconFrame.Border:SetColorTexture(0, 0, 0, 1)
 
 			if (startTime) then
-				local now = GetTime()
-
-				iconFrame.timeRemaining = (startTime + duration - now) / (modRate or 1)
-				iconFrame.expirationTime = startTime + duration
-				
-				if iconFrame.timeRemaining > 0 then
-					CooldownFrame_Set(iconFrame.Cooldown, startTime, duration, true, true, modRate)
-				end
+				CooldownFrame_Set(iconFrame.Cooldown, startTime, duration, true, true, modRate)
 
 				if (self.options.show_text) then
 					iconFrame.CountdownText:Show()
 
-					local formattedTime = (iconFrame.timeRemaining > 0) and (self.options.decimal_timer and iconFrame.parentIconRow.FormatCooldownTimeDecimal(iconFrame.timeRemaining) or iconFrame.parentIconRow.FormatCooldownTime(iconFrame.timeRemaining)) or ""
+					local now = GetTime()
+
+					iconFrame.timeRemaining = (startTime + duration - now) / modRate
+					iconFrame.expirationTime = startTime + duration
+
+					local formattedTime = (iconFrame.timeRemaining > 0) and self.options.decimal_timer and iconFrame.parentIconRow.FormatCooldownTimeDecimal(iconFrame.timeRemaining) or iconFrame.parentIconRow.FormatCooldownTime(iconFrame.timeRemaining) or ""
 					iconFrame.CountdownText:SetText(formattedTime)
 
 					iconFrame.CountdownText:SetPoint(self.options.text_anchor or "center", iconFrame, self.options.text_rel_anchor or "center", self.options.text_x_offset or 0, self.options.text_y_offset or 0)

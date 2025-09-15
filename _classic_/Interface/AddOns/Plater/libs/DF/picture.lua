@@ -243,9 +243,8 @@ detailsFramework:Mixin(ImageMetaFunctions, detailsFramework.ScriptHookMixin)
 ------------------------------------------------------------------------------------------------------------
 --object constructor
 
-	---@class df_image : df_setpoint, texture, df_widgets
+	---@class df_image : texture, df_widgets
 	---@field SetGradient fun(gradientType: "vertical"|"horizontal", fromColor: table, toColor: table)
-	---@field SetPoint fun(self: table, anchorName1: anchor_name, anchorObject: table?, anchorName2: string?, xOffset: number?, yOffset: number?)
 	---@field image texture
 
 	---@class df_gradienttable : table
@@ -379,8 +378,7 @@ detailsFramework:Mixin(ImageMetaFunctions, detailsFramework.ScriptHookMixin)
 						end
 
 						ImageObject.image:SetColorTexture(1, 1, 1, 1)
-
-                        ImageObject.image:SetGradientAlpha(gradientTable.gradient, fromR, fromG, fromB, fromA, toR, toG, toB, toA)
+						ImageObject.image:SetGradientAlpha(gradientTable.gradient, fromR, fromG, fromB, fromA, toR, toG, toB, toA)
 					end
 				else
 					local r, g, b, a = detailsFramework:ParseColors(texture)
@@ -426,14 +424,14 @@ detailsFramework:Mixin(ImageMetaFunctions, detailsFramework.ScriptHookMixin)
 		return ImageObject
 	end
 
-function detailsFramework:CreateHighlightTexture(parent, parentKey, alpha, name, texture)
+function detailsFramework:CreateHighlightTexture(parent, parentKey, alpha, name)
 	if (not name) then
 		name = "DetailsFrameworkPictureNumber" .. detailsFramework.PictureNameCounter
 		detailsFramework.PictureNameCounter = detailsFramework.PictureNameCounter + 1
 	end
 
 	local highlightTexture = parent:CreateTexture(name, "highlight")
-	highlightTexture:SetTexture(texture or [[Interface\Buttons\WHITE8X8]])
+	highlightTexture:SetTexture([[Interface\Buttons\WHITE8X8]])
 	highlightTexture:SetAlpha(alpha or 0.1)
 	highlightTexture:SetBlendMode("ADD")
 	highlightTexture:SetAllPoints()
@@ -718,7 +716,7 @@ function detailsFramework:SetMask(texture, maskTexture)
 	if (not texture.MaskTexture) then
 		local parent = texture:GetParent()
 		local maskTextureObject = parent:CreateMaskTexture(nil, "artwork")
-		maskTextureObject:SetAllPoints(texture.widget or texture)
+		maskTextureObject:SetAllPoints(texture)
 		texture:AddMaskTexture(maskTextureObject)
 		texture.MaskTexture = maskTextureObject
 	end
