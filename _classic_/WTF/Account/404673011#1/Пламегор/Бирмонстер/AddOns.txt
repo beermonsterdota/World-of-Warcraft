@@ -1,0 +1,6 @@
+Blizzard_CompactRaidFrames: enabled
+BigWigs_Core: enabled
+BigWigs_Plugins: enabled
+Blizzard_CombatText: enabled
+BigWigs_Options: enabled
+LittleWigs_MistsOfPandaria: enabled

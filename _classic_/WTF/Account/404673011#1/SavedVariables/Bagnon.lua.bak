@@ -1,0 +1,113 @@
+
+Bagnon_Sets = {
+["latest"] = {
+["id"] = "11.2.8",
+["cooldown"] = 1758280965,
+["who"] = "Квикк",
+},
+["global"] = {
+["inventory"] = {
+["y"] = 104.1480712890625,
+["rules"] = {
+["sidebar"] = {
+"all",
+"normal",
+"trade",
+},
+},
+["point"] = "BOTTOMRIGHT",
+["borderColor"] = {
+},
+["color"] = {
+},
+["brokerObject"] = "BagnonLauncher",
+["x"] = 0,
+},
+["vault"] = {
+["color"] = {
+},
+["rules"] = {
+["sidebar"] = {
+"all",
+"tradegoods",
+"consumable",
+"armor",
+"questitem",
+"miscellaneous",
+},
+},
+["borderColor"] = {
+},
+},
+["guild"] = {
+["color"] = {
+},
+["rules"] = {
+["sidebar"] = {
+"all",
+"tradegoods",
+"consumable",
+"armor",
+"questitem",
+"miscellaneous",
+},
+},
+["borderColor"] = {
+},
+},
+["bank"] = {
+["color"] = {
+},
+["rules"] = {
+["sidebar"] = {
+"all",
+"tradegoods",
+"consumable",
+"armor",
+"questitem",
+"miscellaneous",
+},
+},
+["borderColor"] = {
+},
+},
+},
+["customRules"] = {
+},
+["color"] = {
+["quiver"] = {
+},
+["account"] = {
+},
+["enchant"] = {
+},
+["soul"] = {
+},
+["fridge"] = {
+},
+["mine"] = {
+},
+["engineer"] = {
+},
+["leather"] = {
+},
+["reagent"] = {
+},
+["gem"] = {
+},
+["key"] = {
+},
+["tackle"] = {
+},
+["inscribe"] = {
+},
+["normal"] = {
+},
+["herb"] = {
+},
+},
+["display"] = {
+},
+["profiles"] = {
+},
+}
