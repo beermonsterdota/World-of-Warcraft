@@ -56,8 +56,7 @@ Bagnon_Sets = {
 },
 },
 ["bank"] = {
-["color"] = {
-},
+["y"] = 357.6666564941406,
 ["rules"] = {
 ["sidebar"] = {
 "all",
@@ -68,8 +67,12 @@ Bagnon_Sets = {
 "miscellaneous",
 },
 },
+["point"] = "BOTTOMLEFT",
 ["borderColor"] = {
 },
+["color"] = {
+},
+["x"] = 95.00000762939453,
 },
 },
 ["customRules"] = {
@@ -83,15 +86,15 @@ Bagnon_Sets = {
 },
 ["soul"] = {
 },
-["fridge"] = {
+["reagent"] = {
 },
 ["mine"] = {
 },
 ["engineer"] = {
 },
-["leather"] = {
+["inscribe"] = {
 },
-["reagent"] = {
+["fridge"] = {
 },
 ["gem"] = {
 },
@@ -99,7 +102,7 @@ Bagnon_Sets = {
 },
 ["tackle"] = {
 },
-["inscribe"] = {
+["leather"] = {
 },
 ["normal"] = {
 },
