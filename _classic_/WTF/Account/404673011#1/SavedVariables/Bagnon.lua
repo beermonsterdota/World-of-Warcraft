@@ -1,13 +1,19 @@
 
 Bagnon_Sets = {
 ["latest"] = {
-["id"] = "11.2.8",
+["id"] = "11.2.9",
 ["cooldown"] = 1758280965,
-["who"] = "Квикк",
+["who"] = "Крогбой-Пламегор",
 },
 ["global"] = {
 ["inventory"] = {
 ["y"] = 104.1480712890625,
+["brokerObject"] = "BagnonLauncher",
+["point"] = "BOTTOMRIGHT",
+["borderColor"] = {
+},
+["color"] = {
+},
 ["rules"] = {
 ["sidebar"] = {
 "all",
@@ -15,12 +21,6 @@ Bagnon_Sets = {
 "trade",
 },
 },
-["point"] = "BOTTOMRIGHT",
-["borderColor"] = {
-},
-["color"] = {
-},
-["brokerObject"] = "BagnonLauncher",
 ["x"] = 0,
 },
 ["vault"] = {
@@ -80,33 +80,33 @@ Bagnon_Sets = {
 ["color"] = {
 ["quiver"] = {
 },
-["account"] = {
+["herb"] = {
 },
-["enchant"] = {
+["normal"] = {
 },
 ["soul"] = {
 },
-["fridge"] = {
+["inscribe"] = {
 },
 ["mine"] = {
 },
-["engineer"] = {
+["gem"] = {
 },
 ["leather"] = {
 },
-["reagent"] = {
+["fridge"] = {
 },
-["gem"] = {
+["engineer"] = {
 },
 ["key"] = {
 },
 ["tackle"] = {
 },
-["inscribe"] = {
+["reagent"] = {
 },
-["normal"] = {
+["enchant"] = {
 },
-["herb"] = {
+["account"] = {
 },
 },
 ["display"] = {

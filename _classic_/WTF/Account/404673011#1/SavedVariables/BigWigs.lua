@@ -2,13 +2,13 @@
 BigWigs3DB = {
 ["namespaces"] = {
 },
-["profileKeys"] = {
-["Зурантор - Пламегор"] = "Default",
-},
 ["global"] = {
 ["watchedMovies"] = {
 [-323] = true,
 },
+},
+["profileKeys"] = {
+["Зурантор - Пламегор"] = "Default",
 },
 ["profiles"] = {
 ["Default"] = {
