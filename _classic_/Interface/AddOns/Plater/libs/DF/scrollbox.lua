@@ -131,6 +131,7 @@ detailsFramework.ScrollBoxFunctions = {
 	---@return frame line The line object at the specified index.
 	GetLine = function(self, lineIndex)
 		local line = self.Frames[lineIndex]
+		--print(self, line, line and line:GetName(), lineIndex, self:GetName())
 		if (line) then
 			line._InUse = true
 		end
@@ -348,6 +349,7 @@ detailsFramework.ScrollBoxFunctions = {
 ---@field auto_amount boolean?
 ---@field no_scroll boolean?
 ---@field vertical_padding number?
+---@field horizontal_padding number?
 ---@field no_backdrop boolean?
 
 ---@type df_gridscrollbox_options
@@ -359,6 +361,7 @@ local grid_scrollbox_options = {
     columns_per_line = 4,
 	no_scroll = false,
     vertical_padding = 1,
+    horizontal_padding = 1,
     no_backdrop = false,
 }
 
@@ -394,6 +397,7 @@ function detailsFramework:CreateGridScrollBox(parent, name, refreshFunc, data, c
 	local noScroll = options.no_scroll
 	local noBackdrop = options.no_backdrop
     local verticalPadding = options.vertical_padding or grid_scrollbox_options.vertical_padding
+    local horizontalPadding = options.horizontal_padding or grid_scrollbox_options.horizontal_padding
 
     local createLineFunc = function(scrollBox, lineIndex)
         local line = CreateFrame("frame", "$parentLine" .. lineIndex, scrollBox)
@@ -405,7 +409,11 @@ function detailsFramework:CreateGridScrollBox(parent, name, refreshFunc, data, c
             --dispatch payload: line, lineIndex, columnIndex
             local optionFrame = createColumnFrameFunc(line, lineIndex, columnIndex)
             line.optionFrames[columnIndex] = optionFrame
-            optionFrame:SetPoint("left", line, "left", (columnIndex-1) * (width/columnsPerLine), 0)
+			if (columnIndex == 1) then
+            	optionFrame:SetPoint("left", line, "left", (columnIndex-1) * (width/columnsPerLine), 0)
+			else
+				optionFrame:SetPoint("left", line, "left", (columnIndex-1) * (width/columnsPerLine) + (horizontalPadding * (columnIndex-1)), 0)
+			end
         end
 
         return line

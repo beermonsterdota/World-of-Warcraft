@@ -24,7 +24,6 @@ local media = LibStub("LibSharedMedia-3.0")
 local lsmlist = AceGUIWidgetLSMlists
 
 local WoWRetail = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
-local WoWWrath = (WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC)
 local WoWClassic = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 
 local LibClassicCasterino = WoWClassic and LibStub("LibClassicCasterino", true)
@@ -236,7 +235,7 @@ function CastBarTemplate:UNIT_SPELLCAST_START(event, unit, guid, spellID)
 	if not startTime or not endTime then return end
 
 	-- this property doesn't exist in BC, and aliases with the spellID
-	if not WoWRetail and not WoWWrath then
+	if WoWClassic then
 		notInterruptible = false
 	end
 

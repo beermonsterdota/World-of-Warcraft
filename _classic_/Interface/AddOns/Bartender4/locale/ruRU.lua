@@ -20,7 +20,6 @@ L["After disabling the Extra Action Bar, you should reload your UI to fully rese
 L["Alignment of the text"] = "Выравнивание текста"
 L["Alpha"] = "Прозрачность"
 L["ALT"] = "Alt"
-L["Alternatively, you can also find us on the |cffffff78WoWUIDev Discord|r"] = "Вы также можете найти нас в |cffffff78WoWUIDev Discord|r"
 L["Always Hide"] = "Всегда скрывать"
 L["Anchor"] = "Привязка"
 L["Anchor point"] = "Точка привязки"

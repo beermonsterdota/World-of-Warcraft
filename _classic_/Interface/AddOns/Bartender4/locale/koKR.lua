@@ -20,7 +20,6 @@ L["After disabling the Extra Action Bar, you should reload your UI to fully rese
 L["Alignment of the text"] = "글자 정렬을 변경합니다."
 L["Alpha"] = "투명도"
 L["ALT"] = "ALT 키"
-L["Alternatively, you can also find us on the |cffffff78WoWUIDev Discord|r"] = "또 다른 버그 등을 발견시에는 |cffffff78WoWUIDev Discord|r로 알려주세요."
 L["Always Hide"] = "항상 숨김"
 L["Anchor"] = "앵커"
 L["Anchor point"] = "기준 위치"

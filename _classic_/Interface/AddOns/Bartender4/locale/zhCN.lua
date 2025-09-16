@@ -20,7 +20,6 @@ L["After disabling the Extra Action Bar, you should reload your UI to fully rese
 L["Alignment of the text"] = "文本对齐"
 L["Alpha"] = "透明度"
 L["ALT"] = "ALT"
-L["Alternatively, you can also find us on the |cffffff78WoWUIDev Discord|r"] = "或者，也可以在 |cffffff78WoWUIDev Discord|r 上找到我们"
 L["Always Hide"] = "总是隐藏"
 L["Anchor"] = "锚点"
 L["Anchor point"] = "锚点"

@@ -1,6 +1,6 @@
 # Quartz
 
-## [3.7.8](https://github.com/Nevcairiel/Quartz/tree/3.7.8) (2024-03-20)
-[Full Changelog](https://github.com/Nevcairiel/Quartz/compare/3.7.7...3.7.8) [Previous Releases](https://github.com/Nevcairiel/Quartz/releases)
+## [3.7.16a](https://github.com/Nevcairiel/Quartz/tree/3.7.16a) (2025-09-09)
+[Full Changelog](https://github.com/Nevcairiel/Quartz/compare/3.7.16...3.7.16a) [Previous Releases](https://github.com/Nevcairiel/Quartz/releases)
 
-- Update TOC  
+- Update TOC for 11.2 and 11.2.5  

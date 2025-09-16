@@ -12,7 +12,19 @@ local wipe = wipe
 
 --definitions
 
----@class df_headercolumndata : {key: string, name: string, icon: string, texcoord: table, text: string, canSort: boolean, selected: boolean, width: number, height: number, align: string, offset: number}
+---@class df_headercolumndata : table
+---@field key string?
+---@field name string?
+---@field icon string?
+---@field texcoord table?
+---@field text string?
+---@field canSort boolean?
+---@field selected boolean?
+---@field width number?
+---@field height number?
+---@field align string?
+---@field offset number?
+---@field columnSpan number?
 
 ---@class df_headerchild : uiobject
 ---@field FramesToAlign table
@@ -39,6 +51,8 @@ local wipe = wipe
 ---@field ClearColumnHeader fun(self: df_headerframe, columnHeader: df_headercolumnframe)
 ---@field GetNextHeader fun(self: df_headerframe) : df_headercolumnframe
 ---@field SetColumnSettingChangedCallback fun(self: df_headerframe, func: function) : boolean
+---@field ResetFramesToHeaderAlignment fun(self: df_headerframe)
+---@field GetFramesFromHeaderAlignment fun(self: df_headerframe) : table
 
 ---@class df_headercolumnframe : button
 ---@field Icon texture
@@ -82,7 +96,7 @@ detailsFramework.HeaderFunctions = {
 		self.FramesToAlign = {...}
 	end,
 
-	GetFramesFromHeaderAlignment = function(self, frame)
+	GetFramesFromHeaderAlignment = function(self)
 		return self.FramesToAlign or {}
 	end,
 
@@ -253,11 +267,14 @@ detailsFramework.HeaderMixin = {
 		--amount of headers to be updated
 		local headerSize = #self.HeaderTable
 
+		local columnSpan = 0
+
 		--update header frames
-		for i = 1, headerSize do
+		for headerIndex = 1, headerSize do
 			--get the header button, a new one is created if it doesn't exists yet
 			local columnHeader = self:GetNextHeader()
-			self:UpdateColumnHeader(columnHeader, i)
+			local columnData = self.HeaderTable[headerIndex]
+			self:UpdateColumnHeader(columnHeader, headerIndex)
 
 			--grow direction
 			if (not previousColumnHeader) then
@@ -280,23 +297,29 @@ detailsFramework.HeaderMixin = {
 				end
 			else
 				if (growDirection == "right") then
-					columnHeader:SetPoint("topleft", previousColumnHeader, "topright", self.options.padding, 0)
+					if (columnSpan > 0) then
+						columnHeader:Hide()
+						columnHeader.Separator:Hide()
+						previousColumnHeader:SetWidth(previousColumnHeader:GetWidth() + columnHeader:GetWidth() + self.options.padding)
+					else
+						columnHeader:SetPoint("topleft", previousColumnHeader, "topright", self.options.padding, 0)
 
-					if (self.options.use_line_separators) then
-						columnHeader.Separator:Show()
-						columnHeader.Separator:SetWidth(self.options.line_separator_width)
-						columnHeader.Separator:SetColorTexture(unpack(self.options.line_separator_color))
+						if (self.options.use_line_separators) then
+							columnHeader.Separator:Show()
+							columnHeader.Separator:SetWidth(self.options.line_separator_width)
+							columnHeader.Separator:SetColorTexture(unpack(self.options.line_separator_color))
 
-						columnHeader.Separator:ClearAllPoints()
-						if (self.options.line_separator_gap_align) then
-							columnHeader.Separator:SetPoint("topleft", columnHeader, "topright", 0, 0)
-						else
-							columnHeader.Separator:SetPoint("topleft", columnHeader, "topright", 0, 0)
-						end
-						columnHeader.Separator:SetHeight(self.options.line_separator_height)
+							columnHeader.Separator:ClearAllPoints()
+							if (self.options.line_separator_gap_align) then
+								columnHeader.Separator:SetPoint("topleft", columnHeader, "topright", 0, 0)
+							else
+								columnHeader.Separator:SetPoint("topleft", columnHeader, "topright", 0, 0)
+							end
+							columnHeader.Separator:SetHeight(self.options.line_separator_height)
 
-						if (headerSize == i) then
-							columnHeader.Separator:Hide()
+							if (headerSize == headerIndex) then
+								columnHeader.Separator:Hide()
+							end
 						end
 					end
 
@@ -312,6 +335,12 @@ detailsFramework.HeaderMixin = {
 			end
 
 			previousColumnHeader = columnHeader
+
+			if (columnSpan > 0) then
+				columnSpan = columnSpan - 1
+			else
+				columnSpan = columnData.columnSpan or 0
+			end
 		end
 
 		self:SetSize(self.HeaderWidth, self.HeaderHeight)
@@ -637,14 +666,14 @@ local default_header_options = {
 ---a header is used to organize columns giving them a name/title, a way to sort and align them.
 ---each column is placed on the right side of the previous column.
 ---@param parent frame
----@param headerTable table
+---@param headerTable df_headercolumndata[]
 ---@param options table?
 ---@param frameName string?
 ---@return df_headerframe
 function detailsFramework:CreateHeader(parent, headerTable, options, frameName)
 	---create the header frame which is returned by this function
 	---@type df_headerframe
-	local newHeader = CreateFrame("frame", frameName or "$parentHeaderLine", parent, "BackdropTemplate")
+	local newHeader = CreateFrame("frame", frameName or ("$parentHeaderLine" .. math.random(100000000)), parent, "BackdropTemplate")
 
 	detailsFramework:Mixin(newHeader, detailsFramework.OptionsFunctions)
 	detailsFramework:Mixin(newHeader, detailsFramework.HeaderMixin)

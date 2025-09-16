@@ -1,9 +1,6 @@
 @cont1nuity:
-- Sending NPC information to other players would not work if the name contained a ','.
-- Fixing options alignment issue with Cata.
-- Base support for TWW.
-- Ensuring Gladiator Stance is not considered tanking in SoD.
-
-@Terciob:
-- Backend changes to options layout.
+- Fixing texture artifacts and unifying to tga.
+- Correction to tank recognition adjustments for MoP.
+- Recognizing 'Twist of Fate' as 35% execute for priests.
+- Fixing send to party/raid functionality.
 

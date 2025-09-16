@@ -22,7 +22,6 @@ L["After disabling the Extra Action Bar, you should reload your UI to fully rese
 L["Alignment of the text"] = true
 L["Alpha"] = true
 L["ALT"] = true
-L["Alternatively, you can also find us on the |cffffff78WoWUIDev Discord|r"] = true
 L["Always Hide"] = true
 L["Anchor"] = true
 L["Anchor point"] = true

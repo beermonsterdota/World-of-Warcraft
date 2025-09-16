@@ -24,10 +24,14 @@ local Player = Quartz3:NewModule(MODNAME, "AceEvent-3.0", "AceHook-3.0")
 
 local UnitCastingInfo, UnitChannelInfo = UnitCastingInfo, UnitChannelInfo
 
-local WOW_INTERFACE_VER = select(4, GetBuildInfo())
 local WoWRetail = (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE)
-local WoWBC = (WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE) and WOW_INTERFACE_VER >= 20500 and WOW_INTERFACE_VER < 30000
-local WoWWrath = (WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE) and WOW_INTERFACE_VER >= 30400 and WOW_INTERFACE_VER < 40000
+local WoWClassicEra = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
+local WoWBC = (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)
+local WoWWrath = (WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC)
+local WoWCata = (WOW_PROJECT_ID == WOW_PROJECT_CATACLYSM_CLASSIC)
+local WoWMists = (WOW_PROJECT_ID == WOW_PROJECT_MISTS_CLASSIC)
+
+local GetSpellName = C_Spell and C_Spell.GetSpellName or GetSpellInfo
 
 ----------------------------
 -- Upvalues
@@ -123,6 +127,7 @@ end
 function Player:OnEnable()
 	if WoWRetail then
 		self:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED", "UpdateChannelingTicks")
+		self:RegisterEvent("TRAIT_CONFIG_UPDATED", "UpdateChannelingTicks")
 	end
 
 	self.Bar:RegisterEvents()
@@ -250,74 +255,160 @@ end
 local channelingTicks = WoWWrath and {
 	--- Wrath
 	-- druid
-	[GetSpellInfo(740)] = 4, -- tranquility
-	[GetSpellInfo(16914)] = 10, -- hurricane
+	[GetSpellName(740)] = 4, -- tranquility
+	[GetSpellName(16914)] = 10, -- hurricane
 	-- hunter
-	[GetSpellInfo(1510)] = 6, -- volley
+	[GetSpellName(1510)] = 6, -- volley
 	-- mage
-	[GetSpellInfo(10)] = 8, -- blizzard
+	[GetSpellName(10)] = 8, -- blizzard
 	[5143] = 3, -- arcane missiles r1
 	[5144] = 4, -- arcane missiles r2
-	[GetSpellInfo(5145)] = 5, -- arcane missiles
+	[GetSpellName(5145)] = 5, -- arcane missiles
 	-- priest
-	[GetSpellInfo(15407)] = 3, -- mind flay
-	[GetSpellInfo(48045)] = 5, -- mind sear
-	[GetSpellInfo(47540)] = 2, -- penance
-	[GetSpellInfo(64843)] = 4, -- divine hymn
-	[GetSpellInfo(64901)] = 4, -- hymn of hope
+	[GetSpellName(15407)] = 3, -- mind flay
+	[GetSpellName(48045)] = 5, -- mind sear
+	[GetSpellName(47540)] = 2, -- penance
+	[GetSpellName(64843)] = 4, -- divine hymn
+	[GetSpellName(64901)] = 4, -- hymn of hope
 	-- warlock
-	[GetSpellInfo(1949)] = 15, -- hellfire
-	[GetSpellInfo(5740)] = 4, -- rain of fire
-	[GetSpellInfo(5138)] = 5, -- drain mana
-	[GetSpellInfo(689)] = 5, -- drain life
-	[GetSpellInfo(1120)] = 5, -- drain soul
-	[GetSpellInfo(755)] = 10, -- health funnel
+	[GetSpellName(1949)] = 15, -- hellfire
+	[GetSpellName(5740)] = 4, -- rain of fire
+	[GetSpellName(5138)] = 5, -- drain mana
+	[GetSpellName(689)] = 5, -- drain life
+	[GetSpellName(1120)] = 5, -- drain soul
+	[GetSpellName(755)] = 10, -- health funnel
+} or WoWMists and {
+	--- Mists
+	-- deathknight
+	[GetSpellName(42650)] = 8, -- army of the dead
+	-- druid
+	[GetSpellName(740)] = 4, -- tranquility
+	[GetSpellName(16914)] = 10, -- hurricane
+	[GetSpellName(127663)] = 10, -- astral communion
+	[GetSpellName(106996)] = 10, -- astral storm
+	--hunter
+	[GetSpellName(120360)] = 15, -- barrage
+	-- mage
+	[GetSpellName(10)] = 8, -- blizzard
+	[GetSpellName(5143)] = 5, -- arcane missiles
+	[GetSpellName(12051)] = 3, -- evocation
+	-- monk
+	[GetSpellName(101546)] = 3, -- spinning crane kick
+	[GetSpellName(113656)] = 4, -- fists of fury
+	[GetSpellName(115175)] = 8, -- soothing mist
+	[GetSpellName(115294)] = 6, -- mana tea
+	[GetSpellName(117952)] = 6, -- crackling jade lightning
+	-- priest
+	[GetSpellName(15407)] = 3, -- mind flay
+	[GetSpellName(129197)] = 3, -- mind flay insanity
+	[GetSpellName(48045)] = 5, -- mind sear
+	[GetSpellName(47540)] = 2, -- penance
+	[GetSpellName(64843)] = 4, -- divine hymn
+	[GetSpellName(64901)] = 4, -- hymn of hope
+	-- warlock
+	[GetSpellName(1949)] = 14, -- hellfire
+	[GetSpellName(5740)] = 6, -- rain of fire
+	[GetSpellName(689)] = 6, -- drain life
+	[GetSpellName(1120)] = 6, -- drain soul
+	[GetSpellName(755)] = 6, -- health funnel
+	[GetSpellName(103103)] = 4, -- malefic grasp
+} or WoWCata and {
+	--- Wrath
+	-- druid
+	[GetSpellName(740)] = 4, -- tranquility
+	[GetSpellName(16914)] = 10, -- hurricane
+	-- mage
+	[GetSpellName(10)] = 8, -- blizzard
+	[GetSpellName(5143)] = 5, -- arcane missiles
+	-- priest
+	[GetSpellName(15407)] = 3, -- mind flay
+	[GetSpellName(48045)] = 5, -- mind sear
+	[GetSpellName(47540)] = 2, -- penance
+	[GetSpellName(64843)] = 4, -- divine hymn
+	[GetSpellName(64901)] = 4, -- hymn of hope
+	-- warlock
+	[GetSpellName(1949)] = 15, -- hellfire
+	[GetSpellName(5740)] = 4, -- rain of fire
+	[GetSpellName(689)] = 5, -- drain life
+	[GetSpellName(1120)] = 5, -- drain soul
+	[GetSpellName(755)] = 10, -- health funnel
 } or WoWBC and {
 	--- BCC
 	-- druid
-	[GetSpellInfo(740)] = 4, -- tranquility
-	[GetSpellInfo(16914)] = 10, -- hurricane
+	[GetSpellName(740)] = 4, -- tranquility
+	[GetSpellName(16914)] = 10, -- hurricane
 	-- hunter
-	[GetSpellInfo(1510)] = 6, -- volley
+	[GetSpellName(1510)] = 6, -- volley
 	-- mage
-	[GetSpellInfo(10)] = 8, -- blizzard
+	[GetSpellName(10)] = 8, -- blizzard
 	[5143] = 3, -- arcane missiles r1
 	[5144] = 4, -- arcane missiles r2
-	[GetSpellInfo(5145)] = 5, -- arcane missiles
+	[GetSpellName(5145)] = 5, -- arcane missiles
 	-- priest
-	[GetSpellInfo(15407)] = 3, -- mind flay
-	[GetSpellInfo(10797)] = 5, -- star shards
+	[GetSpellName(15407)] = 3, -- mind flay
+	[GetSpellName(10797)] = 5, -- star shards
 	-- warlock
-	[GetSpellInfo(1949)] = 15, -- hellfire
-	[GetSpellInfo(5740)] = 4, -- rain of fire
-	[GetSpellInfo(5138)] = 5, -- drain mana
-	[GetSpellInfo(689)] = 5, -- drain life
-	[GetSpellInfo(1120)] = 5, -- drain soul
-	[GetSpellInfo(755)] = 10, -- health funnel
+	[GetSpellName(1949)] = 15, -- hellfire
+	[GetSpellName(5740)] = 4, -- rain of fire
+	[GetSpellName(5138)] = 5, -- drain mana
+	[GetSpellName(689)] = 5, -- drain life
+	[GetSpellName(1120)] = 5, -- drain soul
+	[GetSpellName(755)] = 10, -- health funnel
+} or WoWClassicEra and {
+	-- druid
+	[GetSpellName(740)] = 5, -- tranquility
+	[GetSpellName(16914)] = 10, -- hurricane
+	-- hunter
+	[GetSpellName(136)] = 5, -- mend pet
+	[GetSpellName(1510)] = 6, -- volley
+	-- mage
+	[GetSpellName(10)] = 8, -- blizzard
+	[GetSpellName(5143)] = 3, -- arcane missiles
+	-- priest
+	[GetSpellName(15407)] = 3, -- mind flay
+	[GetSpellName(10797)] = 6, -- star shards
+	-- warlock
+	[GetSpellName(1949)] = 15, -- hellfire
+	[GetSpellName(5740)] = 4, -- rain of fire
+	[GetSpellName(5138)] = 5, -- drain mana
+	[GetSpellName(689)] = 5, -- drain life
+	[GetSpellName(1120)] = 5, -- drain soul
+	[GetSpellName(755)] = 10, -- health funnel
 } or WoWRetail and {
 	--- Retail
 	-- warlock
-	[GetSpellInfo(234153)] = 5, -- drain life
-	[GetSpellInfo(198590)] = 5, -- drain soul
-	[GetSpellInfo(217979)] = 5, -- health funnel
+	[GetSpellName(234153)] = 5, -- drain life
+	[GetSpellName(198590)] = 5, -- drain soul
+	[GetSpellName(217979)] = 5, -- health funnel
+	[GetSpellName(196447)] = 15, -- channel demonfire
+	[GetSpellName(417537)] = 3, -- oblivion
 	-- druid
-	[GetSpellInfo(740)] = 4, -- tranquility
+	[GetSpellName(740)] = 4, -- tranquility
+	[GetSpellName(391528)] = 16, -- convoke the spirits
 	-- priest
-	[GetSpellInfo(64843)] = 4, -- divine hymn
-	[GetSpellInfo(15407)] = 6, -- mind flay
-	[GetSpellInfo(47540)] = 3, -- penance
-	[GetSpellInfo(205065)] = 5, -- void torrent
-	[GetSpellInfo(64901)] = 5, -- symbol of hope
+	[GetSpellName(64843)] = 4, -- divine hymn
+	[GetSpellName(15407)] = 6, -- mind flay
+	[GetSpellName(391403)] = 4, -- mind flay: insanity
+	[GetSpellName(47540)] = 3, -- penance
+	[GetSpellName(64901)] = 5, -- symbol of hope
+	[GetSpellName(263165)] = 3, -- void torrent
+	[GetSpellName(400169)] = 3, -- dark reprimand
 	-- mage
-	[GetSpellInfo(5143)] = 5, -- arcane missiles
-	[GetSpellInfo(205021)] = 5, -- ray of frost
-	[GetSpellInfo(314791)] = 4, -- covenant: shifting power
+	[GetSpellName(5143)] = 5, -- arcane missiles
+	[GetSpellName(205021)] = 5, -- ray of frost
+	[GetSpellName(12051)] = 6, -- evocation
+	[GetSpellName(198100)] = 8, -- kleptomania
+	[GetSpellName(382440)] = 4, -- shifting power
 	-- monk
-	[GetSpellInfo(117952)] = 4, -- crackling jade lightning
-	[GetSpellInfo(191837)] = 3, -- essence font
-	[GetSpellInfo(115175)] = 8, -- soothing mist
+	[GetSpellName(117952)] = 4, -- crackling jade lightning
+	[GetSpellName(115175)] = 8, -- soothing mist
+	[GetSpellName(443028)] = 4, -- celestial conduit
 	-- evoker
-	[GetSpellInfo(356995)] = 3, -- disintegrate
+	[GetSpellName(356995)] = 3, -- disintegrate
+	[GetSpellName(370960)] = 5, -- emerald communion
+	-- demon hunter
+	[GetSpellName(212084)] = 10, -- fel devastation
+	[GetSpellName(452486)] = 10, -- fel desolation
 } or {}
 
 
@@ -337,7 +428,16 @@ function Player:UpdateChannelingTicks()
 	if WoWRetail then
 		if playerClass == "PRIEST" then
 			-- Castigation talent adds a tick to penance
-			channelingTicks[GetSpellInfo(47540)] = isTalentKnown(19752) and 4 or 3
+			channelingTicks[GetSpellName(47540)] = IsPlayerSpell(193134) and 4 or 3
+		elseif playerClass == "MAGE" then
+			-- Amplification talent adds 3 ticks to Arcane Missiles
+			channelingTicks[GetSpellName(5143)] = IsPlayerSpell(236628) and 8 or 5
+		elseif playerClass == "DRUID" then
+			-- Several talents remove 4 ticks from Convoke
+			channelingTicks[GetSpellName(391528)] = (IsPlayerSpell(391548) or IsPlayerSpell(393991) or IsPlayerSpell(393414) or IsPlayerSpell(393371)) and 12 or 16
+		elseif playerClass == "EVOKER" then
+			-- Azure Celerity adds a tick to Disintegrate
+			channelingTicks[GetSpellName(356995)] = IsPlayerSpell(1219723) and 4 or 3
 		end
 	end
 end
