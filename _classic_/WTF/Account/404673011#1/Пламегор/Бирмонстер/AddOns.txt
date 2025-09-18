@@ -4,3 +4,5 @@ BigWigs_Plugins: enabled
 Blizzard_CombatText: enabled
 BigWigs_Options: enabled
 LittleWigs_MistsOfPandaria: enabled
+Bagnon_Config: disabled
+Bagnon_GuildBank: disabled

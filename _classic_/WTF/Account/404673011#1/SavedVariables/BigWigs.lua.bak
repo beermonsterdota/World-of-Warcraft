@@ -2,13 +2,14 @@
 BigWigs3DB = {
 ["namespaces"] = {
 },
-["profileKeys"] = {
-["Зурантор - Пламегор"] = "Default",
-},
 ["global"] = {
 ["watchedMovies"] = {
 [-323] = true,
+[-437] = true,
 },
+},
+["profileKeys"] = {
+["Зурантор - Пламегор"] = "Default",
 },
 ["profiles"] = {
 ["Default"] = {
@@ -16,7 +17,7 @@ BigWigs3DB = {
 },
 }
 BigWigsIconDB = {
-["minimapPos"] = 6.985752841966482,
+["minimapPos"] = 50.99587382901965,
 }
 BigWigsStatsDB = {
 }
