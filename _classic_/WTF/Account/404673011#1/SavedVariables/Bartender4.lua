@@ -27,9 +27,9 @@ Bartender4DB = {
 ["rows"] = 12,
 ["version"] = 3,
 ["position"] = {
-["y"] = 610,
-["x"] = -82,
-["point"] = "BOTTOMRIGHT",
+["y"] = -179.1665649414063,
+["x"] = -77.8272705078125,
+["point"] = "TOPRIGHT",
 },
 ["padding"] = 5,
 },
@@ -37,9 +37,9 @@ Bartender4DB = {
 ["rows"] = 12,
 ["version"] = 3,
 ["position"] = {
-["y"] = 610,
-["x"] = -42,
-["point"] = "BOTTOMRIGHT",
+["y"] = -179.1665649414063,
+["x"] = -41.499755859375,
+["point"] = "TOPRIGHT",
 },
 ["padding"] = 5,
 },
@@ -155,18 +155,6 @@ Bartender4DB = {
 },
 },
 },
-["Vehicle"] = {
-["profiles"] = {
-["Зурантор - Пламегор"] = {
-["position"] = {
-["y"] = -112.2813568115234,
-["x"] = -276.4999084472656,
-["point"] = "CENTER",
-},
-["version"] = 3,
-},
-},
-},
 ["StanceBar"] = {
 ["profiles"] = {
 ["Зурантор - Пламегор"] = {
@@ -179,13 +167,25 @@ Bartender4DB = {
 },
 },
 },
+["Vehicle"] = {
+["profiles"] = {
+["Зурантор - Пламегор"] = {
+["position"] = {
+["y"] = -112.2813568115234,
+["x"] = -276.4999084472656,
+["point"] = "CENTER",
+},
+["version"] = 3,
+},
+},
+},
 ["PetBar"] = {
 ["profiles"] = {
 ["Зурантор - Пламегор"] = {
 ["version"] = 3,
 ["position"] = {
-["y"] = -82.28134155273438,
-["x"] = -252.4998779296875,
+["y"] = -73.30691528320312,
+["x"] = -253.7813110351563,
 ["point"] = "CENTER",
 },
 },
@@ -214,7 +214,7 @@ Bartender4DB = {
 ["blizzardVehicle"] = true,
 ["focuscastmodifier"] = false,
 ["minimapIcon"] = {
-["minimapPos"] = 345.7199059771412,
+["minimapPos"] = 357.1547476954834,
 },
 ["outofrange"] = "hotkey",
 },

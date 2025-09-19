@@ -1,0 +1,14 @@
+## Interface: 50500
+## Title: EmityCore
+## Notes: Inserts Emity media into LibSharedMedia's storage.
+## IconTexture: Interface\AddOns\EmityCore\icon\emity_logo
+## RequiredDeps: WeakAuras
+## Version: 2.0.1-7
+## Author: Emity
+
+# Libs
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+
+# Core files
+EmityMedia.lua

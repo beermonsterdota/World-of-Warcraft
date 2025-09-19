@@ -1,0 +1,4 @@
+VER 3 0000000000000001 "Decursive" "INV_MISC_QUESTIONMARK"
+/stopcasting
+/cast [@mouseover,nomod,exists] Очищение духа;  [@mouseover,exists,mod:ctrl] Очищение; [@mouseover,exists,mod:shift] Развеивание магии
+END

@@ -1,0 +1,10 @@
+## Interface: 50500
+## Title: GearInspectorLite
+## Notes: Shows item level and gem slots on character gear.
+## Author: David Ward
+## Version: 0.6
+
+DisplayEnchantStatus.lua
+DisplayGemSockets.lua
+DisplayItemLevel.lua
+GearInspectorLite.lua

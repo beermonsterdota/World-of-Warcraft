@@ -1,0 +1,86 @@
+
+BisTooltipDB = {
+["profileKeys"] = {
+["Зурантор - Пламегор"] = "Default",
+},
+["char"] = {
+["Зурантор - Пламегор"] = {
+["class_index"] = 9,
+["spec_index"] = 3,
+["bis_list_window"] = {
+["y"] = 57.18517303466797,
+["x"] = -91.44493103027344,
+["point"] = "RIGHT",
+["relativePoint"] = "RIGHT",
+["height"] = 500.5926208496094,
+["width"] = 450.0000610351563,
+},
+["highlight_spec"] = {
+["spec_name"] = "Restoration",
+["key"] = "9:3",
+["class_name"] = "Shaman",
+},
+["version"] = 9,
+["filter_specs"] = {
+["Warrior"] = {
+["Fury"] = true,
+["Protection"] = true,
+["Arms"] = true,
+},
+["Paladin"] = {
+["Protection"] = true,
+["Holy"] = true,
+["Retribution"] = true,
+},
+["Shaman"] = {
+["Enhancement"] = true,
+["Elemental"] = true,
+["Restoration"] = false,
+},
+["Monk"] = {
+["Mistweaver"] = true,
+["Brewmaster"] = true,
+["Windwalker"] = true,
+},
+["Rogue"] = {
+["Subtlety"] = true,
+["Combat"] = true,
+["Assassination"] = true,
+},
+["Mage"] = {
+["Fire"] = true,
+["Frost"] = true,
+["Arcane"] = true,
+},
+["Warlock"] = {
+["Demonology"] = true,
+["Affliction"] = true,
+["Destruction"] = true,
+},
+["Death knight"] = {
+["Unholy"] = true,
+["Frost"] = true,
+["Blood tank"] = true,
+},
+["Hunter"] = {
+["Marksmanship"] = true,
+["Survival"] = true,
+["Beast mastery"] = true,
+},
+["Priest"] = {
+["Discipline"] = true,
+["Shadow"] = true,
+["Holy"] = true,
+},
+["Druid"] = {
+["Feral"] = true,
+["Balance"] = true,
+["Guardian"] = true,
+["Restoration"] = true,
+},
+},
+["data_source"] = "wh",
+["minimapPos"] = 124.1659304955105,
+},
+},
+}

@@ -8,6 +8,12 @@ Bagnon_Sets = {
 ["global"] = {
 ["inventory"] = {
 ["y"] = 104.1480712890625,
+["brokerObject"] = "BagnonLauncher",
+["point"] = "BOTTOMRIGHT",
+["borderColor"] = {
+},
+["color"] = {
+},
 ["rules"] = {
 ["sidebar"] = {
 "all",
@@ -15,12 +21,6 @@ Bagnon_Sets = {
 "trade",
 },
 },
-["point"] = "BOTTOMRIGHT",
-["borderColor"] = {
-},
-["color"] = {
-},
-["brokerObject"] = "BagnonLauncher",
 ["x"] = 0,
 },
 ["vault"] = {
@@ -80,33 +80,33 @@ Bagnon_Sets = {
 ["color"] = {
 ["quiver"] = {
 },
-["account"] = {
+["herb"] = {
 },
-["enchant"] = {
+["normal"] = {
 },
 ["soul"] = {
 },
-["fridge"] = {
+["leather"] = {
 },
 ["mine"] = {
 },
-["engineer"] = {
+["gem"] = {
 },
-["leather"] = {
+["inscribe"] = {
 },
 ["reagent"] = {
 },
-["gem"] = {
+["engineer"] = {
 },
 ["key"] = {
 },
 ["tackle"] = {
 },
-["inscribe"] = {
+["fridge"] = {
 },
-["normal"] = {
+["enchant"] = {
 },
-["herb"] = {
+["account"] = {
 },
 },
 ["display"] = {
