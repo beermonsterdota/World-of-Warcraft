@@ -14,5 +14,42 @@ DetailsDataStorage = {
 ["saved_encounters"] = {
 },
 ["totalkills"] = {
+["10player"] = {
+[1505] = {
+["time_incombat"] = 0,
+["time_fasterkill"] = 0,
+["wipes"] = 3,
+["kills"] = 0,
+["dps_best"] = 0,
+["dps_best_when"] = 0,
+["time_fasterkill_when"] = 0,
+["dps_best_raid_when"] = 0,
+["dps_best_raid"] = 0,
+},
+},
+["10playerheroic"] = {
+[1409] = {
+["time_incombat"] = 0,
+["time_fasterkill"] = 0,
+["wipes"] = 7,
+["kills"] = 0,
+["dps_best"] = 0,
+["dps_best_raid"] = 0,
+["time_fasterkill_when"] = 0,
+["dps_best_when"] = 0,
+["dps_best_raid_when"] = 0,
+},
+[1506] = {
+["time_incombat"] = 0,
+["time_fasterkill"] = 0,
+["wipes"] = 11,
+["kills"] = 0,
+["dps_best"] = 0,
+["dps_best_when"] = 0,
+["time_fasterkill_when"] = 0,
+["dps_best_raid_when"] = 0,
+["dps_best_raid"] = 0,
+},
+},
 },
 }

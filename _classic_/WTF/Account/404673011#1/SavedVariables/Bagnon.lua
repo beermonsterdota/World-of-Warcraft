@@ -8,12 +8,6 @@ Bagnon_Sets = {
 ["global"] = {
 ["inventory"] = {
 ["y"] = 104.1480712890625,
-["brokerObject"] = "BagnonLauncher",
-["point"] = "BOTTOMRIGHT",
-["borderColor"] = {
-},
-["color"] = {
-},
 ["rules"] = {
 ["sidebar"] = {
 "all",
@@ -21,7 +15,13 @@ Bagnon_Sets = {
 "trade",
 },
 },
+["point"] = "BOTTOMRIGHT",
+["borderColor"] = {
+},
+["color"] = {
+},
 ["x"] = 0,
+["brokerObject"] = "BagnonLauncher",
 },
 ["vault"] = {
 ["color"] = {

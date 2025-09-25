@@ -11,14 +11,14 @@ WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
 BagBrother: enabled
 Bagnon: enabled
-Bagnon_Bank: enabled
+Bagnon_Bank: disabled
 Scrap: enabled
 Scrap_Merchant: enabled
 Scrap_Config: enabled
 Bartender4: enabled
 BigWigs: enabled
 Bistooltip: enabled
-Decursive: enabled
+Decursive: disabled
 Details: enabled
 Details_Compare2: enabled
 Details_EncounterDetails: enabled
@@ -29,7 +29,7 @@ Details_TinyThreat: enabled
 Details_Vanguard: enabled
 EmityCore: enabled
 GearInspectorLite: enabled
-MRT: enabled
+MRT: disabled
 Pawn: enabled
 Plater: enabled
 Rarity: disabled
@@ -37,7 +37,7 @@ Rarity_Options: disabled
 RCLootCouncil_Classic: enabled
 VuhDo: enabled
 VuhDoOptions: enabled
-WeakAuras: enabled
+WeakAuras: disabled
 WeakAurasModelPaths: enabled
 WeakAurasOptions: enabled
 WeakAurasTemplates: enabled

@@ -8,8 +8,8 @@ BisTooltipDB = {
 ["minimapPos"] = 124.1659304955105,
 ["spec_index"] = 3,
 ["bis_list_window"] = {
-["y"] = 57.18517303466797,
-["x"] = -91.44493103027344,
+["y"] = 61.33324813842773,
+["x"] = -80.77880859375,
 ["point"] = "RIGHT",
 ["relativePoint"] = "RIGHT",
 ["height"] = 500.5926208496094,
@@ -79,6 +79,7 @@ BisTooltipDB = {
 ["Shadow"] = true,
 },
 },
+["phase_index"] = 2,
 ["data_source"] = "wh",
 ["class_index"] = 9,
 },
