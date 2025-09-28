@@ -5,7 +5,7 @@ BisTooltipDB = {
 },
 ["char"] = {
 ["Зурантор - Пламегор"] = {
-["class_index"] = 9,
+["minimapPos"] = 124.1659304955105,
 ["spec_index"] = 3,
 ["bis_list_window"] = {
 ["y"] = 61.33324813842773,
@@ -79,8 +79,9 @@ BisTooltipDB = {
 ["Restoration"] = true,
 },
 },
+["class_index"] = 9,
 ["data_source"] = "wh",
-["minimapPos"] = 124.1659304955105,
+["phase_index"] = 2,
 },
 },
 }

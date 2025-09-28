@@ -7,8 +7,8 @@ RAID_SINGLE_POSITIONS = {
 ["x"] = -0,
 ["point"] = "TOPLEFT",
 ["relativePoint"] = "TOPLEFT",
+["name"] = "Девапс",
 ["settings"] = {
 },
-["name"] = "Девапс",
 },
 }

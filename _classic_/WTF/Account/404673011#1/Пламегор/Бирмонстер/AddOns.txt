@@ -37,7 +37,7 @@ Rarity_Options: disabled
 RCLootCouncil_Classic: enabled
 VuhDo: enabled
 VuhDoOptions: enabled
-WeakAuras: disabled
+WeakAuras: enabled
 WeakAurasModelPaths: enabled
 WeakAurasOptions: enabled
 WeakAurasTemplates: enabled

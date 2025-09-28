@@ -1,6 +1,14 @@
 
 Quartz3DB = {
 ["namespaces"] = {
+["Buff"] = {
+["profiles"] = {
+["Default"] = {
+["targetoffset"] = -35,
+["focusoffset"] = 8,
+},
+},
+},
 ["Pet"] = {
 ["profiles"] = {
 ["Default"] = {
@@ -13,9 +21,9 @@ Quartz3DB = {
 ["Player"] = {
 ["profiles"] = {
 ["Default"] = {
-["y"] = -123.6848297119141,
+["y"] = -143.8329467773438,
 ["point"] = "CENTER",
-["x"] = -3.296051025390625,
+["x"] = -5.073577880859375,
 },
 },
 },
