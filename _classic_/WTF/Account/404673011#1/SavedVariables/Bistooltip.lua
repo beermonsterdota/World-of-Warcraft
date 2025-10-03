@@ -8,12 +8,12 @@ BisTooltipDB = {
 ["minimapPos"] = 124.1659304955105,
 ["spec_index"] = 3,
 ["bis_list_window"] = {
-["y"] = 61.33324813842773,
-["x"] = -80.77880859375,
-["point"] = "RIGHT",
-["relativePoint"] = "RIGHT",
+["y"] = -72.96309661865234,
+["x"] = 254.2212677001953,
+["point"] = "TOP",
+["relativePoint"] = "TOP",
 ["height"] = 500.5926208496094,
-["width"] = 450.0000610351563,
+["width"] = 450.0002136230469,
 },
 ["highlight_spec"] = {
 ["spec_name"] = "Restoration",

@@ -1,30 +1,198 @@
-tag 231ad8742452396c212423e4ab6be140ed926442 v2.1.8
+tag 3fc2190cccfc28d840a8a44262d919251961263e v2.2.3
 Author:	skyler-code <skylerh15@github.com>
-Date:	Fri Sep 26 04:43:34 2025 -0500
+Date:	Fri Oct 3 04:57:06 2025 -0500
 
-commit e43b50572df4f9071be8d346ae868e828690ab44
+commit 2850fbba47e34d12aba22b00dd53fcb36676d364
 Author: skyler-code <skylerh15@github.com>
-Date:   Fri Sep 26 04:43:03 2025 -0500
+Date:   Fri Oct 3 04:55:07 2025 -0500
 
-    need to do playerrace check last
-
-commit 9086eb884207420a8d8ea077e336d5746642e454
-Author: skyler-code <skylerh15@github.com>
-Date:   Fri Sep 26 04:39:45 2025 -0500
-
-    conversion cleanup
-
-commit b301746030ecc6e8ac54ee045559602895f05607
-Author: skyler-code <skylerh15@github.com>
-Date:   Fri Sep 26 03:52:37 2025 -0500
-
-    Factor in 50% additional haste for mistweavers
+    Fix item table column visibility when no gear equipped
     
-    closes #49
+    - Show all stat columns by default when user has no gear equipped
+    - Derive window minimum width from item table actual width instead of manual calculation
+    - Use next() to check if columnHasData has any entries (cleaner than manual loop)
+    - Account for both item table and content area in minimum width calculation
 
-commit 8ea4a5ef1343de88bddda2fe9e851fe3c47c4ee3
+commit 18c24b84e03f8688813be062d8c71f941390ba19
 Author: skyler-code <skylerh15@github.com>
-Date:   Fri Sep 26 03:51:56 2025 -0500
+Date:   Fri Oct 3 04:26:48 2025 -0500
 
-    EnumUtil
+    Refactor cap value tooltip formatter and improve help buttons
+    
+    - Extract formatWithBonus helper function to eliminate code duplication
+    - Improve help button placement and scaling for Stat Weights and Result categories
+    - Enhance help text descriptions for stat weight imports and result color coding
+    - Fix minor whitespace formatting
+
+commit 7fb13fb0e0b8d75577aca13dd3cca0b23956c3f7
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 04:18:24 2025 -0500
+
+    moved help buttons and updated language
+
+commit 9c13991eb8b7b3cf3a6a28d7c592087c6dac7ff7
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 03:55:25 2025 -0500
+
+    no longer needed
+
+commit 5ae49f42a9340960a4cdc521bd57103144071a1b
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 03:53:52 2025 -0500
+
+    Refactor class presets using builder pattern
+    
+    Introduce builder functions (MeleePreset, CasterPreset, TankPreset, HealerPreset) to simplify preset definitions and improve maintainability.
+
+commit 0683fecbd63bd831eef502c89f4447d34928a5dd
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 03:30:13 2025 -0500
+
+    Optimize table auto-sizing and refactor stat weight display
+    
+    - Optimize AutoSizeColumns to only recalculate specific columns when individual cells change
+    - Add EnableColumnAutoWidth helper to enable auto-width for multiple columns at once
+    - Fix SetColumnAutoWidth bounds check (should be > not >=)
+    - Remove maxStatLabelWidth DB storage and calculate dynamically with auto-width
+    - Refactor methodStats to use SetCellText instead of direct cell references
+    - Clean up unused stat weight table row management
+
+commit b5276fccb192ac154a2162697797221c5cf728c3
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 01:23:05 2025 -0500
+
+    Add auto-width column support to tables
+    
+    Add SetColumnAutoWidth method to enable automatic column width
+    adjustment based on text content. When enabled for a column, the
+    column will expand to fit text wider than the current width.
+    
+    Applied to Result table stat names column to prevent text truncation.
+
+commit c9df428f93a0f65ff94c24aa9d45d08670c55671
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 01:07:43 2025 -0500
+
+    Auto-desaturate image buttons when disabled
+    
+    When CreateImageButton is called without a custom disabledTexture,
+    automatically create a desaturated version of the normal texture for
+    the disabled state. This provides visual feedback when buttons are
+    disabled during computation without requiring custom disabled textures.
+
+commit ef920b113789b238c8e71ed5be613af16c219bd4
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 00:35:58 2025 -0500
+
+    Rename maxLabelWidth to maxStatLabelWidth and add default
+    
+    - Rename maxLabelWidth to maxStatLabelWidth for clarity
+    - Add default enUS value of 70 to database
+    - Use unused variable convention (_) in stat loop
+    - Use global max() instead of math.max()
+
+commit 729ded3821450871f79599905eb84c8212e3cafa
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 00:27:18 2025 -0500
+
+    Add CreateFilterDropdown function with proper recycling
+    
+    - Create GUI:CreateFilterDropdown for WowStyle1FilterDropdownTemplate
+    - Accept text and resizeToTextPadding as parameters
+    - Save and restore original resizeToTextPadding during recycling
+    - Add recycling support for filter dropdowns
+    - Include filterDropdowns in Lock/Unlock functions
+    - Update ReforgeLite to use cleaner CreateFilterDropdown API
+    - Standardize opts parameter handling (opts = opts or {})
+
+commit 15cf85dd22a5edbe378ff6ecc581aafec5245f89
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 00:14:55 2025 -0500
+
+    CallbackRegistry documentation
+
+commit f7d5988c2b21d2c0662674da4e2f89057a2f2a55
+Author: skyler-code <skylerh15@github.com>
+Date:   Fri Oct 3 00:00:37 2025 -0500
+
+    Add comprehensive type definitions and IDE configuration
+    
+    - Create Types.lua with AddonTable and ReforgeLite class definitions
+    - Add all ReforgeLite methods and fields for IDE autocomplete
+    - Define WoW frame types (Frame, Button, EditBox, etc.)
+    - Create .luarc.json for Lua Language Server configuration
+    - Add all WoW API globals and constants to suppress warnings
+    - Update .pkgmeta to exclude development files
+    - Add type annotations to all files using addonTable
+    - Configure diagnostics to allow WoW addon patterns
+
+commit 75d749365d43d35f9d71b39705e3586762399021
+Author: skyler-code <skylerh15@github.com>
+Date:   Thu Oct 2 23:04:59 2025 -0500
+
+    Add EmmyLua documentation to Scaling.lua
+    
+    - Document GetRandPropPoints function
+    - Document GetItemStatsUp function with upgrade calculations
+    - Add comprehensive type annotations
+
+commit cc2ad61bfa7083977eb074b40db2295b611b4e2c
+Author: skyler-code <skylerh15@github.com>
+Date:   Thu Oct 2 23:00:17 2025 -0500
+
+    Add EmmyLua documentation to Presets.lua
+    
+    - Document buff checking functions (spell/melee haste, mastery)
+    - Document stat calculation functions (hit, expertise, haste bonuses)
+    - Document preset initialization functions
+    - Add comprehensive type annotations throughout
+
+commit 04e97f8fc953eba75326e4771f2db19de046531f
+Author: skyler-code <skylerh15@github.com>
+Date:   Thu Oct 2 22:57:55 2025 -0500
+
+    Add EmmyLua documentation to core files
+    
+    - Add comprehensive type annotations to ReforgeLite.lua
+    - Add comprehensive type annotations to ReforgeEngine.lua
+    - Add comprehensive type annotations to GUI.lua
+    - Document all public functions with @param and @return tags
+    - Clean up duplicate dropdown enable/disable methods in GUI
+
+commit 9560f432ce82f6307e1abc4cc0ee36230401f1a8
+Author: skyler-code <skylerh15@github.com>
+Date:   Thu Oct 2 22:41:40 2025 -0500
+
+    Optimize stat weights layout and make window size per-character
+    
+    - Move windowWidth/Height from global to char db for per-character sizing
+    - Add dynamic stat label width calculation cached per locale
+    - Reduce stat weight edit boxes from 60px to 50px
+    - Adjust column widths: maxLabelWidth, 55px, maxLabelWidth, 50px
+    - Lower minimum window width from 780px to 680px
+    - Update dynamic resize bounds formula: 420 + (visibleColumns * 60)
+    - Auto-resize window when minimum width increases
+
+commit 1e200ca0beaba69ae0e1ec7ce2833b04dcfce6cb
+Author: skyler-code <skylerh15@github.com>
+Date:   Thu Oct 2 22:23:40 2025 -0500
+
+    nil check
+
+commit f725a1ccb28857ac10dbee2148348f9ec9eaeda8
+Author: skyler-code <skylerh15@github.com>
+Date:   Thu Oct 2 22:06:31 2025 -0500
+
+    remove export button
+
+commit bdc45d654fb2a67cc6b768172e16c08e01d0a57e
+Author: skyler-code <skylerh15@github.com>
+Date:   Thu Oct 2 22:02:32 2025 -0500
+
+    Refactor ParsePawnString to use gmatch instead of gsub
+    
+    - Replace gsub with gmatch iterator to avoid linter warning about discarded return values
+    - Use string.match instead of strfind for cleaner pattern matching
+    - Remove unnecessary callback function and unused variables
+    - Improves code readability and eliminates linter errors
 

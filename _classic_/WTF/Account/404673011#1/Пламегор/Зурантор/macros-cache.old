@@ -4,7 +4,25 @@ END
 VER 3 0100000000000002 "VuhDoDCShieldNames" "Ability_Repair"
 N[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]Зур[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
 END
+VER 3 0100000000000006 "БЛ" "134400"
+#showtooltip Жажда крови
+/cast Жажда крови
+/cast Тотем порыва бури
+END
 VER 3 0100000000000003 "Кик" "136018"
 /stopcasting
 /cast Пронизывающий ветер
+END
+VER 3 0100000000000005 "Перерождение" "134400"
+#showtooltip Перерождение
+/stopcasting
+/cast Перерождение
+/cast Берсерк
+END
+VER 3 0100000000000004 "молния + баф" "134400"
+#showtooltip Молния
+/stopcasting
+/use Повязки огненной птицы
+/cast Покорение стихий
+/cast Молния
 END

@@ -257,6 +257,7 @@ LSM:Register("sound", "|cFFa2fff9ТыВЛуже", [[Interface\Addons\EmityCore\s
 LSM:Register("sound", "|cFFa2fff9ТыГоришь", [[Interface\Addons\EmityCore\sound\YouAreInFire.mp3]])
 LSM:Register("sound", "|cFFa2fff9УвернисьОтВетра", [[Interface\Addons\EmityCore\sound\ConclaveWind.mp3]])
 LSM:Register("sound", "|cFFa2fff9Уворачивайся", [[Interface\Addons\EmityCore\sound\Dodge.mp3]])
+LSM:Register("sound", "|cFFa2fff9Удар", [[Interface\Addons\EmityCore\sound\Punch.mp3]])
 LSM:Register("sound", "|cFFa2fff9УдарИВолны", [[Interface\Addons\EmityCore\sound\PunchAndWaves.mp3]])
 LSM:Register("sound", "|cFFa2fff9ФазаБури", [[Interface\Addons\EmityCore\sound\StormPhase.mp3]])
 LSM:Register("sound", "|cFFa2fff9ФазаГрозы", [[Interface\Addons\EmityCore\sound\LightingPhase.mp3]])

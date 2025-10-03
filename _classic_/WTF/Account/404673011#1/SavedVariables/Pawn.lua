@@ -145,9 +145,6 @@ PawnCommon = {
 ["\"Classic\":SHAMAN1"] = {
 ["IconTexturePath"] = 136048,
 ["PerCharacterOptions"] = {
-["Зурантор-Пламегор"] = {
-["Visible"] = true,
-},
 },
 ["Color"] = "0070de",
 ["LocalizedName"] = "Шаман: Стихии",
@@ -204,6 +201,9 @@ PawnCommon = {
 ["\"Classic\":SHAMAN3"] = {
 ["IconTexturePath"] = 136052,
 ["PerCharacterOptions"] = {
+["Зурантор-Пламегор"] = {
+["Visible"] = true,
+},
 },
 ["Color"] = "0070de",
 ["LocalizedName"] = "Шаман: Исцеление",
