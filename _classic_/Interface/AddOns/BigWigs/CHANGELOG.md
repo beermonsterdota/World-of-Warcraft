@@ -1,8 +1,9 @@
 # BigWigs
 
-## [v399.8](https://github.com/BigWigsMods/BigWigs/tree/v399.8) (2025-09-25)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v399.7...v399.8) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
+## [v400](https://github.com/BigWigsMods/BigWigs/tree/v400) (2025-10-05)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v399.9...v400) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
 
 - Bump version  
-- ManaforgeOmega/Hunters: Don't overlap sounds for The Hunt  
-- ManaforgeOmega/Araz: Remove sound when Astral Harvest starts casting, fixes an overlap with the sound when it's on you  
+- Make it easier for addons to send custom bars to your group  
+- Update deDE (#2277)  
+- Core/BossPrototype: Fix a MoP error  

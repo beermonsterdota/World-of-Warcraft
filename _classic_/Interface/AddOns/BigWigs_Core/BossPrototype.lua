@@ -45,6 +45,7 @@ end or isRetail and EJ_GetEncounterInfo or function(key)
 	return BigWigsAPI:GetLocale("BigWigs: Encounters")[key]
 end
 local SendChatMessage, GetInstanceInfo, SimpleTimer, SetRaidTarget = loader.SendChatMessage, loader.GetInstanceInfo, loader.CTimerAfter, loader.SetRaidTarget
+local IsEncounterInProgress = C_InstanceEncounter and C_InstanceEncounter.IsEncounterInProgress or IsEncounterInProgress -- XXX 12.0 compat
 local UnitGUID, UnitHealth, UnitHealthMax = loader.UnitGUID, loader.UnitHealth, loader.UnitHealthMax
 local RegisterAddonMessagePrefix = loader.RegisterAddonMessagePrefix
 local format, find, gsub, band, tremove, twipe = string.format, string.find, string.gsub, bit.band, table.remove, table.wipe
@@ -504,7 +505,11 @@ function boss:Enable(isWipe)
 		if self.SetupOptions then self:SetupOptions() end
 
 		if self:GetEncounterID() then
-			self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckForEncounterEngage")
+			if loader.isBeta then
+				self:RegisterEvent("ENCOUNTER_START", "EncounterStart")
+			else
+				self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckForEncounterEngage")
+			end
 			self:RegisterEvent("ENCOUNTER_END", "EncounterEnd")
 		else
 			-- Some modules don't engage (trash modules) so we register them here
@@ -544,7 +549,9 @@ function boss:Disable(isWipe)
 
 		-- No enabled modules? Unregister the combat log!
 		if #enabledModules == 0 then
-			bossUtilityFrame:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+			if not loader.isBeta then
+				bossUtilityFrame:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+			end
 			petUtilityFrame:UnregisterEvent("UNIT_PET")
 			activeNameplateUtilityFrame:UnregisterEvent("NAME_PLATE_UNIT_ADDED")
 			inactiveNameplateUtilityFrame:UnregisterEvent("NAME_PLATE_UNIT_REMOVED")
@@ -851,6 +858,7 @@ do
 	-- @param func callback function, passed a keyed table (sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellId, spellName, extraSpellId, extraSpellName, amount)
 	-- @number ... any number of spell ids
 	function boss:Log(event, func, ...)
+		if loader.isBeta then return end -- XXX Needs updating for 12.0
 		if not event or not func then core:Print(format(missingArgument, self.moduleName)) return end
 		if type(func) ~= "function" and not self[func] then core:Print(format(missingFunction, self.moduleName, func)) return end
 		if not eventMap[self][event] then eventMap[self][event] = {} end
@@ -883,6 +891,7 @@ do
 	-- @param func callback function, passed a keyed table (mobId, destGUID, destName, destFlags, destRaidFlags)
 	-- @number ... any number of mob ids
 	function boss:Death(func, ...)
+		if loader.isBeta then return end -- XXX Needs updating for 12.0
 		if not func then core:Print(format(missingArgument, self.moduleName)) return end
 		if type(func) ~= "function" and not self[func] then core:Print(format(missingFunction, self.moduleName, func)) return end
 		if not eventMap[self].UNIT_DIED then eventMap[self].UNIT_DIED = {} end
@@ -1165,6 +1174,7 @@ do
 		-- disables the module if set as engaged but has no boss match.
 		-- noEngage if set to "NoEngage", the module is prevented from engaging if enabling during a boss fight (after a DC)
 		function boss:CheckForEncounterEngage(noEngage)
+			if loader.isBeta then return end -- XXX needs updating for 12.0
 			if not self:IsEngaged() then
 				for i = 1, 10 do
 					local bossUnit = bosses[i]
@@ -1185,6 +1195,12 @@ do
 						end
 					end
 				end
+			end
+		end
+
+		function boss:EncounterStart(_, id, name, diff, size, status)
+			if self:IsEncounterID(id) then
+				self:Engage()
 			end
 		end
 
@@ -1852,6 +1868,7 @@ end
 -- @string unit unit token or name
 -- @return guid guid of the unit
 function boss:UnitGUID(unit)
+	if loader.isBeta then return end -- XXX needs updating for 12.0
 	local guid = UnitGUID(unit)
 	if guid then
 		return guid
@@ -1903,6 +1920,7 @@ end
 -- @string unit unit token or name
 -- @return hp health of the unit as a percentage between 0 and 100
 function boss:GetHealth(unit)
+	if loader.isBeta then return end -- XXX needs updating for 12.0
 	local maxHP = UnitHealthMax(unit)
 	if maxHP == 0 then
 		return maxHP
@@ -2298,7 +2316,8 @@ petUtilityFrame:SetScript("OnEvent", function()
 end)
 
 do
-	local IsSpellKnownOrInSpellBook = loader.IsSpellKnownOrInSpellBook
+	local SpellKnown = loader.IsSpellKnownOrInSpellBook
+	local checkPet = 1 -- Passing 0 or nil to IsSpellKnownOrInSpellBook checks the player, passing 1 checks the pet
 	local IsSpellKnown = loader.IsSpellKnown
 	local IsPlayerSpell = loader.IsPlayerSpell
 	do
@@ -2306,31 +2325,31 @@ do
 		if isMists then
 			function UpdateDispelStatus()
 				offDispel, defDispel = {}, {}
-				if IsSpellKnown(19801) or IsSpellKnown(30449) or IsSpellKnown(370) or IsSpellKnown(528) or IsSpellKnown(32375) or IsPlayerSpell(58375) or IsSpellKnown(19505, true) then
+				if SpellKnown(19801) or SpellKnown(30449) or SpellKnown(370) or SpellKnown(528) or SpellKnown(32375) or SpellKnown(58375) or SpellKnown(19505, checkPet) then
 					-- Tranquilizing Shot (Hunter), Spellsteal (Mage), Purge (Shaman), Dispel Magic (Priest), Mass Dispel (Priest), Glyph of Shield Slam (Warrior), Devour Magic (Warlock Felhunter)
 					offDispel.magic = true
 				end
-				if IsSpellKnown(2908) or IsSpellKnown(19801) or IsSpellKnown(5938) then
+				if SpellKnown(2908) or SpellKnown(19801) or SpellKnown(5938) then
 					-- Soothe (Druid), Tranquilizing Shot (Hunter), Shiv (Rogue)
 					offDispel.enrage = true
 				end
-				if IsPlayerSpell(88423) or IsPlayerSpell(77130) or IsPlayerSpell(53551) or IsSpellKnown(527) or IsSpellKnown(32375) or IsSpellKnown(89808, true) or IsSpellKnown(115451) then
+				if SpellKnown(88423) or SpellKnown(77130) or SpellKnown(53551) or SpellKnown(527) or SpellKnown(32375) or SpellKnown(89808, checkPet) or SpellKnown(115451) then
 					-- Nature's Cure (Druid), Purify Spirit (Shaman), Sacred Cleansing (Paladin), Purify (Priest), Mass Dispel (Priest), Singe Magic (Warlock Imp), Internal Medicine (Monk)
 					defDispel.magic = true
 				end
-				if IsSpellKnown(4987) or IsSpellKnown(527) or IsSpellKnown(115450) then
+				if SpellKnown(4987) or SpellKnown(527) or SpellKnown(115450) then
 					-- Cleanse (Paladin), Purify (Priest), Detox (Monk)
 					defDispel.disease = true
 				end
-				if IsPlayerSpell(88423) or IsSpellKnown(2782) or IsSpellKnown(4987) or IsSpellKnown(115450) then
+				if SpellKnown(88423) or SpellKnown(2782) or SpellKnown(4987) or SpellKnown(115450) then
 					-- Nature's Cure (Druid), Remove Corruption (Druid), Cleanse (Paladin), Detox (Monk)
 					defDispel.poison = true
 				end
-				if IsPlayerSpell(88423) or IsSpellKnown(2782) or IsSpellKnown(475) or IsSpellKnown(51886) then
+				if SpellKnown(88423) or SpellKnown(2782) or SpellKnown(475) or SpellKnown(51886) then
 					-- Nature's Cure (Druid), Remove Corruption (Druid), Remove Curse (Mage), Cleanse Spirit (Shaman)
 					defDispel.curse = true
 				end
-				if IsSpellKnown(1044) or IsSpellKnown(116841) then
+				if SpellKnown(1044) or SpellKnown(116841) then
 					-- Hand of Freedom (Paladin), Tiger's Lust (Monk)
 					defDispel.movement = true
 				end
@@ -2370,31 +2389,31 @@ do
 		else -- Retail
 			function UpdateDispelStatus()
 				offDispel, defDispel = {}, {}
-				if IsSpellKnownOrInSpellBook(32375) or IsSpellKnownOrInSpellBook(528) or IsSpellKnownOrInSpellBook(370) or IsSpellKnownOrInSpellBook(378773) or IsSpellKnownOrInSpellBook(30449) or IsSpellKnownOrInSpellBook(278326) or IsSpellKnownOrInSpellBook(19505, 1) or IsSpellKnownOrInSpellBook(19801) then
+				if SpellKnown(32375) or SpellKnown(528) or SpellKnown(370) or SpellKnown(378773) or SpellKnown(30449) or SpellKnown(278326) or SpellKnown(19505, checkPet) or SpellKnown(19801) then
 					-- Mass Dispel (Priest), Dispel Magic (Priest), Purge (Shaman), Greater Purge (Shaman), Spellsteal (Mage), Consume Magic (Demon Hunter), Devour Magic (Warlock Felhunter), Tranquilizing Shot (Hunter)
 					offDispel.magic = true
 				end
-				if IsSpellKnownOrInSpellBook(2908) or IsSpellKnownOrInSpellBook(19801) or IsSpellKnownOrInSpellBook(5938) or IsSpellKnownOrInSpellBook(450432) then
+				if SpellKnown(2908) or SpellKnown(19801) or SpellKnown(5938) or SpellKnown(450432) then
 					-- Soothe (Druid), Tranquilizing Shot (Hunter), Shiv (Rogue), Pressure Points (Monk)
 					offDispel.enrage = true
 				end
-				if IsSpellKnownOrInSpellBook(527) or IsSpellKnownOrInSpellBook(77130) or IsSpellKnownOrInSpellBook(115450) or IsSpellKnownOrInSpellBook(4987) or IsSpellKnownOrInSpellBook(88423) or IsSpellKnownOrInSpellBook(360823) or IsSpellKnownOrInSpellBook(89808, 1) then -- XXX Add DPS priest mass dispel?
+				if SpellKnown(527) or SpellKnown(77130) or SpellKnown(115450) or SpellKnown(4987) or SpellKnown(88423) or SpellKnown(360823) or SpellKnown(89808, checkPet) then -- XXX Add DPS priest mass dispel?
 					-- Purify (Heal Priest), Purify Spirit (Heal Shaman), Detox (Heal Monk), Cleanse (Heal Paladin), Nature's Cure (Heal Druid), Naturalize (Heal Evoker), Singe Magic (Warlock Imp)
 					defDispel.magic = true
 				end
-				if IsSpellKnownOrInSpellBook(390632) or IsSpellKnownOrInSpellBook(213634) or IsSpellKnownOrInSpellBook(388874) or IsSpellKnownOrInSpellBook(218164) or IsSpellKnownOrInSpellBook(393024) or IsSpellKnownOrInSpellBook(213644) then
+				if SpellKnown(390632) or SpellKnown(213634) or SpellKnown(388874) or SpellKnown(218164) or SpellKnown(393024) or SpellKnown(213644) then
 					-- Improved Purify (Heal Priest), Purify Disease (DPS Priest), Improved Detox (Heal Monk), Detox (Tank/DPS Monk), Improved Cleanse (Heal Paladin), Cleanse Toxins (Tank/DPS Paladin)
 					defDispel.disease = true
 				end
-				if IsSpellKnownOrInSpellBook(392378) or IsSpellKnownOrInSpellBook(2782) or IsSpellKnownOrInSpellBook(388874) or IsSpellKnownOrInSpellBook(218164) or IsSpellKnownOrInSpellBook(393024) or IsSpellKnownOrInSpellBook(213644) or IsSpellKnownOrInSpellBook(360823) or IsSpellKnownOrInSpellBook(365585) then
+				if SpellKnown(392378) or SpellKnown(2782) or SpellKnown(388874) or SpellKnown(218164) or SpellKnown(393024) or SpellKnown(213644) or SpellKnown(360823) or SpellKnown(365585) then
 					-- Improved Nature's Cure (Heal Druid), Remove Corruption (Tank/DPS Druid), Improved Detox (Heal Monk), Detox (Tank/DPS Monk), Improved Cleanse (Heal Paladin), Cleanse Toxins (DPS Paladin), Naturalize (Heal Evoker), Expunge (DPS Evoker)
 					defDispel.poison = true
 				end
-				if IsSpellKnownOrInSpellBook(392378) or IsSpellKnownOrInSpellBook(2782) or IsSpellKnownOrInSpellBook(383016) or IsSpellKnownOrInSpellBook(51886) or IsSpellKnownOrInSpellBook(475) then
+				if SpellKnown(392378) or SpellKnown(2782) or SpellKnown(383016) or SpellKnown(51886) or SpellKnown(475) then
 					-- Improved Nature's Cure (Heal Druid), Remove Corruption (Tank/DPS Druid), Improved Purify Spirit (Heal Shaman), Cleanse Spirit (DPS Shaman), Remove Curse (Mage)
 					defDispel.curse = true
 				end
-				if IsSpellKnownOrInSpellBook(1044) or IsSpellKnownOrInSpellBook(116841) then
+				if SpellKnown(1044) or SpellKnown(116841) then
 					-- Blessing of Freedom (Paladin), Tiger's Lust (Monk)
 					defDispel.movement = true
 				end
@@ -2433,16 +2452,16 @@ do
 				116705, -- Spear Hand Strike (Monk)
 			}
 			function UpdateInterruptStatus()
-				if IsSpellKnown(19647, true) then -- Spell Lock (Warlock Felhunter)
+				if SpellKnown(19647, checkPet) then -- Spell Lock (Warlock Felhunter)
 					canInterrupt = 19647
 					return
 				end
 				canInterrupt = false
 				for i = 1, #spellList do
 					local spell = spellList[i]
-					if IsSpellKnown(spell) then
+					if SpellKnown(spell) then
 						if spell == 147362 then -- Counter Shot
-							if IsPlayerSpell(34490) then -- Silencing Shot (replaces Counter Shot for Marksmanship)
+							if SpellKnown(34490) then -- Silencing Shot (replaces Counter Shot for Marksmanship)
 								canInterrupt = 34490
 								return
 							end
@@ -2517,14 +2536,14 @@ do
 				351338, -- Quell (Evoker)
 			}
 			function UpdateInterruptStatus()
-				if IsSpellKnownOrInSpellBook(19647, 1) then -- Spell Lock (Warlock Felhunter), Enum.SpellBookSpellBank.Pet
+				if SpellKnown(19647, checkPet) then -- Spell Lock (Warlock Felhunter), Enum.SpellBookSpellBank.Pet
 					canInterrupt = 19647
 					return
 				end
 				canInterrupt = false
 				for i = 1, #spellList do
 					local spell = spellList[i]
-					if IsSpellKnownOrInSpellBook(spell) then
+					if SpellKnown(spell) then
 						canInterrupt = spell
 						return
 					end
@@ -3853,6 +3872,7 @@ do
 	-- @usage self:Sync("abilityPrefix", data)
 	-- @usage self:Sync("ability")
 	function boss:Sync(msg, extra, noResend)
+		if loader.isBeta then return end -- XXX 12.0 Needs fixing (not allowed in raids/dungeons atm)
 		if msg then
 			if IsInGroup() then
 				if extra then

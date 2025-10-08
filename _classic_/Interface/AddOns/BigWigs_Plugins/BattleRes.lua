@@ -1,3 +1,5 @@
+if BigWigsLoader.isBeta then return end -- XXX needs updating for 12.0
+
 --------------------------------------------------------------------------------
 -- Module Declaration
 --
@@ -1485,6 +1487,12 @@ end
 -------------------------------------------------------------------------------
 -- Initialization
 --
+
+function plugin:OnRegister()
+	if self.db.profile.newResAvailableSound ~= "None" then
+		self:SimpleTimer(function() local played, id = self:PlaySoundFile(LibSharedMedia:Fetch(SOUND, self.db.profile.newResAvailableSound)) if played then StopSound(id) end end, 0)
+	end
+end
 
 do
 	local function DelayStartOfInstance() -- Difficulty info isn't accurate until 1 frame after PEW

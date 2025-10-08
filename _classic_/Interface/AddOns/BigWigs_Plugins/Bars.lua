@@ -2,7 +2,10 @@
 -- Module Declaration
 --
 
-local plugin, L = BigWigs:NewPlugin("Bars")
+local plugin, L = BigWigs:NewPlugin("Bars", {
+	"db",
+	"SendCustomBarToGroup",
+})
 if not plugin then return end
 
 --------------------------------------------------------------------------------
@@ -25,6 +28,9 @@ local normalAnchor, emphasizeAnchor = nil, nil
 local rearrangeBars
 
 local minBarWidth, minBarHeight, maxBarWidth, maxBarHeight = 120, 10, 550, 100
+
+local barPluginFrame = CreateFrame("Frame")
+local blizzardBars = {}
 
 --------------------------------------------------------------------------------
 -- Profile
@@ -1124,6 +1130,13 @@ function plugin:OnPluginEnable()
 	-- custom bars
 	self:RegisterMessage("BigWigs_PluginComm")
 	self:RegisterMessage("DBM_AddonMessage")
+
+	-- XXX 12.0
+	if issecretvalue then
+		barPluginFrame:RegisterEvent("ENCOUNTER_TIMELINE_EVENT_ADDED")
+		-- barPluginFrame:RegisterEvent("ENCOUNTER_TIMELINE_EVENT_STATE_CHANGED")
+		barPluginFrame:RegisterEvent("ENCOUNTER_TIMELINE_EVENT_REMOVED")
+	end
 end
 
 function plugin:OnPluginDisable()
@@ -1245,6 +1258,20 @@ function plugin:StopModuleBars(_, module)
 	end
 end
 
+function plugin:StopSecretBar(key)
+	if not normalAnchor then return end
+	for k in next, normalAnchor.bars do
+		if k:Get("bigwigs:hasSecrets") and k:Get("bigwigs:option") == key then
+			k:Stop()
+		end
+	end
+	for k in next, emphasizeAnchor.bars do
+		if k:Get("bigwigs:hasSecrets") and k:Get("bigwigs:option") == key then
+			k:Stop()
+		end
+	end
+end
+
 --------------------------------------------------------------------------------
 -- Bar utility functions
 --
@@ -1281,7 +1308,7 @@ end
 
 do
 	local initial = true
-	function plugin:CreateBar(module, key, text, time, icon, isApprox)
+	function plugin:CreateBar(module, key, text, time, icon, isApprox, hasSecrets)
 		local width, height
 		width = db.normalWidth
 		height = db.normalHeight
@@ -1298,9 +1325,14 @@ do
 		bar:SetFont(f, db.fontSize, flags)
 		bar:Set("bigwigs:module", module)
 		bar:Set("bigwigs:option", key)
+		bar:Set("bigwigs:hasSecrets", hasSecrets and hasSecrets or false)
 		bar:Set("bigwigs:anchor", "normalPosition")
 		normalAnchor.bars[bar] = true
-		bar:SetIcon(db.icon and icon or nil)
+		if db.icon then
+			bar:SetIcon(icon)
+		else
+			bar:SetIcon(nil)
+		end
 		bar:SetDuration(time, isApprox)
 		bar:SetColor(colors:GetColor("barColor", module, key))
 		bar:SetBackgroundColor(colors:GetColor("barBackground", module, key))
@@ -1314,7 +1346,7 @@ do
 		bar:SetIconPosition(db.iconPosition)
 		bar:SetFill(db.fill)
 		bar:SetLabel(text)
-		if initial then
+		if not issecretvalue and initial then -- XXX 12.0 compat
 			-- Workaround for wow custom font loading issues
 			self:SimpleTimer(function()
 				initial = false
@@ -1337,10 +1369,12 @@ do
 		rearrangeBars(emphasizeAnchor)
 	end
 
-	function plugin:BigWigs_StartBar(_, module, key, text, time, icon, isApprox, maxTime)
-		if not text then text = "" end
-		self:StopSpecificBar(nil, module, text)
-		local bar = self:CreateBar(module, key, text, time, icon, isApprox)
+	function plugin:BigWigs_StartBar(_, module, key, text, time, icon, isApprox, maxTime, hasSecrets)
+		if not hasSecrets and not text then text = "" end
+		if not hasSecrets then
+			self:StopSpecificBar(nil, module, text)
+		end
+		local bar = self:CreateBar(module, key, text, time, icon, isApprox, hasSecrets)
 		if isApprox then
 			bar:SetPauseWhenDone(true)
 		end
@@ -1416,7 +1450,7 @@ end
 -- Custom Bars
 --
 
-local function parseTime(input)
+local function ConvertTimeStringToSeconds(input)
 	if type(input) == "nil" then return end
 	if tonumber(input) then return tonumber(input) end
 	if type(input) == "string" then
@@ -1428,6 +1462,29 @@ local function parseTime(input)
 		elseif input:find("^%d+mi?n?$") then
 			local _, _, t = input:find("^(%d+)mi?n?$")
 			return tonumber(t) * 60
+		end
+	end
+end
+
+local ReplaceIconWithTexture
+do
+	local markerIcons = {
+		"|T137001:0|t",
+		"|T137002:0|t",
+		"|T137003:0|t",
+		"|T137004:0|t",
+		"|T137005:0|t",
+		"|T137006:0|t",
+		"|T137007:0|t",
+		"|T137008:0|t",
+	}
+
+	function ReplaceIconWithTexture(msg)
+		local id = tonumber(msg)
+		if id and id >= 1 and id <= 8 then
+			return markerIcons[id]
+		else
+			("{rt%s}"):format(msg)
 		end
 	end
 end
@@ -1446,11 +1503,10 @@ do
 			prevBars[bar] = GetTime()
 			if not UnitIsGroupLeader(nick) and not UnitIsGroupAssistant(nick) then return end
 			seconds, barText = bar:match("(%S+) (.*)")
-			seconds = parseTime(seconds)
+			seconds = ConvertTimeStringToSeconds(seconds)
 			if type(seconds) ~= "number" or type(barText) ~= "string" or seconds < 0 then
 				return
 			end
-			BigWigs:Print(L.customBarStarted:format(barText, isDBM and "DBM" or "BigWigs", nick))
 		end
 
 		local id = "bwcb" .. nick .. barText
@@ -1459,6 +1515,10 @@ do
 			timers[id] = nil
 		end
 
+		barText = barText:gsub("{[Rr][Tt](%d)}", ReplaceIconWithTexture)
+		if not localOnly then
+			BigWigs:Print(L.customBarStarted:format(barText, isDBM and "DBM" or "BigWigs", nick))
+		end
 		nick = nick:gsub("%-.+", "*") -- Remove server name
 		if seconds == 0 then
 			plugin:SendMessage("BigWigs_StopBar", plugin, nick..": "..barText)
@@ -1485,41 +1545,45 @@ function plugin:BigWigs_PluginComm(_, msg, seconds, sender)
 	end
 end
 
--------------------------------------------------------------------------------
--- Slashcommand
---
-
 do
 	local SendAddonMessage = BigWigsLoader.SendAddonMessage
 	local dbmPrefix = BigWigsLoader.dbmPrefix
 	local times
-	BigWigsAPI.RegisterSlashCommand("/raidbar", function(input)
-		if not plugin:IsEnabled() then BigWigs:Enable() end
-
+	function plugin:SendCustomBarToGroup(message, duration)
+		if BigWigsLoader.isBeta then return end -- XXX 12.0 Needs fixing (not allowed in raids/dungeons atm)
+		if not duration or duration < 3 then BigWigs:Print(L.wrongTime) return end
 		if not IsInGroup() or (not UnitIsGroupLeader("player") and not UnitIsGroupAssistant("player")) then BigWigs:Print(L.requiresLeadOrAssist) return end
-
-		local seconds, barText = input:match("(%S+) (.*)")
-		if not seconds or not barText then BigWigs:Print(L.wrongCustomBarFormat) return end
-
-		seconds = parseTime(seconds)
-		if not seconds or seconds < 0 then BigWigs:Print(L.wrongTime) return end
+		if not plugin:IsEnabled() then BigWigs:Enable() end
 
 		if not times then times = {} end
 		local t = GetTime()
-		if not times[input] or (times[input] and (times[input] + 2) < t) then
-			times[input] = t
-			BigWigs:Print(L.sendCustomBar:format(barText))
-			plugin:Sync("CBar", input)
+		local id = duration .." ".. message
+		if not times[id] or (times[id] and (times[id] + 1) < t) then
+			times[id] = t
+			local barTextForPrinting = message:gsub("{[Rr][Tt](%d)}", ReplaceIconWithTexture)
+			BigWigs:Print(L.sendCustomBar:format(barTextForPrinting))
+			plugin:Sync("CBar", id)
 			local name = plugin:UnitName("player")
 			local realm = GetRealmName()
 			local normalizedPlayerRealm = realm:gsub("[%s-]+", "") -- Has to mimic DBM code
-			local result = SendAddonMessage(dbmPrefix, ("%s-%s\t1\tU\t%d\t%s"):format(name, normalizedPlayerRealm, seconds, barText), IsInGroup(2) and "INSTANCE_CHAT" or "RAID") -- DBM message
+			local result = SendAddonMessage(dbmPrefix, ("%s-%s\t1\tU\t%d\t%s"):format(name, normalizedPlayerRealm, duration, message), IsInGroup(2) and "INSTANCE_CHAT" or "RAID") -- DBM message
 			if type(result) == "number" and result ~= 0 then
 				BigWigs:Error("BigWigs: Failed to send raid bar. Error code: ".. result)
 			end
 		end
-	end)
+	end
 end
+
+-------------------------------------------------------------------------------
+-- Slashcommand
+--
+
+BigWigsAPI.RegisterSlashCommand("/raidbar", function(input)
+	local seconds, barText = input:match("(%S+) (.*)")
+	if not seconds or not barText then BigWigs:Print(L.wrongCustomBarFormat) return end
+	seconds = ConvertTimeStringToSeconds(seconds)
+	plugin:SendCustomBarToGroup(barText, seconds)
+end)
 
 BigWigsAPI.RegisterSlashCommand("/localbar", function(input)
 	if not plugin:IsEnabled() then BigWigs:Enable() end
@@ -1527,8 +1591,40 @@ BigWigsAPI.RegisterSlashCommand("/localbar", function(input)
 	local seconds, barText = input:match("(%S+) (.*)")
 	if not seconds or not barText then BigWigs:Print(L.wrongCustomBarFormat:gsub("/raidbar", "/localbar")) return end
 
-	seconds = parseTime(seconds)
+	seconds = ConvertTimeStringToSeconds(seconds)
 	if not seconds then BigWigs:Print(L.wrongTime) return end
 
 	startCustomBar(seconds, plugin:UnitName("player"), barText)
 end)
+
+-------------------------------------------------------------------------------
+-- 12.0 Midnight
+--
+
+barPluginFrame:SetScript("OnEvent", function(_, event, ...)
+	barPluginFrame[event](plugin, ...)
+end)
+
+function barPluginFrame:ENCOUNTER_TIMELINE_EVENT_ADDED(eventInfo, initialState)
+	-- Not Secrets
+	local eventID = eventInfo.id
+	local duration = eventInfo.duration
+	local source = eventInfo.source
+
+	-- Secrets
+	local spellId = eventInfo.tooltipSpellID
+	local spellName = C_Spell.GetSpellName(spellId)
+	local iconId = eventInfo.iconFileID
+	local dispelType = eventInfo.dispelType
+	local role = eventInfo.role
+	local priority = eventInfo.priority
+	self:BigWigs_StartBar(nil, nil, eventID, spellName, duration, iconId, nil, nil, true)
+end
+
+-- function barPluginFrame:ENCOUNTER_TIMELINE_EVENT_STATE_CHANGED(_, eventID, info)
+--	used to pause/unpause bars - can we test?
+-- end
+
+function barPluginFrame:ENCOUNTER_TIMELINE_EVENT_REMOVED(eventID)
+	plugin:StopSecretBar(eventID)
+end

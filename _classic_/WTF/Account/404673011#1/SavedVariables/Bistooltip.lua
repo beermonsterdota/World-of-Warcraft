@@ -24,8 +24,8 @@ BisTooltipDB = {
 ["filter_specs"] = {
 ["Warrior"] = {
 ["Fury"] = true,
-["Arms"] = true,
 ["Protection"] = true,
+["Arms"] = true,
 },
 ["Paladin"] = {
 ["Protection"] = true,
@@ -43,8 +43,8 @@ BisTooltipDB = {
 ["Windwalker"] = true,
 },
 ["Rogue"] = {
-["Combat"] = true,
 ["Subtlety"] = true,
+["Combat"] = true,
 ["Assassination"] = true,
 },
 ["Mage"] = {
@@ -64,8 +64,13 @@ BisTooltipDB = {
 },
 ["Hunter"] = {
 ["Marksmanship"] = true,
-["Beast mastery"] = true,
 ["Survival"] = true,
+["Beast mastery"] = true,
+},
+["Priest"] = {
+["Discipline"] = true,
+["Shadow"] = true,
+["Holy"] = true,
 },
 ["Druid"] = {
 ["Feral"] = true,
@@ -73,15 +78,10 @@ BisTooltipDB = {
 ["Guardian"] = true,
 ["Restoration"] = true,
 },
-["Priest"] = {
-["Discipline"] = true,
-["Holy"] = true,
-["Shadow"] = true,
 },
-},
-["phase_index"] = 2,
-["data_source"] = "wh",
 ["class_index"] = 9,
+["data_source"] = "wh",
+["phase_index"] = 2,
 },
 },
 }

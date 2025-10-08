@@ -6,7 +6,7 @@
 ## Group: BagBrother
 
 ## Dependencies: Bagnon
-## Interface: 50500
+## Interface: 50501
 ## LoadOnDemand: 1
 
 ..\BagBrother\frames\guild\guild.xml

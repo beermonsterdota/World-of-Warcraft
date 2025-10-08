@@ -12,9 +12,9 @@ local strfind = string.find
 -- Generate our version variables
 --
 
-local BIGWIGS_VERSION = 399
+local BIGWIGS_VERSION = 400
 local CONTENT_PACK_VERSIONS = {
-	["LittleWigs"] = {11, 2, 34},
+	["LittleWigs"] = {11, 2, 36},
 	["BigWigs_Classic"] = {11, 2, 0},
 	["BigWigs_BurningCrusade"] = {11, 1, 4},
 	["BigWigs_WrathOfTheLichKing"] = {11, 1, 7},
@@ -56,7 +56,7 @@ do
 	local ALPHA = "ALPHA"
 
 	local releaseType
-	local myGitHash = "282485c" -- The ZIP packager will replace this with the Git hash.
+	local myGitHash = "62ed5f4" -- The ZIP packager will replace this with the Git hash.
 	local releaseString
 	--[=[@alpha@
 	-- The following code will only be present in alpha ZIPs.
@@ -149,14 +149,14 @@ public.GetSpellLink = C_Spell.GetSpellLink
 public.GetSpellName = C_Spell.GetSpellName
 public.GetSpellTexture = C_Spell.GetSpellTexture
 public.IsItemInRange = C_Item.IsItemInRange
-public.IsSpellKnownOrInSpellBook = C_SpellBook.IsSpellKnownOrInSpellBook -- XXX [Mainline:✓ MoP:✗ Wrath:✗ Vanilla:✗]
+public.IsSpellKnownOrInSpellBook = C_SpellBook.IsSpellKnownOrInSpellBook -- XXX [Mainline:✓ MoP:✓ Wrath:✗ Vanilla:✗]
 public.IsPlayerSpell = IsPlayerSpell or public.IsSpellKnownOrInSpellBook
 public.IsSpellKnown = IsSpellKnown or public.IsSpellKnownOrInSpellBook
 public.PlaySoundFile = PlaySoundFile
 public.RegisterAddonMessagePrefix = RegisterAddonMessagePrefix
 public.SendAddonMessage = SendAddonMessage
 public.SetRaidTarget = SetRaidTarget
-public.SendChatMessage = C_ChatInfo and C_ChatInfo.SendChatMessage or SendChatMessage -- XXX [Mainline:✓ MoP:✗ Wrath:✗ Vanilla:✗]
+public.SendChatMessage = C_ChatInfo and C_ChatInfo.SendChatMessage or SendChatMessage -- XXX [Mainline:✓ MoP:✓ Wrath:✗ Vanilla:✗]
 public.UnitCanAttack = UnitCanAttack
 public.UnitDetailedThreatSituation = UnitDetailedThreatSituation
 public.UnitThreatSituation = UnitThreatSituation
@@ -219,6 +219,7 @@ do
 	local s = "BigWigs_Shadowlands"
 	local df = "BigWigs_Dragonflight"
 	local tww = "BigWigs_TheWarWithin"
+	local mn = "BigWigs_Midnight"
 	local lw_c = "LittleWigs_Classic"
 	local lw_bc = "LittleWigs_BurningCrusade"
 	local lw_wotlk = "LittleWigs_WrathOfTheLichKing"
@@ -230,6 +231,7 @@ do
 	local lw_s = "LittleWigs_Shadowlands"
 	local lw_df = "LittleWigs_Dragonflight"
 	local lw_tww = "LittleWigs_TheWarWithin"
+	local lw_mn = "LittleWigs_Midnight"
 	local lw_delves = "LittleWigs_Delves"
 	local lw_cs = "LittleWigs_CurrentSeason"
 
@@ -278,29 +280,28 @@ do
 			currentSeason = {},
 			zones = {},
 		}
-	--elseif public.isBeta and public.isTestBuild then -- Retail Beta
-	--	public.currentExpansion = { -- Change on new expansion releases
-	--		name = tww,
-	--		bigWigsBundled = {
-	--			[df] = true,
-	--			[tww] = true,
-	--		},
-	--		littlewigsDefault = lw_cs,
-	--		littleWigsBundled = {
-	--			[lw_df] = true,
-	--			[lw_tww] = true,
-	--			[lw_delves] = true,
-	--			[lw_cs] = true,
-	--		},
-	--		littleWigsExtras = {
-	--			lw_delves,
-	--			lw_cs,
-	--		},
-	--		currentSeason = {},
-	--		zones = {
-	--			[2657] = "BigWigs_NerubarPalace",
-	--		}
-	--	}
+	elseif public.isBeta then -- Retail Beta
+		public.currentExpansion = { -- Change on new expansion releases
+			name = mn,
+			bigWigsBundled = {
+				[mn] = true,
+			},
+			littlewigsDefault = lw_cs,
+			littleWigsBundled = {
+				[lw_df] = true,
+				[lw_tww] = true,
+				[lw_delves] = true,
+				[lw_cs] = true,
+			},
+			littleWigsExtras = {
+				lw_delves,
+				lw_cs,
+			},
+			currentSeason = {},
+			zones = {
+				[2913] = "BigWigs_MarchOnQuelDanas",
+			}
+		}
 	else -- Retail
 		public.currentExpansion = { -- Change on new expansion releases
 			name = tww,
@@ -423,6 +424,9 @@ do
 		[2657] = tww, -- Nerub'ar Palace
 		[2769] = tww, -- Liberation of Undermine
 		[2810] = tww, -- Manaforge Omega
+		--[[ BigWigs: Midnight ]]--
+		[2913] = public.isBeta and mn or nil, -- March on Quel'Danas
+
 
 		--[[ LittleWigs: Classic ]]--
 		[33] = not (public.isVanilla or public.isTBC or public.isWrath) and lw_cata or nil, -- Shadowfang Keep
@@ -595,6 +599,9 @@ do
 		[2826] = lw_delves, -- Sidestreet Sluice
 		[2831] = lw_delves, -- Demolition Dome
 		[2951] = lw_delves, -- Voidrazor Sanctuary
+		--[[ LittleWigs: Midnight ]]--
+		[2805] = public.isBeta and lw_mn or nil, -- Windrunner Spire
+		[2813] = public.isBeta and lw_mn or nil, -- Murder Row
 	}
 	public.remappedZones = {
 		[2827] = 2213, -- Horrific Vision of Stormwind (Revisited) -> Horrific Vision of Stormwind
@@ -1099,9 +1106,13 @@ do
 	if num < 90 then
 		C_CVar.SetCVar("Sound_NumChannels", "90") -- 64 is the default, enforce a little higher as a minimum to prevent sound clipping issues with addons
 	end
-	local cache = tonumber(C_CVar.GetCVar("Sound_MaxCacheSizeInBytes")) or 0
-	if cache < 134217728 then
+	local maxCache = tonumber(C_CVar.GetCVar("Sound_MaxCacheSizeInBytes")) or 0
+	if maxCache < 134217728 then
 		C_CVar.SetCVar("Sound_MaxCacheSizeInBytes", "134217728") -- "Large (128MB)" is the default, enforce it as a minimum
+	end
+	local maxSize = tonumber(C_CVar.GetCVar("Sound_MaxCacheableSizeInBytes")) or 0
+	if maxSize < 174762 then
+		C_CVar.SetCVar("Sound_MaxCacheableSizeInBytes", "174762") -- "174762" (170KB) is the default, enforce it as a minimum
 	end
 end
 
@@ -1383,6 +1394,7 @@ do
 		BigWigs_NerubarPalace = true,
 		BigWigs_LiberationOfUndermine = true,
 		BigWigs_ManaforgeOmega = true,
+		BigWigs_MarchOnQuelDanas = true,
 	}
 	-- Try to teach people not to force load our modules.
 	for i = 1, GetNumAddOns() do
@@ -1473,24 +1485,24 @@ do
 		--ruRU = "Russian (ruRU)",
 		--zhCN = "Simplified Chinese (zhCN)",
 		--zhTW = "Traditional Chinese (zhTW)",
-		itIT = "Italian (itIT)",
+		--itIT = "Italian (itIT)",
 		--koKR = "Korean (koKR)",
 		--esES = "Spanish (esES)",
 		--esMX = "Spanish (esMX)",
 		--deDE = "German (deDE)",
-		ptBR = "Portuguese (ptBR)",
+		--ptBR = "Portuguese (ptBR)",
 		--frFR = "French (frFR)",
 	}
 	local realms = {
 		--[542] = locales.frFR, -- frFR
-		[3207] = locales.ptBR, [3208] = locales.ptBR, [3209] = locales.ptBR, [3210] = locales.ptBR, [3234] = locales.ptBR, -- ptBR
+		--[3207] = locales.ptBR, [3208] = locales.ptBR, [3209] = locales.ptBR, [3210] = locales.ptBR, [3234] = locales.ptBR, -- ptBR
 		--[1425] = locales.esMX, [1427] = locales.esMX, [1428] = locales.esMX, -- esMX
-		[1309] = locales.itIT, [1316] = locales.itIT, -- itIT
+		--[1309] = locales.itIT, [1316] = locales.itIT, -- itIT
 		--[1378] = locales.esES, [1379] = locales.esES, [1380] = locales.esES, [1381] = locales.esES, [1382] = locales.esES, [1383] = locales.esES, -- esES
 		--[1384] = locales.esES, [1385] = locales.esES, [1386] = locales.esES, [1387] = locales.esES, [1395] = locales.esES, -- esES
 	}
 	local criticalList = {
-		[locales.itIT] = true,
+		--[locales.itIT] = true,
 	}
 
 	local language = locales[myLocale]
@@ -1606,15 +1618,16 @@ end
 --
 
 do
-	local DBMdotRevision = "20250923203905" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
-	local DBMdotDisplayVersion = "11.2.17" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
-	local DBMdotReleaseRevision = "20250923000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
+	local DBMdotRevision = "20251001061751" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
+	local DBMdotDisplayVersion = "11.2.18" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
+	local DBMdotReleaseRevision = "20250930000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
 	local protocol = 3
 	local versionPrefix = "V"
 	local PForceDisable = 19
 
 	local timer = nil
 	local function sendDBMMsg()
+		if public.isBeta then return end -- XXX 12.0 Needs fixing (not allowed in raids/dungeons atm)
 		if IsInGroup() then
 			local realm = GetRealmName()
 			local normalizedPlayerRealm = realm:gsub("[%s-]+", "") -- Has to mimic DBM code
@@ -1697,6 +1710,7 @@ local ResetVersionWarning
 do
 	local timer = nil
 	local function sendMsg()
+		if public.isBeta then return end -- XXX 12.0 Needs fixing (not allowed in raids/dungeons atm)
 		if IsInGroup() then
 			local result = SendAddonMessage("BigWigs", versionResponseString, IsInGroup(2) and "INSTANCE_CHAT" or "RAID") -- LE_PARTY_CATEGORY_INSTANCE = 2
 			if type(result) == "number" and result ~= 0 then
@@ -1835,6 +1849,7 @@ do
 		}
 		local UnitIsPlayer = UnitIsPlayer
 		local function UNIT_TARGET(frame, event, unit)
+			if public.isBeta then return end -- XXX needs updating for 12.0
 			local unitTarget = unit.."target"
 			local guid = UnitGUID(unitTarget)
 			if guid and not UnitIsPlayer(unitTarget) then
@@ -1985,6 +2000,7 @@ end
 do
 	local grouped = nil
 	function mod:GROUP_FORMED()
+		if public.isBeta then return end -- XXX 12.0 Needs fixing (not allowed in raids/dungeons atm)
 		local groupType = (IsInGroup(2) and 3) or (IsInRaid() and 2) or (IsInGroup() and 1) -- LE_PARTY_CATEGORY_INSTANCE = 2
 		if (not grouped and groupType) or (grouped and groupType and grouped ~= groupType) then
 			grouped = groupType
