@@ -1,14 +1,14 @@
 
 Bagnon_Sets = {
 ["latest"] = {
-["id"] = "11.2.9",
+["id"] = "11.2.10",
 ["cooldown"] = 1758280965,
-["who"] = "Крогбой-Пламегор",
+["who"] = "Флемет-Пламегор",
 },
 ["global"] = {
 ["inventory"] = {
 ["y"] = 104.1480712890625,
-["brokerObject"] = "BagnonLauncher",
+["x"] = 0,
 ["point"] = "BOTTOMRIGHT",
 ["borderColor"] = {
 },
@@ -21,7 +21,7 @@ Bagnon_Sets = {
 "trade",
 },
 },
-["x"] = 0,
+["brokerObject"] = "BagnonLauncher",
 },
 ["vault"] = {
 ["color"] = {
@@ -80,33 +80,33 @@ Bagnon_Sets = {
 ["color"] = {
 ["quiver"] = {
 },
-["herb"] = {
+["account"] = {
 },
-["normal"] = {
+["enchant"] = {
 },
 ["soul"] = {
 },
-["inscribe"] = {
+["fridge"] = {
 },
 ["mine"] = {
 },
-["gem"] = {
+["engineer"] = {
 },
 ["leather"] = {
 },
-["fridge"] = {
+["reagent"] = {
 },
-["engineer"] = {
+["gem"] = {
 },
 ["key"] = {
 },
 ["tackle"] = {
 },
-["reagent"] = {
+["inscribe"] = {
 },
-["enchant"] = {
+["normal"] = {
 },
-["account"] = {
+["herb"] = {
 },
 },
 ["display"] = {

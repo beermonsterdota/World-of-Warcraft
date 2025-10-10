@@ -1,6 +1,6 @@
 
 PawnOptions = {
-["LastVersion"] = 2.1107,
+["LastVersion"] = 2.1108,
 ["LastPlayerFullName"] = "Зурантор-Пламегор",
 ["AutoSelectScales"] = true,
 ["AutoSelectScalesEnabledOnce"] = true,
@@ -27,9 +27,9 @@ nil,
 ["Link"] = "|cffa335ee|Hitem:86951:4419:76694:76668:::::90::264::::::::|h[Доспех необыкновенных тайн]|h|r",
 },
 {
-["ID"] = 86900,
-["Level"] = 483,
-["Link"] = "|cffa335ee|Hitem:86900::::::::90::264::::::::|h[Связующая цепь вечного лета]|h|r",
+["ID"] = 90452,
+["Level"] = 496,
+["Link"] = "|cffa335ee|Hitem:90452::::::::90::264::::::::|h[Ремень выбивающего искры]|h|r",
 },
 {
 ["ID"] = 87042,

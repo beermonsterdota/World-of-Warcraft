@@ -324,6 +324,20 @@ local teleportList = {
 		[670] = 445424, -- Grim Batol
 	},
 }
+if BigWigsLoader.isBeta then
+	table.insert(teleportList, 2, {
+		[2648] = 445443, -- The Rookery
+		[2649] = 445444, -- Priory of the Sacred Flame
+		[2651] = 445441, -- Darkflame Cleft
+		[2652] = 445269, -- The Stonevault
+		[2660] = 445417, -- Ara-Kara, City of Echoes
+		[2661] = 445440, -- Cinderbrew Meadery
+		[2662] = 445414, -- The Dawnbreaker
+		[2669] = 445416, -- City of Threads
+		[2773] = 1216786, -- Operation: Floodgate
+		[2830] = 1237215, -- Eco-Dome Al'dani
+	})
+end
 for mapID in next, BigWigsLoader.currentExpansion.currentSeason do -- Automatically build the current season list
 	for expansionIndex = 2, #teleportList do
 		if teleportList[expansionIndex][mapID] then
@@ -907,7 +921,7 @@ do
 				local challengeMapName, _, _, icon = GetMapUIInfo(challengeMapID)
 				BigWigsLoader:SendMessage("BigWigs_StartCountdown", self, nil, "mythicplus", 9, nil, db.profile.countVoice, 9, nil, db.profile.countBegin)
 				if keyLevel and keyLevel > 0 then
-					local msg = L.keystoneStartBar:format(dungeonNamesTrimmed[challengeMapID] or "?", keyLevel)
+					local msg = L.keystoneStartBar:format(dungeonNamesTrimmed[challengeMapID] or challengeMapID, keyLevel)
 					BigWigsLoader:SendMessage("BigWigs_StartBar", nil, nil, msg, 9, icon)
 					BigWigsLoader:SendMessage("BigWigs_Timer", nil, nil, 9, 9, msg, 0, icon, false, true)
 				else
@@ -925,7 +939,7 @@ do
 						end
 					end
 				end)
-				BigWigsLoader:SendMessage("BigWigs_Message", self, nil, BigWigsAPI:GetLocale("BigWigs: Common").custom_sec:format(L.keystoneStartBar:format(dungeonNamesTrimmed[challengeMapID], keyLevel), 9), "cyan", icon)
+				BigWigsLoader:SendMessage("BigWigs_Message", self, nil, BigWigsAPI:GetLocale("BigWigs: Common").custom_sec:format(L.keystoneStartBar:format(dungeonNamesTrimmed[challengeMapID] or challengeMapID, keyLevel), 9), "cyan", icon)
 				local soundName = db.profile.countStartSound
 				if soundName ~= "None" then
 					local sound = LibSharedMedia:Fetch("sound", soundName, true)
@@ -1005,7 +1019,7 @@ do
 			teleportButtons[1][1]:SetPoint("TOPRIGHT", scrollChild, "TOP", 0, -40)
 			self:SetScript("OnUpdate", OnUpdate)
 
-			local numExpansions = #L.expansionNames
+			local numExpansions = #L.expansionNames - (BigWigsLoader.isBeta and 0 or 1)
 			for expansionIndex = 1, #teleportButtons do
 				if expansionIndex > 1 then
 					local expansionNameHeader = CreateHeader()
@@ -1097,7 +1111,7 @@ do
 				sortedplayerList[#sortedplayerList+1] = {
 					name = pData.name, decoratedName = decoratedName, nameTooltip = nameTooltip,
 					level = pData.keyLevel, levelTooltip = L.keystoneLevelTooltip:format(pData.keyLevel),
-					map = dungeonNamesTiny[pData.keyMap] or pData.keyMap > 0 and pData.keyMap or "-", mapTooltip = L.keystoneMapTooltip:format(challengeMapName or "-"), mapID = mapID,
+					map = dungeonNamesTiny[pData.keyMap] or pData.keyMap > 0 and pData.keyMap or "?", mapTooltip = L.keystoneMapTooltip:format(challengeMapName or "-"), mapID = mapID,
 					rating = pData.playerRating, ratingTooltip = L.keystoneRatingTooltip:format(pData.playerRating),
 				}
 			end
@@ -1270,13 +1284,8 @@ do
 			local challengeMapName, _, timeLimit = GetMapUIInfo(runs[i].mapChallengeModeID)
 			cellDate:SetWidth(WIDTH_RATING+13)
 			local dateTbl = runs[i].completionDate
-			if type(dateTbl) == "table" then
-				cellDate.text:SetText(L.dayNamesShort[dateTbl.weekday])
-				cellDate.tooltip = L.dateFormat:format(L.dayNames[dateTbl.weekday], dateTbl.day, L.monthNames[dateTbl.month], dateTbl.year)
-			else
-				cellDate.text:SetText("---")
-				cellDate.tooltip = "Date will be available after patch 11.2.5"
-			end
+			cellDate.text:SetText(L.dayNamesShort[dateTbl.weekday])
+			cellDate.tooltip = L.dateFormat:format(L.dayNames[dateTbl.weekday], dateTbl.day, L.monthNames[dateTbl.month], dateTbl.year)
 			cellMapName:SetWidth(WIDTH_MAP)
 			cellMapName.text:SetText(dungeonNamesTiny[runs[i].mapChallengeModeID] or runs[i].mapChallengeModeID)
 			cellMapName.tooltip = L.keystoneMapTooltip:format(challengeMapName or "-")
@@ -1288,33 +1297,33 @@ do
 			cellGainedScore.tooltip = L.keystoneScoreGainedTooltip:format(runs[i].gained, runs[i].runScore)
 			cellInTime:SetWidth(WIDTH_RATING+15)
 			if runs[i].completed then
-				if (runs[i].durationSec or 0) > timeLimit then -- Was the time limit changed in a hotfix?
+				if runs[i].durationSec > timeLimit then -- Was the time limit changed in a hotfix?
 					cellInTime.text:SetFormattedText(L.keystoneTimeUnder, 0, 0)
 				else
-					local diff = timeLimit - (runs[i].durationSec or timeLimit)
+					local diff = timeLimit - runs[i].durationSec
 					local minutesUnder = math.floor(diff / 60)
 					local secondsUnder = math.floor(diff - (minutesUnder*60))
 					cellInTime.text:SetFormattedText(L.keystoneTimeUnder, minutesUnder, secondsUnder)
 				end
-				local minutesTotal = math.floor((runs[i].durationSec or 0) / 60)
-				local secondsTotal = math.floor((runs[i].durationSec or 0) - (minutesTotal*60))
+				local minutesTotal = math.floor(runs[i].durationSec / 60)
+				local secondsTotal = math.floor(runs[i].durationSec - (minutesTotal*60))
 				local minutesTimeLimit = math.floor(timeLimit / 60)
 				local secondsTimeLimit = math.floor(timeLimit - (minutesTimeLimit*60))
-				cellInTime.tooltip = (L.keystoneCompletedTooltip .. "\n" .. "Numbers will be available after patch 11.2.5"):format(minutesTotal, secondsTotal, minutesTimeLimit, secondsTimeLimit)
+				cellInTime.tooltip = (L.keystoneCompletedTooltip):format(minutesTotal, secondsTotal, minutesTimeLimit, secondsTimeLimit)
 			else
-				if (runs[i].durationSec or timeLimit) < timeLimit then -- Was the time limit changed in a hotfix?
+				if runs[i].durationSec < timeLimit then -- Was the time limit changed in a hotfix?
 					cellInTime.text:SetFormattedText(L.keystoneTimeOver, 0, 0)
 				else
-					local diff = (runs[i].durationSec or timeLimit) - timeLimit
+					local diff = runs[i].durationSec - timeLimit
 					local minutesOver = math.floor(diff / 60)
 					local secondsOver = math.floor(diff - (minutesOver*60))
 					cellInTime.text:SetFormattedText(L.keystoneTimeOver, minutesOver, secondsOver)
 				end
-				local minutesTotal = math.floor((runs[i].durationSec or 0) / 60)
-				local secondsTotal = math.floor((runs[i].durationSec or 0) - (minutesTotal*60))
+				local minutesTotal = math.floor(runs[i].durationSec / 60)
+				local secondsTotal = math.floor(runs[i].durationSec - (minutesTotal*60))
 				local minutesTimeLimit = math.floor(timeLimit / 60)
 				local secondsTimeLimit = math.floor(timeLimit - (minutesTimeLimit*60))
-				cellInTime.tooltip = (L.keystoneFailedTooltip .. "\n" .. "Numbers will be available after patch 11.2.5"):format(minutesTotal, secondsTotal, minutesTimeLimit, secondsTimeLimit)
+				cellInTime.tooltip = (L.keystoneFailedTooltip):format(minutesTotal, secondsTotal, minutesTimeLimit, secondsTimeLimit)
 			end
 			prevDate, prevMapName, prevLevel, prevGainedScore, prevInTime = cellDate, cellMapName, cellLevel, cellGainedScore, cellInTime
 
@@ -1420,7 +1429,7 @@ do
 				sortedplayerList[#sortedplayerList+1] = {
 					name = pName, decoratedName = decoratedName, nameTooltip = nameTooltip,
 					level = pData[1], levelTooltip = L.keystoneLevelTooltip:format(pData[1] == -1 and L.keystoneHiddenTooltip or pData[1]),
-					map = pData[2] == -1 and hiddenIcon or dungeonNamesTiny[pData[2]] or "-",
+					map = pData[2] == -1 and hiddenIcon or dungeonNamesTiny[pData[2]] or pData[2] or "?",
 					mapTooltip = L.keystoneMapTooltip:format(pData[2] == -1 and L.keystoneHiddenTooltip or challengeMapName or "-") .. GetTeleportTextForSpellID(teleportSpellID),
 					mapID = mapID,
 					rating = pData[3], ratingTooltip = L.keystoneRatingTooltip:format(pData[3]),

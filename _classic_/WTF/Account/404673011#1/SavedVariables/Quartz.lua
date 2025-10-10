@@ -53,9 +53,9 @@ Quartz3DB = {
 ["Default"] = {
 ["modules"] = {
 ["Focus"] = false,
-["Target"] = false,
-["Pet"] = false,
 ["Timer"] = false,
+["Pet"] = false,
+["Target"] = false,
 },
 },
 },

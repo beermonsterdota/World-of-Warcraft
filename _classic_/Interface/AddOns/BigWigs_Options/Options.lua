@@ -278,7 +278,6 @@ do
 							width = "full",
 						},
 					},
-					hidden = loader.isVanilla,
 				},
 			},
 		}
@@ -1263,7 +1262,7 @@ local function populateToggleOptions(widget, module)
 
 			-- Headers
 			local displayOrder = {
-				"story", "timewalk", "LFR", "normal", "heroic", "mythic",
+				"story", "timewalk", "LFR", "LFR_timerun", "normal", "normal_timerun", "heroic", "heroic_timerun", "mythic", "mythic_timerun",
 				"N10", "N25", "H10", "H25",
 				"SOD", "level1", "level2", "level3", "hardcore",
 				"solotier8", "solotier11",
@@ -1299,7 +1298,7 @@ local function populateToggleOptions(widget, module)
 					if not value then
 						fastestVictoryLabel:SetText("-")
 					elseif value and bestDate then
-						fastestVictoryLabel:SetFormattedText("%s (%s)", value, bestDate)
+						fastestVictoryLabel:SetText(("%s (%s)"):format(value, bestDate))
 					elseif value then
 						fastestVictoryLabel:SetText(value)
 					end

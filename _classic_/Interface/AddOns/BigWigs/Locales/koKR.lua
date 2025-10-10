@@ -78,7 +78,7 @@ L.expansionNames = {
 	"어둠땅", -- Shadowlands
 	"용군단", -- Dragonflight
 	"내부 전쟁", -- The War Within
-	"Midnight", -- Midnight
+	"한밤", -- Midnight
 }
 L.littleWigsExtras = {
 	["LittleWigs_Delves"] = "구렁",
@@ -295,6 +295,10 @@ L.LFR = "공찾"
 L.normal = "일반"
 L.heroic = "영웅"
 L.mythic = "신화"
+L.LFR_timerun = "|A:timerunning-glues-icon:14:14|a공찾"
+L.normal_timerun = "|A:timerunning-glues-icon:14:14|a일반"
+L.heroic_timerun = "|A:timerunning-glues-icon:14:14|a영웅"
+L.mythic_timerun = "|A:timerunning-glues-icon:14:14|a신화"
 L.timewalk = "시간여행"
 L.solotier8 = "솔플 8단계"
 L.solotier11 = "솔플 11단계"

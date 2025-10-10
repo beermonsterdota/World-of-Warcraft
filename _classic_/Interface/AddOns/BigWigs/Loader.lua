@@ -56,7 +56,7 @@ do
 	local ALPHA = "ALPHA"
 
 	local releaseType
-	local myGitHash = "62ed5f4" -- The ZIP packager will replace this with the Git hash.
+	local myGitHash = "c06ad1c" -- The ZIP packager will replace this with the Git hash.
 	local releaseString
 	--[=[@alpha@
 	-- The following code will only be present in alpha ZIPs.
@@ -143,6 +143,7 @@ public.GetBestMapForUnit = GetBestMapForUnit
 public.GetInstanceInfo = GetInstanceInfoModified
 public.GetMapInfo = GetMapInfo
 public.GetPlayerAuraBySpellID = C_UnitAuras.GetPlayerAuraBySpellID
+public.GetUnitAuraBySpellID = C_UnitAuras.GetUnitAuraBySpellID -- XXX [Mainline:✓ MoP:✗ Wrath:✗ Vanilla:✗]
 public.GetSpellCooldown = C_Spell.GetSpellCooldown or GetSpellCooldown -- XXX [Mainline:✓ MoP:✓ Wrath:✓ Vanilla:✗]
 public.GetSpellDescription = C_Spell.GetSpellDescription
 public.GetSpellLink = C_Spell.GetSpellLink
@@ -288,7 +289,7 @@ do
 			},
 			littlewigsDefault = lw_cs,
 			littleWigsBundled = {
-				[lw_df] = true,
+				[lw_mn] = true,
 				[lw_tww] = true,
 				[lw_delves] = true,
 				[lw_cs] = true,
@@ -297,7 +298,15 @@ do
 				lw_delves,
 				lw_cs,
 			},
-			currentSeason = {},
+			currentSeason = {
+				[2287] = lw_cs, -- Halls of Atonement
+				[2441] = lw_cs, -- Tazavesh, the Veiled Market
+				[2649] = lw_cs, -- Priory of the Sacred Flame
+				[2660] = lw_cs, -- Ara-Kara, City of Echoes
+				[2662] = lw_cs, -- The Dawnbreaker
+				[2773] = lw_cs, -- Operation: Floodgate
+				[2830] = lw_cs, -- Eco-Dome Al'dani
+			},
 			zones = {
 				[2913] = "BigWigs_MarchOnQuelDanas",
 			}
@@ -687,11 +696,11 @@ local Popup = public.isRetail and function(msg, focus)
 	text:SetText(msg)
 	frame:Show()
 end or function(msg, focus)
-	local frame = CreateFrame("Frame")
+	local frame = CreateFrame("Frame", nil, UIParent)
 	frame:SetFrameStrata("DIALOG")
 	frame:SetToplevel(true)
 	frame:SetSize(400, 150)
-	frame:SetPoint("CENTER", "UIParent", "CENTER")
+	frame:SetPoint("CENTER")
 	local text = frame:CreateFontString(nil, "ARTWORK", "GameFontRedLarge")
 	text:SetSize(380, 0)
 	text:SetJustifyH("CENTER")
@@ -707,10 +716,9 @@ end or function(msg, focus)
 		self:GetParent():Hide()
 	end)
 	button:SetText(L.okay)
-	button:SetNormalFontObject("DialogButtonNormalText")
-	button:SetHighlightFontObject("DialogButtonHighlightText")
 
 	text:SetText(msg)
+	frame:Show()
 end
 public.Popup = Popup -- XXX temp
 
