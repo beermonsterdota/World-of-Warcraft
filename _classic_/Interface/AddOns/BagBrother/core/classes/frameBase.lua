@@ -16,9 +16,6 @@ Frame.MoneyFrame = Addon.PlayerMoney
 Frame.BagGroup = Addon.BagGroup
 Frame.RegisterEvents = nop
 
-local KEYSTONE_FORMAT = '^' .. strrep('%d+:', 6) .. '%d+$'
-local PET_FORMAT = '^' .. strrep('%d+:', 7) .. '%d+$'
-
 
 --[[ Events ]]--
 
@@ -174,21 +171,21 @@ function Frame:GetItemInfo(bag, slot)
 	local bag = self:GetBagInfo(bag)
 	local data = bag and bag.items and bag.items[slot]
 	if data then
-		if data:find(PET_FORMAT) then
-			local id, quality = data:match('(%d+):%d+:(%d+)')
+		if data:find('^battlepet:') then
+			local id, quality = data:match(':(%d+):%d+:(%d+)')
 			local item = {itemID = tonumber(id), quality = tonumber(quality) or 1}
 			item.name, item.iconFileID = C_PetJournal.GetPetInfoBySpeciesID(item.itemID)
-			item.hyperlink = format('|c%s|Hbattlepet:%sx0|h[%s]|h|r', select(4, C.GetItemQualityColor(item.quality)), data, item.name)
+			item.hyperlink = format('|c%s|H%sx0|h[%s]|h|r', select(4, C.GetItemQualityColor(item.quality)), data, item.name)
 			return item
-		elseif data:find(KEYSTONE_FORMAT) then
-			local item = {itemID = tonumber(data:match('(%d+)'))}
+		elseif data:find('^keystone:') then
+			local item = {itemID = tonumber(data:match(':(%d+)'))}
 			_,_,_,_, item.iconFileID = C.GetItemInfoInstant(item.itemID)
 			_, item.hyperlink, item.quality = C.GetItemInfo(item.itemID)
 			item.hyperlink = item.hyperlink:gsub('item[:%d]+', data, 1)
 			return item
 		else
 			local link, count = strsplit(';', data)
-			local item = {hyperlink = 'item:' .. link, stackCount = tonumber(count)}
+			local item = {hyperlink = 'item:' .. link, stackCount = tonumber(count) or 1}
 			item.itemID, _,_,_, item.iconFileID = C.GetItemInfoInstant(item.hyperlink)
 			_, item.hyperlink, item.quality = C.GetItemInfo(item.hyperlink) 
 			return item

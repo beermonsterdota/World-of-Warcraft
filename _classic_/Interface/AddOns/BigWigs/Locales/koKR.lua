@@ -85,13 +85,13 @@ L.littleWigsExtras = {
 	["LittleWigs_CurrentSeason"] = "현재 시즌",
 }
 L.dayNamesShort = {
-	"일", -- Sunday
-	"월", -- Monday
-	"화", -- Tuesday
-	"수", -- Wednesday
-	"목", -- Thursday
-	"금", -- Friday
-	"토", -- Saturday
+	"일요일", -- Sunday
+	"월요일", -- Monday
+	"화요일", -- Tuesday
+	"수요일", -- Wednesday
+	"목요일", -- Thursday
+	"금요일", -- Friday
+	"토요일", -- Saturday
 }
 L.dayNames = {
 	"일요일",
@@ -411,6 +411,7 @@ L.keystoneHistoryScoreOlderTooltip = "이번 주 이전에 획득한 총 점수:
 L.keystoneTimeUnder = "|cFF33FF99-%02d:%02d|r"
 L.keystoneTimeOver = "|cFFFF4411+%02d:%02d|r"
 L.keystoneTeleportTip = "아래 던전 이름을 클릭하면 |cFF33FF99순간이동|r 던전 입구로 바로 이동합니다."
+--L.keystoneTimerunner = "|A:timerunning-glues-icon:14:14|aThis is a timerunning character." -- Note: Timerunning is a mode like "Legion Remix", it is NOT the same as Timewalking
 
 -- It doesn't really matter what you call it as long as it's recognizable and limited to ~6 characters
 L.keystoneShortName_TheRookery = "부화장"
@@ -427,6 +428,15 @@ L.keystoneShortName_AraKaraCityOfEchoes = "아라카라"
 L.keystoneShortName_TazaveshSoleahsGambit = "소레아"
 L.keystoneShortName_TazaveshStreetsOfWonder = "거리"
 L.keystoneShortName_TheDawnbreaker = "새인호"
+--L.keystoneShortName_BlackRookHold = "BRH"
+--L.keystoneShortName_CourtOfStars = "COS"
+--L.keystoneShortName_DarkheartThicket = "DHT"
+--L.keystoneShortName_EyeOfAzshara = "EOA"
+--L.keystoneShortName_HallsOfValor = "HOV"
+--L.keystoneShortName_MawOfSouls = "MOS"
+--L.keystoneShortName_NeltharionsLair = "NL"
+--L.keystoneShortName_TheArcway = "ARCWAY"
+--L.keystoneShortName_VaultOfTheWardens = "VOTW"
 
 -- These short names are for the bar that shows during the Mythic+ countdown
 -- Use the real dungeon names but make them shorter to fit on the bar better
@@ -444,6 +454,15 @@ L.keystoneShortName_AraKaraCityOfEchoes_Bar = "아라카라"
 L.keystoneShortName_TazaveshSoleahsGambit_Bar = "소레아"
 L.keystoneShortName_TazaveshStreetsOfWonder_Bar = "거리"
 L.keystoneShortName_TheDawnbreaker_Bar = "새인호"
+--L.keystoneShortName_BlackRookHold_Bar = "Black Rook"
+--L.keystoneShortName_CourtOfStars_Bar = "Court"
+--L.keystoneShortName_DarkheartThicket_Bar = "Darkheart"
+--L.keystoneShortName_EyeOfAzshara_Bar = "Eye"
+--L.keystoneShortName_HallsOfValor_Bar = "Halls"
+--L.keystoneShortName_MawOfSouls_Bar = "Maw"
+--L.keystoneShortName_NeltharionsLair_Bar = "Lair"
+--L.keystoneShortName_TheArcway_Bar = "Arcway"
+--L.keystoneShortName_VaultOfTheWardens_Bar = "Vault"
 
 -- Instance Keys "Who has a key?"
 L.instanceKeysTitle = "누가 쐐기돌을 가지고 있나요?"
@@ -679,6 +698,7 @@ L.blockDungeonPopups = "던전 팝업 배너 차단"
 L.blockDungeonPopupsDesc = "던전에 입장할 때 표시되는 팝업 배너는 때때로 매우 긴 텍스트를 포함할 수 있습니다. 이 기능을 활성화하면 이러한 팝업 배너가 완전히 차단됩니다."
 L.itemLevel = "아이템 레벨: %d"
 L.newRespawnPoint = "새로운 부활 지점"
+L.playerLevel = "%d 레벨"
 
 L.userNotifySfx = "보스 기능 차단으로 비활성화된 사운드 효과를 강제로 다시 활성화합니다."
 L.userNotifyMusic = "보스 기능 차단으로 비활성화된 배경음악를 강제로 다시 활성화합니다."

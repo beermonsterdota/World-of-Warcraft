@@ -1,16 +1,15 @@
 # BigWigs
 
-## [v400.1](https://github.com/BigWigsMods/BigWigs/tree/v400.1) (2025-10-09)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v400...v400.1) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
+## [v401](https://github.com/BigWigsMods/BigWigs/tree/v401) (2025-10-14)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v400.1...v401) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
 
-- Tools/Keystones: Change how we deal with missing shortened names  
-- Options: Display Timerunning stats correctly  
-- Update koKR (#2279)  
+- Locales: Tweaks  
+- Update zhCN (#2281)  
+- Bump version  
+- Tools/Keystones: Tweak  
+- Tools/Keystones: Fix teleports, alts, and history tabs for timerunning  
+- Tools/Keystones: Clarify timerunning characters  
+- Tools/Keystones: Add Legion dungeon shortnames  
+- Bump toc  
 - Tools/Keystones: Cleanups  
-- Loader: Fix current season error on beta  
-- Support storing Timerunning stats separately  
-- Options: Fix error when trying to display unknown stats, stop hiding tools on vanilla  
-- Plugins/AutoReply: Tweak  
-- Core/BossPrototype: Allow `GetPlayerAura` to take an optional unit  
-- Loader: Tweak  
-- Midnight/Bars: Support Paused Bars  
+- Plugins/BossBlock: Fix level up toast  

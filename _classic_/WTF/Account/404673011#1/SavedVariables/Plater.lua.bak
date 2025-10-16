@@ -1,109 +1,61 @@
 
 PlaterDB = {
 ["captured_spells"] = {
-[116829] = {
-["encounterName"] = "Воля императора",
-["type"] = "DEBUFF",
-["source"] = "Искра титанов",
-["encounterID"] = 1407,
-["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 60480,
-},
-[135299] = {
-["encounterName"] = "Воля императора",
-["type"] = "DEBUFF",
-["source"] = "Ярость императора",
-["encounterID"] = 1407,
-["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 60396,
-},
-[132425] = {
-["encounterName"] = "Воля императора",
-["type"] = "DEBUFF",
-["source"] = "Цинь-си",
-["encounterID"] = 1407,
-["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 60399,
-},
-[116550] = {
-["encounterName"] = "Воля императора",
-["type"] = "DEBUFF",
-["source"] = "Сила императора",
-["encounterID"] = 1407,
-["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 60768,
-},
-[116968] = {
-["encounterName"] = "Воля императора",
-["source"] = "Цзань-си",
-["isChanneled"] = false,
-["encounterID"] = 1407,
+[121994] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
+["source"] = "Ваятель янтаря Ун'сок",
+["isChanneled"] = true,
+["encounterID"] = 1499,
 ["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 60400,
+["npcID"] = 62511,
 },
-[116778] = {
-["encounterName"] = "Воля императора",
+[122370] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
 ["type"] = "DEBUFF",
-["source"] = "Смелость императора",
-["encounterID"] = 1407,
+["source"] = "Ваятель янтаря Ун'сок",
+["encounterID"] = 1499,
 ["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 60398,
+["npcID"] = 62511,
 },
-[116971] = {
-["encounterName"] = "Воля императора",
-["source"] = "Цинь-си",
+[122398] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
+["source"] = "Мутировавший организм",
 ["isChanneled"] = false,
-["encounterID"] = 1407,
+["encounterID"] = 1499,
 ["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 60399,
+["npcID"] = 62701,
 },
-[116972] = {
-["encounterName"] = "Воля императора",
-["source"] = "Цинь-си",
+[122532] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
+["source"] = "Живой янтарь",
 ["isChanneled"] = false,
-["encounterID"] = 1407,
+["encounterID"] = 1499,
 ["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 60399,
+["npcID"] = 62691,
 },
-[116525] = {
-["encounterName"] = "Воля императора",
-["type"] = "DEBUFF",
-["source"] = "Ярость императора",
-["encounterID"] = 1407,
-["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 60396,
-},
-[117485] = {
-["encounterName"] = "Воля императора",
-["source"] = "Смелость императора",
+[122348] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
+["source"] = "Живой янтарь",
 ["isChanneled"] = false,
-["encounterID"] = 1407,
+["encounterID"] = 1499,
 ["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 60398,
+["npcID"] = 62691,
 },
-[1245126] = {
-["encounterName"] = "Воля императора",
-["source"] = "Древний механизм могу",
+[122784] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
+["source"] = "Ваятель янтаря Ун'сок",
+["isChanneled"] = true,
+["encounterID"] = 1499,
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 62511,
+},
+[121949] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
+["source"] = "Ваятель янтаря Ун'сок",
 ["isChanneled"] = false,
-["encounterID"] = 1407,
+["encounterID"] = 1499,
 ["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 60648,
-},
-[1245131] = {
-["encounterName"] = "Воля императора",
-["source"] = "Древний механизм могу",
-["isChanneled"] = false,
-["encounterID"] = 1407,
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 60648,
-},
-[135373] = {
-["encounterName"] = "Воля императора",
-["type"] = "DEBUFF",
-["source"] = "Ярость императора",
-["encounterID"] = 1407,
-["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 60396,
+["npcID"] = 62511,
 },
 },
 ["profileKeys"] = {
@@ -4745,12 +4697,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 30044,
 },
-[49537] = {
-["encounterName"] = "Пророк Тарон'джа",
-["source"] = "Пророк Тарон'джа",
-["encounterID"] = 375,
+[66290] = {
+["source"] = "Бальназар",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 26632,
+["npcID"] = 10813,
 },
 [16001] = {
 ["source"] = "Восставший всадник на нетопыре из Драккари",
@@ -5096,17 +5046,17 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 27971,
 },
+[51586] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Спиритуалист из клана Укротителей драконов",
+["npcID"] = 28410,
+},
 [1244933] = {
 ["encounterName"] = "Мастер Снежный Вихрь",
 ["source"] = "Повелитель клинков Та'як",
 ["npcID"] = 248074,
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1304,
-},
-[51586] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Спиритуалист из клана Укротителей драконов",
-["npcID"] = 28410,
 },
 [113503] = {
 ["event"] = "SPELL_CAST_START",
@@ -5170,11 +5120,12 @@ PlaterDB = {
 ["source"] = "Шра'тик - призыватель янтаря",
 ["npcID"] = 64917,
 },
-[116830] = {
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Конк",
-["npcID"] = 55509,
+[1244944] = {
+["encounterName"] = "Гу Небесный Удар",
+["source"] = "Повелитель ветров Мел'джарак",
+["npcID"] = 248076,
+["event"] = "SPELL_CAST_START",
+["encounterID"] = 1303,
 },
 [115418] = {
 ["event"] = "SPELL_CAST_START",
@@ -5257,16 +5208,16 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 17308,
 },
+[53314] = {
+["source"] = "Повелитель стихий клана Темных Рун",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 27962,
+},
 [16430] = {
 ["isChanneled"] = true,
 ["source"] = "Некромантка из секты Тузадин",
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 10400,
-},
-[53314] = {
-["source"] = "Повелитель стихий клана Темных Рун",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 27962,
 },
 [51963] = {
 ["source"] = "Вороная горгулья",
@@ -5360,10 +5311,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1500,
 },
-[119007] = {
+[21068] = {
+["source"] = "Бес-осквернитель",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Ученик Чи-Цзи",
-["npcID"] = 60602,
+["npcID"] = 12217,
 },
 [106853] = {
 ["encounterName"] = "Мастер Снежный Вихрь",
@@ -5501,17 +5452,19 @@ PlaterDB = {
 ["source"] = "Скучающий студент",
 ["npcID"] = 59614,
 },
-[73079] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Исследователь чумы",
-["npcID"] = 37023,
-},
 [130395] = {
 ["encounterName"] = "Каменные стражи",
 ["source"] = "Яшмовый страж",
 ["encounterID"] = 1395,
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 59915,
+},
+[120160] = {
+["encounterName"] = "Королевское испытание",
+["source"] = "Хайан Неудержимый",
+["encounterID"] = 1442,
+["event"] = "SPELL_CAST_START",
+["npcID"] = 61445,
 },
 [51972] = {
 ["isChanneled"] = true,
@@ -5589,15 +5542,15 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 29820,
 },
-[61184] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Красарангская охотница",
-["npcID"] = 58070,
-},
 [130524] = {
 ["source"] = "Капитан Дорен",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 66052,
+},
+[61184] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Красарангская охотница",
+["npcID"] = 58070,
 },
 [69242] = {
 ["encounterName"] = "Король-лич",
@@ -6595,12 +6548,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 520,
 },
-[120160] = {
-["encounterName"] = "Королевское испытание",
-["source"] = "Хайан Неудержимый",
-["encounterID"] = 1442,
+[73079] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 61445,
+["source"] = "Исследователь чумы",
+["npcID"] = 37023,
 },
 [128872] = {
 ["event"] = "SPELL_CAST_START",
@@ -6682,10 +6633,10 @@ PlaterDB = {
 ["source"] = "Затерянный во времени темный маг",
 ["npcID"] = 18320,
 },
-[21068] = {
-["source"] = "Бес-осквернитель",
+[119007] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 12217,
+["source"] = "Ученик Чи-Цзи",
+["npcID"] = 60602,
 },
 [30691] = {
 ["encounterName"] = "Вазруден Глашатай",
@@ -6769,12 +6720,11 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 4427,
 },
-[1244944] = {
-["encounterName"] = "Гу Небесный Удар",
-["source"] = "Повелитель ветров Мел'джарак",
-["npcID"] = 248076,
-["event"] = "SPELL_CAST_START",
-["encounterID"] = 1303,
+[116830] = {
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["source"] = "Конк",
+["npcID"] = 55509,
 },
 [131071] = {
 ["event"] = "SPELL_CAST_START",
@@ -6987,10 +6937,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1899,
 },
-[66290] = {
-["source"] = "Бальназар",
+[49537] = {
+["encounterName"] = "Пророк Тарон'джа",
+["source"] = "Пророк Тарон'джа",
+["encounterID"] = 375,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 10813,
+["npcID"] = 26632,
 },
 [9053] = {
 ["event"] = "SPELL_CAST_START",
@@ -7548,8 +7500,8 @@ PlaterDB = {
 ["Author"] = "Tercioo-Sylvanas",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\n    \nend\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Aura - Buff Alert [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 398151,
@@ -7577,8 +7529,8 @@ PlaterDB = {
 ["Author"] = "Huugg-Valdrakken",
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Effect After Cast [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 191284,
@@ -7772,8 +7724,8 @@ PlaterDB = {
 ["Author"] = "Bombad�o-Azralon",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.overlaySpark:Show()\n    \n    if (envTable.ShowArrow) then\n        envTable.topArrow:Show()\n    end\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    Plater.SetCastBarColorForScript(self, true, scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end       \nend\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Explosion Affix M+ [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 240446,
@@ -7876,8 +7828,8 @@ PlaterDB = {
 },
 ["Author"] = "Tercioo-Sylvanas",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Aura - Debuff Alert [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -8020,8 +7972,8 @@ PlaterDB = {
 ["Author"] = "Tercioo-Sylvanas",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Alert + Timer [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 350421,
@@ -8278,8 +8230,8 @@ PlaterDB = {
 ["Author"] = "Bombad�o-Azralon",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.overlaySpark:Show()\n    \n    if (envTable.ShowArrow) then\n        envTable.topArrow:Show()\n    else\n        envTable.topArrow:Hide()\n    end\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, customColor or scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)        \n        Plater.DenyColorChange(unitFrame, true)            \n    end\n    \nend",
-["version"] = -1,
 ["Name"] = "Cast - Ultra Important [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 383823,
@@ -8399,8 +8351,8 @@ PlaterDB = {
 ["Author"] = "Tercioo-Sylvanas",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.SmallFlashAnimationHub:Play()\n    \nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Small Alert [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 376851,
@@ -8688,8 +8640,8 @@ PlaterDB = {
 ["Author"] = "Izimode-Azralon",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (envTable.dotAnimation) then\n        Plater.StopDotAnimation(unitFrame.healthBar, envTable.dotAnimation)\n    end\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotsColor, 3, 4) \n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    unitFrame.UnitImportantSkullTexture:Show()\n    \n    --color priority:\n    local npcIdString = tostring(envTable._NpcID)\n    envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.nameplateColor)    \n    \n    if (scriptTable.config.showExtraTexture) then\n        unitFrame.UnitImportantSkullTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.skullColor))\n        unitFrame.UnitImportantSkullTexture:SetAlpha(scriptTable.config.skullAlpha)\n        unitFrame.UnitImportantSkullTexture:SetScale(scriptTable.config.skullScale)\n        unitFrame.UnitImportantSkullTexture:SetTexture([[Interface/AddOns/Plater/media/x_64]])\n        unitFrame.UnitImportantSkullTexture:ClearAllPoints()\n        unitFrame.UnitImportantSkullTexture:SetPoint(\"right\", unitFrame.healthBar, \"left\", -2, 0)\n        unitFrame.UnitImportantSkullTexture:SetSize(28, 28)\n        unitFrame.UnitImportantSkullTexture:Show()\n    else\n        unitFrame.UnitImportantSkullTexture:Hide()\n    end\n    \n    --rules for some npcs\n    if (envTable._NpcID == 194895) then --unstable squall (explode at dying\n        unitFrame.UnitImportantSkullTexture:Hide()\n        Plater.StopDotAnimation(unitFrame.healthBar, envTable.dotAnimation) \n    end\n    \n    if (scriptTable.config.changeNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        \n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.nameplateColor)        \n        \n        Plater.DenyColorChange(unitFrame, true)\n    end\n    \nend\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Add - Important [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -8884,8 +8836,8 @@ PlaterDB = {
 ["Author"] = "Izimode-Azralon",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.blinkTexture:SetSize (self:GetSize())\n    \nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Aura - Blink by Time Left [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -8913,8 +8865,8 @@ PlaterDB = {
 ["Author"] = "Huugg-Valdrakken",
 ["Initialization"] = "function (scriptTable)\n    \n    scriptTable.allAdds = {} \n    scriptTable.nextAddWave = 0\n    scriptTable.waveTime = 20\n    \n    function scriptTable.ArrangeNpcNumbers(GUID)\n        local spawnId = select(7, strsplit (\"-\", GUID))\n        spawnId = tonumber(spawnId, 16)\n        \n        if (spawnId) then\n            --check if this is a new wave of adds\n            if (GetTime() > scriptTable.nextAddWave) then\n                scriptTable.nextAddWave = GetTime() + scriptTable.waveTime\n                scriptTable.allAdds = {}\n            end\n            \n            local bIsAlreadyOnTheList = false\n            \n            for o = 1, #scriptTable.allAdds do\n                if (scriptTable.allAdds[o][1] == GUID) then\n                    bIsAlreadyOnTheList = true\n                end\n            end\n            \n            if (not bIsAlreadyOnTheList) then\n                scriptTable.allAdds[#scriptTable.allAdds+1] = {GUID, spawnId}\n            end\n        end\n        \n        table.sort(scriptTable.allAdds, function(t1, t2) return t1[2] < t2[2] end)\n        \n        --this is a \"loop\" because this is running each time a nameplate is added!\n        \n        for namePlateIndex, plateFrame in ipairs(Plater.GetAllShownPlates()) do\n            local unitFrame = plateFrame.unitFrame\n            \n            --get the unit GUID\n            local unitGUID = unitFrame.namePlateUnitGUID\n            \n            for addId = 1, #scriptTable.allAdds do\n                local addTable = scriptTable.allAdds[addId]\n                local addGUID = addTable[1]\n                \n                if (unitGUID == addGUID) then\n                    scriptTable.TagNameplate(unitFrame, unitGUID, addId)\n                    break\n                end\n            end\n            \n        end\n    end\n    \n    function scriptTable.TagNameplate(unitFrame, GUID, addId)\n        scriptTable.CreateAddWidgetsForNameplate(unitFrame, GUID, addId)\n        \n        if (addId and addId >= 1 and addId <= 8) then\n            unitFrame.AddSpawnIDTexture:Show()\n            unitFrame.AddIcon:Show()\n            unitFrame.AddNumber:Show()\n            \n            local addTexture = \"Interface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_\" .. addId\n            \n            unitFrame.AddIcon:SetTexture(addTexture)\n            unitFrame.AddNumber:SetText(addId)\n        end\n    end\n    \n    function scriptTable.CreateAddWidgetsForNameplate(unitFrame, GUID, addId)\n        if (not unitFrame.AddSpawnIDTexture) then\n            local healthBar = unitFrame.healthBar\n            \n            local textureBackground = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 5)\n            local addIcon = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 6)\n            local addNumber = healthBar.FrameOverlay:CreateFontString(nil, \"overlay\", \"GameFontNormal\", 6)           \n            \n            unitFrame.AddSpawnIDTexture = textureBackground\n            unitFrame.AddIcon = addIcon\n            unitFrame.AddNumber = addNumber\n        end\n    end    \nend\n\n--Creature-0-2085-1-11042-153285-0002F8DB2B --training dummy for testing\n--195138 Detonating Crystal\n--192955 dracomoc illusion\n--190294 nokhub stormcaster\n--76518 ritual of bones\n\n\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (unitFrame.AddSpawnIDTexture) then\n        unitFrame.AddSpawnIDTexture:Hide()\n        unitFrame.AddIcon:Hide()\n        unitFrame.AddNumber:Hide()\n    end\n    \n    scriptTable.ArrangeNpcNumbers(unitFrame.namePlateUnitGUID)\n    \n    local textureBackground = unitFrame.AddSpawnIDTexture\n    textureBackground:SetSize(22, 10)\n    textureBackground:ClearAllPoints()\n    textureBackground:SetPoint(\"bottomright\", unitFrame.healthBar, \"topright\", 0, 1)\n    \n    textureBackground:SetMask([[Interface\\AddOns\\Plater\\masks\\mask_smallrectangle_rounded1]])\n    textureBackground:SetTexture([[Interface\\AddOns\\Plater\\masks\\mask_smallrectangle_rounded1]])\n    textureBackground:SetVertexColor(0.1215, 0.1176, 0.1294, 1)\n    \n    \n    --textureBackground:SetMask([[Interface/ChatFrame/UI-ChatIcon-HotS]])\n    --    \"Interface/ChatFrame/UI-ChatIcon-HotS\"\n    \n    local addIcon = unitFrame.AddIcon\n    addIcon:ClearAllPoints()\n    addIcon:SetPoint(\"left\", textureBackground, \"left\", 2, 0)\n    addIcon:SetSize(10, 10)\n    \n    local addNumber = unitFrame.AddNumber\n    addNumber:ClearAllPoints()\n    addNumber:SetPoint(\"right\", textureBackground, \"right\", -2, 0)\n    DetailsFramework:SetFontSize(addNumber, 10)\n    \nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Add - Tag Number [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -9028,8 +8980,8 @@ PlaterDB = {
 ["Author"] = "Terciob",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (self.channeling) then\n        return \n    end\n    \n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    textureStretched:SetHeight(castBar:GetHeight())\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        --texture:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.trailColor))\n        texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion+5, castBar:GetHeight())\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2)\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(0.4)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(0.5)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    Plater.SetCastBarColorForScript(self, true, customColor or scriptTable.config.castBarColor, envTable)\nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Glowing [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 376644,
@@ -9411,8 +9363,8 @@ PlaterDB = {
 ["Author"] = "Bombad�o-Azralon",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (envTable.UpdateTargetBox(unitFrame, unitId)) then\n        \n        envTable.BackgroundFlash:Play()\n        \n        Plater.FlashNameplateBorder (unitFrame, 0.05)   \n        Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n        \n        unitFrame:PlayFrameShake (envTable.FrameShake)\n        \n        if (envTable._CanInterrupt) then\n            if (scriptTable.config.useCastbarColor) then\n                self:SetStatusBarColor (Plater:ParseColors (scriptTable.config.castBarColor))\n            end\n        end\n        \n    end\n    \nend\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Important Target [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 270042,
@@ -9679,8 +9631,8 @@ PlaterDB = {
 ["Author"] = "Bombad�o-Azralon",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.castBar, 5, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    envTable.BackgroundFlash:Play()\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    --Dominator on Shadowmoon Burial Grounds\n    if (envTable._SpellID == 154327) then\n        if (UnitHealth(unitId) == UnitHealthMax(unitId)) then\n            if (envTable._Duration == 604800) then\n                Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, {1, 0, 0, 1}, envTable)\n            end\n        end\n    end\nend",
-["version"] = -1,
 ["Name"] = "Cast - Very Important [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 373046,
@@ -9839,8 +9791,8 @@ PlaterDB = {
 ["Author"] = "Huugg-Valdrakken",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    unitFrame.onShowAddToKillFlash = unitFrame.onShowAddToKillFlash or Plater.CreateFlash (unitFrame.healthBar, 0.25, 1, \"white\")\n    \n    if (scriptTable.config.useFlash) then\n        unitFrame.onShowAddToKillFlash:Play()\n    end\n    \n    if (scriptTable.config.useNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.healthBarColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end\nend\n\n\n\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Add - Warning [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -9864,8 +9816,8 @@ PlaterDB = {
 ["Author"] = "Tiranaa-Azralon",
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Aura While Casting [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 372743,
@@ -10008,8 +9960,8 @@ PlaterDB = {
 ["Author"] = "Tercioo-Sylvanas",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (not Plater.IsShowingCastBarTest) then\n        if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"none\") then\n            return\n        end\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    --set the color of the cast bar to dark orange (only if can be interrupted)\n    --Plater auto set this color to default when a new cast starts, no need to reset this value at OnHide.    \n    if (envTable._CanInterrupt) then\n        if (scriptTable.config.useCastbarColor) then\n            self:SetStatusBarColor (Plater:ParseColors (envTable.CastbarColor))\n        end\n    end\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Big Alert [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 396640,
@@ -10175,8 +10127,8 @@ PlaterDB = {
 ["Author"] = "Butazzul-Valdrakken",
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.CreateSwipeTextureAndAnimations(unitFrame)\n    \n    local options = scriptTable.config\n    \n    local targetScale = scriptTable.config.textureScale\n    \n    --swipe rotation duration    \n    unitFrame.CastSwipeAnimation.Rotation:SetDuration(scriptTable.config.rotationDuration)\n    \n    --swipe texture settings\n    unitFrame.CastSwipeTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.textureColor))\n    unitFrame.CastSwipeTexture:SetScale(targetScale)\n    unitFrame.CastSwipeTexture:SetAlpha(scriptTable.config.textureAlpha)  \n    \n    unitFrame.StartSwipeAnimation.Alpha:SetDuration(scriptTable.config.animStartDuration)\n    unitFrame.StartSwipeAnimation.Alpha:SetFromAlpha(scriptTable.config.textureStartAlpha)\n    unitFrame.StartSwipeAnimation.Alpha:SetToAlpha(scriptTable.config.textureAlpha)\n    \n    unitFrame.StartSwipeAnimation.Scale:SetDuration(scriptTable.config.animStartDuration)\n    unitFrame.StartSwipeAnimation.Scale:SetScaleTo(targetScale, targetScale)\n    \n    unitFrame.EndSwipeAnimation.Scale:SetDuration(0.1)\n    unitFrame.EndSwipeAnimation.Alpha:SetDuration(0.1)\n    \n    --start playing\n    envTable.PlaySwipeAnimation(unitFrame)    \n    \nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Circle AoE [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 385916,
@@ -10347,8 +10299,8 @@ PlaterDB = {
 ["Author"] = "Symantec-Azralon",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateSpitefulWidget(unitFrame)\nend\n\n\n",
-["version"] = -1,
 ["Name"] = "M+ Spiteful",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -10488,8 +10440,8 @@ PlaterDB = {
 ["Author"] = "Tercioo-Sylvanas",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\") then\n        return\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Quick Flash [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 392640,
@@ -10587,8 +10539,8 @@ PlaterDB = {
 ["Author"] = "Huugg-Valdrakken",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.nameplateColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end    \n    \n    unitFrame.healthBar._savedOriginalScale = unitFrame.healthBar:GetScale()\n    \n    if (scriptTable.config.useNameplateScale) then\n        unitFrame.healthBar:SetScale(scriptTable.config.scale)\n    end\n    \nend\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Add - Non Elite Trash [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -10612,8 +10564,8 @@ PlaterDB = {
 ["Author"] = "Huugg-Valdrakken",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (not UnitGetTotalAbsorbs) then\n        return\n    end\n    \n    local healthBar = unitFrame.healthBar\n    \n    healthBar.absorbBar:Show()\n    healthBar.absorbSpark:Show()\n    \n    healthBar.absorbBar:SetTexture([[Interface\\RaidFrame\\Shield-Fill]])\n    \n    healthBar.absorbBar:ClearAllPoints()    \n    healthBar.absorbBar:SetPoint(\"topleft\", healthBar, \"topleft\", 0, 0)\n    healthBar.absorbBar:SetPoint(\"bottomleft\", healthBar, \"bottomleft\", 0, 0)\n    \n    healthBar.absorbBar:SetAlpha(1)\n    \n    healthBar.absorbBar.MaxValue = UnitGetTotalAbsorbs(unitId) or 0\n    healthBar.absorbBar.MinValue = 0\nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Shield Interrupt [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 373688,
@@ -10728,8 +10680,8 @@ PlaterDB = {
 ["Author"] = "Ditador-Azralon",
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    self.OGC_BlinkTexture:ClearAllPoints()\n    self.OGC_BlinkTexture:SetPoint(\"topleft\", self, \"topleft\", 0, 0)\n    self.OGC_BlinkTexture:SetPoint(\"bottomright\", self, \"bottomright\", 0, 0)\n    \n    local red, green, blue = Plater:ParseColors(scriptTable.config.blinkColor)\n    self.OGC_BlinkTexture:SetVertexColor(red, green, blue)\n    \n    local blinkSpeed = scriptTable.config.speed\n    \n    self.OGC_BlinkAnimation.In:SetDuration(blinkSpeed)\n    self.OGC_BlinkAnimation.Out:SetDuration(blinkSpeed)\n    \n    local minBlinkAlpha = scriptTable.config.minAlpha\n    local maxBlinkAlpha = scriptTable.config.maxAlpha\n    \n    self.OGC_BlinkAnimation.In:SetFromAlpha(minBlinkAlpha)\n    self.OGC_BlinkAnimation.In:SetToAlpha(maxBlinkAlpha)\n    self.OGC_BlinkAnimation.Out:SetFromAlpha(maxBlinkAlpha)    \n    self.OGC_BlinkAnimation.Out:SetToAlpha(minBlinkAlpha)\n    \n    self.OGC_BlinkAnimation:SetLooping(\"repeat\")\n    self.OGC_BlinkAnimation:Play()\n    \n    envTable.dotAnimation1 = Plater.PlayDotAnimation(self, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    envTable.dotAnimation1.textureInfo.speedMultiplier = 0.3\n    \n    envTable.dotAnimation2 = Plater.PlayDotAnimation(self, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    envTable.dotAnimation2.textureInfo.speedMultiplier = 1\n    \nend",
-["version"] = -1,
 ["Name"] = "Cast - On Going Cast [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 388886,
@@ -10761,8 +10713,8 @@ PlaterDB = {
 ["Author"] = "Aelerolor-Torghast",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    local npcInfo = envTable.npcInfo[envTable._NpcID]\n    \n    if (npcInfo and npcInfo.secondCastBar) then\n        if (npcInfo.debuffTimer) then\n            if (Plater.NameplateHasAura (unitFrame, npcInfo.debuffTimer)) then\n                \n                local name = npcInfo.name\n                --get the debuff timeleft\n                local name = npcInfo.name\n                local auras = Plater.GetUnitAuras(unitFrame)\n                local duration, expirationTime\n                for _, aura in pairs(auras) do\n                    if aura.name == name then\n                        duration = aura.duration\n                        expirationTime = aura.expirationTime\n                        break\n                    end\n                end\n                \n                envTable.ShowAltCastBar(npcInfo, unitFrame, unitId, duration, expirationTime-duration)\n            else\n                if (unitFrame.castBar2:IsShown()) then\n                    local altCastId = Plater.GetAltCastBarAltId(unitFrame.PlateFrame)\n                    if (altCastId == npcInfo.altCastId) then\n                        Plater.ClearAltCastBar(unitFrame.PlateFrame)\n                    end                   \n                end                              \n            end\n        else\n            envTable.ShowAltCastBar(npcInfo, unitFrame, unitId)\n        end\n    end\nend",
-["version"] = -1,
 ["Name"] = "Countdown",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -10799,8 +10751,8 @@ PlaterDB = {
 ["Author"] = "Ditador-Azralon",
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Fixate by Unit Buff [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 426662,
@@ -10853,8 +10805,8 @@ PlaterDB = {
 ["Author"] = "Aelerolor-Torghast",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.CheckMark (unitId, unitFrame)\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Auto Set Skull",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -10950,8 +10902,8 @@ PlaterDB = {
 ["Author"] = "Huugg-Valdrakken",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    local healthBar = unitFrame.healthBar\n    \n    if (scriptTable.config.useReverse) then\n        healthBar:SetReverseFill(true)\n    end\n    \n    --unitFrame.AddExplosionOnDieShake\n    \n    envTable.CreateWidgets()\n    \n    unitFrame.AddExplosionOnDieShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    unitFrame.AddExplosionOnDieShake.OriginalDuration = 0.120\n    unitFrame.AddExplosionOnDieShake.OriginalFrequency = scriptTable.config.shakeFrequency\n    \n    if (scriptTable.config.useBackground) then\n        unitFrame.AddExplosionOnDieBackground:Show()\n        unitFrame.AddExplosionOnDieBackground:SetAlpha(0)\n    else\n        unitFrame.AddExplosionOnDieBackground:Hide()\n    end\nend\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Add - Explode on Die [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -11061,8 +11013,8 @@ PlaterDB = {
 ["Author"] = "Celian-Sylvanas",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.EnergyAmount:Show()\nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Unit - Show Energy [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -11123,8 +11075,8 @@ PlaterDB = {
 ["Author"] = "Terciob",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    textureStretched:SetHeight(castBar:GetHeight())\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion+5, castBar:GetHeight())\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2)\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        --local duration = 0.6 --debug\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(0.4)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(0.5)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    unitFrame.stopCastingX:Show()\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    self.Text:SetDrawLayer(\"artwork\", 7)\n    self.Spark:SetDrawLayer(\"artwork\", 7)\n    self.Spark:Hide()\nend\n\n\n\n\n\n\n\n\n",
-["version"] = -1,
 ["Name"] = "Cast - Stop Casting [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 377004,
@@ -11155,8 +11107,8 @@ PlaterDB = {
 ["Author"] = "Celian-Sylvanas",
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n\n\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Fixate [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 },
@@ -11184,8 +11136,8 @@ PlaterDB = {
 },
 ["Author"] = "Tecno-Azralon",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
-["version"] = -1,
 ["Name"] = "Fixate On You [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["SpellIds"] = {
 "spawn of g'huun",
@@ -11207,7 +11159,7 @@ PlaterDB = {
 ["nameplateShowFriends"] = "[C]: ?\n[C]: in function 'SetCVar'\n[FRIENDNAMEPLATES]:6: in function <[string \"FRIENDNAMEPLATES\"]:1>\n",
 ["nameplateMotion"] = "Interface/AddOns/Plater/Plater_OptionsPanel.lua:5493",
 ["nameplateShowFriendlyNPCs"] = "Interface/AddOns/Plater/Plater_OptionsPanel.lua:8467",
-["nameplateShowEnemies"] = "[C]: in function 'SetCVar'\n[NAMEPLATES]:6: in function <[string \"NAMEPLATES\"]:1>\n",
+["nameplateShowEnemies"] = "[C]: ?\n[C]: in function 'SetCVar'\n[NAMEPLATES]:6: in function <[string \"NAMEPLATES\"]:1>\n",
 ["nameplateOverlapV"] = "Interface/AddOns/Plater/Plater_OptionsPanel.lua:5510",
 },
 ["aura2_y_offset"] = 5,
@@ -14380,11 +14332,6 @@ PlaterDB = {
 "Аукиндон: Сетеккские залы",
 "ruRU",
 },
-[59398] = {
-"Деморализующее знамя",
-"Подземелья Могу'шан",
-"ruRU",
-},
 [37595] = {
 "Омраченный рыцарь крови",
 "Цитадель Ледяной Короны",
@@ -14410,14 +14357,14 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[17735] = {
-"Воин клана Зловещего Плавника",
-"Кривой Клык: Нижетопь",
-"ruRU",
-},
 [61340] = {
 "Глинтрок - мастер проклятий",
 "Дворец Могу'шан",
+"ruRU",
+},
+[17735] = {
+"Воин клана Зловещего Плавника",
+"Кривой Клык: Нижетопь",
 "ruRU",
 },
 [37027] = {
@@ -14430,13 +14377,18 @@ PlaterDB = {
 "Ульдаман",
 "ruRU",
 },
+[29264] = {
+"Дух волка",
+"Подземелья Могу'шан",
+"ruRU",
+},
 [64368] = {
 "Тень страха",
 "Терраса Вечной Весны",
 "ruRU",
 },
-[29264] = {
-"Дух волка",
+[59915] = {
+"Яшмовый страж",
 "Подземелья Могу'шан",
 "ruRU",
 },
@@ -14455,14 +14407,9 @@ PlaterDB = {
 "Резервуар Кривого Клыка: Узилище",
 "ruRU",
 },
-[59915] = {
-"Яшмовый страж",
-"Подземелья Могу'шан",
-"ruRU",
-},
-[63589] = {
-"Сет'тик-ветрорез",
-"Сердце Страха",
+[40084] = {
+"Раб кузни",
+"Пещеры Черной горы",
 "ruRU",
 },
 [60576] = {
@@ -14470,9 +14417,14 @@ PlaterDB = {
 "Подземелья Могу'шан",
 "ruRU",
 },
-[40084] = {
-"Раб кузни",
-"Пещеры Черной горы",
+[39956] = {
+"Сумеречный головорез",
+"Грим Батол",
+"ruRU",
+},
+[60586] = {
+"Старейшина Асани",
+"Терраса Вечной Весны",
 "ruRU",
 },
 [58803] = {
@@ -14480,9 +14432,9 @@ PlaterDB = {
 "Монастырь Шадо-Пан",
 "ruRU",
 },
-[60586] = {
-"Старейшина Асани",
-"Терраса Вечной Весны",
+[63589] = {
+"Сет'тик-ветрорез",
+"Сердце Страха",
 "ruRU",
 },
 [56884] = {
@@ -14510,9 +14462,9 @@ PlaterDB = {
 "Чертоги Молний",
 "ruRU",
 },
-[39956] = {
-"Сумеречный головорез",
-"Грим Батол",
+[8983] = {
+"Повелитель големов Аргелмах",
+"Глубины Черной горы",
 "ruRU",
 },
 [14325] = {
@@ -14525,9 +14477,9 @@ PlaterDB = {
 "Крепость Драк'Тарон",
 "ruRU",
 },
-[8983] = {
-"Повелитель големов Аргелмах",
-"Глубины Черной горы",
+[62511] = {
+"Ваятель янтаря Ун'сок",
+"Сердце Страха",
 "ruRU",
 },
 [26691] = {
@@ -14538,11 +14490,6 @@ PlaterDB = {
 [26723] = {
 "Керистраза",
 "Нексус",
-"ruRU",
-},
-[62511] = {
-"Ваятель янтаря Ун'сок",
-"Сердце Страха",
 "ruRU",
 },
 [60701] = {
@@ -14558,6 +14505,11 @@ PlaterDB = {
 [60583] = {
 "Защитник Каолань",
 "Терраса Вечной Весны",
+"ruRU",
+},
+[63593] = {
+"Сет'тик - воздушный воин",
+"Сердце Страха",
 "ruRU",
 },
 [10375] = {
@@ -14585,13 +14537,13 @@ PlaterDB = {
 "Стратхольм",
 "ruRU",
 },
-[63593] = {
-"Сет'тик - воздушный воин",
+[64353] = {
+"Сет'тик - рассекатель ветров",
 "Сердце Страха",
 "ruRU",
 },
-[64353] = {
-"Сет'тик - рассекатель ветров",
+[64338] = {
+"Инструктор Кли'так",
 "Сердце Страха",
 "ruRU",
 },
@@ -14605,11 +14557,6 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[64338] = {
-"Инструктор Кли'так",
-"Сердце Страха",
-"ruRU",
-},
 [60913] = {
 "Энергетический заряд",
 "Подземелья Могу'шан",
@@ -14617,6 +14564,11 @@ PlaterDB = {
 },
 [60708] = {
 "Мын Безумный",
+"Подземелья Могу'шан",
+"ruRU",
+},
+[60710] = {
+"Субетай Быстрый",
 "Подземелья Могу'шан",
 "ruRU",
 },
@@ -14630,19 +14582,14 @@ PlaterDB = {
 "Залы Алого ордена",
 "ruRU",
 },
-[60710] = {
-"Субетай Быстрый",
+[60184] = {
+"Теневой прислужник",
 "Подземелья Могу'шан",
 "ruRU",
 },
 [42428] = {
 "Верный последователь",
 "Каменные Недра",
-"ruRU",
-},
-[60184] = {
-"Теневой прислужник",
-"Подземелья Могу'шан",
 "ruRU",
 },
 [60047] = {
@@ -14660,9 +14607,14 @@ PlaterDB = {
 "Храм Нефритовой Змеи",
 "ruRU",
 },
-[59884] = {
-"Павший рыцарь",
-"Монастырь Алого ордена",
+[65415] = {
+"Ша Бездны",
+"Монастырь Шадо-Пан",
+"ruRU",
+},
+[510] = {
+"Элементаль воды",
+"Подземелья Могу'шан",
 "ruRU",
 },
 [40765] = {
@@ -14675,14 +14627,9 @@ PlaterDB = {
 "Терраса Вечной Весны",
 "ruRU",
 },
-[510] = {
-"Элементаль воды",
-"Подземелья Могу'шан",
-"ruRU",
-},
-[65415] = {
-"Ша Бездны",
-"Монастырь Шадо-Пан",
+[59884] = {
+"Павший рыцарь",
+"Монастырь Алого ордена",
 "ruRU",
 },
 [59369] = {
@@ -14697,6 +14644,11 @@ PlaterDB = {
 },
 [36633] = {
 "Ледяная сфера",
+"Цитадель Ледяной Короны",
+"ruRU",
+},
+[37534] = {
+"Хребтохруст",
 "Цитадель Ледяной Короны",
 "ruRU",
 },
@@ -14715,8 +14667,8 @@ PlaterDB = {
 "Сердце Страха",
 "ruRU",
 },
-[37534] = {
-"Хребтохруст",
+[37532] = {
+"Ледокрылый дракончик",
 "Цитадель Ледяной Короны",
 "ruRU",
 },
@@ -14725,9 +14677,9 @@ PlaterDB = {
 "Лабиринты Иглошкурых",
 "ruRU",
 },
-[37532] = {
-"Ледокрылый дракончик",
-"Цитадель Ледяной Короны",
+[28067] = {
+"Пивовар из клана Черного Железа",
+"Глубины Черной горы",
 "ruRU",
 },
 [27971] = {
@@ -14735,9 +14687,9 @@ PlaterDB = {
 "Чертоги Камня",
 "ruRU",
 },
-[37695] = {
-"Вурдалак-приспешник",
-"Цитадель Ледяной Короны",
+[28734] = {
+"Ануб'арский рыскатель",
+"Азжол-Неруб",
 "ruRU",
 },
 [8904] = {
@@ -14745,14 +14697,14 @@ PlaterDB = {
 "Глубины Черной горы",
 "ruRU",
 },
-[28067] = {
-"Пивовар из клана Черного Железа",
-"Глубины Черной горы",
+[37695] = {
+"Вурдалак-приспешник",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
-[28734] = {
-"Ануб'арский рыскатель",
-"Азжол-Неруб",
+[30338] = {
+"Ан'кахарский паук",
+"Ан'кахет: Старое Королевство",
 "ruRU",
 },
 [30178] = {
@@ -14770,9 +14722,9 @@ PlaterDB = {
 "Резервуар Кривого Клыка: Узилище",
 "ruRU",
 },
-[4518] = {
-"Ведунья из племени Мертвой Головы",
-"Лабиринты Иглошкурых",
+[28419] = {
+"Бесноватый упырь",
+"Крепость Утгард",
 "ruRU",
 },
 [9016] = {
@@ -14780,9 +14732,9 @@ PlaterDB = {
 "Глубины Черной горы",
 "ruRU",
 },
-[30338] = {
-"Ан'кахарский паук",
-"Ан'кахет: Старое Королевство",
+[4518] = {
+"Ведунья из племени Мертвой Головы",
+"Лабиринты Иглошкурых",
 "ruRU",
 },
 [4526] = {
@@ -14795,19 +14747,14 @@ PlaterDB = {
 "Лабиринты Иглошкурых",
 "ruRU",
 },
+[56395] = {
+"Новообращенный Шадо-Пан",
+"Монастырь Шадо-Пан",
+"ruRU",
+},
 [9096] = {
 "Драконоид Когтя Ярости",
 "Пик Черной горы",
-"ruRU",
-},
-[28419] = {
-"Бесноватый упырь",
-"Крепость Утгард",
-"ruRU",
-},
-[60051] = {
-"Кобальтовый страж",
-"Подземелья Могу'шан",
 "ruRU",
 },
 [66652] = {
@@ -14815,9 +14762,14 @@ PlaterDB = {
 "Монастырь Шадо-Пан",
 "ruRU",
 },
-[56395] = {
-"Новообращенный Шадо-Пан",
-"Монастырь Шадо-Пан",
+[60051] = {
+"Кобальтовый страж",
+"Подземелья Могу'шан",
+"ruRU",
+},
+[18311] = {
+"Эфириал - осквернитель гробниц",
+"Аукиндон: Гробницы маны",
 "ruRU",
 },
 [28547] = {
@@ -14830,14 +14782,14 @@ PlaterDB = {
 "Чертоги Молний",
 "ruRU",
 },
-[18311] = {
-"Эфириал - осквернитель гробниц",
-"Аукиндон: Гробницы маны",
+[36897] = {
+"Малый слизнюк",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
-[18472] = {
-"Темнопряд Сит",
-"Аукиндон: Сетеккские залы",
+[37038] = {
+"Мстительный свежеватель",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
 [26628] = {
@@ -14855,13 +14807,13 @@ PlaterDB = {
 "Вершина Утгард",
 "ruRU",
 },
-[37038] = {
-"Мстительный свежеватель",
+[38184] = {
+"Зараженный имирьяр",
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[38184] = {
-"Зараженный имирьяр",
+[37562] = {
+"Облако газа",
 "Цитадель Ледяной Короны",
 "ruRU",
 },
@@ -14870,14 +14822,14 @@ PlaterDB = {
 "Чертоги Молний",
 "ruRU",
 },
-[37562] = {
-"Облако газа",
-"Цитадель Ледяной Короны",
-"ruRU",
-},
 [29335] = {
 "Ануб'арский прядильщик",
 "Азжол-Неруб",
+"ruRU",
+},
+[27600] = {
+"Восставший темный чародей",
+"Крепость Драк'Тарон",
 "ruRU",
 },
 [59893] = {
@@ -14890,16 +14842,6 @@ PlaterDB = {
 "Аметистовая крепость",
 "ruRU",
 },
-[27600] = {
-"Восставший темный чародей",
-"Крепость Драк'Тарон",
-"ruRU",
-},
-[39679] = {
-"Глашатай сумрака Корла",
-"Пещеры Черной горы",
-"ruRU",
-},
 [9416] = {
 "Ворг легиона Изрубленного Щита",
 "Пик Черной горы",
@@ -14910,14 +14852,19 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[60277] = {
-"Терзатель душ",
-"Подземелья Могу'шан",
+[39679] = {
+"Глашатай сумрака Корла",
+"Пещеры Черной горы",
 "ruRU",
 },
 [37664] = {
 "Омраченный верховный маг",
 "Цитадель Ледяной Короны",
+"ruRU",
+},
+[60277] = {
+"Терзатель душ",
+"Подземелья Могу'шан",
 "ruRU",
 },
 [59800] = {
@@ -14930,14 +14877,19 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
+[9261] = {
+"Темнопряд из легиона Огненного Клейма",
+"Пик Черной горы",
+"ruRU",
+},
 [19016] = {
 "Фамилиар цитадели Адского Пламени",
 "Цитадель Адского Пламени: Кузня Крови",
 "ruRU",
 },
-[4798] = {
-"Тенелов из племени Змеящегося Корня",
-"Непроглядная Пучина",
+[26670] = {
+"Имирьярский плотоед",
+"Вершина Утгард",
 "ruRU",
 },
 [21127] = {
@@ -14955,9 +14907,9 @@ PlaterDB = {
 "Грим Батол",
 "ruRU",
 },
-[64947] = {
-"Стражник Могу'шан",
-"Подземелья Могу'шан",
+[4798] = {
+"Тенелов из племени Змеящегося Корня",
+"Непроглядная Пучина",
 "ruRU",
 },
 [40447] = {
@@ -14985,19 +14937,19 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[9261] = {
-"Темнопряд из легиона Огненного Клейма",
-"Пик Черной горы",
-"ruRU",
-},
-[26670] = {
-"Имирьярский плотоед",
-"Вершина Утгард",
-"ruRU",
-},
 [26638] = {
 "Восставший всадник на нетопыре из Драккари",
 "Крепость Драк'Тарон",
+"ruRU",
+},
+[64947] = {
+"Стражник Могу'шан",
+"Подземелья Могу'шан",
+"ruRU",
+},
+[65414] = {
+"Призрачный ша",
+"Монастырь Шадо-Пан",
 "ruRU",
 },
 [11783] = {
@@ -15008,11 +14960,6 @@ PlaterDB = {
 [36855] = {
 "Леди Смертный Шепот",
 "Цитадель Ледяной Короны",
-"ruRU",
-},
-[65414] = {
-"Призрачный ша",
-"Монастырь Шадо-Пан",
 "ruRU",
 },
 [59302] = {
@@ -15050,6 +14997,11 @@ PlaterDB = {
 "Подземелья Могу'шан",
 "ruRU",
 },
+[11477] = {
+"Гниющий высокорожденный",
+"Забытый Город",
+"ruRU",
+},
 [27972] = {
 "Создание молнии",
 "Чертоги Камня",
@@ -15060,9 +15012,9 @@ PlaterDB = {
 "Трон Приливов",
 "ruRU",
 },
-[11477] = {
-"Гниющий высокорожденный",
-"Забытый Город",
+[9037] = {
+"Мрак'нел",
+"Глубины Черной горы",
 "ruRU",
 },
 [37697] = {
@@ -15080,9 +15032,9 @@ PlaterDB = {
 "Ан'кахет: Старое Королевство",
 "ruRU",
 },
-[9037] = {
-"Мрак'нел",
-"Глубины Черной горы",
+[58633] = {
+"Инструктор Ледяное Сердце",
+"Некроситет",
 "ruRU",
 },
 [17961] = {
@@ -15090,19 +15042,9 @@ PlaterDB = {
 "Резервуар Кривого Клыка: Узилище",
 "ruRU",
 },
-[58633] = {
-"Инструктор Ледяное Сердце",
-"Некроситет",
-"ruRU",
-},
 [36724] = {
 "Слуга трона",
 "Цитадель Ледяной Короны",
-"ruRU",
-},
-[40320] = {
-"Валиона",
-"Грим Батол",
 "ruRU",
 },
 [17938] = {
@@ -15110,9 +15052,19 @@ PlaterDB = {
 "Резервуар Кривого Клыка: Узилище",
 "ruRU",
 },
+[39890] = {
+"Сумеречный демиург",
+"Грим Батол",
+"ruRU",
+},
 [62837] = {
 "Великая императрица Шек'зир",
 "Сердце Страха",
+"ruRU",
+},
+[40320] = {
+"Валиона",
+"Грим Батол",
 "ruRU",
 },
 [58807] = {
@@ -15125,9 +15077,9 @@ PlaterDB = {
 "Грим Батол",
 "ruRU",
 },
-[39890] = {
-"Сумеречный демиург",
-"Грим Батол",
+[3527] = {
+"Тотем исцеляющего потока",
+"Подземелья Могу'шан",
 "ruRU",
 },
 [61046] = {
@@ -15135,9 +15087,9 @@ PlaterDB = {
 "Терраса Вечной Весны",
 "ruRU",
 },
-[3527] = {
-"Тотем исцеляющего потока",
-"Подземелья Могу'шан",
+[21904] = {
+"Небесный боевой ястреб",
+"Аукиндон: Сетеккские залы",
 "ruRU",
 },
 [18313] = {
@@ -15160,9 +15112,9 @@ PlaterDB = {
 "Забытый Город",
 "ruRU",
 },
-[21904] = {
-"Небесный боевой ястреб",
-"Аукиндон: Сетеккские залы",
+[8877] = {
+"Ревнитель из племени Песчаной Бури",
+"Зул'Фаррак",
 "ruRU",
 },
 [18473] = {
@@ -15190,11 +15142,6 @@ PlaterDB = {
 "Чертоги Молний",
 "ruRU",
 },
-[8877] = {
-"Ревнитель из племени Песчаной Бури",
-"Зул'Фаррак",
-"ruRU",
-},
 [63053] = {
 "Нога Гаралона",
 "Сердце Страха",
@@ -15208,6 +15155,11 @@ PlaterDB = {
 [61337] = {
 "Глинтрок-крепкошкур",
 "Дворец Могу'шан",
+"ruRU",
+},
+[60585] = {
+"Старейшина Регейл",
+"Терраса Вечной Весны",
 "ruRU",
 },
 [10408] = {
@@ -15230,9 +15182,9 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[60585] = {
-"Старейшина Регейл",
-"Терраса Вечной Весны",
+[23192] = {
+"Жар Аззинота",
+"Храм Нефритовой Змеи",
 "ruRU",
 },
 [39873] = {
@@ -15245,9 +15197,9 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[23192] = {
-"Жар Аззинота",
-"Храм Нефритовой Змеи",
+[61029] = {
+"Изначальный элементаль огня",
+"Подземелья Могу'шан",
 "ruRU",
 },
 [5270] = {
@@ -15255,9 +15207,9 @@ PlaterDB = {
 "Затонувший храм",
 "ruRU",
 },
-[61029] = {
-"Изначальный элементаль огня",
-"Подземелья Могу'шан",
+[64280] = {
+"Маки Водорез",
+"Арена Истребления",
 "ruRU",
 },
 [29316] = {
@@ -15270,9 +15222,9 @@ PlaterDB = {
 "Курганы Иглошкурых",
 "ruRU",
 },
-[64280] = {
-"Маки Водорез",
-"Арена Истребления",
+[61239] = {
+"Глинтрок-оракул",
+"Дворец Могу'шан",
 "ruRU",
 },
 [7357] = {
@@ -15295,9 +15247,9 @@ PlaterDB = {
 "Трон Приливов",
 "ruRU",
 },
-[7405] = {
-"Смертоносный пещерный скорпид",
-"Ульдаман",
+[61398] = {
+"Синь Мастер Боя",
+"Дворец Могу'шан",
 "ruRU",
 },
 [7397] = {
@@ -15308,11 +15260,6 @@ PlaterDB = {
 [67177] = {
 "Зар'тик-молельщик",
 "Сердце Страха",
-"ruRU",
-},
-[61398] = {
-"Синь Мастер Боя",
-"Дворец Могу'шан",
 "ruRU",
 },
 [62348] = {
@@ -15330,9 +15277,9 @@ PlaterDB = {
 "Подземелья Могу'шан",
 "ruRU",
 },
-[24082] = {
-"Укротитель протодраконов",
-"Крепость Утгард",
+[11490] = {
+"Зеврим Терновое Копыто",
+"Забытый Город",
 "ruRU",
 },
 [10808] = {
@@ -15340,9 +15287,9 @@ PlaterDB = {
 "Стратхольм",
 "ruRU",
 },
-[11490] = {
-"Зеврим Терновое Копыто",
-"Забытый Город",
+[61623] = {
+"Капля смолы",
+"Осада храма Нюцзао",
 "ruRU",
 },
 [21891] = {
@@ -15360,9 +15307,9 @@ PlaterDB = {
 "Забытый Город",
 "ruRU",
 },
-[17770] = {
-"Топеглад",
-"Кривой Клык: Нижетопь",
+[37571] = {
+"Омраченный советник",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
 [9033] = {
@@ -15370,14 +15317,19 @@ PlaterDB = {
 "Глубины Черной горы",
 "ruRU",
 },
+[63031] = {
+"Сет'тик-фанатик",
+"Сердце Страха",
+"ruRU",
+},
 [27973] = {
 "Кристаллический осколыш",
 "Чертоги Камня",
 "ruRU",
 },
-[37571] = {
-"Омраченный советник",
-"Цитадель Ледяной Короны",
+[17770] = {
+"Топеглад",
+"Кривой Клык: Нижетопь",
 "ruRU",
 },
 [8905] = {
@@ -15395,9 +15347,9 @@ PlaterDB = {
 "Ульдаман",
 "ruRU",
 },
-[63031] = {
-"Сет'тик-фанатик",
-"Сердце Страха",
+[58632] = {
+"Воитель Гарлан",
+"Залы Алого ордена",
 "ruRU",
 },
 [24071] = {
@@ -15405,9 +15357,9 @@ PlaterDB = {
 "Крепость Утгард",
 "ruRU",
 },
-[37955] = {
-"Кровавая королева Лана'тель",
-"Цитадель Ледяной Короны",
+[17962] = {
+"Работяга резервуара Кривого Клыка",
+"Резервуар Кривого Клыка: Узилище",
 "ruRU",
 },
 [30276] = {
@@ -15425,9 +15377,9 @@ PlaterDB = {
 "Сердце Страха",
 "ruRU",
 },
-[36612] = {
-"Лорд Ребрад",
-"Цитадель Ледяной Короны",
+[7327] = {
+"Иссохший воин",
+"Курганы Иглошкурых",
 "ruRU",
 },
 [7605] = {
@@ -15450,24 +15402,24 @@ PlaterDB = {
 "Врата Заходящего Солнца",
 "ruRU",
 },
-[58632] = {
-"Воитель Гарлан",
-"Залы Алого ордена",
-"ruRU",
-},
-[7327] = {
-"Иссохший воин",
-"Курганы Иглошкурых",
-"ruRU",
-},
 [18314] = {
 "Ловчий нексуса",
 "Аукиндон: Гробницы маны",
 "ruRU",
 },
-[28581] = {
-"Тактик клана Закаленных Бурей",
-"Чертоги Молний",
+[40017] = {
+"Сумеречный страж стихий",
+"Пещеры Черной горы",
+"ruRU",
+},
+[36612] = {
+"Лорд Ребрад",
+"Цитадель Ледяной Короны",
+"ruRU",
+},
+[61240] = {
+"Глинтрок-тихоступ",
+"Дворец Могу'шан",
 "ruRU",
 },
 [30660] = {
@@ -15495,9 +15447,9 @@ PlaterDB = {
 "Пик Черной горы",
 "ruRU",
 },
-[40017] = {
-"Сумеречный страж стихий",
-"Пещеры Черной горы",
+[56930] = {
+"Крик'тик - вестник роя",
+"Врата Заходящего Солнца",
 "ruRU",
 },
 [15430] = {
@@ -15510,19 +15462,19 @@ PlaterDB = {
 "Монастырь Алого ордена",
 "ruRU",
 },
-[56930] = {
-"Крик'тик - вестник роя",
-"Врата Заходящего Солнца",
-"ruRU",
-},
 [58198] = {
 "Послушник Шадо-Пан",
 "Монастырь Шадо-Пан",
 "ruRU",
 },
-[11448] = {
-"Чернокнижник из клана Гордок",
-"Забытый Город",
+[64183] = {
+"Огромный каменный цийлинь",
+"Подземелья Могу'шан",
+"ruRU",
+},
+[4625] = {
+"Хранительница чертогов Мертвой Головы",
+"Лабиринты Иглошкурых",
 "ruRU",
 },
 [5710] = {
@@ -15530,14 +15482,14 @@ PlaterDB = {
 "Затонувший храм",
 "ruRU",
 },
-[11480] = {
-"Волшебная аберрация",
-"Забытый Город",
+[61928] = {
+"Сик'тик-стражник",
+"Осада храма Нюцзао",
 "ruRU",
 },
-[64183] = {
-"Огромный каменный цийлинь",
-"Подземелья Могу'шан",
+[11448] = {
+"Чернокнижник из клана Гордок",
+"Забытый Город",
 "ruRU",
 },
 [11464] = {
@@ -15555,11 +15507,6 @@ PlaterDB = {
 "Зул'Фаррак",
 "ruRU",
 },
-[61928] = {
-"Сик'тик-стражник",
-"Осада храма Нюцзао",
-"ruRU",
-},
 [10390] = {
 "Скелет-страж",
 "Стратхольм",
@@ -15575,6 +15522,11 @@ PlaterDB = {
 "Храм Нефритовой Змеи",
 "ruRU",
 },
+[26861] = {
+"Король Имирон",
+"Вершина Утгард",
+"ruRU",
+},
 [39870] = {
 "Сумеречный ловец огня",
 "Грим Батол",
@@ -15585,9 +15537,9 @@ PlaterDB = {
 "Глубины Черной горы",
 "ruRU",
 },
-[26861] = {
-"Король Имирон",
-"Вершина Утгард",
+[26716] = {
+"Лазурный хранитель",
+"Нексус",
 "ruRU",
 },
 [60793] = {
@@ -15600,9 +15552,9 @@ PlaterDB = {
 "Хмелеварня Буйных Портеров",
 "ruRU",
 },
-[26716] = {
-"Лазурный хранитель",
-"Нексус",
+[41073] = {
+"Сумеречный мечник",
+"Грим Батол",
 "ruRU",
 },
 [63032] = {
@@ -15625,9 +15577,9 @@ PlaterDB = {
 "Гундрак",
 "ruRU",
 },
-[41073] = {
-"Сумеречный мечник",
-"Грим Батол",
+[4539] = {
+"Большой лабиринтовый нетопырь",
+"Лабиринты Иглошкурых",
 "ruRU",
 },
 [29637] = {
@@ -15645,29 +15597,9 @@ PlaterDB = {
 "Мародон",
 "ruRU",
 },
-[4539] = {
-"Большой лабиринтовый нетопырь",
-"Лабиринты Иглошкурых",
-"ruRU",
-},
 [5648] = {
 "Темный чародей из племени Песчаной Бури",
 "Зул'Фаррак",
-"ruRU",
-},
-[7333] = {
-"Иссохший боевой кабан",
-"Курганы Иглошкурых",
-"ruRU",
-},
-[37125] = {
-"Капитан Руперт",
-"Цитадель Ледяной Короны",
-"ruRU",
-},
-[9817] = {
-"Ткач ужаса из легиона Чернорука",
-"Пик Черной горы",
 "ruRU",
 },
 [10268] = {
@@ -15680,6 +15612,26 @@ PlaterDB = {
 "Ульдаман",
 "ruRU",
 },
+[29829] = {
+"Землетряс Драккари",
+"Гундрак",
+"ruRU",
+},
+[9817] = {
+"Ткач ужаса из легиона Чернорука",
+"Пик Черной горы",
+"ruRU",
+},
+[7333] = {
+"Иссохший боевой кабан",
+"Курганы Иглошкурых",
+"ruRU",
+},
+[30667] = {
+"Лазурная колдунья",
+"Аметистовая крепость",
+"ruRU",
+},
 [61945] = {
 "Стальная пасть клана Гуртан",
 "Дворец Могу'шан",
@@ -15690,24 +15642,19 @@ PlaterDB = {
 "Ан'кахет: Старое Королевство",
 "ruRU",
 },
-[30667] = {
-"Лазурная колдунья",
-"Аметистовая крепость",
+[18321] = {
+"Сетеккский Лорд Когтя",
+"Аукиндон: Сетеккские залы",
 "ruRU",
 },
-[2992] = {
-"Исцеляющий идол V",
-"Лабиринты Иглошкурых",
+[17771] = {
+"Оракул из племени Темной Крови",
+"Кривой Клык: Нижетопь",
 "ruRU",
 },
 [27963] = {
 "Чудотворец клана Темных Рун",
 "Чертоги Камня",
-"ruRU",
-},
-[18321] = {
-"Сетеккский Лорд Когтя",
-"Аукиндон: Сетеккские залы",
 "ruRU",
 },
 [61453] = {
@@ -15718,6 +15665,11 @@ PlaterDB = {
 [30668] = {
 "Лазурный налетчик",
 "Аметистовая крепость",
+"ruRU",
+},
+[56718] = {
+"Прыгун",
+"Хмелеварня Буйных Портеров",
 "ruRU",
 },
 [60410] = {
@@ -15745,14 +15697,14 @@ PlaterDB = {
 "Крепость Утгард",
 "ruRU",
 },
-[58683] = {
-"Мирмидон Алого ордена",
-"Залы Алого ордена",
+[56636] = {
+"Командир Ри'мок",
+"Врата Заходящего Солнца",
 "ruRU",
 },
-[56718] = {
-"Прыгун",
-"Хмелеварня Буйных Портеров",
+[20208] = {
+"Исцеляющий идол Менну",
+"Резервуар Кривого Клыка: Узилище",
 "ruRU",
 },
 [56764] = {
@@ -15770,9 +15722,9 @@ PlaterDB = {
 "Храм Нефритовой Змеи",
 "ruRU",
 },
-[20208] = {
-"Исцеляющий идол Менну",
-"Резервуар Кривого Клыка: Узилище",
+[27964] = {
+"Ученый из клана Темных Рун",
+"Чертоги Камня",
 "ruRU",
 },
 [12216] = {
@@ -15785,9 +15737,9 @@ PlaterDB = {
 "Аукиндон: Гробницы маны",
 "ruRU",
 },
-[28582] = {
-"Лекарь клана Закаленных Бурей",
-"Чертоги Молний",
+[36678] = {
+"Профессор Мерзоцид",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
 [10217] = {
@@ -15800,14 +15752,14 @@ PlaterDB = {
 "Забытый Город",
 "ruRU",
 },
-[61434] = {
-"Сик'тик - боец авангарда",
-"Осада храма Нюцзао",
+[26631] = {
+"Новос Призыватель",
+"Крепость Драк'Тарон",
 "ruRU",
 },
-[36678] = {
-"Профессор Мерзоцид",
-"Цитадель Ледяной Короны",
+[59835] = {
+"Крик'тик-роевик",
+"Врата Заходящего Солнца",
 "ruRU",
 },
 [36998] = {
@@ -15835,9 +15787,9 @@ PlaterDB = {
 "Монастырь Алого ордена",
 "ruRU",
 },
-[59835] = {
-"Крик'тик-роевик",
-"Врата Заходящего Солнца",
+[6206] = {
+"Землеглот из пещерных глубин",
+"Гномреган",
 "ruRU",
 },
 [61946] = {
@@ -15865,11 +15817,6 @@ PlaterDB = {
 "Азжол-Неруб",
 "ruRU",
 },
-[27964] = {
-"Ученый из клана Темных Рун",
-"Чертоги Камня",
-"ruRU",
-},
 [6222] = {
 "Прокаженный техник",
 "Гномреган",
@@ -15885,14 +15832,14 @@ PlaterDB = {
 "Хмелеварня Буйных Портеров",
 "ruRU",
 },
-[11476] = {
-"Скелет высокорожденного",
-"Забытый Город",
-"ruRU",
-},
 [26125] = {
 "Восставший союзник",
 "Подземелья Могу'шан",
+"ruRU",
+},
+[11476] = {
+"Скелет высокорожденного",
+"Забытый Город",
 "ruRU",
 },
 [10398] = {
@@ -15905,18 +15852,23 @@ PlaterDB = {
 "Хмелеварня Буйных Портеров",
 "ruRU",
 },
-[60731] = {
-"Бессмертные тени",
-"Подземелья Могу'шан",
+[58812] = {
+"Злобная сущность",
+"Монастырь Шадо-Пан",
+"ruRU",
+},
+[58684] = {
+"Рассекатель Алого ордена",
+"Залы Алого ордена",
+"ruRU",
+},
+[10383] = {
+"Изломанный кадавр",
+"Стратхольм",
 "ruRU",
 },
 [56765] = {
 "Разрушительный ша",
-"Монастырь Шадо-Пан",
-"ruRU",
-},
-[58812] = {
-"Злобная сущность",
 "Монастырь Шадо-Пан",
 "ruRU",
 },
@@ -15930,14 +15882,14 @@ PlaterDB = {
 "Крепость Драк'Тарон",
 "ruRU",
 },
-[10383] = {
-"Изломанный кадавр",
-"Стратхольм",
-"ruRU",
-},
 [19307] = {
 "Ужасень Нексуса",
 "Аукиндон: Гробницы маны",
+"ruRU",
+},
+[42692] = {
+"Костолом Каменных Недр",
+"Каменные Недра",
 "ruRU",
 },
 [10697] = {
@@ -15950,9 +15902,9 @@ PlaterDB = {
 "Дворец Могу'шан",
 "ruRU",
 },
-[8889] = {
-"Надзиратель из клана Ярости Горна",
-"Глубины Черной горы",
+[59974] = {
+"Хтонир",
+"Монастырь Алого ордена",
 "ruRU",
 },
 [36807] = {
@@ -15965,14 +15917,14 @@ PlaterDB = {
 "Некроситет",
 "ruRU",
 },
-[59974] = {
-"Хтонир",
-"Монастырь Алого ордена",
-"ruRU",
-},
 [11030] = {
 "Безмозглая нежить",
 "Стратхольм",
+"ruRU",
+},
+[56927] = {
+"Озверевший хозен-тусовщик",
+"Хмелеварня Буйных Портеров",
 "ruRU",
 },
 [10809] = {
@@ -15980,14 +15932,9 @@ PlaterDB = {
 "Стратхольм",
 "ruRU",
 },
-[37127] = {
-"Имирьярская повелительница льда",
-"Цитадель Ледяной Короны",
-"ruRU",
-},
-[56927] = {
-"Озверевший хозен-тусовщик",
-"Хмелеварня Буйных Портеров",
+[29830] = {
+"Живое колдунство",
+"Гундрак",
 "ruRU",
 },
 [59240] = {
@@ -16000,14 +15947,19 @@ PlaterDB = {
 "Забытый Город",
 "ruRU",
 },
+[58108] = {
+"Крик'тик-разведчик",
+"Врата Заходящего Солнца",
+"ruRU",
+},
 [61947] = {
 "Крушитель ребер клана Каргеш",
 "Дворец Могу'шан",
 "ruRU",
 },
-[58108] = {
-"Крик'тик-разведчик",
-"Врата Заходящего Солнца",
+[39698] = {
+"Карш Гнущий Сталь",
+"Пещеры Черной горы",
 "ruRU",
 },
 [27975] = {
@@ -16030,14 +15982,14 @@ PlaterDB = {
 "Глубины Черной горы",
 "ruRU",
 },
-[39698] = {
-"Карш Гнущий Сталь",
-"Пещеры Черной горы",
-"ruRU",
-},
 [5649] = {
 "Кровопийца из племени Песчаной Бури",
 "Зул'Фаррак",
+"ruRU",
+},
+[59398] = {
+"Деморализующее знамя",
+"Подземелья Могу'шан",
 "ruRU",
 },
 [17941] = {
@@ -16095,19 +16047,19 @@ PlaterDB = {
 "Цитадель Адского Пламени: бастионы",
 "ruRU",
 },
-[58810] = {
-"Фрагмент Ненависти",
-"Монастырь Шадо-Пан",
-"ruRU",
-},
-[26536] = {
-"Безмозглый слуга",
-"Вершина Утгард",
+[4848] = {
+"Тенегорнский черный маг",
+"Ульдаман",
 "ruRU",
 },
 [28583] = {
 "Волдырный парозлоб",
 "Чертоги Молний",
+"ruRU",
+},
+[26536] = {
+"Безмозглый слуга",
+"Вершина Утгард",
 "ruRU",
 },
 [65402] = {
@@ -16140,9 +16092,9 @@ PlaterDB = {
 "Нексус",
 "ruRU",
 },
-[4848] = {
-"Тенегорнский черный маг",
-"Ульдаман",
+[4832] = {
+"Повелитель сумрака Келрис",
+"Непроглядная Пучина",
 "ruRU",
 },
 [26792] = {
@@ -16165,9 +16117,9 @@ PlaterDB = {
 "Вершина Смерча",
 "ruRU",
 },
-[4832] = {
-"Повелитель сумрака Келрис",
-"Непроглядная Пучина",
+[58810] = {
+"Фрагмент Ненависти",
+"Монастырь Шадо-Пан",
 "ruRU",
 },
 [18341] = {
@@ -16245,9 +16197,9 @@ PlaterDB = {
 "Непроглядная Пучина",
 "ruRU",
 },
-[4815] = {
-"Мелководный клешнехват",
-"Непроглядная Пучина",
+[56895] = {
+"Слабое место",
+"Врата Заходящего Солнца",
 "ruRU",
 },
 [4823] = {
@@ -16260,14 +16212,14 @@ PlaterDB = {
 "Лабиринты Иглошкурых",
 "ruRU",
 },
-[4847] = {
-"Тенегорнский охотник за реликвиями",
-"Ульдаман",
-"ruRU",
-},
 [61245] = {
 "Тотем конденсации",
 "Сердце Страха",
+"ruRU",
+},
+[4847] = {
+"Тенегорнский охотник за реликвиями",
+"Ульдаман",
 "ruRU",
 },
 [4855] = {
@@ -16360,9 +16312,9 @@ PlaterDB = {
 "Сердце Страха",
 "ruRU",
 },
-[56448] = {
-"Мудрый Марис",
-"Храм Нефритовой Змеи",
+[30279] = {
+"Глубинный ползун",
+"Ан'кахет: Старое Королевство",
 "ruRU",
 },
 [40008] = {
@@ -16370,9 +16322,9 @@ PlaterDB = {
 "Пещеры Черной горы",
 "ruRU",
 },
-[30279] = {
-"Глубинный ползун",
-"Ан'кахет: Старое Королевство",
+[56448] = {
+"Мудрый Марис",
+"Храм Нефритовой Змеи",
 "ruRU",
 },
 [13276] = {
@@ -16382,16 +16334,6 @@ PlaterDB = {
 },
 [7078] = {
 "Пещерный скорпид",
-"Ульдаман",
-"ruRU",
-},
-[67093] = {
-"Сик'тик - боевой лекарь",
-"Осада храма Нюцзао",
-"ruRU",
-},
-[24830] = {
-"Погромщик из племени Каменного Свода",
 "Ульдаман",
 "ruRU",
 },
@@ -16405,14 +16347,24 @@ PlaterDB = {
 "Крепость Драк'Тарон",
 "ruRU",
 },
+[67093] = {
+"Сик'тик - боевой лекарь",
+"Осада храма Нюцзао",
+"ruRU",
+},
+[30666] = {
+"Лазурный капитан",
+"Аметистовая крепость",
+"ruRU",
+},
 [3560] = {
 "Исцеляющий идол",
 "Ульдаман",
 "ruRU",
 },
-[12201] = {
-"Принцесса Терадрас",
-"Мародон",
+[40584] = {
+"Захватчик Леди Наз'жар",
+"Трон Приливов",
 "ruRU",
 },
 [12217] = {
@@ -16440,9 +16392,9 @@ PlaterDB = {
 "Пик Черной горы",
 "ruRU",
 },
-[30666] = {
-"Лазурный капитан",
-"Аметистовая крепость",
+[24830] = {
+"Погромщик из племени Каменного Свода",
+"Ульдаман",
 "ruRU",
 },
 [17537] = {
@@ -16485,14 +16437,14 @@ PlaterDB = {
 "Аукиндон: Сетеккские залы",
 "ruRU",
 },
-[64061] = {
-"Стражник Могу'шан",
-"Подземелья Могу'шан",
+[10394] = {
+"Караульный Черной Стражи",
+"Стратхольм",
 "ruRU",
 },
-[29128] = {
-"Ануб'арский стражник",
-"Азжол-Неруб",
+[7286] = {
+"Зул'фарракский зомби",
+"Зул'Фаррак",
 "ruRU",
 },
 [10426] = {
@@ -16510,9 +16462,9 @@ PlaterDB = {
 "Азжол-Неруб",
 "ruRU",
 },
-[7286] = {
-"Зул'фарракский зомби",
-"Зул'Фаррак",
+[29128] = {
+"Ануб'арский стражник",
+"Азжол-Неруб",
 "ruRU",
 },
 [13160] = {
@@ -16525,9 +16477,9 @@ PlaterDB = {
 "Нексус",
 "ruRU",
 },
-[7246] = {
-"Темный охотник из племени Песчаной Бури",
-"Зул'Фаррак",
+[40270] = {
+"Сумеречный призыватель грома",
+"Грим Батол",
 "ruRU",
 },
 [5271] = {
@@ -16535,14 +16487,14 @@ PlaterDB = {
 "Затонувший храм",
 "ruRU",
 },
+[9036] = {
+"Гнус'рел",
+"Глубины Черной горы",
+"ruRU",
+},
 [7334] = {
 "Жуткий боевой вепрь",
 "Курганы Иглошкурых",
-"ruRU",
-},
-[38154] = {
-"Боевой ястреб",
-"Цитадель Ледяной Короны",
 "ruRU",
 },
 [7342] = {
@@ -16550,9 +16502,9 @@ PlaterDB = {
 "Курганы Иглошкурых",
 "ruRU",
 },
-[40270] = {
-"Сумеречный призыватель грома",
-"Грим Батол",
+[7246] = {
+"Темный охотник из племени Песчаной Бури",
+"Зул'Фаррак",
 "ruRU",
 },
 [7358] = {
@@ -16565,9 +16517,9 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[9036] = {
-"Гнус'рел",
-"Глубины Черной горы",
+[38154] = {
+"Боевой ястреб",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
 [28619] = {
@@ -16580,9 +16532,9 @@ PlaterDB = {
 "Чертоги Камня",
 "ruRU",
 },
-[44999] = {
-"Шен'драларский дозорный",
-"Забытый Город",
+[8477] = {
+"Скелет-слуга",
+"Курганы Иглошкурых",
 "ruRU",
 },
 [61247] = {
@@ -16590,19 +16542,14 @@ PlaterDB = {
 "Дворец Могу'шан",
 "ruRU",
 },
-[8477] = {
-"Скелет-слуга",
-"Курганы Иглошкурых",
-"ruRU",
-},
 [36811] = {
 "Вестник смерти - помощник",
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[59520] = {
-"Шипучий бражный хмелементаль",
-"Хмелеварня Буйных Портеров",
+[44999] = {
+"Шен'драларский дозорный",
+"Забытый Город",
 "ruRU",
 },
 [61567] = {
@@ -16610,9 +16557,14 @@ PlaterDB = {
 "Осада храма Нюцзао",
 "ruRU",
 },
-[37003] = {
-"Мститель с \"Усмирителя небес\"",
-"Цитадель Ледяной Короны",
+[8908] = {
+"Оплавленный боевой голем",
+"Глубины Черной горы",
+"ruRU",
+},
+[29768] = {
+"Непреклонный душитель",
+"Гундрак",
 "ruRU",
 },
 [27753] = {
@@ -16630,16 +16582,6 @@ PlaterDB = {
 "Подземелья Могу'шан",
 "ruRU",
 },
-[9502] = {
-"Фаланг",
-"Глубины Черной горы",
-"ruRU",
-},
-[8908] = {
-"Оплавленный боевой голем",
-"Глубины Черной горы",
-"ruRU",
-},
 [8892] = {
 "Пехотинец из клана Ярости Горна",
 "Глубины Черной горы",
@@ -16648,6 +16590,16 @@ PlaterDB = {
 [8876] = {
 "Послушник из племени Песчаной Бури",
 "Зул'Фаррак",
+"ruRU",
+},
+[9502] = {
+"Фаланг",
+"Глубины Черной горы",
+"ruRU",
+},
+[37003] = {
+"Мститель с \"Усмирителя небес\"",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
 [27977] = {
@@ -16690,9 +16642,9 @@ PlaterDB = {
 "Подземелья Могу'шан",
 "ruRU",
 },
-[62847] = {
-"Область диссонанса",
-"Сердце Страха",
+[61699] = {
+"Сик'тик Желтокрыл",
+"Осада храма Нюцзао",
 "ruRU",
 },
 [9019] = {
@@ -16700,14 +16652,14 @@ PlaterDB = {
 "Глубины Черной горы",
 "ruRU",
 },
-[11082] = {
-"Стратхольмский курьер",
-"Стратхольм",
+[9035] = {
+"Гнев'рел",
+"Глубины Черной горы",
 "ruRU",
 },
-[56706] = {
-"Крик'тик-бомбардир",
-"Врата Заходящего Солнца",
+[62847] = {
+"Область диссонанса",
+"Сердце Страха",
 "ruRU",
 },
 [7606] = {
@@ -16715,14 +16667,14 @@ PlaterDB = {
 "Зул'Фаррак",
 "ruRU",
 },
-[61699] = {
-"Сик'тик Желтокрыл",
-"Осада храма Нюцзао",
+[56706] = {
+"Крик'тик-бомбардир",
+"Врата Заходящего Солнца",
 "ruRU",
 },
-[39626] = {
-"Багровый полководец",
-"Грим Батол",
+[9042] = {
+"Верек",
+"Глубины Черной горы",
 "ruRU",
 },
 [5283] = {
@@ -16730,9 +16682,9 @@ PlaterDB = {
 "Затонувший храм",
 "ruRU",
 },
-[61056] = {
-"Изначальный элементаль земли",
-"Подземелья Могу'шан",
+[40586] = {
+"Леди Наз'жар",
+"Трон Приливов",
 "ruRU",
 },
 [8916] = {
@@ -16765,14 +16717,14 @@ PlaterDB = {
 "Залы Алого ордена",
 "ruRU",
 },
-[37004] = {
-"Клинок ужаса с \"Усмирителя небес\"",
-"Цитадель Ледяной Короны",
+[13323] = {
+"Подземный деметродон",
+"Мародон",
 "ruRU",
 },
-[59521] = {
-"Булькающий бражный хмелементаль",
-"Хмелеварня Буйных Портеров",
+[9259] = {
+"Рубака из легиона Огненного Клейма",
+"Пик Черной горы",
 "ruRU",
 },
 [26730] = {
@@ -16790,29 +16742,29 @@ PlaterDB = {
 "Нексус",
 "ruRU",
 },
-[6212] = {
-"Посланник клана Черного Железа",
-"Гномреган",
-"ruRU",
-},
-[60033] = {
-"Бесноватый дух",
-"Монастырь Алого ордена",
-"ruRU",
-},
-[64383] = {
-"Пузырящаяся смола",
-"Сердце Страха",
-"ruRU",
-},
-[64063] = {
-"Чародей Могу'шан",
-"Подземелья Могу'шан",
+[11472] = {
+"Элдретский дух",
+"Забытый Город",
 "ruRU",
 },
 [5719] = {
 "Морфаз",
 "Затонувший храм",
+"ruRU",
+},
+[18894] = {
+"Страж Скверны - громила",
+"Цитадель Адского Пламени: Кузня Крови",
+"ruRU",
+},
+[5711] = {
+"Огом Презренный",
+"Затонувший храм",
+"ruRU",
+},
+[45704] = {
+"Затаившаяся буря",
+"Вершина Смерча",
 "ruRU",
 },
 [11450] = {
@@ -16830,9 +16782,9 @@ PlaterDB = {
 "Азжол-Неруб",
 "ruRU",
 },
-[18894] = {
-"Страж Скверны - громила",
-"Цитадель Адского Пламени: Кузня Крови",
+[64383] = {
+"Пузырящаяся смола",
+"Сердце Страха",
 "ruRU",
 },
 [18312] = {
@@ -16915,14 +16867,14 @@ PlaterDB = {
 "Вершина Смерча",
 "ruRU",
 },
-[17455] = {
-"Повелитель зверей из клана Костеглодов",
-"Цитадель Адского Пламени: бастионы",
+[416] = {
+"Дагпито",
+"Лабиринты Иглошкурых",
 "ruRU",
 },
-[63808] = {
-"Тусклый самоцвет",
-"Дворец Могу'шан",
+[9819] = {
+"Ветеран легиона Чернорука",
+"Пик Черной горы",
 "ruRU",
 },
 [59458] = {
@@ -16945,9 +16897,9 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[9819] = {
-"Ветеран легиона Чернорука",
-"Пик Черной горы",
+[63808] = {
+"Тусклый самоцвет",
+"Дворец Могу'шан",
 "ruRU",
 },
 [63872] = {
@@ -16965,8 +16917,8 @@ PlaterDB = {
 "Лабиринты Иглошкурых",
 "ruRU",
 },
-[26918] = {
-"Хаотический разлом",
+[26763] = {
+"Аномалус",
 "Нексус",
 "ruRU",
 },
@@ -16975,19 +16927,19 @@ PlaterDB = {
 "Чертоги Камня",
 "ruRU",
 },
-[4887] = {
-"Гхаму-ра",
-"Непроглядная Пучина",
-"ruRU",
-},
-[26763] = {
-"Аномалус",
-"Нексус",
-"ruRU",
-},
 [61634] = {
 "Командир Во'цзак",
 "Осада храма Нюцзао",
+"ruRU",
+},
+[26918] = {
+"Хаотический разлом",
+"Нексус",
+"ruRU",
+},
+[4887] = {
+"Гхаму-ра",
+"Непроглядная Пучина",
 "ruRU",
 },
 [17871] = {
@@ -16995,9 +16947,9 @@ PlaterDB = {
 "Кривой Клык: Нижетопь",
 "ruRU",
 },
-[11489] = {
-"Тендрис Криводрев",
-"Забытый Город",
+[26635] = {
+"Восставший воин Драккари",
+"Крепость Драк'Тарон",
 "ruRU",
 },
 [37901] = {
@@ -17010,9 +16962,9 @@ PlaterDB = {
 "Лабиринты Иглошкурых",
 "ruRU",
 },
-[26635] = {
-"Восставший воин Драккари",
-"Крепость Драк'Тарон",
+[11489] = {
+"Тендрис Криводрев",
+"Забытый Город",
 "ruRU",
 },
 [10043] = {
@@ -17020,9 +16972,9 @@ PlaterDB = {
 "Глубины Черной горы",
 "ruRU",
 },
-[4861] = {
-"Крылан-охотник",
-"Ульдаман",
+[61250] = {
+"Могу-чародей",
+"Подземелья Могу'шан",
 "ruRU",
 },
 [40268] = {
@@ -17035,9 +16987,9 @@ PlaterDB = {
 "Пик Черной горы",
 "ruRU",
 },
-[61250] = {
-"Могу-чародей",
-"Подземелья Могу'шан",
+[4861] = {
+"Крылан-охотник",
+"Ульдаман",
 "ruRU",
 },
 [62977] = {
@@ -17120,9 +17072,9 @@ PlaterDB = {
 "Гномреган",
 "ruRU",
 },
-[416] = {
-"Дагпито",
-"Лабиринты Иглошкурых",
+[17455] = {
+"Повелитель зверей из клана Костеглодов",
+"Цитадель Адского Пламени: бастионы",
 "ruRU",
 },
 [6223] = {
@@ -17200,14 +17152,14 @@ PlaterDB = {
 "Каменные Недра",
 "ruRU",
 },
-[11472] = {
-"Элдретский дух",
-"Забытый Город",
+[60033] = {
+"Бесноватый дух",
+"Монастырь Алого ордена",
 "ruRU",
 },
-[13323] = {
-"Подземный деметродон",
-"Мародон",
+[64063] = {
+"Чародей Могу'шан",
+"Подземелья Могу'шан",
 "ruRU",
 },
 [63106] = {
@@ -17220,19 +17172,19 @@ PlaterDB = {
 "Цитадель Адского Пламени: бастионы",
 "ruRU",
 },
-[5711] = {
-"Огом Презренный",
-"Затонувший храм",
+[6212] = {
+"Посланник клана Черного Железа",
+"Гномреган",
 "ruRU",
 },
-[45704] = {
-"Затаившаяся буря",
-"Вершина Смерча",
+[37004] = {
+"Клинок ужаса с \"Усмирителя небес\"",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
-[9259] = {
-"Рубака из легиона Огненного Клейма",
-"Пик Черной горы",
+[59521] = {
+"Булькающий бражный хмелементаль",
+"Хмелеварня Буйных Портеров",
 "ruRU",
 },
 [19428] = {
@@ -17240,9 +17192,9 @@ PlaterDB = {
 "Аукиндон: Сетеккские залы",
 "ruRU",
 },
-[9042] = {
-"Верек",
-"Глубины Черной горы",
+[61056] = {
+"Изначальный элементаль земли",
+"Подземелья Могу'шан",
 "ruRU",
 },
 [59460] = {
@@ -17250,9 +17202,9 @@ PlaterDB = {
 "Хмелеварня Буйных Портеров",
 "ruRU",
 },
-[40586] = {
-"Леди Наз'жар",
-"Трон Приливов",
+[39626] = {
+"Багровый полководец",
+"Грим Батол",
 "ruRU",
 },
 [10811] = {
@@ -17265,14 +17217,14 @@ PlaterDB = {
 "Гундрак",
 "ruRU",
 },
-[10391] = {
-"Скелет-берсерк",
+[11082] = {
+"Стратхольмский курьер",
 "Стратхольм",
 "ruRU",
 },
-[9035] = {
-"Гнев'рел",
-"Глубины Черной горы",
+[10391] = {
+"Скелет-берсерк",
+"Стратхольм",
 "ruRU",
 },
 [60197] = {
@@ -17305,14 +17257,14 @@ PlaterDB = {
 "Стратхольм",
 "ruRU",
 },
+[59520] = {
+"Шипучий бражный хмелементаль",
+"Хмелеварня Буйных Портеров",
+"ruRU",
+},
 [5273] = {
 "Старший жрец из племени Атал'ай",
 "Затонувший храм",
-"ruRU",
-},
-[29768] = {
-"Непреклонный душитель",
-"Гундрак",
 "ruRU",
 },
 [28733] = {
@@ -17365,6 +17317,11 @@ PlaterDB = {
 "Хмелеварня Буйных Портеров",
 "ruRU",
 },
+[64061] = {
+"Стражник Могу'шан",
+"Подземелья Могу'шан",
+"ruRU",
+},
 [17398] = {
 "Новообращенный орк Скверны",
 "Цитадель Адского Пламени: Кузня Крови",
@@ -17373,11 +17330,6 @@ PlaterDB = {
 [61389] = {
 "Великий страж клана Каргеш",
 "Дворец Могу'шан",
-"ruRU",
-},
-[10394] = {
-"Караульный Черной Стражи",
-"Стратхольм",
 "ruRU",
 },
 [18320] = {
@@ -17395,9 +17347,9 @@ PlaterDB = {
 "Пик Черной горы",
 "ruRU",
 },
-[40584] = {
-"Захватчик Леди Наз'жар",
-"Трон Приливов",
+[12201] = {
+"Принцесса Терадрас",
+"Мародон",
 "ruRU",
 },
 [36880] = {
@@ -17470,6 +17422,11 @@ PlaterDB = {
 "Забытый Город",
 "ruRU",
 },
+[4815] = {
+"Мелководный клешнехват",
+"Непроглядная Пучина",
+"ruRU",
+},
 [59426] = {
 "Попрыгун",
 "Хмелеварня Буйных Портеров",
@@ -17483,11 +17440,6 @@ PlaterDB = {
 [63036] = {
 "Кор'тик - яростный воин",
 "Сердце Страха",
-"ruRU",
-},
-[56895] = {
-"Слабое место",
-"Врата Заходящего Солнца",
 "ruRU",
 },
 [28837] = {
@@ -17590,9 +17542,9 @@ PlaterDB = {
 "Кривой Клык: Нижетопь",
 "ruRU",
 },
-[29830] = {
-"Живое колдунство",
-"Гундрак",
+[37127] = {
+"Имирьярская повелительница льда",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
 [29931] = {
@@ -17615,14 +17567,14 @@ PlaterDB = {
 "Сердце Страха",
 "ruRU",
 },
+[8889] = {
+"Надзиратель из клана Ярости Горна",
+"Глубины Черной горы",
+"ruRU",
+},
 [57080] = {
 "Проклятый свиток",
 "Храм Нефритовой Змеи",
-"ruRU",
-},
-[42692] = {
-"Костолом Каменных Недр",
-"Каменные Недра",
 "ruRU",
 },
 [7023] = {
@@ -17630,9 +17582,9 @@ PlaterDB = {
 "Ульдаман",
 "ruRU",
 },
-[58684] = {
-"Рассекатель Алого ордена",
-"Залы Алого ордена",
+[60731] = {
+"Бессмертные тени",
+"Подземелья Могу'шан",
 "ruRU",
 },
 [62405] = {
@@ -17670,9 +17622,9 @@ PlaterDB = {
 "Глубины Черной горы",
 "ruRU",
 },
-[6206] = {
-"Землеглот из пещерных глубин",
-"Гномреган",
+[61434] = {
+"Сик'тик - боец авангарда",
+"Осада храма Нюцзао",
 "ruRU",
 },
 [58823] = {
@@ -17680,19 +17632,19 @@ PlaterDB = {
 "Некроситет",
 "ruRU",
 },
-[26631] = {
-"Новос Призыватель",
-"Крепость Драк'Тарон",
+[28582] = {
+"Лекарь клана Закаленных Бурей",
+"Чертоги Молний",
+"ruRU",
+},
+[58683] = {
+"Мирмидон Алого ордена",
+"Залы Алого ордена",
 "ruRU",
 },
 [37949] = {
 "Приверженец культа",
 "Цитадель Ледяной Короны",
-"ruRU",
-},
-[56636] = {
-"Командир Ри'мок",
-"Врата Заходящего Солнца",
 "ruRU",
 },
 [12219] = {
@@ -17705,9 +17657,9 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[17771] = {
-"Оракул из племени Темной Крови",
-"Кривой Клык: Нижетопь",
+[2992] = {
+"Исцеляющий идол V",
+"Лабиринты Иглошкурых",
 "ruRU",
 },
 [10220] = {
@@ -17730,9 +17682,9 @@ PlaterDB = {
 "Грим Батол",
 "ruRU",
 },
-[29829] = {
-"Землетряс Драккари",
-"Гундрак",
+[37125] = {
+"Капитан Руперт",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
 [59487] = {
@@ -17775,9 +17727,9 @@ PlaterDB = {
 "Стратхольм",
 "ruRU",
 },
-[4625] = {
-"Хранительница чертогов Мертвой Головы",
-"Лабиринты Иглошкурых",
+[11480] = {
+"Волшебная аберрация",
+"Забытый Город",
 "ruRU",
 },
 [7271] = {
@@ -17810,9 +17762,9 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[61240] = {
-"Глинтрок-тихоступ",
-"Дворец Могу'шан",
+[28581] = {
+"Тактик клана Закаленных Бурей",
+"Чертоги Молний",
 "ruRU",
 },
 [5280] = {
@@ -17835,9 +17787,9 @@ PlaterDB = {
 "Монастырь Шадо-Пан",
 "ruRU",
 },
-[17962] = {
-"Работяга резервуара Кривого Клыка",
-"Резервуар Кривого Клыка: Узилище",
+[37955] = {
+"Кровавая королева Лана'тель",
+"Цитадель Ледяной Короны",
 "ruRU",
 },
 [13142] = {
@@ -17865,9 +17817,9 @@ PlaterDB = {
 "Цитадель Ледяной Короны",
 "ruRU",
 },
-[61623] = {
-"Капля смолы",
-"Осада храма Нюцзао",
+[24082] = {
+"Укротитель протодраконов",
+"Крепость Утгард",
 "ruRU",
 },
 [27597] = {
@@ -17880,9 +17832,9 @@ PlaterDB = {
 "Некроситет",
 "ruRU",
 },
-[61239] = {
-"Глинтрок-оракул",
-"Дворец Могу'шан",
+[7405] = {
+"Смертоносный пещерный скорпид",
+"Ульдаман",
 "ruRU",
 },
 [59464] = {
@@ -18100,9 +18052,9 @@ PlaterDB = {
 "Забытый Город",
 "ruRU",
 },
-[36897] = {
-"Малый слизнюк",
-"Цитадель Ледяной Короны",
+[18472] = {
+"Темнопряд Сит",
+"Аукиндон: Сетеккские залы",
 "ruRU",
 },
 [11484] = {
@@ -18365,12 +18317,12 @@ PlaterDB = {
 ["Desc"] = "Player an animation when the cast start. Start a timer when the cast finishes. Set the time in the options.",
 ["NpcNames"] = {
 },
-["Name"] = "Cast - Alert + Timer [P]",
 ["SpellIds"] = {
 350421,
 355787,
 348513,
 },
+["Name"] = "Cast - Alert + Timer [P]",
 ["PlaterCore"] = 1,
 ["version"] = -1,
 ["Options"] = {
@@ -18545,10 +18497,10 @@ PlaterDB = {
 ["Unit - Show Energy"] = 11,
 ["Cast - Important Target [P]"] = 2,
 ["Aura - Buff Alert"] = 15,
-["Cast - Alert + Timer [P]"] = 4,
+["Cast - Circular Swipe"] = 4,
 ["Cast - Effect After Cast [P]"] = 2,
 ["Cast - Very Important"] = 15,
-["Cast - Circular Swipe"] = 4,
+["Explosion Affix M+"] = 14,
 ["Cast - Shield Interrupt"] = 2,
 ["Aura - Debuff Alert"] = 12,
 ["Cast - Ultra Important"] = 14,
@@ -18558,20 +18510,20 @@ PlaterDB = {
 ["Cast - Big Alert"] = 14,
 ["Add - Explode on Die [P]"] = 1,
 ["Cast - Small Alert"] = 12,
-["Spiteful Affix"] = 3,
-["Countdown"] = 12,
 ["Add - Important [P]"] = 4,
-["Add - Tag Number [P]"] = 2,
+["Cast - Stop Casting"] = 4,
+["Auto Set Skull"] = 11,
+["Countdown"] = 12,
 ["Add - Non Elite Trash [P]"] = 4,
 ["Aura - Blink Time Left"] = 13,
 ["Cast - On Going Cast [P]"] = 2,
-["Cast - Stop Casting"] = 4,
+["Add - Tag Number [P]"] = 2,
 ["Fixate by Unit Buff [P]"] = 2,
-["Auto Set Skull"] = 11,
+["Spiteful Affix"] = 3,
 ["Fixate"] = 11,
 ["Cast - Glowing [P]"] = 10,
 ["Cast - Quick Flash"] = 2,
-["Explosion Affix M+"] = 14,
+["Cast - Alert + Timer [P]"] = 4,
 ["Fixate On You"] = 12,
 },
 ["use_playerclass_color"] = false,
@@ -18580,14 +18532,14 @@ PlaterDB = {
 ["Dont Have Aura"] = 1,
 ["Players Targetting Amount"] = 4,
 ["Color Automation"] = 1,
-["Hide Neutral Units"] = 1,
+["Combo Points"] = 6,
 ["Cast Bar Icon Config"] = 2,
 ["Execute Range"] = 1,
-["Combo Points"] = 6,
+["Extra Border"] = 2,
 ["Attacking Specific Unit"] = 2,
 ["Target Color"] = 3,
 ["Aura Reorder"] = 3,
-["Extra Border"] = 2,
+["Hide Neutral Units"] = 1,
 },
 ["aura2_x_offset"] = 0,
 ["saved_cvars"] = {
@@ -18597,7 +18549,7 @@ PlaterDB = {
 ["nameplateShowEnemies"] = "1",
 ["nameplateOverlapV"] = "1.0099999904633",
 },
-["login_counter"] = 1085,
+["login_counter"] = 1098,
 ["plate_config"] = {
 ["global_health_height"] = 12,
 ["friendlyplayer"] = {
@@ -19403,6 +19355,8 @@ PlaterLanguage = {
 }
 PlaterLogs = {
 ["_general_logs"] = {
+"2025-10-10 19:51:55 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-09 20:00:49 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
 "2025-10-08 20:16:47 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
 "2025-10-08 17:53:29 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
 "2025-10-08 13:13:08 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
@@ -19420,8 +19374,6 @@ PlaterLogs = {
 "2025-10-02 17:51:18 | INIT | Plater-v615-Mists | Framework v621 | 5.5.1 | ruRU | Зурантор",
 "2025-10-02 17:51:04 | INIT | Plater-v615-Mists | Framework v621 | 5.5.1 | ruRU | Зурантор",
 "2025-10-02 17:50:40 | INIT | Plater-v615-Mists | Framework v621 | 5.5.1 | ruRU | Зурантор",
-"2025-10-02 16:41:32 | INIT | Plater-v615-Mists | Framework v621 | 5.5.1 | ruRU | Зурантор",
-"2025-10-02 13:29:40 | INIT | Plater-v615-Mists | Framework v621 | 5.5.1 | ruRU | Зурантор",
 },
 ["_error_logs"] = {
 },

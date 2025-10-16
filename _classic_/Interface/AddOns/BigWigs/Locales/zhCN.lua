@@ -85,13 +85,13 @@ L.littleWigsExtras = {
 	["LittleWigs_CurrentSeason"] = "当前赛季",
 }
 L.dayNamesShort = {
-	"周日", -- Sunday
-	"周一", -- Monday
-	"周二", -- Tuesday
-	"周三", -- Wednesday
-	"周四", -- Thursday
-	"周五", -- Friday
-	"周六", -- Saturday
+	"星期日", -- Sunday
+	"星期一", -- Monday
+	"星期二", -- Tuesday
+	"星期三", -- Wednesday
+	"星期四", -- Thursday
+	"星期五", -- Friday
+	"星期六", -- Saturday
 }
 L.dayNames = {
 	"星期日",
@@ -411,6 +411,7 @@ L.keystoneHistoryScoreOlderTooltip = "本周之前获得的总分数：|cFFFFFFF
 L.keystoneTimeUnder = "|cFF33FF99-%02d:%02d|r"
 L.keystoneTimeOver = "|cFFFF4411+%02d:%02d|r"
 L.keystoneTeleportTip = "点击下方地下城名称可直接|cFF33FF99传送|r至地下城入口。"
+--L.keystoneTimerunner = "|A:timerunning-glues-icon:14:14|aThis is a timerunning character." -- Note: Timerunning is a mode like "Legion Remix", it is NOT the same as Timewalking
 
 -- It doesn't really matter what you call it as long as it's recognizable and limited to ~6 characters
 L.keystoneShortName_TheRookery = "驭雷栖巢"
@@ -427,6 +428,15 @@ L.keystoneShortName_AraKaraCityOfEchoes = "回响之城"
 L.keystoneShortName_TazaveshSoleahsGambit = "索·莉亚宏图"
 L.keystoneShortName_TazaveshStreetsOfWonder = "琳彩天街"
 L.keystoneShortName_TheDawnbreaker = "破晨号"
+L.keystoneShortName_BlackRookHold = "黑鸦堡垒"
+L.keystoneShortName_CourtOfStars = "群星庭院"
+L.keystoneShortName_DarkheartThicket = "黑心林地"
+L.keystoneShortName_EyeOfAzshara = "艾萨拉之眼"
+L.keystoneShortName_HallsOfValor = "英灵殿"
+L.keystoneShortName_MawOfSouls = "噬魂之喉"
+L.keystoneShortName_NeltharionsLair = "奈萨里奥巢穴"
+L.keystoneShortName_TheArcway = "魔法回廊"
+L.keystoneShortName_VaultOfTheWardens = "守望者地窟"
 
 -- These short names are for the bar that shows during the Mythic+ countdown
 -- Use the real dungeon names but make them shorter to fit on the bar better
@@ -444,6 +454,15 @@ L.keystoneShortName_AraKaraCityOfEchoes_Bar = "回响之城"
 L.keystoneShortName_TazaveshSoleahsGambit_Bar = "索·莉亚宏图"
 L.keystoneShortName_TazaveshStreetsOfWonder_Bar = "琳彩天街"
 L.keystoneShortName_TheDawnbreaker_Bar = "破晨号"
+L.keystoneShortName_BlackRookHold_Bar = "黑鸦堡垒"
+L.keystoneShortName_CourtOfStars_Bar = "群星庭院"
+L.keystoneShortName_DarkheartThicket_Bar = "黑心林地"
+L.keystoneShortName_EyeOfAzshara_Bar = "艾萨拉之眼"
+L.keystoneShortName_HallsOfValor_Bar = "英灵殿"
+L.keystoneShortName_MawOfSouls_Bar = "噬魂之喉"
+L.keystoneShortName_NeltharionsLair_Bar = "奈萨里奥的巢穴"
+L.keystoneShortName_TheArcway_Bar = "魔法回廊"
+L.keystoneShortName_VaultOfTheWardens_Bar = "守望者地窟"
 
 -- Instance Keys "Who has a key?"
 L.instanceKeysTitle = "谁拥有钥石？"
@@ -679,6 +698,7 @@ L.blockDungeonPopups = "屏蔽地下城弹出式横幅"
 L.blockDungeonPopupsDesc = "进入地下城时弹出的横幅有时会包含很长的文字。启用此功能将完全屏蔽它们。"
 L.itemLevel = "物品等级%d"
 L.newRespawnPoint = "新的复活位置"
+L.playerLevel = "等级 %d"
 
 L.userNotifySfx = "首领屏蔽禁用了声音效果，强制它重新启用。"
 L.userNotifyMusic = "首领屏蔽禁用了音乐，强制它重新启用。"

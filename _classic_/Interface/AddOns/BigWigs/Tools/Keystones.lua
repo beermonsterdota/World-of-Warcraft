@@ -189,28 +189,49 @@ local dungeonNamesTiny = {
 	[247] = L.keystoneShortName_TheMotherlode, -- ML
 	[370] = L.keystoneShortName_OperationMechagonWorkshop, -- WORK
 
-	[542] = L.keystoneShortName_EcoDomeAldani, -- ALDANI
+	[542] = L.keystoneShortName_EcoDomeAldani, -- ECODOME
 	[378] = L.keystoneShortName_HallsOfAtonement, -- HOA
 	[503] = L.keystoneShortName_AraKaraCityOfEchoes, -- ARAK
 	[392] = L.keystoneShortName_TazaveshSoleahsGambit, -- GAMBIT
 	[391] = L.keystoneShortName_TazaveshStreetsOfWonder, -- STREET
 	[505] = L.keystoneShortName_TheDawnbreaker, -- DAWN
+
+	[199] = L.keystoneShortName_BlackRookHold, -- BRH
+	[210] = L.keystoneShortName_CourtOfStars, -- COS
+	[198] = L.keystoneShortName_DarkheartThicket, -- DHT
+	[197] = L.keystoneShortName_EyeOfAzshara, -- EOA
+	[200] = L.keystoneShortName_HallsOfValor, -- HOV
+	[208] = L.keystoneShortName_MawOfSouls, -- MOS
+	[206] = L.keystoneShortName_NeltharionsLair, -- NL
+	[209] = L.keystoneShortName_TheArcway, -- ARC
+	[207] = L.keystoneShortName_VaultOfTheWardens, -- VOTW
 }
 local dungeonNamesTrimmed = {
-	[500] = L.keystoneShortName_TheRookery_Bar, -- ROOK
-	[504] = L.keystoneShortName_DarkflameCleft_Bar, -- DFC
-	[499] = L.keystoneShortName_PrioryOfTheSacredFlame_Bar, -- PRIORY
-	[506] = L.keystoneShortName_CinderbrewMeadery_Bar, -- BREW
-	[525] = L.keystoneShortName_OperationFloodgate_Bar, -- FLOOD
-	[382] = L.keystoneShortName_TheaterOfPain_Bar, -- TOP
-	[247] = L.keystoneShortName_TheMotherlode_Bar, -- ML
-	[370] = L.keystoneShortName_OperationMechagonWorkshop_Bar, -- WORK
-	[542] = L.keystoneShortName_EcoDomeAldani_Bar, -- ALDANI
-	[378] = L.keystoneShortName_HallsOfAtonement_Bar, -- HOA
-	[503] = L.keystoneShortName_AraKaraCityOfEchoes_Bar, -- ARAK
-	[392] = L.keystoneShortName_TazaveshSoleahsGambit_Bar, -- GAMBIT
-	[391] = L.keystoneShortName_TazaveshStreetsOfWonder_Bar, -- STREET
-	[505] = L.keystoneShortName_TheDawnbreaker_Bar, -- DAWN
+	[500] = L.keystoneShortName_TheRookery_Bar, -- Rookery
+	[504] = L.keystoneShortName_DarkflameCleft_Bar, -- Darkflame
+	[499] = L.keystoneShortName_PrioryOfTheSacredFlame_Bar, -- Priory
+	[506] = L.keystoneShortName_CinderbrewMeadery_Bar, -- Cinderbrew
+	[525] = L.keystoneShortName_OperationFloodgate_Bar, -- Floodgate
+	[382] = L.keystoneShortName_TheaterOfPain_Bar, -- Theater
+	[247] = L.keystoneShortName_TheMotherlode_Bar, -- Motherlode
+	[370] = L.keystoneShortName_OperationMechagonWorkshop_Bar, -- Workshop
+
+	[542] = L.keystoneShortName_EcoDomeAldani_Bar, -- Eco-Dome
+	[378] = L.keystoneShortName_HallsOfAtonement_Bar, -- Halls
+	[503] = L.keystoneShortName_AraKaraCityOfEchoes_Bar, -- Ara-Kara
+	[392] = L.keystoneShortName_TazaveshSoleahsGambit_Bar, -- Gambit
+	[391] = L.keystoneShortName_TazaveshStreetsOfWonder_Bar, -- Streets
+	[505] = L.keystoneShortName_TheDawnbreaker_Bar, -- Dawnbreaker
+
+	[199] = L.keystoneShortName_BlackRookHold_Bar, -- Black Rook
+	[210] = L.keystoneShortName_CourtOfStars_Bar, -- Court
+	[198] = L.keystoneShortName_DarkheartThicket_Bar, -- Darkheart
+	[197] = L.keystoneShortName_EyeOfAzshara_Bar, -- Eye
+	[200] = L.keystoneShortName_HallsOfValor_Bar, -- Halls
+	[208] = L.keystoneShortName_MawOfSouls_Bar, -- Maw
+	[206] = L.keystoneShortName_NeltharionsLair_Bar, -- Lair
+	[209] = L.keystoneShortName_TheArcway_Bar, -- Arcway
+	[207] = L.keystoneShortName_VaultOfTheWardens_Bar, -- Vault
 }
 local dungeonMapWithMultipleKeys = {
 	[2441] = true, -- Tazavesh, the Veiled Market
@@ -337,6 +358,23 @@ if BigWigsLoader.isBeta then
 		[2773] = 1216786, -- Operation: Floodgate
 		[2830] = 1237215, -- Eco-Dome Al'dani
 	})
+else
+	-- XXX temp Lemix
+	teleportList[0] = {
+		--[1544] = lw_l, -- Assault on Violet Hold
+		--[1677] = lw_l, -- Cathedral of Eternal Night
+		[1571] = 393766, -- Court of Stars
+		[1651] = 373262, -- Return to Karazhan
+		[1501] = 424153, -- Black Rook Hold
+		--[1516] = lw_l, -- The Arcway
+		[1466] = 424163, -- Darkheart Thicket
+		[1458] = 410078, -- Neltharion's Lair
+		--[1456] = lw_l, -- Eye of Azshara
+		--[1492] = lw_l, -- Maw of Souls
+		[1477] = 393764, -- Halls of Valor
+		--[1493] = lw_l, -- Vault of the Wardens
+		--[1753] = lw_l, -- Seat of the Triumvirate
+	}
 end
 for mapID in next, BigWigsLoader.currentExpansion.currentSeason do -- Automatically build the current season list
 	for expansionIndex = 2, #teleportList do
@@ -477,6 +515,11 @@ end
 
 local UpdateMyKeystone
 do
+	-- XXX temp Lemix
+	local GetContainerNumSlots, GetContainerItemID, GetContainerItemLink = C_Container.GetContainerNumSlots, C_Container.GetContainerItemID, C_Container.GetContainerItemLink
+	local IsItemKeystoneByID, PlayerIsTimerunning = C_Item.IsItemKeystoneByID, PlayerIsTimerunning
+	local strsplit = string.split
+
 	local GetMaxPlayerLevel = GetMaxPlayerLevel
 	local GetWeeklyResetStartTime = C_DateAndTime.GetWeeklyResetStartTime
 	local GetOwnedKeystoneLevel, GetOwnedKeystoneChallengeMapID = C_MythicPlus.GetOwnedKeystoneLevel, C_MythicPlus.GetOwnedKeystoneChallengeMapID
@@ -520,6 +563,30 @@ do
 		local playerRatingSummary = GetPlayerMythicPlusRatingSummary("player")
 		if type(playerRatingSummary) == "table" and type(playerRatingSummary.currentSeasonScore) == "number" then
 			myRating = playerRatingSummary.currentSeasonScore
+		end
+
+		-- XXX temp Lemix
+		if not keyLevel and not keyChallengeMapID and PlayerIsTimerunning and PlayerIsTimerunning() then
+			for currentBag = 0, 4 do -- 0=Backpack, 1/2/3/4=Bags
+				local slots = GetContainerNumSlots(currentBag)
+				for currentSlot = 1, slots do
+					local itemID = GetContainerItemID(currentBag, currentSlot)
+					if itemID and IsItemKeystoneByID(itemID) then
+						local itemLink = GetContainerItemLink(currentBag, currentSlot)
+						if type(itemLink) == "string" then
+							local _, _, _, strChallengeMapID, strLevel = strsplit(":", itemLink)
+							local challengeMapID = tonumber(strChallengeMapID)
+							local level = tonumber(strLevel)
+							if challengeMapID and level then
+								myKeyMap = challengeMapID
+								myKeyLevel = level
+								myRating = -1
+								break
+							end
+						end
+					end
+				end
+			end
 		end
 
 		local guid = BigWigsLoader.UnitGUID("player")
@@ -707,7 +774,7 @@ do
 
 	local GetRealZoneText = GetRealZoneText
 	local prevButton = nil
-	for expansionIndex = 1, #teleportList do
+	for expansionIndex = 0, #teleportList do -- XXX temp Lemix, swap 0 back to 1
 		if not teleportButtons[expansionIndex] then
 			teleportButtons[expansionIndex] = {}
 		end
@@ -845,7 +912,7 @@ do
 				text:SetJustifyH("CENTER")
 			end
 			text:SetText("")
-			if db.profile.autoSlotKeystone and not HasSlottedKeystone() then
+			if db.profile.autoSlotKeystone then
 				local _, _, _, _, _, _, _, instanceID = BigWigsLoader.GetInstanceInfo()
 				if GetOwnedKeystoneMapID() == instanceID then
 					for currentBag = 0, 4 do -- 0=Backpack, 1/2/3/4=Bags
@@ -854,9 +921,11 @@ do
 							local itemLink = GetContainerItemLink(currentBag, currentSlot)
 							if itemLink and itemLink:find("Hkeystone", nil, true) then
 								text:SetText(L.keystoneAutoSlotFrame)
-								PickupContainerItem(currentBag, currentSlot)
-								SlotKeystone()
 								BigWigsLoader.Print(L.keystoneAutoSlotMessage:format(itemLink))
+								if not HasSlottedKeystone() then
+									PickupContainerItem(currentBag, currentSlot)
+									SlotKeystone()
+								end
 							end
 						end
 					end
@@ -865,11 +934,22 @@ do
 		end)
 	end
 	-- Tab 1 Click Handler
+	local PlayerIsTimerunning = PlayerIsTimerunning -- XXX temp Lemix
 	tab1:SetScript("OnClick", function(self)
 		SelectTab(self)
 		DeselectTab(tab2)
 		DeselectTab(tab3)
 		DeselectTab(tab4)
+
+		if PlayerIsTimerunning and PlayerIsTimerunning() then -- XXX temp Lemix
+			PlayerIsTimerunning = nil
+			teleportList[1] = teleportList[0]
+			teleportButtons[1] = teleportButtons[0]
+			local newTotal = #teleportButtons[1]
+			local num = newTotal % 2 == 0 and newTotal - 1 or newTotal
+			teleportButtons[2][1]:ClearAllPoints()
+			teleportButtons[2][1]:SetPoint("TOP", teleportButtons[1][num], "BOTTOM", 0, -36)
+		end
 
 		if db.profile.showViewerTeleportTip then
 			for _, teleportSpellID in next, teleportList[1] do
@@ -1111,7 +1191,7 @@ do
 				sortedplayerList[#sortedplayerList+1] = {
 					name = pData.name, decoratedName = decoratedName, nameTooltip = nameTooltip,
 					level = pData.keyLevel, levelTooltip = L.keystoneLevelTooltip:format(pData.keyLevel),
-					map = dungeonNamesTiny[pData.keyMap] or pData.keyMap > 0 and pData.keyMap or "?", mapTooltip = L.keystoneMapTooltip:format(challengeMapName or "-"), mapID = mapID,
+					map = dungeonNamesTiny[pData.keyMap] or pData.keyMap > 0 and pData.keyMap or "-", mapTooltip = L.keystoneMapTooltip:format(challengeMapName or "-"), mapID = mapID,
 					rating = pData.playerRating, ratingTooltip = L.keystoneRatingTooltip:format(pData.playerRating),
 				}
 			end
@@ -1154,8 +1234,8 @@ do
 				cellMap.text:SetText(sortedplayerList[i].map)
 				cellMap.tooltip = sortedplayerList[i].mapTooltip
 				cellRating:SetWidth(WIDTH_RATING)
-				cellRating.text:SetText(sortedplayerList[i].rating)
-				cellRating.tooltip = sortedplayerList[i].ratingTooltip
+				cellRating.text:SetText(sortedplayerList[i].rating == -1 and "|A:timerunning-glues-icon:14:14|a" or sortedplayerList[i].rating) -- XXX temp Lemix
+				cellRating.tooltip = sortedplayerList[i].rating == -1 and L.keystoneTimerunner or sortedplayerList[i].ratingTooltip -- XXX temp Lemix
 				prevName, prevLevel, prevMap, prevRating = cellName, cellLevel, cellMap, cellRating
 
 				if i == tableSize then
@@ -1280,12 +1360,16 @@ do
 					cellInTime:SetPoint("TOP", prevInTime, "BOTTOM", 0, -6)
 				end
 			end
+			if not firstOldRun then -- There are 0 older runs, fix the header
+				local y = 50 + runsThisWeek*26
+				olderHeader:SetPoint("TOP", thisWeekHeader, "BOTTOM", 0, -y)
+			end
 
 			local challengeMapName, _, timeLimit = GetMapUIInfo(runs[i].mapChallengeModeID)
 			cellDate:SetWidth(WIDTH_RATING+13)
 			local dateTbl = runs[i].completionDate
 			cellDate.text:SetText(L.dayNamesShort[dateTbl.weekday])
-			cellDate.tooltip = L.dateFormat:format(L.dayNames[dateTbl.weekday], dateTbl.day, L.monthNames[dateTbl.month], dateTbl.year)
+			cellDate.tooltip = L.dateFormat:format(L.dayNames[dateTbl.weekday], dateTbl.day+1, L.monthNames[dateTbl.month], dateTbl.year+2000)
 			cellMapName:SetWidth(WIDTH_MAP)
 			cellMapName.text:SetText(dungeonNamesTiny[runs[i].mapChallengeModeID] or runs[i].mapChallengeModeID)
 			cellMapName.tooltip = L.keystoneMapTooltip:format(challengeMapName or "-")
@@ -1411,6 +1495,17 @@ do
 	end
 
 	local guildCellsCurrentlyShowing = {}
+	local tempLemixDungeonsDeleteMe = { -- XXX temp Lemix
+		[199] = true,
+		[210] = true,
+		[198] = true,
+		[197] = true,
+		[200] = true,
+		[208] = true,
+		[206] = true,
+		[209] = true,
+		[207] = true,
+	}
 	local function UpdateCellsForOnlineTab(playerList, isGuildList)
 		local sortedplayerList = {}
 		for pName, pData in next, playerList do
@@ -1432,6 +1527,7 @@ do
 					map = pData[2] == -1 and hiddenIcon or dungeonNamesTiny[pData[2]] or pData[2] or "?",
 					mapTooltip = L.keystoneMapTooltip:format(pData[2] == -1 and L.keystoneHiddenTooltip or challengeMapName or "-") .. GetTeleportTextForSpellID(teleportSpellID),
 					mapID = mapID,
+					challengeMapID = pData[2], -- XXX temp Lemix
 					rating = pData[3], ratingTooltip = L.keystoneRatingTooltip:format(pData[3]),
 				}
 			end
@@ -1480,8 +1576,8 @@ do
 			cellMap.text:SetText(sortedplayerList[i].map)
 			cellMap.tooltip = sortedplayerList[i].mapTooltip
 			cellRating:SetWidth(WIDTH_RATING)
-			cellRating.text:SetText(sortedplayerList[i].rating)
-			cellRating.tooltip = sortedplayerList[i].ratingTooltip
+			cellRating.text:SetText(tempLemixDungeonsDeleteMe[sortedplayerList[i].challengeMapID] and "|A:timerunning-glues-icon:14:14|a" or sortedplayerList[i].rating) -- XXX temp Lemix
+			cellRating.tooltip = tempLemixDungeonsDeleteMe[sortedplayerList[i].challengeMapID] and L.keystoneTimerunner or sortedplayerList[i].ratingTooltip -- XXX temp Lemix
 			prevName, prevLevel, prevMap, prevRating = cellName, cellLevel, cellMap, cellRating
 			if isGuildList then
 				local num = #guildCellsCurrentlyShowing

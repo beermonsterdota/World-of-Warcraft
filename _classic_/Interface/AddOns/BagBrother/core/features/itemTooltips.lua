@@ -16,8 +16,8 @@ local function aggregate(counts, bag)
 	for slot, data in pairs(bag and bag.items or NONE) do
 		if tonumber(slot) then
 			local singleton = tonumber(data)
+			local id = singleton or tonumber(data:match('%d+'))
 			local count = not singleton and tonumber(data:match(';(%d+)$')) or 1
-			local id = singleton or tonumber(data:match('^(%d+)'))
 
 			counts[id] = (counts[id] or 0) + count
 		end
@@ -30,7 +30,7 @@ local function find(bag, item)
 	for slot, data in pairs(bag and bag.items or NONE) do
 		if tonumber(slot) then
 			local singleton = tonumber(data)
-			local id = singleton or tonumber(data:match('^(%d+)'))
+			local id = singleton or tonumber(data:match('%d+'))
 			if id == item then
 				count = count + (not singleton and tonumber(data:match(';(%d+)$')) or 1)
 			end
@@ -200,22 +200,20 @@ function TipCounts:CountItems(owner)
 end
 
 function TipCounts:Format(color, ...)
-	local total, places = 0, 0
-	local text = ''
+	local total, text = 0, {}
 
 	for i = 1, select('#', ...), 2 do
 		local icon, count = select(i, ...)
 		if count and count > 0 then
-			text = text .. DELIMITER .. icon:format(count)
+			tinsert(text, icon:format(count))
 			total = total + count
-			places = places + 1
 		end
 	end
 
-	if places > 1 then
-		text = color:format(total) .. LIGHTGRAY_FONT_COLOR:WrapTextInColorCode('='.. text:sub(3) .. '')
-	else
-		text = color:format(text:sub(3))
+	if #text > 1 then
+		text = color:format(total) .. LIGHTGRAY_FONT_COLOR:WrapTextInColorCode('='.. table.concat(text, DELIMITER))
+	elseif #text == 1 then
+		text = color:format(text[1])
 	end
 
 	return total, total > 0 and text

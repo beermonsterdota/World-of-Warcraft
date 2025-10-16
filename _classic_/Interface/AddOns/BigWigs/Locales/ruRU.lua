@@ -411,6 +411,7 @@ L.keystoneHistoryScoreOlderTooltip = "Общее количество рейти
 L.keystoneTimeUnder = "|cFF33FF99-%02d:%02d|r"
 L.keystoneTimeOver = "|cFFFF4411+%02d:%02d|r"
 --L.keystoneTeleportTip = "Click the dungeon name below to |cFF33FF99TELEPORT|r directly to the dungeon entrance."
+--L.keystoneTimerunner = "|A:timerunning-glues-icon:14:14|aThis is a timerunning character." -- Note: Timerunning is a mode like "Legion Remix", it is NOT the same as Timewalking
 
 -- It doesn't really matter what you call it as long as it's recognizable and limited to ~6 characters
 L.keystoneShortName_TheRookery = "ROOK"
@@ -427,6 +428,15 @@ L.keystoneShortName_AraKaraCityOfEchoes = "ARAK"
 L.keystoneShortName_TazaveshSoleahsGambit = "GAMBIT"
 L.keystoneShortName_TazaveshStreetsOfWonder = "STREET"
 L.keystoneShortName_TheDawnbreaker = "DAWN"
+--L.keystoneShortName_BlackRookHold = "BRH"
+--L.keystoneShortName_CourtOfStars = "COS"
+--L.keystoneShortName_DarkheartThicket = "DHT"
+--L.keystoneShortName_EyeOfAzshara = "EOA"
+--L.keystoneShortName_HallsOfValor = "HOV"
+--L.keystoneShortName_MawOfSouls = "MOS"
+--L.keystoneShortName_NeltharionsLair = "NL"
+--L.keystoneShortName_TheArcway = "ARCWAY"
+--L.keystoneShortName_VaultOfTheWardens = "VOTW"
 
 -- These short names are for the bar that shows during the Mythic+ countdown
 -- Use the real dungeon names but make them shorter to fit on the bar better
@@ -444,6 +454,15 @@ L.keystoneShortName_AraKaraCityOfEchoes_Bar = "Ара-Кара"
 L.keystoneShortName_TazaveshSoleahsGambit_Bar = "Гамбит"
 L.keystoneShortName_TazaveshStreetsOfWonder_Bar = "Улицы"
 L.keystoneShortName_TheDawnbreaker_Bar = "Рассвет"
+--L.keystoneShortName_BlackRookHold_Bar = "Black Rook"
+--L.keystoneShortName_CourtOfStars_Bar = "Court"
+--L.keystoneShortName_DarkheartThicket_Bar = "Darkheart"
+--L.keystoneShortName_EyeOfAzshara_Bar = "Eye"
+--L.keystoneShortName_HallsOfValor_Bar = "Halls"
+--L.keystoneShortName_MawOfSouls_Bar = "Maw"
+--L.keystoneShortName_NeltharionsLair_Bar = "Lair"
+--L.keystoneShortName_TheArcway_Bar = "Arcway"
+--L.keystoneShortName_VaultOfTheWardens_Bar = "Vault"
 
 -- Instance Keys "Who has a key?"
 L.instanceKeysTitle = "У кого есть ключ?"
@@ -679,6 +698,7 @@ L.blockDungeonPopups = "Скрывать уведомления о входе в
 L.blockDungeonPopupsDesc = "Уведомления о входе в подземелья иногда бывают очень длинными. Включив эту настройку, они будут полностью скрыты."
 L.itemLevel = "Уровень предмета: %d"
 L.newRespawnPoint = "Новая точка воскрешения"
+L.playerLevel = "%d-го уровня"
 
 L.userNotifySfx = "Звуковые эффекты были отключён BossBlock-ом, включаю обратно..."
 L.userNotifyMusic = "Музыка была отключена BossBlock-ом, включаю обратно..."
