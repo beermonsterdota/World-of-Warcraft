@@ -1,13 +1,23 @@
 
 Bagnon_Sets = {
 ["latest"] = {
-["id"] = "11.2.10",
+["id"] = "11.2.12",
 ["cooldown"] = 1758280965,
-["who"] = "Флемет-Пламегор",
+["who"] = "Науфоми-Пламегор",
 },
 ["global"] = {
 ["inventory"] = {
+["brokerObject"] = "BagnonLauncher",
+["point"] = "BOTTOMRIGHT",
+["color"] = {
+},
 ["y"] = 104.1480712890625,
+["x"] = 0,
+["borderColor"] = {
+},
+["showBags"] = true,
+["activeRules"] = {
+},
 ["rules"] = {
 ["sidebar"] = {
 "all",
@@ -15,17 +25,8 @@ Bagnon_Sets = {
 "trade",
 },
 },
-["point"] = "BOTTOMRIGHT",
-["borderColor"] = {
-},
-["color"] = {
-},
-["x"] = 0,
-["brokerObject"] = "BagnonLauncher",
 },
 ["vault"] = {
-["color"] = {
-},
 ["rules"] = {
 ["sidebar"] = {
 "all",
@@ -37,11 +38,13 @@ Bagnon_Sets = {
 },
 },
 ["borderColor"] = {
+},
+["color"] = {
+},
+["activeRules"] = {
 },
 },
 ["guild"] = {
-["color"] = {
-},
 ["rules"] = {
 ["sidebar"] = {
 "all",
@@ -53,6 +56,10 @@ Bagnon_Sets = {
 },
 },
 ["borderColor"] = {
+},
+["color"] = {
+},
+["activeRules"] = {
 },
 },
 ["bank"] = {
@@ -71,6 +78,8 @@ Bagnon_Sets = {
 ["borderColor"] = {
 },
 ["color"] = {
+},
+["activeRules"] = {
 },
 ["x"] = 95.00000762939453,
 },

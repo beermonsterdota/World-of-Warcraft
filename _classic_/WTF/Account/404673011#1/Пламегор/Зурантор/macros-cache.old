@@ -1,8 +1,8 @@
 VER 3 0100000000000001 "VuhDoDCShieldData" "Ability_Repair"
-R1MR1HR1ET1PH1HR2WT2SR2IR2SM[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]2SH[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+R1WT1PH1LR1ET1MR2SM2RM2IR2HR[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]2SH[x][x][x][x]0__[x][x][x]0__[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
 END
 VER 3 0100000000000002 "VuhDoDCShieldNames" "Ability_Repair"
-NКроБулТуфТэйКреБыдРейДевПле[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]Зур[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+NБыдТэйЖенТуфКроПлеХтоАнкКре[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]Зур[x][x][x][x]Эле[x][x][x]Вол[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
 END
 VER 3 0100000000000006 "БЛ" "134400"
 #showtooltip Жажда крови
@@ -21,7 +21,11 @@ VER 3 0100000000000005 "Перерождение" "134400"
 END
 VER 3 0100000000000007 "диспел" "134400"
 /stopcasting
-/cast Очищение духа
+/cast [target=vuhdo] Очищение духа
+END
+VER 3 0100000000000008 "кик фокус" "134400"
+/stopcasting
+/cast [target=focus] Пронизывающий ветер
 END
 VER 3 0100000000000004 "молния + баф" "134400"
 #showtooltip Молния

@@ -1,11 +1,4 @@
 Version: 1
-Frame: Vd1
-FrameLevel: 2
-Anchor: TOPLEFT
-X: 20
-Y: -108
-W: 261
-H: 237
 Frame: FocusFrame
 FrameLevel: 1
 Anchor: TOP
@@ -27,3 +20,10 @@ X: 0
 Y: 0
 W: 610
 H: 438
+Frame: TargetFrame
+FrameLevel: 1
+Anchor: TOPLEFT
+X: 290
+Y: -5
+W: 232
+H: 100

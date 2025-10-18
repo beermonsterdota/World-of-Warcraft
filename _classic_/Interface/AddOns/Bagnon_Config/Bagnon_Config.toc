@@ -6,7 +6,7 @@
 ## Group: BagBrother
 
 ## Dependencies: Bagnon
-## Interface: 110200, 50501, 40402, 30404, 20504, 11507
+## Interface: 110205, 50501, 40402, 30404, 20504, 11507
 ## LoadOnDemand: 1
 
 ..\Bagnon\src\config.lua
