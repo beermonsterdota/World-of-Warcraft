@@ -155,7 +155,7 @@ VUHDO_CONFIG = {
 ["isHostileOthers"] = true,
 ["animate"] = false,
 ["isShowFriendly"] = true,
-["scale"] = 0.8,
+["scale"] = 0.699999988079071,
 ["STORED"] = {
 "55334",
 "54703",
@@ -5238,14 +5238,14 @@ VUHDO_PANEL_SETUP = {
 ["xAdjust"] = 0,
 },
 ["POSITION"] = {
-["y"] = 745.4816284179688,
-["x"] = 20.14809989929199,
+["y"] = 745.4823608398438,
+["x"] = 20.14811515808106,
 ["orientation"] = "TOPLEFT",
 ["relativePoint"] = "BOTTOMLEFT",
 ["scale"] = 1,
-["height"] = 237.1482238769531,
+["height"] = 110.0370254516602,
 ["growth"] = "TOPLEFT",
-["width"] = 261.3331909179688,
+["width"] = 175.9999084472656,
 },
 ["RAID_ICON"] = {
 ["show"] = true,
@@ -9154,7 +9154,7 @@ VUHDO_BUFF_SETTINGS = {
 ["O"] = 1,
 ["useOpacity"] = true,
 },
-["name"] = "Туфутаеши",
+["name"] = "Быдлоголовая",
 ["filter"] = {
 [999] = true,
 },

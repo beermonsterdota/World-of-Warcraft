@@ -1,6 +1,6 @@
 
 PawnOptions = {
-["LastVersion"] = 2.1108,
+["LastVersion"] = 2.1109,
 ["LastPlayerFullName"] = "Зурантор-Пламегор",
 ["AutoSelectScales"] = true,
 ["AutoSelectScalesEnabledOnce"] = true,

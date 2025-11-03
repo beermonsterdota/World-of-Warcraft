@@ -1,50 +1,6 @@
 
 BigWigs3DB = {
 ["namespaces"] = {
-["BigWigs_Plugins_Countdown"] = {
-["profiles"] = {
-["Default"] = {
-["position"] = {
-nil,
-nil,
--19,
--79,
-},
-},
-},
-},
-["BigWigs_Plugins_Bars"] = {
-["profiles"] = {
-["Default"] = {
-["expHeight"] = 28,
-["expWidth"] = 261,
-["expPosition"] = {
-"LEFT",
-"LEFT",
-24,
-57,
-},
-["normalPosition"] = {
-"LEFT",
-"LEFT",
-287,
-62,
-},
-},
-},
-},
-["BigWigs_Plugins_InfoBox"] = {
-["profiles"] = {
-["Default"] = {
-["position"] = {
-"BOTTOMRIGHT",
-"BOTTOMRIGHT",
--300,
-175,
-},
-},
-},
-},
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["Default"] = {
@@ -63,10 +19,54 @@ nil,
 },
 },
 },
+["BigWigs_Plugins_InfoBox"] = {
+["profiles"] = {
+["Default"] = {
+["position"] = {
+"BOTTOMRIGHT",
+"BOTTOMRIGHT",
+-300,
+175,
+},
+},
+},
+},
+["BigWigs_Plugins_Bars"] = {
+["profiles"] = {
+["Default"] = {
+["normalPosition"] = {
+"LEFT",
+"LEFT",
+287,
+62,
+},
+["expWidth"] = 261,
+["expPosition"] = {
+"LEFT",
+"LEFT",
+24,
+57,
+},
+["expHeight"] = 28,
+},
+},
+},
 ["BigWigs_Plugins_Pull"] = {
 ["profiles"] = {
 ["Default"] = {
 ["countBegin"] = 10,
+},
+},
+},
+["BigWigs_Plugins_Countdown"] = {
+["profiles"] = {
+["Default"] = {
+["position"] = {
+nil,
+nil,
+-19,
+-79,
+},
 },
 },
 },
@@ -125,8 +125,8 @@ BigWigsStatsDB = {
 [713] = {
 ["H10"] = {
 ["kills"] = 1,
-["bestDate"] = "2025/10/18",
 ["fkDate"] = "2025/10/18",
+["bestDate"] = "2025/10/18",
 ["best"] = 383.8170000000027,
 ["fkDuration"] = 383.8170000000027,
 },
@@ -184,23 +184,23 @@ BigWigsStatsDB = {
 [996] = {
 [683] = {
 ["H10"] = {
-["wipes"] = 24,
+["wipes"] = 37,
 },
 ["N10"] = {
-["kills"] = 5,
-["wipes"] = 1,
+["kills"] = 6,
 ["fkDuration"] = 335.6100000000006,
-["best"] = 259.3989999999976,
-["bestDate"] = "2025/10/19",
+["wipes"] = 1,
+["best"] = 244.4939999999997,
+["bestDate"] = "2025/10/22",
 ["fkDate"] = "2025/09/20",
 },
 },
 [742] = {
 ["H10"] = {
-["wipes"] = 21,
+["wipes"] = 39,
 },
 ["N10"] = {
-["kills"] = 5,
+["kills"] = 6,
 ["fkDate"] = "2025/09/20",
 ["bestDate"] = "2025/10/19",
 ["fkWipes"] = 3,
@@ -211,10 +211,10 @@ BigWigsStatsDB = {
 },
 [729] = {
 ["N10"] = {
-["kills"] = 1,
+["kills"] = 2,
 ["fkDate"] = "2025/09/20",
-["bestDate"] = "2025/09/20",
-["best"] = 289.7429999999986,
+["bestDate"] = "2025/10/23",
+["best"] = 234.473,
 ["fkDuration"] = 289.7429999999986,
 },
 ["H10"] = {
@@ -223,13 +223,13 @@ BigWigsStatsDB = {
 ["bestDate"] = "2025/10/09",
 ["fkWipes"] = 11,
 ["best"] = 331.3940000000002,
-["wipes"] = 30,
+["wipes"] = 34,
 ["fkDuration"] = 407.8389999999999,
 },
 },
 [709] = {
 ["N10"] = {
-["kills"] = 5,
+["kills"] = 6,
 ["fkDate"] = "2025/09/20",
 ["bestDate"] = "2025/10/19",
 ["best"] = 264.2599999999948,

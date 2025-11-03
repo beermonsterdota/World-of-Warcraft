@@ -1,38 +1,6 @@
 
 BigWigs3DB = {
 ["namespaces"] = {
-["BigWigs_Plugins_Countdown"] = {
-["profiles"] = {
-["Default"] = {
-["position"] = {
-nil,
-nil,
--19,
--79,
-},
-},
-},
-},
-["BigWigs_Plugins_Bars"] = {
-["profiles"] = {
-["Default"] = {
-["expHeight"] = 28,
-["expWidth"] = 261,
-["expPosition"] = {
-"LEFT",
-"LEFT",
-24,
-57,
-},
-["normalPosition"] = {
-"LEFT",
-"LEFT",
-287,
-62,
-},
-},
-},
-},
 ["BigWigs_Plugins_InfoBox"] = {
 ["profiles"] = {
 ["Default"] = {
@@ -63,10 +31,42 @@ nil,
 },
 },
 },
+["BigWigs_Plugins_Bars"] = {
+["profiles"] = {
+["Default"] = {
+["expHeight"] = 28,
+["expWidth"] = 261,
+["expPosition"] = {
+"LEFT",
+"LEFT",
+24,
+57,
+},
+["normalPosition"] = {
+"LEFT",
+"LEFT",
+287,
+62,
+},
+},
+},
+},
 ["BigWigs_Plugins_Pull"] = {
 ["profiles"] = {
 ["Default"] = {
 ["countBegin"] = 10,
+},
+},
+},
+["BigWigs_Plugins_Countdown"] = {
+["profiles"] = {
+["Default"] = {
+["position"] = {
+nil,
+nil,
+-19,
+-79,
+},
 },
 },
 },
@@ -184,20 +184,20 @@ BigWigsStatsDB = {
 [996] = {
 [683] = {
 ["N10"] = {
-["kills"] = 5,
+["kills"] = 6,
 ["fkDate"] = "2025/09/20",
-["bestDate"] = "2025/10/19",
-["best"] = 259.3989999999976,
+["bestDate"] = "2025/10/22",
+["best"] = 244.4939999999997,
 ["wipes"] = 1,
 ["fkDuration"] = 335.6100000000006,
 },
 ["H10"] = {
-["wipes"] = 24,
+["wipes"] = 37,
 },
 },
 [742] = {
 ["N10"] = {
-["kills"] = 5,
+["kills"] = 6,
 ["fkDuration"] = 343.1870000000017,
 ["wipes"] = 4,
 ["fkWipes"] = 3,
@@ -206,30 +206,30 @@ BigWigsStatsDB = {
 ["fkDate"] = "2025/09/20",
 },
 ["H10"] = {
-["wipes"] = 21,
+["wipes"] = 39,
 },
 },
 [729] = {
 ["H10"] = {
 ["kills"] = 4,
 ["fkDuration"] = 407.8389999999999,
-["wipes"] = 30,
+["wipes"] = 34,
 ["fkWipes"] = 11,
 ["best"] = 331.3940000000002,
 ["bestDate"] = "2025/10/09",
 ["fkDate"] = "2025/09/25",
 },
 ["N10"] = {
-["kills"] = 1,
+["kills"] = 2,
 ["fkDuration"] = 289.7429999999986,
-["best"] = 289.7429999999986,
-["bestDate"] = "2025/09/20",
+["best"] = 234.473,
+["bestDate"] = "2025/10/23",
 ["fkDate"] = "2025/09/20",
 },
 },
 [709] = {
 ["N10"] = {
-["kills"] = 5,
+["kills"] = 6,
 ["fkDuration"] = 364.4650000000002,
 ["best"] = 264.2599999999948,
 ["bestDate"] = "2025/10/19",

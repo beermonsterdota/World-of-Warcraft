@@ -1,15 +1,12 @@
 # BigWigs
 
-## [v401](https://github.com/BigWigsMods/BigWigs/tree/v401) (2025-10-14)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v400.1...v401) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
+## [v401.4](https://github.com/BigWigsMods/BigWigs/tree/v401.4) (2025-10-30)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v401.3...v401.4) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
 
-- Locales: Tweaks  
-- Update zhCN (#2281)  
-- Bump version  
-- Tools/Keystones: Tweak  
-- Tools/Keystones: Fix teleports, alts, and history tabs for timerunning  
-- Tools/Keystones: Clarify timerunning characters  
-- Tools/Keystones: Add Legion dungeon shortnames  
-- Bump toc  
-- Tools/Keystones: Cleanups  
-- Plugins/BossBlock: Fix level up toast  
+- ManaforgeOmega/Salhadaar: Remove default emphasize on Banishment  
+- Core/BossPrototype: Fix a potential error when disabling class colors for messages, closes #2294  
+- Update deDE (#2293)  
+- Update koKR (#2292)  
+- Update frFR (#2291)  
+- Update zhCN (#2290)  
+- Tools/Keystones: Add Cathedral of Eternal Night and Seat of the Triumvirate  

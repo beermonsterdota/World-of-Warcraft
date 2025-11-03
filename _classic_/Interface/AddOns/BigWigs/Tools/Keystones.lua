@@ -205,6 +205,10 @@ local dungeonNamesTiny = {
 	[206] = L.keystoneShortName_NeltharionsLair, -- NL
 	[209] = L.keystoneShortName_TheArcway, -- ARC
 	[207] = L.keystoneShortName_VaultOfTheWardens, -- VOTW
+	[227] = L.keystoneShortName_ReturnToKarazhanLower, -- LKARA
+	[234] = L.keystoneShortName_ReturnToKarazhanUpper, -- UKARA
+	[233] = L.keystoneShortName_CathedralOfEternalNight, -- COEN
+	[239] = L.keystoneShortName_SeatOfTheTriumvirate, -- SOTT
 }
 local dungeonNamesTrimmed = {
 	[500] = L.keystoneShortName_TheRookery_Bar, -- Rookery
@@ -232,8 +236,13 @@ local dungeonNamesTrimmed = {
 	[206] = L.keystoneShortName_NeltharionsLair_Bar, -- Lair
 	[209] = L.keystoneShortName_TheArcway_Bar, -- Arcway
 	[207] = L.keystoneShortName_VaultOfTheWardens_Bar, -- Vault
+	[227] = L.keystoneShortName_ReturnToKarazhanLower_Bar, -- Lower Kara
+	[234] = L.keystoneShortName_ReturnToKarazhanUpper_Bar, -- Upper Kara
+	[233] = L.keystoneShortName_CathedralOfEternalNight_Bar, -- Cathedral
+	[239] = L.keystoneShortName_SeatOfTheTriumvirate_Bar, -- Triumvirate
 }
 local dungeonMapWithMultipleKeys = {
+	[1651] = true, -- Return to Karazhan
 	[2441] = true, -- Tazavesh, the Veiled Market
 }
 local teleportList = {
@@ -346,6 +355,7 @@ local teleportList = {
 	},
 }
 if BigWigsLoader.isBeta then
+	teleportList[0] = {}
 	table.insert(teleportList, 2, {
 		[2648] = 445443, -- The Rookery
 		[2649] = 445444, -- Priory of the Sacred Flame
@@ -1524,7 +1534,7 @@ do
 				sortedplayerList[#sortedplayerList+1] = {
 					name = pName, decoratedName = decoratedName, nameTooltip = nameTooltip,
 					level = pData[1], levelTooltip = L.keystoneLevelTooltip:format(pData[1] == -1 and L.keystoneHiddenTooltip or pData[1]),
-					map = pData[2] == -1 and hiddenIcon or dungeonNamesTiny[pData[2]] or pData[2] or "?",
+					map = pData[2] == -1 and hiddenIcon or dungeonNamesTiny[pData[2]] or (pData[2] > 0 and pData[2] or "-"),
 					mapTooltip = L.keystoneMapTooltip:format(pData[2] == -1 and L.keystoneHiddenTooltip or challengeMapName or "-") .. GetTeleportTextForSpellID(teleportSpellID),
 					mapID = mapID,
 					challengeMapID = pData[2], -- XXX temp Lemix

@@ -5,53 +5,53 @@ ReforgeLiteDB = {
 ["method"] = {
 ["items"] = {
 {
+["dst"] = 6,
 ["src"] = 8,
 ["reforge"] = 55,
-["dst"] = 6,
 ["amount"] = 303,
 },
 {
+["dst"] = 1,
 ["src"] = 5,
 ["reforge"] = 29,
-["dst"] = 1,
 ["amount"] = 201,
 },
 {
+["dst"] = 6,
 ["src"] = 5,
 ["reforge"] = 33,
-["dst"] = 6,
 ["amount"] = 272,
 },
 {
+["dst"] = 1,
 ["src"] = 8,
 ["reforge"] = 50,
-["dst"] = 1,
 ["amount"] = 210,
 },
 {
+["dst"] = 6,
 ["src"] = 8,
 ["reforge"] = 55,
-["dst"] = 6,
 ["amount"] = 364,
 },
 {
+["dst"] = 5,
 ["src"] = 6,
 ["reforge"] = 40,
-["dst"] = 5,
 ["amount"] = 178,
 },
 {
 },
 {
+["dst"] = 1,
 ["src"] = 8,
 ["reforge"] = 50,
-["dst"] = 1,
 ["amount"] = 274,
 },
 {
+["dst"] = 6,
 ["src"] = 8,
 ["reforge"] = 55,
-["dst"] = 6,
 ["amount"] = 376,
 },
 {
@@ -59,9 +59,9 @@ ReforgeLiteDB = {
 {
 },
 {
+["dst"] = 5,
 ["src"] = 8,
 ["reforge"] = 54,
-["dst"] = 5,
 ["amount"] = 188,
 },
 {
@@ -69,9 +69,9 @@ ReforgeLiteDB = {
 {
 },
 {
+["dst"] = 1,
 ["src"] = 8,
 ["reforge"] = 50,
-["dst"] = 1,
 ["amount"] = 156,
 },
 {

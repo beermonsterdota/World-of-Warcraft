@@ -14,7 +14,7 @@
 ## Notes-ptBR: Abordagem modular, leve e não intrusiva para avisos em encontros com chefes.
 ## IconTexture: Interface\AddOns\BigWigs\Media\Icons\minimap_raid.tga
 ## Author: Funkeh, Nebula, Justwait, Delk
-## Version: v401
+## Version: v401.4
 ## LoadSavedVariablesFirst: 1
 
 ## X-Credits: Ammo, Elvador, Vhaarr
@@ -41,7 +41,6 @@ Media\Media.lua
 GuildVersion.lua
 Loader.lua
 Tools\AutoRole.lua
-Tools\BattleRes.lua
 Tools\Keystones.lua
 Tools\LFGTimer.lua
 modules.xml

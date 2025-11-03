@@ -4,10 +4,10 @@ PlaterDB = {
 [119692] = {
 ["encounterName"] = "Ша Страха",
 ["source"] = "Ша Страха",
-["npcID"] = 60999,
+["encounterID"] = 1431,
 ["isChanneled"] = false,
 ["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1431,
+["npcID"] = 60999,
 },
 [96847] = {
 ["type"] = "BUFF",
@@ -15,129 +15,123 @@ PlaterDB = {
 ["event"] = "SPELL_AURA_APPLIED",
 ["npcID"] = 52812,
 },
-[22888] = {
+[114893] = {
 ["type"] = "BUFF",
-["source"] = "Властитель Рунтак",
+["source"] = "Тотем каменной преграды",
 ["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 173758,
+["npcID"] = 59712,
 },
 [119888] = {
 ["encounterName"] = "Ша Страха",
-["source"] = "Чэн Кан",
-["npcID"] = 61042,
+["source"] = "Ян Гоши",
+["encounterID"] = 1431,
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1431,
+["npcID"] = 61038,
 },
 [119983] = {
 ["encounterName"] = "Ша Страха",
-["source"] = "Цзиньлунь Кунь",
-["npcID"] = 61046,
+["source"] = "Ян Гоши",
+["encounterID"] = 1431,
 ["isChanneled"] = false,
 ["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1431,
+["npcID"] = 61038,
 },
 [120047] = {
 ["encounterName"] = "Ша Страха",
-["source"] = "Цзиньлунь Кунь",
-["npcID"] = 61046,
+["source"] = "Ян Гоши",
+["encounterID"] = 1431,
 ["isChanneled"] = false,
 ["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1431,
+["npcID"] = 61038,
 },
 [5320] = {
+["event"] = "SPELL_AURA_APPLIED",
 ["type"] = "BUFF",
 ["source"] = "Сергра Черный Шип",
-["event"] = "SPELL_AURA_APPLIED",
 ["npcID"] = 3338,
 },
-[54216] = {
-["type"] = "BUFF",
-["source"] = "Вовк",
+[125786] = {
+["encounterName"] = "Ша Страха",
+["type"] = "DEBUFF",
+["source"] = "Ша Страха",
+["encounterID"] = 1431,
 ["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 19459,
+["npcID"] = 60999,
 },
 [119414] = {
 ["encounterName"] = "Ша Страха",
 ["source"] = "Ша Страха",
-["npcID"] = 60999,
+["encounterID"] = 1431,
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1431,
-},
-[108446] = {
-["encounterName"] = "Ша Страха",
-["type"] = "BUFF",
-["source"] = "Иллироггу",
-["npcID"] = 58964,
-["event"] = "SPELL_AURA_APPLIED",
-["encounterID"] = 1431,
-},
-[119519] = {
-["encounterName"] = "Ша Страха",
-["source"] = "Ша Страха",
 ["npcID"] = 60999,
-["isChanneled"] = false,
-["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1431,
+},
+[130958] = {
+["event"] = "SPELL_AURA_APPLIED",
+["type"] = "BUFF",
+["source"] = "Обычный маг",
+["npcID"] = 62295,
 },
 [119862] = {
 ["encounterName"] = "Ша Страха",
-["source"] = "Цзиньлунь Кунь",
-["npcID"] = 61046,
+["source"] = "Ян Гоши",
+["encounterID"] = 1431,
 ["isChanneled"] = false,
 ["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1431,
+["npcID"] = 61038,
 },
-[24604] = {
+[126188] = {
+["source"] = "Алани",
 ["type"] = "BUFF",
-["source"] = "Неизвестно",
 ["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 10981,
+["npcID"] = 64403,
 },
 [119775] = {
 ["encounterName"] = "Ша Страха",
 ["source"] = "Ша Страха",
-["npcID"] = 60999,
+["encounterID"] = 1431,
 ["isChanneled"] = false,
 ["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1431,
-},
-[65753] = {
-["type"] = "BUFF",
-["source"] = "Глаза Тонги",
-["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 34615,
+["npcID"] = 60999,
 },
 [131996] = {
 ["encounterName"] = "Ша Страха",
 ["type"] = "BUFF",
 ["source"] = "Ша Страха",
-["npcID"] = 60999,
-["event"] = "SPELL_AURA_APPLIED",
 ["encounterID"] = 1431,
+["event"] = "SPELL_AURA_APPLIED",
+["npcID"] = 60999,
+},
+[119593] = {
+["encounterName"] = "Ша Страха",
+["source"] = "Ша Страха",
+["encounterID"] = 1431,
+["isChanneled"] = false,
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 60999,
 },
 [119086] = {
 ["encounterName"] = "Ша Страха",
 ["type"] = "DEBUFF",
 ["source"] = "Порождение кошмара",
-["npcID"] = 61034,
-["event"] = "SPELL_AURA_APPLIED",
 ["encounterID"] = 1431,
-},
-[35760] = {
-["type"] = "DEBUFF",
-["source"] = "Большой крабстер",
 ["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 17817,
+["npcID"] = 61034,
 },
-[119693] = {
+[126119] = {
+["type"] = "BUFF",
+["source"] = "Статуя черного быка",
+["event"] = "SPELL_AURA_APPLIED",
+["npcID"] = 61146,
+},
+[119519] = {
 ["encounterName"] = "Ша Страха",
 ["source"] = "Ша Страха",
-["npcID"] = 60999,
+["encounterID"] = 1431,
 ["isChanneled"] = false,
 ["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1431,
+["npcID"] = 60999,
 },
 },
 ["profileKeys"] = {
@@ -11297,7 +11291,7 @@ PlaterDB = {
 ["nameplateShowEnemies"] = "1",
 ["nameplateOverlapV"] = "1.0099999904633",
 },
-["login_counter"] = 1186,
+["login_counter"] = 1208,
 ["plate_config"] = {
 ["global_health_height"] = 12,
 ["friendlyplayer"] = {
@@ -12755,6 +12749,13 @@ PlaterDB = {
 ["source"] = "Шра'тик-рабочий",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 63677,
+},
+[111752] = {
+["encounterName"] = "Инструктор Ледяное Сердце",
+["source"] = "Неофит Некроситета",
+["npcID"] = 58823,
+["event"] = "SPELL_CAST_START",
+["encounterID"] = 1426,
 },
 [114183] = {
 ["source"] = "Книжник Алого ордена",
@@ -15940,6 +15941,11 @@ PlaterDB = {
 ["source"] = "Чо'Раш Наблюдатель",
 ["npcID"] = 14324,
 },
+[125995] = {
+["source"] = "Склизень",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 244995,
+},
 [50364] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Неруб'арский туннельщик",
@@ -15950,11 +15956,6 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 56289,
 },
-[125995] = {
-["source"] = "Склизень",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 244995,
-},
 [50895] = {
 ["encounterName"] = "Сьоннир Литейщик",
 ["source"] = "Кованый железный дворф",
@@ -15962,6 +15963,16 @@ PlaterDB = {
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
 ["encounterID"] = 569,
+},
+[125241] = {
+["source"] = "Кан Похититель Душ",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 50349,
+},
+[125971] = {
+["source"] = "Повелитель зверей Шань'цзэ",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 62530,
 },
 [17162] = {
 ["event"] = "SPELL_CAST_START",
@@ -15975,10 +15986,11 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37868,
 },
-[125241] = {
-["source"] = "Кан Похититель Душ",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 50349,
+[120770] = {
+["isChanneled"] = true,
+["source"] = "Заклинатель Мрачного Леса",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 62457,
 },
 [54970] = {
 ["encounterName"] = "Слад'ран",
@@ -15999,10 +16011,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 387,
 },
-[125971] = {
-["source"] = "Повелитель зверей Шань'цзэ",
+[70541] = {
+["encounterName"] = "Король-лич",
+["source"] = "Король-лич",
+["encounterID"] = 1106,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 62530,
+["npcID"] = 36597,
 },
 [91997] = {
 ["source"] = "Шань Цзитун",
@@ -16015,18 +16029,16 @@ PlaterDB = {
 ["source"] = "Шелкоперый ястреб",
 ["npcID"] = 58455,
 },
-[120770] = {
-["isChanneled"] = true,
-["source"] = "Заклинатель Мрачного Леса",
+[36205] = {
+["isChanneled"] = false,
 ["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 62457,
+["source"] = "Ртутный страж",
+["npcID"] = 67833,
 },
-[70541] = {
-["encounterName"] = "Король-лич",
-["source"] = "Король-лич",
-["encounterID"] = 1106,
+[124935] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 36597,
+["source"] = "Сан Охотник Прилива",
+["npcID"] = 50780,
 },
 [72039] = {
 ["encounterName"] = "Кровавый Совет",
@@ -16035,25 +16047,27 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37970,
 },
-[119691] = {
+[128192] = {
+["source"] = "Вестник смерти Шань'цзэ",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Мастер Бум-Бум",
-["npcID"] = 61013,
+["npcID"] = 62559,
 },
-[124935] = {
+[72037] = {
+["encounterName"] = "Кровавый Совет",
+["source"] = "Принц Валанар",
+["encounterID"] = 1095,
 ["event"] = "SPELL_CAST_START",
-["source"] = "Сан Охотник Прилива",
-["npcID"] = 50780,
+["npcID"] = 37970,
 },
 [125645] = {
 ["source"] = "Мастер иллюзий Шань'цзэ",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 62440,
 },
-[128192] = {
-["source"] = "Вестник смерти Шань'цзэ",
+[127255] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 62559,
+["source"] = "Милау",
+["npcID"] = 64965,
 },
 [127948] = {
 ["isChanneled"] = true,
@@ -16073,10 +16087,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 12201,
 },
-[127255] = {
+[50255] = {
+["encounterName"] = "Скади Безжалостный",
+["source"] = "Скади Безжалостный",
+["npcID"] = 26693,
 ["event"] = "SPELL_CAST_START",
-["source"] = "Милау",
-["npcID"] = 64965,
+["encounterID"] = 581,
 },
 [116178] = {
 ["source"] = "Пенистый бражный хмелементаль",
@@ -16099,34 +16115,21 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 62511,
 },
-[50255] = {
-["encounterName"] = "Скади Безжалостный",
-["source"] = "Скади Безжалостный",
-["npcID"] = 26693,
-["event"] = "SPELL_CAST_START",
-["encounterID"] = 581,
-},
-[11016] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Пожиратель душ из племени Песчаной Бури",
-["npcID"] = 7247,
-},
 [33988] = {
 ["isChanneled"] = true,
 ["source"] = "Затерянный во времени Провидец",
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 18319,
 },
+[11016] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Пожиратель душ из племени Песчаной Бури",
+["npcID"] = 7247,
+},
 [71906] = {
 ["source"] = "Валь'кира-глашатай",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37098,
-},
-[33989] = {
-["isChanneled"] = true,
-["source"] = "Затерянный во времени Провидец",
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 18319,
 },
 [70498] = {
 ["encounterName"] = "Король-лич",
@@ -16135,10 +16138,22 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1106,
 },
-[15238] = {
+[33989] = {
+["isChanneled"] = true,
+["source"] = "Затерянный во времени Провидец",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 18319,
+},
+[124297] = {
 ["event"] = "SPELL_CAST_START",
-["source"] = "Ялия Мудрый Шепот",
-["npcID"] = 62825,
+["source"] = "Фердинанд",
+["npcID"] = 51078,
+},
+[125902] = {
+["isChanneled"] = true,
+["source"] = "Кор'тик-воитель",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 64458,
 },
 [56698] = {
 ["event"] = "SPELL_CAST_START",
@@ -16150,11 +16165,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 4848,
 },
-[125902] = {
-["isChanneled"] = true,
-["source"] = "Кор'тик-воитель",
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 64458,
+[15238] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Ялия Мудрый Шепот",
+["npcID"] = 62825,
 },
 [15254] = {
 ["encounterName"] = "Принц Шаффар",
@@ -16180,27 +16194,11 @@ PlaterDB = {
 ["source"] = "Шаман Драккари",
 ["npcID"] = 26639,
 },
-[124297] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Фердинанд",
-["npcID"] = 51078,
-},
-[106447] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Новообращенный Шадо-Пан",
-["npcID"] = 56395,
-},
 [120052] = {
 ["isChanneled"] = true,
 ["source"] = "Бату",
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 63872,
-},
-[122832] = {
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Непрощенный",
-["npcID"] = 10516,
 },
 [124018] = {
 ["encounterName"] = "Императорский визирь Зор'лок",
@@ -16209,6 +16207,25 @@ PlaterDB = {
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 62980,
+},
+[122813] = {
+["source"] = "Обычный маг",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 62379,
+},
+[122832] = {
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["source"] = "Непрощенный",
+["npcID"] = 10516,
+},
+[121994] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
+["source"] = "Ваятель янтаря Ун'сок",
+["encounterID"] = 1499,
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 62511,
 },
 [36996] = {
 ["event"] = "SPELL_CAST_START",
@@ -16225,19 +16242,6 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 41164,
 },
-[122813] = {
-["source"] = "Обычный маг",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 62379,
-},
-[121994] = {
-["encounterName"] = "Ваятель янтаря Ун'сок",
-["source"] = "Ваятель янтаря Ун'сок",
-["encounterID"] = 1499,
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 62511,
-},
 [31948] = {
 ["encounterName"] = "Рокмар Трескун",
 ["source"] = "Рокмар Трескун",
@@ -16245,16 +16249,28 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 17991,
 },
-[71257] = {
-["isChanneled"] = true,
-["source"] = "Имирьярская воительница",
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 37132,
+[72762] = {
+["encounterName"] = "Король-лич",
+["source"] = "Король-лич",
+["npcID"] = 36597,
+["event"] = "SPELL_CAST_START",
+["encounterID"] = 1106,
 },
 [13899] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Лорд Опалитель",
 ["npcID"] = 9017,
+},
+[110968] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Освятитель Алого ордена",
+["npcID"] = 58569,
+},
+[71257] = {
+["isChanneled"] = true,
+["source"] = "Имирьярская воительница",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 37132,
 },
 [43649] = {
 ["encounterName"] = "Скарвальд и Далронн",
@@ -16270,10 +16286,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 62408,
 },
-[110968] = {
+[125069] = {
+["source"] = "Покрытый янтарем мушан",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Освятитель Алого ордена",
-["npcID"] = 58569,
+["npcID"] = 63568,
 },
 [71274] = {
 ["isChanneled"] = true,
@@ -16281,10 +16297,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 37127,
 },
-[22876] = {
-["source"] = "Блуждающее око Килрогга",
+[52534] = {
+["encounterName"] = "Крик'тир Хранитель Врат",
+["source"] = "Ануб'арский темный чародей",
+["npcID"] = 28733,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 14386,
+["encounterID"] = 216,
 },
 [69483] = {
 ["encounterName"] = "Леди Смертный Шепот",
@@ -16293,10 +16311,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 36829,
 },
-[125069] = {
-["source"] = "Покрытый янтарем мушан",
+[122402] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
+["source"] = "Янтарное чудовище",
+["encounterID"] = 1499,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 63568,
+["npcID"] = 62711,
 },
 [48191] = {
 ["isChanneled"] = true,
@@ -16311,12 +16331,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1045,
 },
-[124849] = {
-["encounterName"] = "Великая императрица Шек'зир",
-["source"] = "Великая императрица Шек'зир",
-["encounterID"] = 1501,
+[69923] = {
+["source"] = "Проповедник с \"Усмирителя небес\"",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 62837,
+["npcID"] = 37016,
 },
 [70123] = {
 ["encounterName"] = "Синдрагоса",
@@ -16325,22 +16343,20 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 36853,
 },
-[122402] = {
-["encounterName"] = "Ваятель янтаря Ун'сок",
-["source"] = "Янтарное чудовище",
-["encounterID"] = 1499,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 62711,
-},
-[69923] = {
-["source"] = "Проповедник с \"Усмирителя небес\"",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 37016,
-},
 [126284] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Доминатор Шао-Тень",
 ["npcID"] = 63947,
+},
+[125865] = {
+["source"] = "Зар'тик - авгур",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 64454,
+},
+[15802] = {
+["source"] = "Элдретский фантазм",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 11475,
 },
 [114062] = {
 ["encounterName"] = "Джандис Барова",
@@ -16354,17 +16370,16 @@ PlaterDB = {
 ["source"] = "Страхопряд-охранник",
 ["npcID"] = 61981,
 },
-[15802] = {
-["source"] = "Элдретский фантазм",
+[58535] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 11475,
+["source"] = "Хранитель портала",
+["npcID"] = 30893,
 },
-[132236] = {
+[123791] = {
 ["encounterName"] = "Императорский визирь Зор'лок",
 ["source"] = "Императорский визирь Зор'лок",
 ["encounterID"] = 1507,
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
+["event"] = "SPELL_CAST_START",
 ["npcID"] = 62980,
 },
 [48895] = {
@@ -16384,23 +16399,6 @@ PlaterDB = {
 ["source"] = "Служитель храма",
 ["npcID"] = 45935,
 },
-[58535] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Хранитель портала",
-["npcID"] = 30893,
-},
-[135517] = {
-["source"] = "Воздаятель операции \"Заслон\"",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 67296,
-},
-[71787] = {
-["encounterName"] = "Валитрия Сноходица",
-["source"] = "Капитан Руперт",
-["encounterID"] = 1098,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 37125,
-},
 [125490] = {
 ["source"] = "Янтарный огнежал",
 ["event"] = "SPELL_CAST_START",
@@ -16411,10 +16409,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 58959,
 },
-[13895] = {
+[71787] = {
+["encounterName"] = "Валитрия Сноходица",
+["source"] = "Капитан Руперт",
+["encounterID"] = 1098,
 ["event"] = "SPELL_CAST_START",
-["source"] = "Бейл'Гар",
-["npcID"] = 9016,
+["npcID"] = 37125,
 },
 [122406] = {
 ["encounterName"] = "Повелитель ветров Мел'джарак",
@@ -16423,10 +16423,16 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 62397,
 },
-[127947] = {
+[116990] = {
+["isChanneled"] = true,
+["source"] = "Каменный цийлинь",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 60576,
+},
+[13895] = {
 ["event"] = "SPELL_CAST_START",
-["source"] = "Аззикс К'тай",
-["npcID"] = 62843,
+["source"] = "Бейл'Гар",
+["npcID"] = 9016,
 },
 [73061] = {
 ["encounterName"] = "Синдрагоса",
@@ -16435,15 +16441,27 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 36853,
 },
+[69899] = {
+["source"] = "Иерофант с \"Усмирителя небес\"",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 37027,
+},
+[120946] = {
+["source"] = "Сик'тик - янтарный прядильщик",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 61929,
+},
 [16006] = {
 ["source"] = "Ревелош",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 6910,
 },
-[69899] = {
-["source"] = "Иерофант с \"Усмирителя небес\"",
+[119684] = {
+["encounterName"] = "Синь Мастер Боя",
+["source"] = "Синь Мастер Боя",
+["npcID"] = 61398,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 37027,
+["encounterID"] = 1441,
 },
 [21833] = {
 ["isChanneled"] = true,
@@ -16456,11 +16474,6 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 36725,
 },
-[120946] = {
-["source"] = "Сик'тик - янтарный прядильщик",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 61929,
-},
 [69973] = {
 ["source"] = "Призыватель с \"Усмирителя небес\"",
 ["event"] = "SPELL_CAST_START",
@@ -16471,15 +16484,20 @@ PlaterDB = {
 ["source"] = "Аггем Терновое Проклятие",
 ["npcID"] = 4424,
 },
-[125716] = {
-["source"] = "Сет'тик-бурелом",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 64358,
-},
 [49712] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Восставший укротитель Драккари",
 ["npcID"] = 26637,
+},
+[70053] = {
+["source"] = "Сестра Свална",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 37126,
+},
+[111667] = {
+["source"] = "Вызыватель из Алого ордена",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 58756,
 },
 [71788] = {
 ["source"] = "Капитан Руперт",
@@ -16491,10 +16509,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37026,
 },
-[70053] = {
-["source"] = "Сестра Свална",
+[15530] = {
+["source"] = "Амненнар Хладовей",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 37126,
+["npcID"] = 7358,
 },
 [36922] = {
 ["source"] = "Хребтохруст",
@@ -16506,18 +16524,6 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 39854,
 },
-[15530] = {
-["source"] = "Амненнар Хладовей",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 7358,
-},
-[70447] = {
-["encounterName"] = "Профессор Мерзоцид",
-["source"] = "Неустойчивый слизнюк",
-["encounterID"] = 1102,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 37697,
-},
 [15498] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Тенегорнский сенатор",
@@ -16528,20 +16534,30 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 5710,
 },
-[31407] = {
-["source"] = "Копейщик из племени Темной Крови",
+[71386] = {
+["source"] = "Иней",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 17729,
+["npcID"] = 37533,
 },
 [106681] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Благоухающий Лотос",
 ["npcID"] = 56472,
 },
-[124072] = {
-["source"] = "Сет'тик - крыло ветра",
+[111010] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 63592,
+["source"] = "Фанатик Алого ордена",
+["npcID"] = 58590,
+},
+[71140] = {
+["source"] = "Зачумленное поганище",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 37022,
+},
+[71253] = {
+["source"] = "Имирьярская охотница",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 37134,
 },
 [12248] = {
 ["source"] = "Темный скелет-чародей",
@@ -16555,10 +16571,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37972,
 },
-[71140] = {
-["source"] = "Зачумленное поганище",
+[42669] = {
+["encounterName"] = "Ингвар Расхититель",
+["source"] = "Ингвар Расхититель",
+["encounterID"] = 575,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 37022,
+["npcID"] = 23954,
 },
 [75755] = {
 ["isChanneled"] = true,
@@ -16566,17 +16584,16 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 39392,
 },
-[71253] = {
-["source"] = "Имирьярская охотница",
+[13323] = {
+["source"] = "Элдретский колдун",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 37134,
+["npcID"] = 11470,
 },
-[42669] = {
-["encounterName"] = "Ингвар Расхититель",
-["source"] = "Ингвар Расхититель",
-["encounterID"] = 575,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 23954,
+[70299] = {
+["isChanneled"] = true,
+["source"] = "Омраченный верховный маг",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 37664,
 },
 [86374] = {
 ["source"] = "Страж Шадо-Пан",
@@ -16588,15 +16605,19 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 17395,
 },
-[13323] = {
-["source"] = "Элдретский колдун",
+[73001] = {
+["encounterName"] = "Кровавый Совет",
+["source"] = "Принц Келесет",
+["encounterID"] = 1095,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 11470,
+["npcID"] = 37972,
 },
-[9734] = {
-["source"] = "Проповедница Алого ордена",
+[70162] = {
+["encounterName"] = "Битва на кораблях в Ледяной Короне",
+["source"] = "Ружейник с \"Усмирителя небес\"",
+["encounterID"] = 1099,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 58685,
+["npcID"] = 36969,
 },
 [107356] = {
 ["encounterName"] = "Тажань Чжу",
@@ -16605,25 +16626,6 @@ PlaterDB = {
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
 ["encounterID"] = 1306,
-},
-[73001] = {
-["encounterName"] = "Кровавый Совет",
-["source"] = "Принц Келесет",
-["encounterID"] = 1095,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 37972,
-},
-[120789] = {
-["encounterName"] = "Командир Во'цзак",
-["source"] = "Командир Во'цзак",
-["encounterID"] = 1502,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 61634,
-},
-[8362] = {
-["source"] = "Оракул из племени Мутной Воды",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 4820,
 },
 [69968] = {
 ["source"] = "Иерофант с \"Усмирителя небес\"",
@@ -16634,6 +16636,22 @@ PlaterDB = {
 ["source"] = "Сумеречный призыватель грома",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 40270,
+},
+[8362] = {
+["source"] = "Оракул из племени Мутной Воды",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 4820,
+},
+[70116] = {
+["source"] = "Ледяной змей Шпиля",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 37230,
+},
+[47346] = {
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["source"] = "Новос Призыватель",
+["npcID"] = 26631,
 },
 [79466] = {
 ["encounterName"] = "Эрудакс",
@@ -16652,15 +16670,17 @@ PlaterDB = {
 ["source"] = "Верховный маг Эванор",
 ["npcID"] = 25784,
 },
-[70116] = {
-["source"] = "Ледяной змей Шпиля",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 37230,
-},
 [69972] = {
 ["source"] = "Призыватель с \"Усмирителя небес\"",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37148,
+},
+[70594] = {
+["encounterName"] = "Леди Смертный Шепот",
+["source"] = "Приверженец культа",
+["encounterID"] = 1100,
+["event"] = "SPELL_CAST_START",
+["npcID"] = 37949,
 },
 [69871] = {
 ["isChanneled"] = true,
@@ -16730,10 +16750,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 39392,
 },
-[34163] = {
-["source"] = "Шаркун Нижетопи",
+[71237] = {
+["encounterName"] = "Леди Смертный Шепот",
+["source"] = "Приверженец культа",
+["encounterID"] = 1100,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 17871,
+["npcID"] = 37949,
 },
 [49089] = {
 ["encounterName"] = "Скади Безжалостный",
@@ -16742,46 +16764,25 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 581,
 },
-[70594] = {
-["encounterName"] = "Леди Смертный Шепот",
-["source"] = "Приверженец культа",
-["encounterID"] = 1100,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 37949,
-},
 [74552] = {
 ["source"] = "Сумеречный демиург",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 39890,
-},
-[14887] = {
-["source"] = "Лефтендрис",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 14327,
-},
-[69679] = {
-["encounterName"] = "Битва на кораблях в Ледяной Короне",
-["source"] = "Оружейник с \"Усмирителя небес\"",
-["encounterID"] = 1099,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 36978,
 },
 [16001] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Восставший всадник на нетопыре из Драккари",
 ["npcID"] = 26638,
 },
-[66290] = {
+[14887] = {
+["source"] = "Лефтендрис",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Бальназар",
-["npcID"] = 10813,
+["npcID"] = 14327,
 },
-[49537] = {
-["encounterName"] = "Пророк Тарон'джа",
-["source"] = "Пророк Тарон'джа",
-["npcID"] = 26632,
+[55888] = {
 ["event"] = "SPELL_CAST_START",
-["encounterID"] = 375,
+["source"] = "Исчадие воды",
+["npcID"] = 30044,
 },
 [129919] = {
 ["source"] = "Ученик Чи-Цзи",
@@ -16793,15 +16794,32 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 67636,
 },
+[66290] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Бальназар",
+["npcID"] = 10813,
+},
 [131657] = {
 ["source"] = "Ик'тик - боец авангарда",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 58368,
 },
+[18327] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Баронесса Анастари",
+["npcID"] = 10436,
+},
 [129917] = {
 ["source"] = "Ученик Чи-Цзи",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 60601,
+},
+[122479] = {
+["encounterName"] = "Императорский визирь Зор'лок",
+["source"] = "Императорский визирь Зор'лок",
+["encounterID"] = 1507,
+["event"] = "SPELL_CAST_START",
+["npcID"] = 63554,
 },
 [118105] = {
 ["encounterName"] = "Призрачные короли",
@@ -16830,30 +16848,6 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 9024,
 },
-[127189] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Изваяние могу",
-["npcID"] = 59156,
-},
-[122479] = {
-["encounterName"] = "Императорский визирь Зор'лок",
-["source"] = "Императорский визирь Зор'лок",
-["encounterID"] = 1507,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 63554,
-},
-[48258] = {
-["encounterName"] = "Свала Вечноскорбящая",
-["source"] = "Свала Вечноскорбящая",
-["npcID"] = 26668,
-["event"] = "SPELL_CAST_START",
-["encounterID"] = 577,
-},
-[36040] = {
-["source"] = "Шахандана",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 41165,
-},
 [122149] = {
 ["encounterName"] = "Повелитель ветров Мел'джарак",
 ["source"] = "Зар'тик - боевой лекарь",
@@ -16866,16 +16860,37 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 59158,
 },
+[127189] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Изваяние могу",
+["npcID"] = 59156,
+},
+[36040] = {
+["source"] = "Шахандана",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 41165,
+},
+[15979] = {
+["source"] = "Волшебная аберрация",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 11480,
+},
+[129926] = {
+["source"] = "Ученик Чи-Цзи",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 60601,
+},
 [56702] = {
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
 ["source"] = "Ан'кахарский метатель заклинаний",
 ["npcID"] = 30278,
 },
-[15979] = {
-["source"] = "Волшебная аберрация",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 11480,
+[17682] = {
+["isChanneled"] = true,
+["source"] = "Посвященный охотник на магов",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 26728,
 },
 [125900] = {
 ["isChanneled"] = true,
@@ -16883,11 +16898,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 64458,
 },
-[17682] = {
-["isChanneled"] = true,
-["source"] = "Посвященный охотник на магов",
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 26728,
+[129081] = {
+["source"] = "Дитя Чи-Цзи",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 60616,
 },
 [79085] = {
 ["source"] = "Осул - туманный шаман",
@@ -16901,28 +16915,13 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 60710,
 },
-[55931] = {
-["encounterName"] = "Принц Талдарам",
-["source"] = "Принц Талдарам",
-["npcID"] = 29308,
-["event"] = "SPELL_CAST_START",
-["encounterID"] = 213,
-},
-[129081] = {
-["source"] = "Дитя Чи-Цзи",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 60616,
-},
-[13692] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Гончий пес",
-["npcID"] = 8921,
-},
-[36808] = {
+[117665] = {
+["encounterName"] = "Ша Сомнения",
+["source"] = "Ша Сомнения",
+["encounterID"] = 1439,
 ["isChanneled"] = true,
-["source"] = "Опытный охотник на магов",
 ["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 26727,
+["npcID"] = 56439,
 },
 [72143] = {
 ["encounterName"] = "Король-лич",
@@ -16931,20 +16930,26 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37698,
 },
-[16429] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Темный чародей из секты Тузадин",
-["npcID"] = 10398,
-},
 [31865] = {
 ["source"] = "Соблазнительница",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 17399,
 },
-[4971] = {
+[36808] = {
+["isChanneled"] = true,
+["source"] = "Опытный охотник на магов",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 26727,
+},
+[81439] = {
 ["event"] = "SPELL_CAST_START",
-["source"] = "Тотемист племени Иглошкурых",
-["npcID"] = 4440,
+["source"] = "Миллхаус Манашторм",
+["npcID"] = 43391,
+},
+[16429] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Темный чародей из секты Тузадин",
+["npcID"] = 10398,
 },
 [71815] = {
 ["encounterName"] = "Кровавый Совет",
@@ -16953,11 +16958,20 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37972,
 },
-[111582] = {
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Голодная гончая",
-["npcID"] = 58876,
+[121673] = {
+["source"] = "Сальинь-рыскатель",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 62350,
+},
+[126136] = {
+["source"] = "Вестник Шао-Тень",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 59914,
+},
+[15495] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Драгун из клана Кузни Рока",
+["npcID"] = 8899,
 },
 [3356] = {
 ["source"] = "Тенегорнский геолог",
@@ -16969,15 +16983,18 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 65810,
 },
-[15495] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Драгун из клана Кузни Рока",
-["npcID"] = 8899,
+[111582] = {
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["source"] = "Голодная гончая",
+["npcID"] = 58876,
 },
-[121673] = {
-["source"] = "Сальинь-рыскатель",
+[54801] = {
+["encounterName"] = "Колосс Драккари",
+["source"] = "Элементаль Дракарри",
+["npcID"] = 29573,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 62350,
+["encounterID"] = 385,
 },
 [47747] = {
 ["encounterName"] = "Аномалус",
@@ -16987,12 +17004,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 26763,
 },
-[54801] = {
-["encounterName"] = "Колосс Драккари",
-["source"] = "Элементаль Дракарри",
-["npcID"] = 29573,
+[70672] = {
+["encounterName"] = "Профессор Мерзоцид",
+["source"] = "Облако газа",
+["encounterID"] = 1102,
 ["event"] = "SPELL_CAST_START",
-["encounterID"] = 385,
+["npcID"] = 37562,
 },
 [49922] = {
 ["source"] = "Квалдир-повелитель туманов",
@@ -17004,10 +17021,10 @@ PlaterDB = {
 ["source"] = "Создание молота Гнева",
 ["npcID"] = 8907,
 },
-[113629] = {
-["source"] = "Ткачиха Смерти",
+[16866] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 59193,
+["source"] = "Изрыгатель яда",
+["npcID"] = 10417,
 },
 [122713] = {
 ["encounterName"] = "Императорский визирь Зор'лок",
@@ -17031,13 +17048,6 @@ PlaterDB = {
 ["source"] = "Ядовитый грелль",
 ["npcID"] = 12216,
 },
-[70672] = {
-["encounterName"] = "Профессор Мерзоцид",
-["source"] = "Облако газа",
-["encounterID"] = 1102,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 37562,
-},
 [45587] = {
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
@@ -17048,6 +17058,11 @@ PlaterDB = {
 ["source"] = "Зеврим Терновое Копыто",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 11490,
+},
+[37629] = {
+["source"] = "Шахандана",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 41165,
 },
 [115421] = {
 ["isChanneled"] = true,
@@ -17066,17 +17081,17 @@ PlaterDB = {
 ["source"] = "Восставший инквизитор",
 ["npcID"] = 10426,
 },
-[53617] = {
-["encounterName"] = "Ануб'арак",
-["source"] = "Ануб'арский ядомант",
-["npcID"] = 29217,
+[122413] = {
+["encounterName"] = "Ваятель янтаря Ун'сок",
+["source"] = "Янтарное чудовище",
+["encounterID"] = 1499,
 ["event"] = "SPELL_CAST_START",
-["encounterID"] = 218,
+["npcID"] = 62711,
 },
-[37629] = {
-["source"] = "Шахандана",
+[13748] = {
+["source"] = "Рудиментное чудовище",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 41165,
+["npcID"] = 11484,
 },
 [15799] = {
 ["event"] = "SPELL_CAST_START",
@@ -17088,15 +17103,16 @@ PlaterDB = {
 ["source"] = "Инструктор Галфорд",
 ["npcID"] = 10811,
 },
-[131968] = {
-["source"] = "Сик'тик - боевой лекарь",
+[38618] = {
+["source"] = "Командир Альянса",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 67093,
+["npcID"] = 27949,
 },
-[13748] = {
-["source"] = "Рудиментное чудовище",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 11484,
+[38619] = {
+["isChanneled"] = false,
+["source"] = "Командир Альянса",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 27949,
 },
 [49091] = {
 ["encounterName"] = "Скади Безжалостный",
@@ -17110,21 +17126,10 @@ PlaterDB = {
 ["source"] = "Завоеватель Шао-Тень",
 ["npcID"] = 63081,
 },
-[38618] = {
-["source"] = "Командир Альянса",
+[75992] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 27949,
-},
-[38619] = {
-["isChanneled"] = false,
-["source"] = "Командир Альянса",
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 27949,
-},
-[51832] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Жестокое создание",
-["npcID"] = 27971,
+["source"] = "Ведьма бурь Леди Наз'жар",
+["npcID"] = 40634,
 },
 [15537] = {
 ["event"] = "SPELL_CAST_START",
@@ -17135,6 +17140,18 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Лорд Аурий Ривендер",
 ["npcID"] = 45412,
+},
+[15743] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Вызыватель из легиона Кровавого Топора",
+["npcID"] = 9693,
+},
+[1244933] = {
+["encounterName"] = "Мастер Снежный Вихрь",
+["source"] = "Повелитель клинков Та'як",
+["encounterID"] = 1304,
+["event"] = "SPELL_CAST_START",
+["npcID"] = 248074,
 },
 [51586] = {
 ["source"] = "Спиритуалист из клана Укротителей драконов",
@@ -17151,15 +17168,15 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 54930,
 },
-[7978] = {
+[131071] = {
+["source"] = "Воздухоплаватель Сильной Руки",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Тенегорнский крестьянин",
-["npcID"] = 8896,
+["npcID"] = 65840,
 },
-[15743] = {
+[115418] = {
+["source"] = "Крик'тик - направитель ветров",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Вызыватель из легиона Кровавого Топора",
-["npcID"] = 9693,
+["npcID"] = 59801,
 },
 [68981] = {
 ["encounterName"] = "Король-лич",
@@ -17173,15 +17190,28 @@ PlaterDB = {
 ["source"] = "Лазурный налетчик",
 ["npcID"] = 30668,
 },
-[131071] = {
-["source"] = "Воздухоплаватель Сильной Руки",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 65840,
+[112929] = {
+["encounterName"] = "Тажань Чжу",
+["source"] = "Хваткая ненависть",
+["npcID"] = 59804,
+["isChanneled"] = false,
+["event"] = "SPELL_CAST_SUCCESS",
+["encounterID"] = 1306,
 },
-[115418] = {
-["source"] = "Крик'тик - направитель ветров",
+[80780] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 59801,
+["source"] = "Визжащая банши",
+["npcID"] = 10463,
+},
+[92266] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Облученный погромщик",
+["npcID"] = 6329,
+},
+[126937] = {
+["source"] = "Шра'тик - призыватель янтаря",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 64917,
 },
 [1244944] = {
 ["encounterName"] = "Гу Небесный Удар",
@@ -17190,21 +17220,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 248076,
 },
-[126937] = {
-["source"] = "Шра'тик - призыватель янтаря",
+[113364] = {
+["encounterName"] = "Ткач пламени Кеглер",
+["source"] = "Ткач пламени Кеглер",
+["encounterID"] = 1420,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 64917,
-},
-[116830] = {
-["isChanneled"] = true,
-["source"] = "Конк",
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 55509,
-},
-[92266] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Облученный погромщик",
-["npcID"] = 6329,
+["npcID"] = 59150,
 },
 [32358] = {
 ["encounterName"] = "Пандемоний",
@@ -17221,12 +17242,13 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 17942,
 },
-[113364] = {
-["encounterName"] = "Ткач пламени Кеглер",
-["source"] = "Ткач пламени Кеглер",
-["encounterID"] = 1420,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 59150,
+[120001] = {
+["encounterName"] = "Визирь Цзинь'бак",
+["source"] = "Визирь Цзинь'бак",
+["encounterID"] = 1465,
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 61567,
 },
 [115423] = {
 ["source"] = "Укротитель духов Шань'цзэ",
@@ -17260,23 +17282,21 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 36724,
 },
-[126354] = {
-["source"] = "Снайпер Громовой крепости",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 66507,
+[69906] = {
+["isChanneled"] = true,
+["source"] = "Священник с \"Усмирителя небес\"",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 37021,
 },
 [114272] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Отзвук ша",
 ["npcID"] = 59417,
 },
-[120001] = {
-["encounterName"] = "Визирь Цзинь'бак",
-["source"] = "Визирь Цзинь'бак",
-["encounterID"] = 1465,
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 61567,
+[49711] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Восставший укротитель Драккари",
+["npcID"] = 26637,
 },
 [30695] = {
 ["encounterName"] = "Омор Неодолимый",
@@ -17285,33 +17305,21 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1891,
 },
-[69906] = {
-["isChanneled"] = true,
-["source"] = "Священник с \"Усмирителя небес\"",
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 37021,
-},
 [53314] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Повелитель стихий клана Темных Рун",
 ["npcID"] = 27962,
 },
-[49711] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Восставший укротитель Драккари",
-["npcID"] = 26637,
+[16430] = {
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["source"] = "Некромантка из секты Тузадин",
+["npcID"] = 10400,
 },
 [20822] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Адепт из племени Мертвой Головы",
 ["npcID"] = 4516,
-},
-[127834] = {
-["encounterName"] = "Императорский визирь Зор'лок",
-["source"] = "Императорский визирь Зор'лок",
-["encounterID"] = 1507,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 62980,
 },
 [49356] = {
 ["encounterName"] = "Пророк Тарон'джа",
@@ -17321,32 +17329,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["encounterID"] = 375,
 },
-[51587] = {
-["source"] = "Спиритуалист из клана Укротителей драконов",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 28410,
-},
-[82800] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Пехотинец Альянса",
-["npcID"] = 67901,
-},
-[49668] = {
-["encounterName"] = "Новос Призыватель",
-["source"] = "Хрустальный укротитель",
-["npcID"] = 26627,
-["event"] = "SPELL_CAST_START",
-["encounterID"] = 371,
-},
 [76815] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Врачеватель душ Леди Наз'жар",
 ["npcID"] = 41096,
-},
-[55937] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Ориноко Клыколом",
-["npcID"] = 30020,
 },
 [75907] = {
 ["encounterName"] = "Леди Наз'жар",
@@ -17355,16 +17341,35 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1045,
 },
-[3636] = {
-["source"] = "Нефритовый василиск",
+[51587] = {
+["source"] = "Спиритуалист из клана Укротителей драконов",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 4863,
+["npcID"] = 28410,
+},
+[127834] = {
+["encounterName"] = "Императорский визирь Зор'лок",
+["source"] = "Императорский визирь Зор'лок",
+["encounterID"] = 1507,
+["event"] = "SPELL_CAST_START",
+["npcID"] = 62980,
+},
+[49668] = {
+["encounterName"] = "Новос Призыватель",
+["source"] = "Хрустальный укротитель",
+["npcID"] = 26627,
+["event"] = "SPELL_CAST_START",
+["encounterID"] = 371,
 },
 [88061] = {
 ["encounterName"] = "Озрук",
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Бронированный мистраль",
 ["npcID"] = 45915,
+},
+[55937] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Ориноко Клыколом",
+["npcID"] = 30020,
 },
 [30691] = {
 ["encounterName"] = "Вазруден Глашатай",
@@ -17373,25 +17378,42 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1892,
 },
-[120670] = {
-["source"] = "Зандаларский огненный танцовщик",
+[3636] = {
+["source"] = "Нефритовый василиск",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 60402,
+["npcID"] = 4863,
 },
 [51507] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Наблюдатель из клана Темных Рун",
 ["npcID"] = 27966,
 },
-[21068] = {
+[117954] = {
+["encounterName"] = "Элегон",
+["source"] = "Элегон",
+["encounterID"] = 1500,
 ["event"] = "SPELL_CAST_START",
-["source"] = "Бес-осквернитель",
-["npcID"] = 12217,
+["npcID"] = 60410,
+},
+[120670] = {
+["source"] = "Зандаларский огненный танцовщик",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 60402,
+},
+[123958] = {
+["source"] = "Малышка Люян",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 63313,
 },
 [119007] = {
 ["source"] = "Ученик Чи-Цзи",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 60602,
+},
+[21068] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Бес-осквернитель",
+["npcID"] = 12217,
 },
 [106853] = {
 ["encounterName"] = "Мастер Снежный Вихрь",
@@ -17400,10 +17422,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1304,
 },
-[15585] = {
-["source"] = "Медик из клана Ярости Горна",
+[48276] = {
+["encounterName"] = "Свала Вечноскорбящая",
+["source"] = "Свала Вечноскорбящая",
+["npcID"] = 26668,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 8894,
+["encounterID"] = 577,
 },
 [58688] = {
 ["encounterName"] = "Синигоса",
@@ -17412,16 +17436,18 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 545,
 },
-[123958] = {
-["source"] = "Малышка Люян",
+[11981] = {
+["source"] = "Тенегорнский черный маг",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 63313,
+["npcID"] = 4848,
 },
-[88080] = {
-["encounterName"] = "Озрук",
-["event"] = "SPELL_CAST_START",
-["source"] = "Хлесткий ветер",
-["npcID"] = 47238,
+[114087] = {
+["encounterName"] = "Псарь Браун",
+["source"] = "Псарь Браун",
+["encounterID"] = 1422,
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 59303,
 },
 [119775] = {
 ["encounterName"] = "Ша Страха",
@@ -17442,28 +17468,25 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 66200,
 },
-[11981] = {
-["source"] = "Тенегорнский черный маг",
+[34259] = {
+["source"] = "Вестник смерти из племени Атал'ай",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 4848,
+["npcID"] = 5271,
 },
 [17294] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Эзра Гримм",
 ["npcID"] = 11058,
 },
-[114087] = {
-["encounterName"] = "Псарь Браун",
-["source"] = "Псарь Браун",
-["encounterID"] = 1422,
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 59303,
-},
-[34259] = {
-["source"] = "Вестник смерти из племени Атал'ай",
+[81459] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 5271,
+["source"] = "Землерез Каменных Недр",
+["npcID"] = 43537,
+},
+[55980] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Гигантос",
+["npcID"] = 30021,
 },
 [122118] = {
 ["encounterName"] = "Душелов Гара'джал",
@@ -17479,10 +17502,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 58633,
 },
-[16336] = {
+[50379] = {
 ["event"] = "SPELL_CAST_START",
-["source"] = "Призрачный горожанин",
-["npcID"] = 10384,
+["source"] = "Воскреситель из Плети",
+["npcID"] = 26626,
 },
 [31717] = {
 ["encounterName"] = "Черная Охотница",
@@ -17490,16 +17513,6 @@ PlaterDB = {
 ["encounterID"] = 1948,
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 17882,
-},
-[50379] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Воскреситель из Плети",
-["npcID"] = 26626,
-},
-[15970] = {
-["source"] = "Ужасная драконида",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 5280,
 },
 [82137] = {
 ["event"] = "SPELL_CAST_START",
@@ -17511,15 +17524,11 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 69056,
 },
-[129883] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Порочный мучитель",
-["npcID"] = 59238,
-},
-[114864] = {
-["source"] = "Скучающий студент",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 59614,
+[128970] = {
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["source"] = "Капитан Дорен",
+["npcID"] = 66052,
 },
 [47773] = {
 ["encounterName"] = "Великая ведунья Телестра",
@@ -17527,6 +17536,23 @@ PlaterDB = {
 ["encounterID"] = 520,
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 26731,
+},
+[129883] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Порочный мучитель",
+["npcID"] = 59238,
+},
+[130120] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Тень кошмара",
+["npcID"] = 66100,
+},
+[117833] = {
+["encounterName"] = "Призрачные короли",
+["source"] = "Мын Безумный",
+["encounterID"] = 1436,
+["event"] = "SPELL_CAST_START",
+["npcID"] = 60708,
 },
 [130395] = {
 ["encounterName"] = "Каменные стражи",
@@ -17553,22 +17579,20 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 61302,
 },
-[130120] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Тень кошмара",
-["npcID"] = 66100,
-},
-[117833] = {
-["encounterName"] = "Призрачные короли",
-["source"] = "Мын Безумный",
-["encounterID"] = 1436,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 60708,
-},
 [128232] = {
 ["source"] = "Проповедница Алого ордена",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 58685,
+},
+[54965] = {
+["source"] = "Заклинатель рун из клана Укротителей драконов",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 23960,
+},
+[131034] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Мстительный гуртанский дух",
+["npcID"] = 65452,
 },
 [15128] = {
 ["event"] = "SPELL_CAST_START",
@@ -17585,26 +17609,26 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 66507,
 },
-[51503] = {
+[111216] = {
+["encounterName"] = "Воитель Гарлан",
+["source"] = "Воитель Гарлан",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Наблюдатель из клана Темных Рун",
-["npcID"] = 27966,
+["npcID"] = 58632,
 },
-[76790] = {
+[74561] = {
+["source"] = "Сумеречный рассекатель туч",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Захватчик Леди Наз'жар",
-["npcID"] = 39616,
+["npcID"] = 39962,
 },
 [119521] = {
 ["source"] = "Цян Безжалостный",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 61423,
 },
-[111216] = {
-["encounterName"] = "Воитель Гарлан",
-["source"] = "Воитель Гарлан",
+[76790] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 58632,
+["source"] = "Захватчик Леди Наз'жар",
+["npcID"] = 39616,
 },
 [52740] = {
 ["event"] = "SPELL_CAST_START",
@@ -17616,10 +17640,10 @@ PlaterDB = {
 ["source"] = "Сумеречный черный маг",
 ["npcID"] = 30319,
 },
-[74561] = {
-["source"] = "Сумеречный рассекатель туч",
+[76378] = {
+["source"] = "Рожденный в лазури страж",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 39962,
+["npcID"] = 39854,
 },
 [61184] = {
 ["source"] = "Красарангская охотница",
@@ -17644,22 +17668,22 @@ PlaterDB = {
 ["source"] = "Стайный острозуб",
 ["npcID"] = 65282,
 },
-[112992] = {
-["encounterName"] = "Прыгопотам",
-["source"] = "Прыгопотам",
-["encounterID"] = 1413,
+[131046] = {
+["source"] = "Колосс Шао-Тень",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 56717,
+["npcID"] = 65824,
 },
 [13321] = {
 ["source"] = "Маноед-гончая Скверны",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 17401,
 },
-[131512] = {
-["source"] = "Рейдер Ордо",
+[69508] = {
+["encounterName"] = "Гниломорд",
+["source"] = "Гниломорд",
+["encounterID"] = 1104,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 65928,
+["npcID"] = 36627,
 },
 [69882] = {
 ["source"] = "Иерофант с \"Усмирителя небес\"",
@@ -17678,18 +17702,6 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1303,
 },
-[131046] = {
-["source"] = "Колосс Шао-Тень",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 65824,
-},
-[69508] = {
-["encounterName"] = "Гниломорд",
-["source"] = "Гниломорд",
-["encounterID"] = 1104,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 36627,
-},
 [123931] = {
 ["source"] = "Джол'Грум",
 ["event"] = "SPELL_CAST_START",
@@ -17706,6 +17718,16 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Врачеватель душ Леди Наз'жар",
 ["npcID"] = 41139,
+},
+[125506] = {
+["source"] = "Командир Линдон",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 59191,
+},
+[20831] = {
+["source"] = "Клочок маны",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 11483,
 },
 [70906] = {
 ["encounterName"] = "Леди Смертный Шепот",
@@ -17727,11 +17749,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 11489,
 },
-[121182] = {
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Хартак Поджигатель",
-["npcID"] = 61392,
+[131067] = {
+["source"] = "Лекарь Сильной Руки",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 65842,
 },
 [10346] = {
 ["event"] = "SPELL_CAST_START",
@@ -17748,10 +17769,10 @@ PlaterDB = {
 ["source"] = "Завоеватель Шао-Тень",
 ["npcID"] = 63081,
 },
-[131067] = {
-["source"] = "Лекарь Сильной Руки",
+[60236] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 65842,
+["source"] = "Бушующий вихрь",
+["npcID"] = 28547,
 },
 [71930] = {
 ["source"] = "Страждущая душа",
@@ -17763,31 +17784,15 @@ PlaterDB = {
 ["source"] = "Остатки Ненависти",
 ["npcID"] = 58803,
 },
-[76688] = {
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Сумеречный бурильщик обсидиана",
-["npcID"] = 40019,
-},
-[60236] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Бушующий вихрь",
-["npcID"] = 28547,
-},
 [131097] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Капитан Дорен",
 ["npcID"] = 66052,
 },
-[11642] = {
+[22945] = {
+["source"] = "Волшебный поток",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Мурта Мрачнобрюх",
-["npcID"] = 7608,
-},
-[56632] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Ан'кахарский веретенщик",
-["npcID"] = 30276,
+["npcID"] = 14399,
 },
 [113134] = {
 ["encounterName"] = "Верховный инквизитор Вайтмейн",
@@ -17796,35 +17801,52 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 3977,
 },
+[11642] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Мурта Мрачнобрюх",
+["npcID"] = 7608,
+},
 [9532] = {
 ["source"] = "Скелет-призыватель",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 7342,
 },
-[114022] = {
-["source"] = "Хранитель сокровищ Алого ордена",
+[48920] = {
+["encounterName"] = "Король Дред",
+["source"] = "Король Дред",
+["npcID"] = 27483,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 59241,
-},
-[76686] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Сумеречный бурильщик обсидиана",
-["npcID"] = 40019,
+["encounterID"] = 373,
 },
 [88186] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Небесный убийца",
 ["npcID"] = 45922,
 },
-[79607] = {
-["source"] = "Зан'тик - янтарный панцирь",
+[114022] = {
+["source"] = "Хранитель сокровищ Алого ордена",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 64982,
+["npcID"] = 59241,
 },
 [121601] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Призыватель бури из клана Хартак",
 ["npcID"] = 61946,
+},
+[56632] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Ан'кахарский веретенщик",
+["npcID"] = 30276,
+},
+[79607] = {
+["source"] = "Зан'тик - янтарный панцирь",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 64982,
+},
+[12471] = {
+["source"] = "Призыватель огня из племени Змеящегося Корня",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 4799,
 },
 [106612] = {
 ["encounterName"] = "Мудрый Марис",
@@ -17838,20 +17860,26 @@ PlaterDB = {
 ["source"] = "Посланник клана Черного Железа",
 ["npcID"] = 6212,
 },
-[12471] = {
-["source"] = "Призыватель огня из племени Змеящегося Корня",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 4799,
-},
-[102998] = {
-["source"] = "Сяо",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 54926,
-},
 [130265] = {
 ["source"] = "Солдат Громовой крепости",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 66291,
+},
+[52086] = {
+["encounterName"] = "Крик'тир Хранитель Врат",
+["source"] = "Ануб'арский прядильщик",
+["npcID"] = 29335,
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["encounterID"] = 216,
+},
+[51849] = {
+["encounterName"] = "Сьоннир Литейщик",
+["source"] = "Сьоннир Литейщик",
+["npcID"] = 27978,
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["encounterID"] = 569,
 },
 [123490] = {
 ["source"] = "Порабощенный костолом",
@@ -17880,31 +17908,27 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 54987,
 },
-[52086] = {
-["encounterName"] = "Крик'тир Хранитель Врат",
-["source"] = "Ануб'арский прядильщик",
-["npcID"] = 29335,
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 216,
+[16071] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Темнопряд из легиона Огненного Клейма",
+["npcID"] = 9261,
 },
 [11962] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Оро Вырвиглаз",
 ["npcID"] = 7606,
 },
-[51849] = {
-["encounterName"] = "Сьоннир Литейщик",
-["source"] = "Сьоннир Литейщик",
-["npcID"] = 27978,
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 569,
-},
-[16071] = {
+[55633] = {
+["encounterName"] = "Колосс Драккари",
+["source"] = "Голем Драккари",
+["npcID"] = 29832,
 ["event"] = "SPELL_CAST_START",
-["source"] = "Темнопряд из легиона Огненного Клейма",
-["npcID"] = 9261,
+["encounterID"] = 385,
+},
+[120667] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Шадопанский меткий стрелок",
+["npcID"] = 61968,
 },
 [71420] = {
 ["encounterName"] = "Леди Смертный Шепот",
@@ -17913,10 +17937,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 36855,
 },
-[114859] = {
-["source"] = "Скучающий студент",
+[8275] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 59614,
+["source"] = "Повелитель зверей из племени Иглошкурых",
+["npcID"] = 4532,
 },
 [116710] = {
 ["source"] = "Чжи-Чжи",
@@ -17945,26 +17969,15 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 58673,
 },
-[8275] = {
+[124951] = {
+["source"] = "Плеватель из клана Грозной Чешуи",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Повелитель зверей из племени Иглошкурых",
-["npcID"] = 4532,
+["npcID"] = 63490,
 },
 [12470] = {
 ["source"] = "Мордреш Огненный Глаз",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 7357,
-},
-[114848] = {
-["encounterName"] = "Верховный инквизитор Вайтмейн",
-["event"] = "SPELL_CAST_START",
-["source"] = "Верховный инквизитор Вайтмейн",
-["npcID"] = 3977,
-},
-[115320] = {
-["source"] = "Секретный агент Альянса",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 56303,
 },
 [32914] = {
 ["source"] = "Мотылянь",
@@ -17976,22 +17989,17 @@ PlaterDB = {
 ["source"] = "Тучный бражный хмелементаль",
 ["npcID"] = 59519,
 },
-[14033] = {
-["source"] = "Элдретский хамелеон",
+[114848] = {
+["encounterName"] = "Верховный инквизитор Вайтмейн",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 14398,
+["source"] = "Верховный инквизитор Вайтмейн",
+["npcID"] = 3977,
 },
-[76026] = {
-["encounterName"] = "Командир Улток",
-["source"] = "Командир Улток",
-["npcID"] = 40765,
+[76031] = {
+["encounterName"] = "Красавица",
 ["event"] = "SPELL_CAST_START",
-["encounterID"] = 1044,
-},
-[30633] = {
-["source"] = "Кристаллический заступник",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 26792,
+["source"] = "Красавица",
+["npcID"] = 39700,
 },
 [22478] = {
 ["source"] = "Зеврим Терновое Копыто",
@@ -18003,6 +18011,23 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["source"] = "Малекай Бледный",
 ["npcID"] = 10438,
+},
+[30633] = {
+["source"] = "Кристаллический заступник",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 26792,
+},
+[15305] = {
+["source"] = "Повелитель големов Аргелмах",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 8983,
+},
+[106563] = {
+["encounterName"] = "Янь-Чжу Высвобожденный",
+["source"] = "Янь-Чжу Высвобожденный",
+["npcID"] = 59479,
+["event"] = "SPELL_CAST_START",
+["encounterID"] = 1414,
 },
 [122852] = {
 ["encounterName"] = "Императорский визирь Зор'лок",
@@ -18016,21 +18041,22 @@ PlaterDB = {
 ["source"] = "Ануб'арский сокрушитель",
 ["npcID"] = 28922,
 },
-[15305] = {
-["source"] = "Повелитель големов Аргелмах",
+[14033] = {
+["source"] = "Элдретский хамелеон",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 8983,
+["npcID"] = 14398,
 },
-[130521] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Капитан Дорен",
-["npcID"] = 66052,
-},
-[111398] = {
-["isChanneled"] = true,
-["source"] = "Проповедница Алого ордена",
+[111725] = {
+["encounterName"] = "Райгонн",
+["source"] = "Райгонн",
+["isChanneled"] = false,
 ["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 58685,
+["npcID"] = 56877,
+},
+[15241] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Восставший окудник",
+["npcID"] = 10419,
 },
 [76411] = {
 ["isChanneled"] = true,
@@ -18045,12 +18071,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 375,
 },
-[111725] = {
-["encounterName"] = "Райгонн",
-["source"] = "Райгонн",
-["isChanneled"] = false,
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 56877,
+[130521] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Капитан Дорен",
+["npcID"] = 66052,
 },
 [45578] = {
 ["source"] = "Стрелок клана Песни Войны",
@@ -18067,28 +18091,15 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 4805,
 },
-[15241] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Восставший окудник",
-["npcID"] = 10419,
-},
-[115816] = {
-["source"] = "Плут Зеленой Скалы",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 54987,
-},
 [116838] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Поработитель Гормал",
 ["npcID"] = 55016,
 },
-[428209] = {
-["encounterName"] = "Кровавый Совет",
-["source"] = "Принц Валанар",
-["encounterID"] = 1095,
-["isChanneled"] = false,
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 37970,
+[115816] = {
+["source"] = "Плут Зеленой Скалы",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 54987,
 },
 [111594] = {
 ["encounterName"] = "Инструктор Ледяное Сердце",
@@ -18107,11 +18118,6 @@ PlaterDB = {
 ["source"] = "Каменный цийлинь",
 ["npcID"] = 60576,
 },
-[71934] = {
-["source"] = "Страждущая душа",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 38410,
-},
 [32325] = {
 ["encounterName"] = "Пандемоний",
 ["source"] = "Пандемоний",
@@ -18123,6 +18129,11 @@ PlaterDB = {
 ["source"] = "Колосс Шао-Тень",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 65824,
+},
+[71934] = {
+["source"] = "Страждущая душа",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 38410,
 },
 [110945] = {
 ["encounterName"] = "Гу Небесный Удар",
@@ -18137,12 +18148,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 62814,
 },
-[31623] = {
-["encounterName"] = "Владыка болот Мусел'ек",
-["source"] = "Владыка болот Мусел'ек",
-["encounterID"] = 1947,
+[115997] = {
+["source"] = "Пятнистый мотылек",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 17826,
+["npcID"] = 57232,
 },
 [122881] = {
 ["encounterName"] = "Цулон",
@@ -18151,16 +18160,31 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 62919,
 },
+[135818] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Пехотинец Альянса",
+["npcID"] = 67901,
+},
+[102573] = {
+["encounterName"] = "Гу Небесный Удар",
+["source"] = "Лазурный змей",
+["npcID"] = 56754,
+["event"] = "SPELL_CAST_START",
+["encounterID"] = 1303,
+},
 [111723] = {
 ["encounterName"] = "Райгонн",
 ["source"] = "Райгонн",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 56877,
 },
-[135818] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Пехотинец Альянса",
-["npcID"] = 67901,
+[113764] = {
+["encounterName"] = "Брат Корлофф",
+["source"] = "Брат Корлофф",
+["npcID"] = 59223,
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["encounterID"] = 1424,
 },
 [120167] = {
 ["encounterName"] = "Королевское испытание",
@@ -18175,20 +18199,15 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 63279,
 },
-[102573] = {
-["encounterName"] = "Гу Небесный Удар",
-["source"] = "Лазурный змей",
-["npcID"] = 56754,
+[55348] = {
 ["event"] = "SPELL_CAST_START",
-["encounterID"] = 1303,
+["source"] = "Боевой наездник Драккари",
+["npcID"] = 29836,
 },
-[113764] = {
-["encounterName"] = "Брат Корлофф",
-["source"] = "Брат Корлофф",
-["npcID"] = 59223,
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1424,
+[79868] = {
+["source"] = "Шеймус Золотые Башмаки",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 67848,
 },
 [75645] = {
 ["event"] = "SPELL_CAST_START",
@@ -18201,35 +18220,10 @@ PlaterDB = {
 ["source"] = "Бронированный мистраль",
 ["npcID"] = 45915,
 },
-[55348] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Боевой наездник Драккари",
-["npcID"] = 29836,
-},
-[79868] = {
-["source"] = "Шеймус Золотые Башмаки",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 67848,
-},
 [115809] = {
 ["source"] = "Плут Зеленой Скалы",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 54987,
-},
-[80344] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Бес",
-["npcID"] = 43014,
-},
-[12890] = {
-["source"] = "Тень Эраникуса",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 5709,
-},
-[123610] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Оскверненный защитник",
-["npcID"] = 63275,
 },
 [117975] = {
 ["encounterName"] = "Вечные защитники",
@@ -18237,6 +18231,21 @@ PlaterDB = {
 ["encounterID"] = 1409,
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 60583,
+},
+[80344] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Бес",
+["npcID"] = 43014,
+},
+[123610] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Оскверненный защитник",
+["npcID"] = 63275,
+},
+[12890] = {
+["source"] = "Тень Эраникуса",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 5709,
 },
 [88032] = {
 ["encounterName"] = "Озрук",
@@ -18267,26 +18276,27 @@ PlaterDB = {
 ["source"] = "Дева Скорби",
 ["npcID"] = 27975,
 },
-[71296] = {
-["source"] = "Имирьярский носитель смерти",
+[31623] = {
+["encounterName"] = "Владыка болот Мусел'ек",
+["source"] = "Владыка болот Мусел'ек",
+["encounterID"] = 1947,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 38125,
+["npcID"] = 17826,
 },
 [116004] = {
 ["source"] = "Водяной демон",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 56820,
 },
-[115997] = {
-["source"] = "Пятнистый мотылек",
+[71296] = {
+["source"] = "Имирьярский носитель смерти",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 57232,
+["npcID"] = 38125,
 },
-[88056] = {
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Бронированный мистраль",
-["npcID"] = 45915,
+[17141] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Восставший жрец",
+["npcID"] = 10423,
 },
 [116711] = {
 ["encounterName"] = "Фэн Проклятый",
@@ -18296,30 +18306,45 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 60009,
 },
-[32329] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Шаркун Нижетопи",
-["npcID"] = 17871,
+[88056] = {
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["source"] = "Бронированный мистраль",
+["npcID"] = 45915,
 },
 [131627] = {
 ["source"] = "Наваждение ша",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 66425,
 },
-[17141] = {
+[32329] = {
 ["event"] = "SPELL_CAST_START",
-["source"] = "Восставший жрец",
-["npcID"] = 10423,
+["source"] = "Шаркун Нижетопи",
+["npcID"] = 17871,
+},
+[428209] = {
+["encounterName"] = "Кровавый Совет",
+["source"] = "Принц Валанар",
+["encounterID"] = 1095,
+["isChanneled"] = false,
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 37970,
+},
+[8259] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Копьешкур из племени Иглошкурых",
+["npcID"] = 4438,
 },
 [129636] = {
 ["source"] = "Ученик Чи-Цзи",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 60603,
 },
-[8259] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Копьешкур из племени Иглошкурых",
-["npcID"] = 4438,
+[111398] = {
+["isChanneled"] = true,
+["source"] = "Проповедница Алого ордена",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 58685,
 },
 [11131] = {
 ["event"] = "SPELL_CAST_START",
@@ -18352,12 +18377,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 11464,
 },
-[106563] = {
-["encounterName"] = "Янь-Чжу Высвобожденный",
-["source"] = "Янь-Чжу Высвобожденный",
-["npcID"] = 59479,
+[76026] = {
+["encounterName"] = "Командир Улток",
+["source"] = "Командир Улток",
+["npcID"] = 40765,
 ["event"] = "SPELL_CAST_START",
-["encounterID"] = 1414,
+["encounterID"] = 1044,
 },
 [49034] = {
 ["encounterName"] = "Новос Призыватель",
@@ -18377,11 +18402,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 54924,
 },
-[76031] = {
-["encounterName"] = "Красавица",
+[115320] = {
+["source"] = "Секретный агент Альянса",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Красавица",
-["npcID"] = 39700,
+["npcID"] = 56303,
 },
 [119018] = {
 ["event"] = "SPELL_CAST_START",
@@ -18407,10 +18431,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 56636,
 },
-[124951] = {
-["source"] = "Плеватель из клана Грозной Чешуи",
+[114859] = {
+["source"] = "Скучающий студент",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 63490,
+["npcID"] = 59614,
 },
 [125799] = {
 ["event"] = "SPELL_CAST_START",
@@ -18422,32 +18446,20 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 17963,
 },
-[120667] = {
+[76369] = {
+["source"] = "Рожденный в лазури провидец",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Шадопанский меткий стрелок",
-["npcID"] = 61968,
+["npcID"] = 39855,
 },
 [111854] = {
 ["source"] = "Инструктор Ледяное Сердце",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 58633,
 },
-[76369] = {
-["source"] = "Рожденный в лазури провидец",
+[102998] = {
+["source"] = "Сяо",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 39855,
-},
-[55633] = {
-["encounterName"] = "Колосс Драккари",
-["source"] = "Голем Драккари",
-["npcID"] = 29832,
-["event"] = "SPELL_CAST_START",
-["encounterID"] = 385,
-},
-[71298] = {
-["source"] = "Имирьярский носитель смерти",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 38125,
+["npcID"] = 54926,
 },
 [30707] = {
 ["encounterName"] = "Омор Неодолимый",
@@ -18456,15 +18468,25 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1891,
 },
-[15609] = {
+[71298] = {
+["source"] = "Имирьярский носитель смерти",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Интендант Зигрис",
-["npcID"] = 9736,
+["npcID"] = 38125,
 },
 [116831] = {
 ["source"] = "Конк",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 55509,
+},
+[15609] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Интендант Зигрис",
+["npcID"] = 9736,
+},
+[76686] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Сумеречный бурильщик обсидиана",
+["npcID"] = 40019,
 },
 [133321] = {
 ["source"] = "Ружейник операции \"Заслон\"",
@@ -18491,17 +18513,18 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 39954,
 },
-[48920] = {
-["encounterName"] = "Король Дред",
-["source"] = "Король Дред",
-["npcID"] = 27483,
-["event"] = "SPELL_CAST_START",
-["encounterID"] = 373,
+[76688] = {
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["source"] = "Сумеречный бурильщик обсидиана",
+["npcID"] = 40019,
 },
-[22945] = {
-["source"] = "Волшебный поток",
+[83914] = {
+["encounterName"] = "Озумат",
+["source"] = "Злобный бичеватель разума",
+["npcID"] = 44715,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 14399,
+["encounterID"] = 1047,
 },
 [111599] = {
 ["encounterName"] = "Инструктор Ледяное Сердце",
@@ -18510,12 +18533,11 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 58757,
 },
-[83914] = {
-["encounterName"] = "Озумат",
-["source"] = "Злобный бичеватель разума",
-["npcID"] = 44715,
-["event"] = "SPELL_CAST_START",
-["encounterID"] = 1047,
+[121182] = {
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["source"] = "Хартак Поджигатель",
+["npcID"] = 61392,
 },
 [15785] = {
 ["event"] = "SPELL_CAST_START",
@@ -18527,20 +18549,22 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 6910,
 },
-[20831] = {
-["source"] = "Клочок маны",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 11483,
-},
-[125506] = {
-["source"] = "Командир Линдон",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 59191,
-},
 [82362] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Преобразившийся сумеречный ревнитель",
 ["npcID"] = 39987,
+},
+[131512] = {
+["source"] = "Рейдер Ордо",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 65928,
+},
+[112992] = {
+["encounterName"] = "Прыгопотам",
+["source"] = "Прыгопотам",
+["encounterID"] = 1413,
+["event"] = "SPELL_CAST_START",
+["npcID"] = 56717,
 },
 [17393] = {
 ["event"] = "SPELL_CAST_START",
@@ -18568,10 +18592,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 56183,
 },
-[76378] = {
-["source"] = "Рожденный в лазури страж",
+[51503] = {
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 39854,
+["source"] = "Наблюдатель из клана Темных Рун",
+["npcID"] = 27966,
 },
 [55624] = {
 ["event"] = "SPELL_CAST_START",
@@ -18607,16 +18631,6 @@ PlaterDB = {
 ["source"] = "Генерал Темуджа",
 ["npcID"] = 246242,
 },
-[54965] = {
-["source"] = "Заклинатель рун из клана Укротителей драконов",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 23960,
-},
-[131034] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Мстительный гуртанский дух",
-["npcID"] = 65452,
-},
 [73079] = {
 ["source"] = "Исследователь чумы",
 ["event"] = "SPELL_CAST_START",
@@ -18626,6 +18640,16 @@ PlaterDB = {
 ["source"] = "Субетай Быстрый",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 61427,
+},
+[114864] = {
+["source"] = "Скучающий студент",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 59614,
+},
+[15970] = {
+["source"] = "Ужасная драконида",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 5280,
 },
 [128872] = {
 ["source"] = "Ци'тар Зовущий Смерть",
@@ -18639,11 +18663,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 579,
 },
-[128970] = {
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Капитан Дорен",
-["npcID"] = 66052,
+[16336] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Призрачный горожанин",
+["npcID"] = 10384,
 },
 [32330] = {
 ["source"] = "Оса ликулла",
@@ -18678,27 +18701,28 @@ PlaterDB = {
 ["source"] = "Ай-Жань Летящее Облако",
 ["npcID"] = 50822,
 },
-[81459] = {
+[111715] = {
+["encounterName"] = "Инструктор Ледяное Сердце",
+["source"] = "Неофит Некроситета",
+["npcID"] = 58823,
 ["event"] = "SPELL_CAST_START",
-["source"] = "Землерез Каменных Недр",
-["npcID"] = 43537,
+["encounterID"] = 1426,
 },
-[55980] = {
+[88080] = {
+["encounterName"] = "Озрук",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Гигантос",
-["npcID"] = 30021,
+["source"] = "Хлесткий ветер",
+["npcID"] = 47238,
 },
 [128233] = {
 ["source"] = "Проповедница Алого ордена",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 58685,
 },
-[48276] = {
-["encounterName"] = "Свала Вечноскорбящая",
-["source"] = "Свала Вечноскорбящая",
-["npcID"] = 26668,
+[15585] = {
+["source"] = "Медик из клана Ярости Горна",
 ["event"] = "SPELL_CAST_START",
-["encounterID"] = 577,
+["npcID"] = 8894,
 },
 [22415] = {
 ["source"] = "Криводрев-ветвеплет",
@@ -18710,17 +18734,18 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 18320,
 },
-[117954] = {
-["encounterName"] = "Элегон",
-["source"] = "Элегон",
-["encounterID"] = 1500,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 60410,
-},
 [126920] = {
 ["source"] = "Терзатель духов Шао-Тень",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 65810,
+},
+[114004] = {
+["encounterName"] = "Псарь Браун",
+["source"] = "Псарь Браун",
+["encounterID"] = 1422,
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 59303,
 },
 [10252] = {
 ["isChanneled"] = true,
@@ -18733,13 +18758,10 @@ PlaterDB = {
 ["source"] = "Ануб'арский некрорахнид",
 ["npcID"] = 29118,
 },
-[114004] = {
-["encounterName"] = "Псарь Браун",
-["source"] = "Псарь Браун",
-["encounterID"] = 1422,
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 59303,
+[82800] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Пехотинец Альянса",
+["npcID"] = 67901,
 },
 [123244] = {
 ["encounterName"] = "Лэй Ши",
@@ -18763,16 +18785,15 @@ PlaterDB = {
 ["source"] = "Прокаженный машиностроитель",
 ["npcID"] = 6224,
 },
-[16430] = {
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Некромантка из секты Тузадин",
-["npcID"] = 10400,
-},
 [51963] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Вороная горгулья",
 ["npcID"] = 27829,
+},
+[126354] = {
+["source"] = "Снайпер Громовой крепости",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 66507,
 },
 [2601] = {
 ["event"] = "SPELL_CAST_START",
@@ -18784,23 +18805,16 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 4812,
 },
-[80780] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Визжащая банши",
-["npcID"] = 10463,
+[116830] = {
+["isChanneled"] = true,
+["source"] = "Конк",
+["event"] = "SPELL_CAST_SUCCESS",
+["npcID"] = 55509,
 },
 [12491] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Страж чертогов",
 ["npcID"] = 4427,
-},
-[112929] = {
-["encounterName"] = "Тажань Чжу",
-["source"] = "Хваткая ненависть",
-["npcID"] = 59804,
-["isChanneled"] = false,
-["event"] = "SPELL_CAST_SUCCESS",
-["encounterID"] = 1306,
 },
 [119414] = {
 ["encounterName"] = "Ша Страха",
@@ -18817,17 +18831,15 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1409,
 },
+[7978] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Тенегорнский крестьянин",
+["npcID"] = 8896,
+},
 [126955] = {
 ["source"] = "Стражник Могу'шан",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 64061,
-},
-[1244933] = {
-["encounterName"] = "Мастер Снежный Вихрь",
-["source"] = "Повелитель клинков Та'як",
-["encounterID"] = 1304,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 248074,
 },
 [30643] = {
 ["encounterName"] = "Начальник стражи Гарголмар",
@@ -18836,15 +18848,15 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1893,
 },
+[51832] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Жестокое создание",
+["npcID"] = 27971,
+},
 [110963] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Освятитель Алого ордена",
 ["npcID"] = 58569,
-},
-[75992] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Ведьма бурь Леди Наз'жар",
-["npcID"] = 40634,
 },
 [123938] = {
 ["source"] = "Кровожадный саурок",
@@ -18856,6 +18868,11 @@ PlaterDB = {
 ["source"] = "Тень кошмара",
 ["npcID"] = 66100,
 },
+[131968] = {
+["source"] = "Сик'тик - боевой лекарь",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 67093,
+},
 [86911] = {
 ["encounterName"] = "Асаад",
 ["source"] = "Асаад",
@@ -18864,12 +18881,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["encounterID"] = 1042,
 },
-[122413] = {
-["encounterName"] = "Ваятель янтаря Ун'сок",
-["source"] = "Янтарное чудовище",
-["encounterID"] = 1499,
+[53617] = {
+["encounterName"] = "Ануб'арак",
+["source"] = "Ануб'арский ядомант",
+["npcID"] = 29217,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 62711,
+["encounterID"] = 218,
 },
 [130154] = {
 ["event"] = "SPELL_CAST_START",
@@ -18886,10 +18903,10 @@ PlaterDB = {
 ["source"] = "Капитан Брент Черный",
 ["npcID"] = 67626,
 },
-[16866] = {
+[113629] = {
+["source"] = "Ткачиха Смерти",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Изрыгатель яда",
-["npcID"] = 10417,
+["npcID"] = 59193,
 },
 [71303] = {
 ["source"] = "Имирьярский носитель смерти",
@@ -18903,11 +18920,6 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 371,
 },
-[126136] = {
-["source"] = "Вестник Шао-Тень",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 59914,
-},
 [55959] = {
 ["encounterName"] = "Принц Талдарам",
 ["source"] = "Принц Талдарам",
@@ -18915,6 +18927,11 @@ PlaterDB = {
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
 ["encounterID"] = 213,
+},
+[4971] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Тотемист племени Иглошкурых",
+["npcID"] = 4440,
 },
 [80003] = {
 ["source"] = "Капрал Джексон Сильвер",
@@ -18926,28 +18943,27 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 60576,
 },
-[81439] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Миллхаус Манашторм",
-["npcID"] = 43391,
-},
 [128381] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Кор'тик-резонатор",
 ["npcID"] = 62755,
+},
+[13692] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Гончий пес",
+["npcID"] = 8921,
 },
 [129643] = {
 ["source"] = "Капрал Джексон Сильвер",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 65881,
 },
-[117665] = {
-["encounterName"] = "Ша Сомнения",
-["source"] = "Ша Сомнения",
-["encounterID"] = 1439,
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 56439,
+[55931] = {
+["encounterName"] = "Принц Талдарам",
+["source"] = "Принц Талдарам",
+["npcID"] = 29308,
+["event"] = "SPELL_CAST_START",
+["encounterID"] = 213,
 },
 [88959] = {
 ["event"] = "SPELL_CAST_START",
@@ -18964,15 +18980,17 @@ PlaterDB = {
 ["source"] = "Исчадие воздуха",
 ["npcID"] = 30045,
 },
-[129926] = {
-["source"] = "Ученик Чи-Цзи",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 60601,
-},
 [50198] = {
 ["source"] = "Посвященный охотник на магов",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 26728,
+},
+[48258] = {
+["encounterName"] = "Свала Вечноскорбящая",
+["source"] = "Свала Вечноскорбящая",
+["npcID"] = 26668,
+["event"] = "SPELL_CAST_START",
+["encounterID"] = 577,
 },
 [98393] = {
 ["event"] = "SPELL_CAST_START",
@@ -18996,15 +19014,17 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 62164,
 },
-[18327] = {
-["event"] = "SPELL_CAST_START",
-["source"] = "Баронесса Анастари",
-["npcID"] = 10436,
-},
 [128964] = {
 ["source"] = "Красарангский хранитель рун",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 65598,
+},
+[49537] = {
+["encounterName"] = "Пророк Тарон'джа",
+["source"] = "Пророк Тарон'джа",
+["npcID"] = 26632,
+["event"] = "SPELL_CAST_START",
+["encounterID"] = 375,
 },
 [33975] = {
 ["event"] = "SPELL_CAST_START",
@@ -19018,10 +19038,12 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 18344,
 },
-[55888] = {
+[69679] = {
+["encounterName"] = "Битва на кораблях в Ледяной Короне",
+["source"] = "Оружейник с \"Усмирителя небес\"",
+["encounterID"] = 1099,
 ["event"] = "SPELL_CAST_START",
-["source"] = "Исчадие воды",
-["npcID"] = 30044,
+["npcID"] = 36978,
 },
 [9053] = {
 ["source"] = "Высокорожденный-призыватель",
@@ -19033,12 +19055,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37664,
 },
-[71237] = {
-["encounterName"] = "Леди Смертный Шепот",
-["source"] = "Приверженец культа",
-["encounterID"] = 1100,
+[34163] = {
+["source"] = "Шаркун Нижетопи",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 37949,
+["npcID"] = 17871,
 },
 [15242] = {
 ["source"] = "Пузиллин",
@@ -19052,12 +19072,6 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 36678,
 },
-[47346] = {
-["isChanneled"] = true,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Новос Призыватель",
-["npcID"] = 26631,
-},
 [69975] = {
 ["source"] = "Стрелок с \"Усмирителя небес\"",
 ["event"] = "SPELL_CAST_START",
@@ -19070,18 +19084,23 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37934,
 },
+[120789] = {
+["encounterName"] = "Командир Во'цзак",
+["source"] = "Командир Во'цзак",
+["encounterID"] = 1502,
+["event"] = "SPELL_CAST_START",
+["npcID"] = 61634,
+},
 [53068] = {
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
 ["source"] = "Создание клана Закаленных Бурей",
 ["npcID"] = 28835,
 },
-[70162] = {
-["encounterName"] = "Битва на кораблях в Ледяной Короне",
-["source"] = "Ружейник с \"Усмирителя небес\"",
-["encounterID"] = 1099,
+[9734] = {
+["source"] = "Проповедница Алого ордена",
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 36969,
+["npcID"] = 58685,
 },
 [114548] = {
 ["encounterName"] = "Янь-Чжу Высвобожденный",
@@ -19095,12 +19114,6 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 64061,
 },
-[70299] = {
-["isChanneled"] = true,
-["source"] = "Омраченный верховный маг",
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 37664,
-},
 [12167] = {
 ["source"] = "Оракул из племени Мутной Воды",
 ["event"] = "SPELL_CAST_START",
@@ -19111,6 +19124,11 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 59522,
 },
+[124072] = {
+["source"] = "Сет'тик - крыло ветра",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 63592,
+},
 [113141] = {
 ["encounterName"] = "Темный магистр Гандлинг",
 ["source"] = "Темный магистр Гандлинг",
@@ -19118,20 +19136,22 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 59080,
 },
-[111010] = {
+[31407] = {
+["source"] = "Копейщик из племени Темной Крови",
 ["event"] = "SPELL_CAST_START",
-["source"] = "Фанатик Алого ордена",
-["npcID"] = 58590,
+["npcID"] = 17729,
 },
 [70410] = {
 ["source"] = "Омраченный верховный маг",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37664,
 },
-[71386] = {
-["source"] = "Иней",
+[70447] = {
+["encounterName"] = "Профессор Мерзоцид",
+["source"] = "Неустойчивый слизнюк",
+["encounterID"] = 1102,
 ["event"] = "SPELL_CAST_START",
-["npcID"] = 37533,
+["npcID"] = 37697,
 },
 [111606] = {
 ["encounterName"] = "Инструктор Ледяное Сердце",
@@ -19157,15 +19177,15 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 66000,
 },
-[111667] = {
-["source"] = "Вызыватель из Алого ордена",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 58756,
-},
 [76729] = {
 ["source"] = "Сумеречный мечник",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 41073,
+},
+[125716] = {
+["source"] = "Сет'тик-бурелом",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 64358,
 },
 [69387] = {
 ["source"] = "Вестник смерти - помощник",
@@ -19196,12 +19216,10 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 1506,
 },
-[119684] = {
-["encounterName"] = "Синь Мастер Боя",
-["source"] = "Синь Мастер Боя",
-["npcID"] = 61398,
+[127947] = {
 ["event"] = "SPELL_CAST_START",
-["encounterID"] = 1441,
+["source"] = "Аззикс К'тай",
+["npcID"] = 62843,
 },
 [52493] = {
 ["encounterName"] = "Крик'тир Хранитель Врат",
@@ -19209,12 +19227,6 @@ PlaterDB = {
 ["npcID"] = 28731,
 ["event"] = "SPELL_CAST_START",
 ["encounterID"] = 216,
-},
-[116990] = {
-["isChanneled"] = true,
-["source"] = "Каменный цийлинь",
-["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 60576,
 },
 [69325] = {
 ["isChanneled"] = true,
@@ -19229,16 +19241,22 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 36597,
 },
+[135517] = {
+["source"] = "Воздаятель операции \"Заслон\"",
+["event"] = "SPELL_CAST_START",
+["npcID"] = 67296,
+},
 [9613] = {
 ["source"] = "Сумеречный темный маг",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 4813,
 },
-[123791] = {
+[132236] = {
 ["encounterName"] = "Императорский визирь Зор'лок",
 ["source"] = "Императорский визирь Зор'лок",
 ["encounterID"] = 1507,
-["event"] = "SPELL_CAST_START",
+["isChanneled"] = true,
+["event"] = "SPELL_CAST_SUCCESS",
 ["npcID"] = 62980,
 },
 [17235] = {
@@ -19256,11 +19274,6 @@ PlaterDB = {
 ["source"] = "Вилли Разбивающий Надежды",
 ["npcID"] = 10997,
 },
-[125865] = {
-["source"] = "Зар'тик - авгур",
-["event"] = "SPELL_CAST_START",
-["npcID"] = 64454,
-},
 [71236] = {
 ["encounterName"] = "Леди Смертный Шепот",
 ["source"] = "Фанатик культа",
@@ -19275,17 +19288,22 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 37973,
 },
+[124849] = {
+["encounterName"] = "Великая императрица Шек'зир",
+["source"] = "Великая императрица Шек'зир",
+["encounterID"] = 1501,
+["event"] = "SPELL_CAST_START",
+["npcID"] = 62837,
+},
 [116725] = {
 ["source"] = "Хушунь",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 54925,
 },
-[52534] = {
-["encounterName"] = "Крик'тир Хранитель Врат",
-["source"] = "Ануб'арский темный чародей",
-["npcID"] = 28733,
+[22876] = {
+["source"] = "Блуждающее око Килрогга",
 ["event"] = "SPELL_CAST_START",
-["encounterID"] = 216,
+["npcID"] = 14386,
 },
 [11820] = {
 ["event"] = "SPELL_CAST_START",
@@ -19315,17 +19333,15 @@ PlaterDB = {
 ["source"] = "Садовый острожал",
 ["npcID"] = 65616,
 },
-[72762] = {
-["encounterName"] = "Король-лич",
-["source"] = "Король-лич",
-["npcID"] = 36597,
-["event"] = "SPELL_CAST_START",
-["encounterID"] = 1106,
-},
 [124854] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Сан Охотник Прилива",
 ["npcID"] = 50780,
+},
+[106447] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Новообращенный Шадо-Пан",
+["npcID"] = 56395,
 },
 [47696] = {
 ["source"] = "Безумный манаплеск",
@@ -19394,17 +19410,15 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 18344,
 },
-[72037] = {
-["encounterName"] = "Кровавый Совет",
-["source"] = "Принц Валанар",
-["encounterID"] = 1095,
-["event"] = "SPELL_CAST_START",
-["npcID"] = 37970,
-},
 [6725] = {
 ["source"] = "Геомант из племени Мертвой Головы",
 ["event"] = "SPELL_CAST_START",
 ["npcID"] = 7335,
+},
+[119691] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Мастер Бум-Бум",
+["npcID"] = 61013,
 },
 [127729] = {
 ["encounterName"] = "Глашатай Волаж",
@@ -19419,12 +19433,6 @@ PlaterDB = {
 ["source"] = "Сумеречный страж стихий",
 ["npcID"] = 40017,
 },
-[36205] = {
-["isChanneled"] = false,
-["event"] = "SPELL_CAST_SUCCESS",
-["source"] = "Ртутный страж",
-["npcID"] = 67833,
-},
 [126128] = {
 ["isChanneled"] = true,
 ["event"] = "SPELL_CAST_SUCCESS",
@@ -19436,15 +19444,22 @@ PlaterDB = {
 ["source"] = "Крайнее Сомнение",
 ["npcID"] = 57330,
 },
+[128142] = {
+["event"] = "SPELL_CAST_START",
+["source"] = "Милау",
+["npcID"] = 64965,
+},
 [126322] = {
 ["event"] = "SPELL_CAST_START",
 ["source"] = "Разоритель Шао-Тень",
 ["npcID"] = 63948,
 },
-[128142] = {
+[111762] = {
+["encounterName"] = "Инструктор Ледяное Сердце",
+["source"] = "Неофит Некроситета",
+["npcID"] = 58823,
 ["event"] = "SPELL_CAST_START",
-["source"] = "Милау",
-["npcID"] = 64965,
+["encounterID"] = 1426,
 },
 },
 }
@@ -19454,6 +19469,18 @@ PlaterLanguage = {
 }
 PlaterLogs = {
 ["_general_logs"] = {
+"2025-11-03 14:43:15 | INIT | Plater-v616-Mists | Framework v624 | 5.5.2 | ruRU | Зурантор",
+"2025-11-03 14:41:09 | INIT | Plater-v616-Mists | Framework v624 | 5.5.2 | ruRU | Зурантор",
+"2025-10-24 01:03:34 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-24 01:00:08 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-24 00:54:44 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-23 00:48:36 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-22 20:19:31 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-22 20:15:18 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-22 20:14:17 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-21 12:12:11 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-21 11:34:45 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
+"2025-10-21 11:18:30 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
 "2025-10-19 01:05:25 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
 "2025-10-18 19:30:31 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
 "2025-10-18 19:10:19 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
@@ -19461,18 +19488,6 @@ PlaterLogs = {
 "2025-10-16 18:06:15 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
 "2025-10-16 18:06:08 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
 "2025-10-16 17:36:53 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-16 13:07:12 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-10 20:41:55 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-10 19:51:55 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-09 20:00:49 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-08 20:16:47 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-08 17:53:29 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-08 13:13:08 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-08 11:24:30 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-08 00:36:25 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-07 21:13:27 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-05 19:59:27 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
-"2025-10-05 13:10:25 | INIT | Plater-v616-Mists | Framework v624 | 5.5.1 | ruRU | Зурантор",
 },
 ["_error_logs"] = {
 },

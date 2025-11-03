@@ -1255,7 +1255,7 @@ do
 	end
 	cdText:SetSize(300, 20)
 	cdText:SetTextColor(plugin.defaultDB.durationColor[1], plugin.defaultDB.durationColor[2], plugin.defaultDB.durationColor[3], plugin.defaultDB.durationColor[4])
-	if not cdText.SetFontHeight then -- XXX [Mainline:✓ MoP:✓ Wrath:✗ Vanilla:✗]
+	if not cdText.SetFontHeight then -- XXX [Mainline:✓ MoP:✓ Wrath:✗ Vanilla:✓]
 		cdText.SetFontHeight = function(self, num)
 			local flags = nil
 			if plugin.db.profile.monochrome and plugin.db.profile.outline ~= "NONE" then
@@ -1285,7 +1285,7 @@ do
 	end
 	chargesText:SetSize(300, 20)
 	chargesText:SetTextColor(plugin.defaultDB.chargesNoneColor[1], plugin.defaultDB.chargesNoneColor[2], plugin.defaultDB.chargesNoneColor[3], plugin.defaultDB.chargesNoneColor[4])
-	if not chargesText.SetFontHeight then -- XXX [Mainline:✓ MoP:✓ Wrath:✗ Vanilla:✗]
+	if not chargesText.SetFontHeight then -- XXX [Mainline:✓ MoP:✓ Wrath:✗ Vanilla:✓]
 		chargesText.SetFontHeight = function(self, num)
 			local flags = nil
 			if plugin.db.profile.monochrome and plugin.db.profile.outline ~= "NONE" then
@@ -1553,13 +1553,6 @@ do
 		end
 	end
 	function plugin:OnPluginEnable()
-		local oldDB = BigWigsLoader.db:GetNamespace("BattleRes", true)
-		if oldDB and not oldDB.profile.imported then
-			for k, v in next, oldDB.profile do
-				plugin.db.profile[k] = v
-			end
-			oldDB.profile.imported = true
-		end
 		self:RegisterMessage("BigWigs_ProfileUpdate", SwapProfile)
 		ProfileUtils.ValidateMainSettings()
 		ProfileUtils.UpdateWidgets()

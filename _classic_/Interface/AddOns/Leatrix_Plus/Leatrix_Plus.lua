@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 5.1.04 (15th October 2025)
+-- 	Leatrix Plus 5.1.07 (29th October 2025)
 ----------------------------------------------------------------------
 
 --	01:Functions 02:Locks   03:Restart 40:Player   45:Rest
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "5.1.04"
+	LeaPlusLC["AddonVer"] = "5.1.07"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -8946,15 +8946,8 @@
 				cancelFormBtn:SetAttribute("type", "macro")
 				cancelFormBtn:SetAttribute("macrotext", "/cancelform")
 				cancelFormBtn:ClearAllPoints()
-				if LeaPlusLC["EnhanceFlightMap"] == "On" then
-					-- Enhance flight map is on so position the button top-left
-					cancelFormBtn:SetPoint("TOPLEFT", TaxiRouteMap, "TOPLEFT", 2, -2)
-					cancelFormBtn:SetSize(12, 12)
-				else
-					-- Enhance flight map is off so position the button top-right
-					cancelFormBtn:SetPoint("TOPRIGHT", TaxiFrame, "TOPRIGHT", -46, -46)
-					cancelFormBtn:SetSize(24, 24)
-				end
+				cancelFormBtn:SetPoint("TOPRIGHT", TaxiFrame, "TOPRIGHT", -46, -46)
+				cancelFormBtn:SetSize(24, 24)
 				cancelFormBtn:SetNormalTexture("Interface\\ICONS\\Achievement_Character_Nightelf_Female")
 				cancelFormBtn:SetPushedTexture("Interface\\ICONS\\Achievement_Character_Nightelf_Female")
 				cancelFormBtn:SetHighlightTexture("Interface\\ICONS\\Achievement_Character_Nightelf_Female")
@@ -8964,9 +8957,6 @@
 				cancelFormBtn.f:SetHeight(32)
 				cancelFormBtn.f:SetPoint('RIGHT', cancelFormBtn, 'LEFT', -10, 0)
 				cancelFormBtn.f:SetText(L["Click to unshift"])
-				if LeaPlusLC["EnhanceFlightMap"] == "On" then
-					cancelFormBtn.f:Hide()
-				end
 
 				-- Toggle button when form changes
 				cancelFormBtn:SetScript("OnEvent", function()
@@ -11010,6 +11000,9 @@
 
 		if LeaPlusLC["TipModEnable"] == "On" and not LeaLockList["TipModEnable"] then
 
+			-- Enable mouse hover events for world frame (required for hide tooltips, cursor anchor and maybe other addons)
+			WorldFrame:EnableMouseMotion(true)
+
 			----------------------------------------------------------------------
 			--	Position the tooltip
 			----------------------------------------------------------------------
@@ -11019,7 +11012,7 @@
 					if (not tooltip or not parent) then
 						return
 					end
-					if LeaPlusLC["TooltipAnchorMenu"] == 2 or GetMouseFoci()[1] then -- LeaPlusLC.NewPatch: or not WorldFrame:IsMouseMotionFocus() then
+					if LeaPlusLC["TooltipAnchorMenu"] == 2 or not WorldFrame:IsMouseMotionFocus() then
 						local a,b,c,d,e = tooltip:GetPoint()
 						if a ~= "BOTTOMRIGHT" or c ~= "BOTTOMRIGHT" then
 							tooltip:ClearAllPoints()
@@ -11302,6 +11295,9 @@
 				-- Game settings panel tooltip
 				if SettingsTooltip then SettingsTooltip:SetScale(LeaPlusLC["LeaPlusTipSize"]) end
 
+				-- World map tooltip
+				if WorldMapTooltip then WorldMapTooltip:SetScale(LeaPlusLC["LeaPlusTipSize"]) end
+
 				-- LibDBIcon
 				if LibDBIconTooltip then LibDBIconTooltip:SetScale(LeaPlusLC["LeaPlusTipSize"]) end
 
@@ -11417,7 +11413,7 @@
 				end
 
 				-- Get unit information
-				if not GetMouseFoci()[1] then -- LeaPlusLC.NewPatch: if WorldFrame:IsMouseMotionFocus() then (previous)
+				if WorldFrame:IsMouseMotionFocus() then
 					LT["Unit"] = "mouseover"
 					-- Hide and quit if tips should be hidden during combat
 					if LeaPlusLC["TipHideInCombat"] == "On" and UnitAffectingCombat("player") then
@@ -14942,8 +14938,8 @@
 								if unitType then
 									if unitType == "rare" or unitType == "rareelite" then unitTag = "(" .. L["Rare"] .. ") " elseif unitType == "worldboss" then unitTag = "(" .. L["Boss"] .. ") " end
 								end
-								SendChatMessage(format("%%t " .. unitTag .. "(%d%%)%s", uHealth / uHealthMax * 100, " " .. string.format("%.0f", pos.x * 100) .. ":" .. string.format("%.0f", pos.y * 100)), "CHANNEL", nil, index)
-								-- SendChatMessage(format("%%t " .. unitTag .. "(%d%%)%s", uHealth / uHealthMax * 100, " " .. string.format("%.0f", pos.x * 100) .. ":" .. string.format("%.0f", pos.y * 100)), "WHISPER", nil, GetUnitName("player")) -- Debug
+								C_ChatInfo.SendChatMessage(format("%%t " .. unitTag .. "(%d%%)%s", uHealth / uHealthMax * 100, " " .. string.format("%.0f", pos.x * 100) .. ":" .. string.format("%.0f", pos.y * 100)), "CHANNEL", nil, index)
+								--C_ChatInfo.SendChatMessage(format("%%t " .. unitTag .. "(%d%%)%s", uHealth / uHealthMax * 100, " " .. string.format("%.0f", pos.x * 100) .. ":" .. string.format("%.0f", pos.y * 100)), "WHISPER", nil, GetUnitName("player")) -- Debug
 							else
 								LeaPlusLC:Print("Invalid target.")
 							end
