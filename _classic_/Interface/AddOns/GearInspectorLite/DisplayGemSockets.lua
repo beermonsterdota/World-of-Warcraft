@@ -30,7 +30,7 @@ local socketIconSize = 14
 local overlays = {}
 local ilvlTexts = {}
 
-local function GetItemSocketInfo(link)
+local function GetItemSocketInfo(link, slotName)
     if not link then return nil end
 
     local _, payload = strsplit("Hitem:", link)
@@ -55,6 +55,28 @@ local function GetItemSocketInfo(link)
             end
         end
     end
+
+    -- 👇 Special case: check if prismatic socket was added via belt buckle
+    local hasPrismaticFromBuckle = false
+    if slotName == "WaistSlot" then
+        local scanner = CreateFrame("GameTooltip", "BuckleGemScanner", nil, "GameTooltipTemplate")
+        scanner:SetOwner(UIParent, "ANCHOR_NONE")
+        scanner:SetInventoryItem("player", GetInventorySlotInfo("WaistSlot"))
+
+        for i = 1, scanner:NumLines() do
+            local textLine = _G["BuckleGemScannerTextLeft" .. i]
+            if textLine then
+                local text = textLine:GetText()
+                if text and text:match("Prismatic Socket") then
+                    hasPrismaticFromBuckle = true
+                    break
+                end
+            end
+        end
+        scanner:Hide()
+    end
+
+    -- build ordered socket list
     if ret.numSockets > 0 then
         for _, socketType in ipairs(socketOrder) do
             if sockets[socketType] and sockets[socketType] > 0 then
@@ -64,17 +86,34 @@ local function GetItemSocketInfo(link)
                 end
             end
         end
+    end
 
-        for i = 1, 3 do
-            local gemTexture = GetItemGem(link, i)
-            local socketType = ret.socketTypes[i]
+    -- detect gems in sockets
+    for i = 1, 3 do
+        local gemTexture = GetItemGem(link, i)
+        local socketType = ret.socketTypes[i]
 
-            if gemTexture then
-                table.insert(ret.filledSockets, socketType or "UNKNOWN")
-            elseif itemSocketsOrdered[i] then
-                table.insert(ret.emptySockets, socketType or "UNKNOWN")
-                ret.numEmptySockets = ret.numEmptySockets + 1
+        if gemTexture then
+            table.insert(ret.filledSockets, socketType or "UNKNOWN")
+        elseif itemSocketsOrdered[i] then
+            table.insert(ret.emptySockets, socketType or "UNKNOWN")
+            ret.numEmptySockets = ret.numEmptySockets + 1
+        end
+    end
+
+    -- 👇 Handle empty prismatic if buckle added but no gem socketed
+    if slotName == "WaistSlot" and hasPrismaticFromBuckle then
+        -- Only add empty socket if it's NOT already shown (i.e. gem not socketed)
+        local gemFound = false
+        for _, filled in ipairs(ret.filledSockets) do
+            if filled == "EMPTY_SOCKET_PRISMATIC" then
+                gemFound = true
+                break
             end
+        end
+        if not gemFound then
+            table.insert(ret.emptySockets, "EMPTY_SOCKET_PRISMATIC")
+            ret.numEmptySockets = ret.numEmptySockets + 1
         end
     end
 
@@ -100,7 +139,7 @@ function GearInspectorLite_UpdatePlayerEmptySocketIcons()
         local itemLink = GetInventoryItemLink("player", slotId)
 
         if itemLink and slotFrame then
-            local socketInfo = GetItemSocketInfo(itemLink)
+            local socketInfo = GetItemSocketInfo(itemLink, slotName)
 
             if socketInfo and socketInfo.numEmptySockets > 0 then
                 local cover = overlays[slotName .. "_cover"]
@@ -171,7 +210,7 @@ function GearInspectorLite_UpdateInspectEmptySocketIcons(unitToken)
         local itemLink = GetInventoryItemLink(unitToken, slotId)
 
         if itemLink and slotFrame then
-            local socketInfo = GetItemSocketInfo(itemLink)
+            local socketInfo = GetItemSocketInfo(itemLink, slotName)
 
             if socketInfo and socketInfo.numEmptySockets > 0 then
                 totalMissingGems = totalMissingGems + socketInfo.numEmptySockets

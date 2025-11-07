@@ -2,7 +2,7 @@
 Bagnon_Sets = {
 ["latest"] = {
 ["id"] = "11.2.14",
-["cooldown"] = 1758280965,
+["cooldown"] = 1762775000,
 ["who"] = "Тэйверкх-Пламегор",
 },
 ["global"] = {
@@ -95,15 +95,15 @@ Bagnon_Sets = {
 },
 ["soul"] = {
 },
-["reagent"] = {
+["fridge"] = {
 },
 ["mine"] = {
 },
 ["engineer"] = {
 },
-["inscribe"] = {
+["leather"] = {
 },
-["fridge"] = {
+["reagent"] = {
 },
 ["gem"] = {
 },
@@ -111,7 +111,7 @@ Bagnon_Sets = {
 },
 ["tackle"] = {
 },
-["leather"] = {
+["inscribe"] = {
 },
 ["normal"] = {
 },

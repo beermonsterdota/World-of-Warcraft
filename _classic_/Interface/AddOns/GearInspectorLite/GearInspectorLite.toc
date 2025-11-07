@@ -2,7 +2,7 @@
 ## Title: GearInspectorLite
 ## Notes: Shows item level and gem slots on character gear.
 ## Author: David Ward
-## Version: 0.6
+## Version: 0.7
 
 DisplayEnchantStatus.lua
 DisplayGemSockets.lua

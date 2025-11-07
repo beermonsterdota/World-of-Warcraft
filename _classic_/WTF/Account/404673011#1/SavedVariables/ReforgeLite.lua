@@ -5,9 +5,9 @@ ReforgeLiteDB = {
 ["method"] = {
 ["items"] = {
 {
-["dst"] = 6,
+["dst"] = 5,
 ["src"] = 8,
-["reforge"] = 55,
+["reforge"] = 54,
 ["amount"] = 303,
 },
 {
@@ -35,10 +35,6 @@ ReforgeLiteDB = {
 ["amount"] = 364,
 },
 {
-["dst"] = 5,
-["src"] = 6,
-["reforge"] = 40,
-["amount"] = 178,
 },
 {
 },
@@ -78,12 +74,12 @@ ReforgeLiteDB = {
 },
 },
 ["stats"] = {
-7686,
+7799,
 0,
 0,
-0,
-1956,
-5507,
+7629,
+2181,
+5504,
 0,
 6016,
 },
