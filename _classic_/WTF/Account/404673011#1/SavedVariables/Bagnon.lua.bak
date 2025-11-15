@@ -1,9 +1,7 @@
 
 Bagnon_Sets = {
 ["latest"] = {
-["id"] = "11.2.14",
-["cooldown"] = 1762775000,
-["who"] = "Тэйверкх-Пламегор",
+["cooldown"] = 1763741644,
 },
 ["global"] = {
 ["inventory"] = {

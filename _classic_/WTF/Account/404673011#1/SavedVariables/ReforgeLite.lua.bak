@@ -5,60 +5,68 @@ ReforgeLiteDB = {
 ["method"] = {
 ["items"] = {
 {
-["dst"] = 5,
+["dst"] = 1,
 ["src"] = 8,
-["amount"] = 303,
-["reforge"] = 54,
+["reforge"] = 50,
+["amount"] = 412,
 },
 {
 ["dst"] = 1,
 ["src"] = 5,
-["amount"] = 201,
 ["reforge"] = 29,
+["amount"] = 201,
 },
 {
 ["dst"] = 6,
 ["src"] = 5,
-["amount"] = 272,
 ["reforge"] = 33,
+["amount"] = 272,
 },
 {
 ["dst"] = 1,
 ["src"] = 8,
+["reforge"] = 50,
 ["amount"] = 210,
-["reforge"] = 50,
-},
-{
-["dst"] = 6,
-["src"] = 8,
-["amount"] = 364,
-["reforge"] = 55,
-},
-{
-},
-{
-},
-{
-["dst"] = 1,
-["src"] = 8,
-["amount"] = 274,
-["reforge"] = 50,
-},
-{
-["dst"] = 6,
-["src"] = 8,
-["amount"] = 376,
-["reforge"] = 55,
-},
-{
-},
-{
 },
 {
 ["dst"] = 5,
 ["src"] = 8,
-["amount"] = 188,
 ["reforge"] = 54,
+["amount"] = 364,
+},
+{
+["dst"] = 5,
+["src"] = 6,
+["reforge"] = 40,
+["amount"] = 227,
+},
+{
+["dst"] = 5,
+["src"] = 6,
+["reforge"] = 40,
+["amount"] = 316,
+},
+{
+["dst"] = 1,
+["src"] = 8,
+["reforge"] = 50,
+["amount"] = 274,
+},
+{
+["dst"] = 1,
+["src"] = 8,
+["reforge"] = 50,
+["amount"] = 370,
+},
+{
+},
+{
+},
+{
+["dst"] = 6,
+["src"] = 8,
+["reforge"] = 55,
+["amount"] = 188,
 },
 {
 },
@@ -66,22 +74,22 @@ ReforgeLiteDB = {
 },
 {
 ["dst"] = 1,
-["src"] = 8,
-["amount"] = 156,
-["reforge"] = 50,
+["src"] = 6,
+["reforge"] = 36,
+["amount"] = 414,
 },
 {
 },
 },
 ["stats"] = {
-7799,
+7589,
 0,
 0,
-7629,
-2181,
-5504,
 0,
-6016,
+4109,
+5503,
+0,
+5935,
 },
 },
 ["weights"] = {
@@ -111,8 +119,8 @@ nil,
 "TOPRIGHT",
 nil,
 "TOPRIGHT",
--104.2960433959961,
--51.03689956665039,
+-85.92574310302734,
+-53.99983978271484,
 ["n"] = 5,
 },
 ["methodWindowLocation"] = {

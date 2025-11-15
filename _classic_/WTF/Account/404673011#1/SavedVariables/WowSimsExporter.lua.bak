@@ -1,0 +1,18 @@
+
+WSEDB = {
+["profileKeys"] = {
+["Зурантор - Пламегор"] = "Default",
+},
+["profiles"] = {
+["Default"] = {
+["savedCharacters"] = {
+{
+["name"] = "Зурантор-Пламегор",
+["timestamp"] = 1763136886,
+["data"] = "{\"talents\":\"333122\",\"glyphs\":{\"minor\":[{\"spellID\":58135},{\"spellID\":147770},{\"spellID\":55448}],\"major\":[{\"spellID\":55453},{\"spellID\":55446},{\"spellID\":55456}]},\"id\":\"Player-4474-06029678\",\"class\":\"shaman\",\"unit\":\"player\",\"professions\":[{\"name\":\"Engineering\",\"level\":303}],\"race\":\"Troll\",\"name\":\"Зурантор\",\"spec\":\"elemental\",\"gear\":{\"items\":[{\"id\":89927,\"reforging\":162,\"upgrade_step\":2,\"gems\":[76885,76668]},{\"id\":87076,\"reforging\":141,\"upgrade_step\":2,\"gems\":[]},{\"enchant\":4806,\"id\":87133,\"reforging\":145,\"upgrade_step\":2,\"gems\":[76686]},{\"enchant\":4423,\"id\":89936,\"reforging\":162,\"upgrade_step\":2,\"gems\":[]},{\"enchant\":4419,\"id\":86951,\"reforging\":166,\"upgrade_step\":2,\"gems\":[76694,76668]},{\"enchant\":4414,\"id\":86962,\"reforging\":152,\"upgrade_step\":2,\"gems\":[]},{\"enchant\":4430,\"id\":87130,\"reforging\":152,\"upgrade_step\":2,\"gems\":[]},{\"id\":90452,\"reforging\":162,\"upgrade_step\":2,\"gems\":[76694,76694]},{\"enchant\":4826,\"id\":87132,\"reforging\":162,\"upgrade_step\":2,\"gems\":[76694]},{\"id\":90515,\"gems\":[76668],\"upgrade_step\":2,\"enchant\":4429},{\"id\":86873,\"gems\":[],\"upgrade_step\":2},{\"id\":86858,\"reforging\":167,\"upgrade_step\":2,\"gems\":[]},{\"id\":79330,\"gems\":[],\"upgrade_step\":2},{\"id\":87163,\"gems\":[],\"upgrade_step\":2},{\"enchant\":4442,\"id\":87170,\"reforging\":148,\"upgrade_step\":2,\"gems\":[89882,76694]}],\"version\":\"v3.1.5\"},\"level\":90,\"version\":\"v3.1.5\",\"realm\":\"Пламегор\"}",
+["dateString"] = "2025-11-14 19:14:46",
+},
+},
+},
+},
+}

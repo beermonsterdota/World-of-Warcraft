@@ -1,8 +1,8 @@
 VER 3 0100000000000001 "VuhDoDCShieldData" "Ability_Repair"
-P1OH[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]1SH[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+R1WM1DT1HR1LR1OH2SM2RM2PT2IH[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]2SH[x][x]0__[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
 END
 VER 3 0100000000000002 "VuhDoDCShieldNames" "Ability_Repair"
-NТэй[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]Зур[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
+NБыдДевКреЖенТэйАйсЧипЛёкАнк[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]Зур[x][x]Вол[x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x][x]
 END
 VER 3 0100000000000006 "БЛ" "134400"
 #showtooltip Жажда крови
@@ -32,4 +32,18 @@ VER 3 0100000000000004 "молния + баф" "134400"
 /use Повязки огненной птицы
 /cast Покорение стихий
 /cast Молния
+END
+VER 3 010000000000000A "ша вуду" "134400"
+/target vuhdo
+/stopcasting
+/click ExtraActionButton1
+/y перекинул сферу на  %t!
+/targetlasttarget
+END
+VER 3 0100000000000009 "ша перекинуть" "132384"
+/target mouseover
+/stopcasting
+/click ExtraActionButton1
+/y перекинул сферу на  %t!
+/targetlasttarget
 END

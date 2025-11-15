@@ -1,4 +1,4 @@
-﻿## Interface: 50501
+﻿## Interface: 50502
 ## Title: Pawn
 ## Version: 2.11.9
 ## Notes: Pawn helps you compare items and find upgrades.

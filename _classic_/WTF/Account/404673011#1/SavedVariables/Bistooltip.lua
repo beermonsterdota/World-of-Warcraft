@@ -5,15 +5,15 @@ BisTooltipDB = {
 },
 ["char"] = {
 ["Зурантор - Пламегор"] = {
-["minimapPos"] = 124.1659304955105,
+["minimapPos"] = 124.0625325906284,
 ["spec_index"] = 3,
 ["bis_list_window"] = {
-["y"] = -72.37055969238281,
-["x"] = 33.18429565429688,
-["point"] = "TOP",
-["relativePoint"] = "TOP",
+["y"] = 75.55548095703125,
+["x"] = -140.6312103271484,
+["point"] = "RIGHT",
+["relativePoint"] = "RIGHT",
 ["height"] = 500.5926208496094,
-["width"] = 450.0000915527344,
+["width"] = 450.0001220703125,
 },
 ["highlight_spec"] = {
 ["spec_name"] = "Restoration",

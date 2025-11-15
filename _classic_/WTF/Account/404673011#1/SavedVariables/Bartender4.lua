@@ -80,6 +80,7 @@ Bartender4DB = {
 ["ExtraActionBar"] = {
 ["profiles"] = {
 ["Зурантор - Пламегор"] = {
+["enabled"] = false,
 ["position"] = {
 ["y"] = 123.0000228881836,
 ["x"] = -63.49993896484375,
@@ -155,18 +156,6 @@ Bartender4DB = {
 },
 },
 },
-["StanceBar"] = {
-["profiles"] = {
-["Зурантор - Пламегор"] = {
-["version"] = 3,
-["position"] = {
-["y"] = -15,
-["x"] = -82.49993896484375,
-["point"] = "CENTER",
-},
-},
-},
-},
 ["Vehicle"] = {
 ["profiles"] = {
 ["Зурантор - Пламегор"] = {
@@ -176,6 +165,18 @@ Bartender4DB = {
 ["point"] = "CENTER",
 },
 ["version"] = 3,
+},
+},
+},
+["StanceBar"] = {
+["profiles"] = {
+["Зурантор - Пламегор"] = {
+["version"] = 3,
+["position"] = {
+["y"] = -15,
+["x"] = -82.49993896484375,
+["point"] = "CENTER",
+},
 },
 },
 },
@@ -214,7 +215,7 @@ Bartender4DB = {
 ["blizzardVehicle"] = true,
 ["focuscastmodifier"] = false,
 ["minimapIcon"] = {
-["minimapPos"] = 357.1547476954834,
+["minimapPos"] = 356.9531831446708,
 },
 ["outofrange"] = "hotkey",
 },
